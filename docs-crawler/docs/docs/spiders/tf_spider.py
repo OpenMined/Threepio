@@ -1,16 +1,10 @@
 import re
 import scrapy
+from docs.items import ApiItem
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.linkextractors import LinkExtractor
 from w3lib.html import remove_tags
 
-
-
-class ApiItem(scrapy.Item):
-    code = scrapy.Field()
-    function_name = scrapy.Field()
-    args = scrapy.Field()
-    kwargs = scrapy.Field()
 
 class TfSpider(CrawlSpider):
     name = "tf"
