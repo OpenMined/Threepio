@@ -64,9 +64,11 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'docs.pipelines.DocsPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'docs.pipelines.OutputPipeline': 3000,
+}
+
+FEED_FORMAT = 'json'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
