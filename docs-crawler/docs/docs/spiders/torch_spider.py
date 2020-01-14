@@ -38,5 +38,3 @@ class TorchSpider(scrapy.Spider):
             item['args'] = args
             item['kwargs'] = kwargs
             yield item
-
-        print('\n'.join(defs))
