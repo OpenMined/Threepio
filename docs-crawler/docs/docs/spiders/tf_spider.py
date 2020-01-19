@@ -8,8 +8,9 @@ from w3lib.html import remove_tags
 
 class TfSpider(CrawlSpider):
     name = "tf"
+    version = "2.1"
     allowed_domains = ['tensorflow.org']
-    start_urls = ['https://www.tensorflow.org/api_docs/python/tf']
+    start_urls = [f'https://www.tensorflow.org/versions/r{version}/api_docs/python/tf']
     split_def = re.compile('^([\w\.]+)\((.*)\)$')
 
     rules = (
