@@ -9,9 +9,9 @@ class DocsPipeline(object):
 class OutputPipeline(object):
 
     def open_spider(self, spider):
-        output_dir = f"output/{spider.version}"
+        output_dir = f"output/{spider.name}"
         os.makedirs(output_dir, exist_ok=True)
-        self.file = open(f'{output_dir}/{spider.name}.json', 'w')
+        self.file = open(f'{output_dir}/{spider.version}.json', 'w')
 
     def close_spider(self, spider):
         self.file.close()
