@@ -54,6 +54,7 @@
 {"code": "get(...locs)", "function_name": "get", "args": ["...locs"], "kwargs": []}
 {"code": "toTensor()", "function_name": "toTensor", "args": [""], "kwargs": []}
 {"code": "tf.batchToSpaceND(x,blockShape,crops)", "function_name": "batchToSpaceND", "args": ["x", "blockShape", "crops"], "kwargs": []}
+{"code": "tf.broadcastTo(x,shape)", "function_name": "broadcastTo", "args": ["x", "shape"], "kwargs": []}
 {"code": "tf.cast(x,dtype)", "function_name": "cast", "args": ["x", "dtype"], "kwargs": []}
 {"code": "tf.depthToSpace(x,blockSize,dataFormat?)", "function_name": "depthToSpace", "args": ["x", "blockSize", "dataFormat?"], "kwargs": []}
 {"code": "tf.expandDims(x,axis?)", "function_name": "expandDims", "args": ["x", "axis?"], "kwargs": []}
@@ -128,6 +129,7 @@
 {"code": "tf.layers.permute(args)", "function_name": "permute", "args": ["args"], "kwargs": []}
 {"code": "tf.layers.repeatVector(args)", "function_name": "repeatVector", "args": ["args"], "kwargs": []}
 {"code": "tf.layers.reshape(args)", "function_name": "reshape", "args": ["args"], "kwargs": []}
+{"code": "tf.layers.spatialDropout1d(args)", "function_name": "spatialDropout1d", "args": ["args"], "kwargs": []}
 {"code": "tf.layers.conv1d(args)", "function_name": "conv1d", "args": ["args"], "kwargs": []}
 {"code": "tf.layers.conv2d(args)", "function_name": "conv2d", "args": ["args"], "kwargs": []}
 {"code": "tf.layers.conv2dTranspose(args)", "function_name": "conv2dTranspose", "args": ["args"], "kwargs": []}
@@ -186,6 +188,7 @@
 {"code": "tf.mul(a,b)", "function_name": "mul", "args": ["a", "b"], "kwargs": []}
 {"code": "tf.div(a,b)", "function_name": "div", "args": ["a", "b"], "kwargs": []}
 {"code": "tf.addN(tensors)", "function_name": "addN", "args": ["tensors"], "kwargs": []}
+{"code": "tf.divNoNan(a,b)", "function_name": "divNoNan", "args": ["a", "b"], "kwargs": []}
 {"code": "tf.floorDiv(a,b)", "function_name": "floorDiv", "args": ["a", "b"], "kwargs": []}
 {"code": "tf.maximum(a,b)", "function_name": "maximum", "args": ["a", "b"], "kwargs": []}
 {"code": "tf.minimum(a,b)", "function_name": "minimum", "args": ["a", "b"], "kwargs": []}
@@ -269,6 +272,7 @@
 {"code": "tf.sparseToDense(sparseIndices,sparseValues,outputShape,defaultValue?)", "function_name": "sparseToDense", "args": ["sparseIndices", "sparseValues", "outputShape", "defaultValue?"], "kwargs": []}
 {"code": "tf.image.cropAndResize(image,boxes,boxInd,cropSize,?,extrapolationValue?)", "function_name": "cropAndResize", "args": ["image", "boxes", "boxInd", "cropSize", "?", "extrapolationValue?"], "kwargs": []}
 {"code": "tf.image.nonMaxSuppression(boxes,scores,maxOutputSize,iouThreshold?,scoreThreshold?)", "function_name": "nonMaxSuppression", "args": ["boxes", "scores", "maxOutputSize", "iouThreshold?", "scoreThreshold?"], "kwargs": []}
+{"code": "tf.image.nonMaxSuppressionWithScore(boxes,scores,maxOutputSize,iouThreshold?,scoreThreshold?,softNmsSigma?)", "function_name": "nonMaxSuppressionWithScore", "args": ["boxes", "scores", "maxOutputSize", "iouThreshold?", "scoreThreshold?", "softNmsSigma?"], "kwargs": []}
 {"code": "tf.image.resizeBilinear(images,size,alignCorners?)", "function_name": "resizeBilinear", "args": ["images", "size", "alignCorners?"], "kwargs": []}
 {"code": "tf.image.resizeNearestNeighbor(images,size,alignCorners?)", "function_name": "resizeNearestNeighbor", "args": ["images", "size", "alignCorners?"], "kwargs": []}
 {"code": "tf.basicLSTMCell(forgetBias,lstmKernel,lstmBias,data,c,h)", "function_name": "basicLSTMCell", "args": ["forgetBias", "lstmKernel", "lstmBias", "data", "c", "h"], "kwargs": []}
@@ -303,6 +307,7 @@
 {"code": "tf.signal.hammingWindow(windowLength)", "function_name": "hammingWindow", "args": ["windowLength"], "kwargs": []}
 {"code": "tf.signal.hannWindow(windowLength)", "function_name": "hannWindow", "args": ["windowLength"], "kwargs": []}
 {"code": "tf.signal.stft(signal,frameLength,frameStep,fftLength?,windowFn?)", "function_name": "stft", "args": ["signal", "frameLength", "frameStep", "fftLength?", "windowFn?"], "kwargs": []}
+{"code": "tf.linalg.bandPart(a,numLower,numUpper)", "function_name": "bandPart", "args": ["a", "numLower", "numUpper"], "kwargs": []}
 {"code": "tf.linalg.gramSchmidt(xs)", "function_name": "gramSchmidt", "args": ["xs"], "kwargs": []}
 {"code": "tf.linalg.qr(x,fullMatrices?)", "function_name": "qr", "args": ["x", "fullMatrices?"], "kwargs": []}
 {"code": "tf.grad(f)", "function_name": "grad", "args": ["f"], "kwargs": []}

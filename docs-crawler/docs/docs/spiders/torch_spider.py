@@ -6,11 +6,12 @@ from w3lib.html import remove_tags
 
 class TorchSpider(scrapy.Spider):
     name = "torch"
+    version = "1.4.0"
     split_def = re.compile('^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     def start_requests(self):
         urls = [
-            'https://pytorch.org/docs/stable/torch.html',
+            f'https://pytorch.org/docs/{self.version}/torch.html',
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)

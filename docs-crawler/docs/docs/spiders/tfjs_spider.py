@@ -6,11 +6,12 @@ from w3lib.html import remove_tags
 
 class TfjsSpider(scrapy.Spider):
     name = "tfjs"
+    version = "1.5.1"
     split_def = re.compile('^([\w\.]+)\((.*)\)$')
 
     def start_requests(self):
         urls = [
-            'https://js.tensorflow.org/api/latest/',
+            f'https://js.tensorflow.org/api/{self.version}/',
         ]
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
