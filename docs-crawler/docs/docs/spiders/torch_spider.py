@@ -1,26 +1,34 @@
 import re
 import scrapy
 from docs.items import ApiItem
+from scrapy.spiders import Rule, CrawlSpider
+from scrapy.linkextractors import LinkExtractor
 from w3lib.html import remove_tags
 
 
-class TorchSpider(scrapy.Spider):
+class TorchSpider(CrawlSpider):
     name = "torch"
     version = "1.4.0"
+    allowed_domains = ['pytorch.org']
+    start_urls = [f'https://pytorch.org/docs/{version}/index.html']
     split_def = re.compile('^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
-    def start_requests(self):
-        urls = [
-            f'https://pytorch.org/docs/{self.version}/torch.html',
-        ]
-        for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
-
-    def parse(self, response):
+    rules = (
+        Rule(LinkExtractor(
+                allow=(re.compile('.+\.html')),
+                restrict_css='.toctree-l1'), 
+            callback='parse_api',),
+    )
+    
+    def parse_api(self, response):
+        self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
         defs = []
         for selector in fdef:
-            text = remove_tags(selector.get()).replace('\n', '')
+            text = (remove_tags(selector.get())
+                    .replace('\n', '')
+                    .replace(' ', '')
+                    .replace('[source]', ''))
             defs.append(text)
 
         for text in defs:

@@ -1,68 +1,249 @@
-{"code": "torch.is_tensor(obj)[source]\u00b6", "function_name": "is_tensor", "args": ["obj"], "kwargs": []}
-{"code": "torch.is_storage(obj)[source]\u00b6", "function_name": "is_storage", "args": ["obj"], "kwargs": []}
-{"code": "torch.is_floating_point(input) -&gt; (bool)\u00b6", "function_name": "is_floating_point", "args": ["input"], "kwargs": []}
-{"code": "torch.set_default_dtype(d)[source]\u00b6", "function_name": "set_default_dtype", "args": ["d"], "kwargs": []}
-{"code": "torch.get_default_dtype() \u2192 torch.dtype\u00b6", "function_name": "get_default_dtype", "args": [""], "kwargs": []}
-{"code": "torch.set_default_tensor_type(t)[source]\u00b6", "function_name": "set_default_tensor_type", "args": ["t"], "kwargs": []}
-{"code": "torch.numel(input) \u2192 int\u00b6", "function_name": "numel", "args": ["input"], "kwargs": []}
-{"code": "torch.set_printoptions(precision=None, threshold=None, edgeitems=None, linewidth=None, profile=None, sci_mode=None)[source]\u00b6", "function_name": "set_printoptions", "args": [], "kwargs": [["precision", "None"], [" threshold", "None"], [" edgeitems", "None"], [" linewidth", "None"], [" profile", "None"], [" sci_mode", "None"]]}
-{"code": "torch.set_flush_denormal(mode) \u2192 bool\u00b6", "function_name": "set_flush_denormal", "args": ["mode"], "kwargs": []}
-{"code": "torch.tensor(data, dtype=None, device=None, requires_grad=False, pin_memory=False) \u2192 Tensor\u00b6", "function_name": "tensor", "args": ["data"], "kwargs": [[" dtype", "None"], [" device", "None"], [" requires_grad", "False"], [" pin_memory", "False"]]}
-{"code": "torch.sparse_coo_tensor(indices, values, size=None, dtype=None, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "sparse_coo_tensor", "args": ["indices", " values"], "kwargs": [[" size", "None"], [" dtype", "None"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.as_tensor(data, dtype=None, device=None) \u2192 Tensor\u00b6", "function_name": "as_tensor", "args": ["data"], "kwargs": [[" dtype", "None"], [" device", "None"]]}
-{"code": "torch.as_strided(input, size, stride, storage_offset=0) \u2192 Tensor\u00b6", "function_name": "as_strided", "args": ["input", " size", " stride"], "kwargs": [[" storage_offset", "0"]]}
-{"code": "torch.from_numpy(ndarray) \u2192 Tensor\u00b6", "function_name": "from_numpy", "args": ["ndarray"], "kwargs": []}
-{"code": "torch.zeros(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "zeros", "args": ["*size"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.zeros_like(input, dtype=None, layout=None, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "zeros_like", "args": ["input"], "kwargs": [[" dtype", "None"], [" layout", "None"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.ones(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "ones", "args": ["*size"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.ones_like(input, dtype=None, layout=None, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "ones_like", "args": ["input"], "kwargs": [[" dtype", "None"], [" layout", "None"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.arange(start=0, end, step=1, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "arange", "args": [" end"], "kwargs": [["start", "0"], [" step", "1"], [" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.range(start=0, end, step=1, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "range", "args": [" end"], "kwargs": [["start", "0"], [" step", "1"], [" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.linspace(start, end, steps=100, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "linspace", "args": ["start", " end"], "kwargs": [[" steps", "100"], [" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.logspace(start, end, steps=100, base=10.0, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "logspace", "args": ["start", " end"], "kwargs": [[" steps", "100"], [" base", "10.0"], [" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.eye(n, m=None, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "eye", "args": ["n"], "kwargs": [[" m", "None"], [" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.empty(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False, pin_memory=False) \u2192 Tensor\u00b6", "function_name": "empty", "args": ["*size"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"], [" pin_memory", "False"]]}
-{"code": "torch.empty_like(input, dtype=None, layout=None, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "empty_like", "args": ["input"], "kwargs": [[" dtype", "None"], [" layout", "None"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.empty_strided(size, stride, dtype=None, layout=None, device=None, requires_grad=False, pin_memory=False) \u2192 Tensor\u00b6", "function_name": "empty_strided", "args": ["size", " stride"], "kwargs": [[" dtype", "None"], [" layout", "None"], [" device", "None"], [" requires_grad", "False"], [" pin_memory", "False"]]}
-{"code": "torch.full(size, fill_value, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "full", "args": ["size", " fill_value"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.full_like(input, fill_value, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "full_like", "args": ["input", " fill_value"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.quantize_per_tensor(input, scale, zero_point, dtype) \u2192 Tensor\u00b6", "function_name": "quantize_per_tensor", "args": ["input", " scale", " zero_point", " dtype"], "kwargs": []}
-{"code": "torch.quantize_per_channel(input, scales, zero_points, axis, dtype) \u2192 Tensor\u00b6", "function_name": "quantize_per_channel", "args": ["input", " scales", " zero_points", " axis", " dtype"], "kwargs": []}
-{"code": "torch.cat(tensors, dim=0, out=None) \u2192 Tensor\u00b6", "function_name": "cat", "args": ["tensors"], "kwargs": [[" dim", "0"], [" out", "None"]]}
-{"code": "torch.chunk(input, chunks, dim=0) \u2192 List of Tensors\u00b6", "function_name": "chunk", "args": ["input", " chunks"], "kwargs": [[" dim", "0"]]}
-{"code": "torch.gather(input, dim, index, out=None, sparse_grad=False) \u2192 Tensor\u00b6", "function_name": "gather", "args": ["input", " dim", " index"], "kwargs": [[" out", "None"], [" sparse_grad", "False"]]}
-{"code": "torch.index_select(input, dim, index, out=None) \u2192 Tensor\u00b6", "function_name": "index_select", "args": ["input", " dim", " index"], "kwargs": [[" out", "None"]]}
-{"code": "torch.masked_select(input, mask, out=None) \u2192 Tensor\u00b6", "function_name": "masked_select", "args": ["input", " mask"], "kwargs": [[" out", "None"]]}
-{"code": "torch.narrow(input, dim, start, length) \u2192 Tensor\u00b6", "function_name": "narrow", "args": ["input", " dim", " start", " length"], "kwargs": []}
-{"code": "torch.nonzero(input, *, out=None, as_tuple=False) \u2192 LongTensor or tuple of LongTensors\u00b6", "function_name": "nonzero", "args": ["input", " *"], "kwargs": [[" out", "None"], [" as_tuple", "False"]]}
-{"code": "torch.reshape(input, shape) \u2192 Tensor\u00b6", "function_name": "reshape", "args": ["input", " shape"], "kwargs": []}
-{"code": "torch.split(tensor, split_size_or_sections, dim=0)[source]\u00b6", "function_name": "split", "args": ["tensor", " split_size_or_sections"], "kwargs": [[" dim", "0"]]}
-{"code": "torch.squeeze(input, dim=None, out=None) \u2192 Tensor\u00b6", "function_name": "squeeze", "args": ["input"], "kwargs": [[" dim", "None"], [" out", "None"]]}
-{"code": "torch.stack(tensors, dim=0, out=None) \u2192 Tensor\u00b6", "function_name": "stack", "args": ["tensors"], "kwargs": [[" dim", "0"], [" out", "None"]]}
-{"code": "torch.t(input) \u2192 Tensor\u00b6", "function_name": "t", "args": ["input"], "kwargs": []}
-{"code": "torch.take(input, index) \u2192 Tensor\u00b6", "function_name": "take", "args": ["input", " index"], "kwargs": []}
-{"code": "torch.transpose(input, dim0, dim1) \u2192 Tensor\u00b6", "function_name": "transpose", "args": ["input", " dim0", " dim1"], "kwargs": []}
-{"code": "torch.unbind(input, dim=0) \u2192 seq\u00b6", "function_name": "unbind", "args": ["input"], "kwargs": [[" dim", "0"]]}
-{"code": "torch.unsqueeze(input, dim, out=None) \u2192 Tensor\u00b6", "function_name": "unsqueeze", "args": ["input", " dim"], "kwargs": [[" out", "None"]]}
+{"code": "torch.utils.model_zoo.load_url(url,model_dir=None,map_location=None,progress=True,check_hash=False)\u00b6", "function_name": "load_url", "args": ["url"], "kwargs": [["model_dir", "None"], ["map_location", "None"], ["progress", "True"], ["check_hash", "False"]]}
+{"code": "torchvision.get_image_backend()\u00b6", "function_name": "get_image_backend", "args": [""], "kwargs": []}
+{"code": "torchvision.set_image_backend(backend)\u00b6", "function_name": "set_image_backend", "args": ["backend"], "kwargs": []}
+{"code": "torchvision.set_video_backend(backend)\u00b6", "function_name": "set_video_backend", "args": ["backend"], "kwargs": []}
+{"code": "torch.utils.dlpack.from_dlpack(dlpack)\u2192Tensor\u00b6", "function_name": "from_dlpack", "args": ["dlpack"], "kwargs": []}
+{"code": "torch.utils.dlpack.to_dlpack(tensor)\u2192PyCapsule\u00b6", "function_name": "to_dlpack", "args": ["tensor"], "kwargs": []}
+{"code": "torch.utils.data.get_worker_info()\u00b6", "function_name": "get_worker_info", "args": [""], "kwargs": []}
+{"code": "torch.utils.cpp_extension.CppExtension(name,sources,*args,**kwargs)\u00b6", "function_name": "CppExtension", "args": ["name", "sources", "*args", "**kwargs"], "kwargs": []}
+{"code": "torchvision.utils.make_grid(tensor,nrow=8,padding=2,normalize=False,range=None,scale_each=False,pad_value=0)\u00b6", "function_name": "make_grid", "args": ["tensor"], "kwargs": [["nrow", "8"], ["padding", "2"], ["normalize", "False"], ["range", "None"], ["scale_each", "False"], ["pad_value", "0"]]}
+{"code": "torch.utils.checkpoint.checkpoint(function,*args,**kwargs)\u00b6", "function_name": "checkpoint", "args": ["function", "*args", "**kwargs"], "kwargs": []}
+{"code": "torchvision.transforms.functional.adjust_brightness(img,brightness_factor)\u00b6", "function_name": "adjust_brightness", "args": ["img", "brightness_factor"], "kwargs": []}
+{"code": "torchvision.ops.nms(boxes,scores,iou_threshold)\u00b6", "function_name": "nms", "args": ["boxes", "scores", "iou_threshold"], "kwargs": []}
+{"code": "torchvision.models.alexnet(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "alexnet", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torch.utils.data.random_split(dataset,lengths)\u00b6", "function_name": "random_split", "args": ["dataset", "lengths"], "kwargs": []}
+{"code": "torch.utils.cpp_extension.CUDAExtension(name,sources,*args,**kwargs)\u00b6", "function_name": "CUDAExtension", "args": ["name", "sources", "*args", "**kwargs"], "kwargs": []}
+{"code": "torch.utils.cpp_extension.BuildExtension(*args,**kwargs)\u00b6", "function_name": "BuildExtension", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.utils.cpp_extension.load(name,sources,extra_cflags=None,extra_cuda_cflags=None,extra_ldflags=None,extra_include_paths=None,build_directory=None,verbose=False,with_cuda=None,is_python_module=True)\u00b6", "function_name": "load", "args": ["name", "sources"], "kwargs": [["extra_cflags", "None"], ["extra_cuda_cflags", "None"], ["extra_ldflags", "None"], ["extra_include_paths", "None"], ["build_directory", "None"], ["verbose", "False"], ["with_cuda", "None"], ["is_python_module", "True"]]}
+{"code": "torch.utils.cpp_extension.load_inline(name,cpp_sources,cuda_sources=None,functions=None,extra_cflags=None,extra_cuda_cflags=None,extra_ldflags=None,extra_include_paths=None,build_directory=None,verbose=False,with_cuda=None,is_python_module=True,with_pytorch_error_handling=True)\u00b6", "function_name": "load_inline", "args": ["name", "cpp_sources"], "kwargs": [["cuda_sources", "None"], ["functions", "None"], ["extra_cflags", "None"], ["extra_cuda_cflags", "None"], ["extra_ldflags", "None"], ["extra_include_paths", "None"], ["build_directory", "None"], ["verbose", "False"], ["with_cuda", "None"], ["is_python_module", "True"], ["with_pytorch_error_handling", "True"]]}
+{"code": "torch.utils.cpp_extension.include_paths(cuda=False)\u00b6", "function_name": "include_paths", "args": [], "kwargs": [["cuda", "False"]]}
+{"code": "torch.utils.cpp_extension.check_compiler_abi_compatibility(compiler)\u00b6", "function_name": "check_compiler_abi_compatibility", "args": ["compiler"], "kwargs": []}
+{"code": "torch.utils.cpp_extension.verify_ninja_availability()\u00b6", "function_name": "verify_ninja_availability", "args": [""], "kwargs": []}
+{"code": "torchvision.utils.save_image(tensor,fp,nrow=8,padding=2,normalize=False,range=None,scale_each=False,pad_value=0,format=None)\u00b6", "function_name": "save_image", "args": ["tensor", "fp"], "kwargs": [["nrow", "8"], ["padding", "2"], ["normalize", "False"], ["range", "None"], ["scale_each", "False"], ["pad_value", "0"], ["format", "None"]]}
+{"code": "torch.utils.checkpoint.checkpoint_sequential(functions,segments,*inputs,**kwargs)\u00b6", "function_name": "checkpoint_sequential", "args": ["functions", "segments", "*inputs", "**kwargs"], "kwargs": []}
+{"code": "torchvision.transforms.functional.adjust_contrast(img,contrast_factor)\u00b6", "function_name": "adjust_contrast", "args": ["img", "contrast_factor"], "kwargs": []}
+{"code": "torchvision.transforms.functional.adjust_gamma(img,gamma,gain=1)\u00b6", "function_name": "adjust_gamma", "args": ["img", "gamma"], "kwargs": [["gain", "1"]]}
+{"code": "torchvision.transforms.functional.adjust_hue(img,hue_factor)\u00b6", "function_name": "adjust_hue", "args": ["img", "hue_factor"], "kwargs": []}
+{"code": "torchvision.transforms.functional.adjust_saturation(img,saturation_factor)\u00b6", "function_name": "adjust_saturation", "args": ["img", "saturation_factor"], "kwargs": []}
+{"code": "torchvision.models.vgg11(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg11", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg11_bn(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg11_bn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg13(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg13", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg13_bn(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg13_bn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg16(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg16", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg16_bn(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg16_bn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg19(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg19", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.vgg19_bn(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "vgg19_bn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.resnet18(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnet18", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.resnet34(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnet34", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.resnet50(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnet50", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.transforms.functional.affine(img,angle,translate,scale,shear,resample=0,fillcolor=None)\u00b6", "function_name": "affine", "args": ["img", "angle", "translate", "scale", "shear"], "kwargs": [["resample", "0"], ["fillcolor", "None"]]}
+{"code": "torchvision.transforms.functional.center_crop(img,output_size)\u00b6", "function_name": "center_crop", "args": ["img", "output_size"], "kwargs": []}
+{"code": "torchvision.transforms.functional.crop(img,top,left,height,width)\u00b6", "function_name": "crop", "args": ["img", "top", "left", "height", "width"], "kwargs": []}
+{"code": "torch.sparse.addmm(mat,mat1,mat2,beta=1,alpha=1)\u00b6", "function_name": "addmm", "args": ["mat", "mat1", "mat2"], "kwargs": [["beta", "1"], ["alpha", "1"]]}
+{"code": "torch.quantization.quantize(model,run_fn,run_args,mapping=None,inplace=False)\u00b6", "function_name": "quantize", "args": ["model", "run_fn", "run_args"], "kwargs": [["mapping", "None"], ["inplace", "False"]]}
+{"code": "torchvision.models.resnet101(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnet101", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.resnet152(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnet152", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.squeezenet1_0(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "squeezenet1_0", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.squeezenet1_1(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "squeezenet1_1", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.densenet121(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "densenet121", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.densenet169(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "densenet169", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.densenet161(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "densenet161", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.densenet201(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "densenet201", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.inception_v3(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "inception_v3", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.transforms.functional.erase(img,i,j,h,w,v,inplace=False)\u00b6", "function_name": "erase", "args": ["img", "i", "j", "h", "w", "v"], "kwargs": [["inplace", "False"]]}
+{"code": "torchvision.transforms.functional.five_crop(img,size)\u00b6", "function_name": "five_crop", "args": ["img", "size"], "kwargs": []}
+{"code": "torchvision.transforms.functional.hflip(img)\u00b6", "function_name": "hflip", "args": ["img"], "kwargs": []}
+{"code": "torchvision.transforms.functional.normalize(tensor,mean,std,inplace=False)\u00b6", "function_name": "normalize", "args": ["tensor", "mean", "std"], "kwargs": [["inplace", "False"]]}
+{"code": "torch.sparse.mm(mat1,mat2)\u00b6", "function_name": "mm", "args": ["mat1", "mat2"], "kwargs": []}
+{"code": "torch.sparse.sum(input,dim=None,dtype=None)\u00b6", "function_name": "sum", "args": ["input"], "kwargs": [["dim", "None"], ["dtype", "None"]]}
+{"code": "torch.quantization.quantize_dynamic(model,qconfig_spec=None,dtype=torch.qint8,mapping=None,inplace=False)\u00b6", "function_name": "quantize_dynamic", "args": ["model"], "kwargs": [["qconfig_spec", "None"], ["dtype", "torch.qint8"], ["mapping", "None"], ["inplace", "False"]]}
+{"code": "torch.quantization.quantize_qat(model,run_fn,run_args,inplace=False)\u00b6", "function_name": "quantize_qat", "args": ["model", "run_fn", "run_args"], "kwargs": [["inplace", "False"]]}
+{"code": "torch.quantization.prepare(model,qconfig_dict=None,inplace=False)\u00b6", "function_name": "prepare", "args": ["model"], "kwargs": [["qconfig_dict", "None"], ["inplace", "False"]]}
+{"code": "torch.quantization.prepare_qat(model,mapping=None,inplace=False)\u00b6", "function_name": "prepare_qat", "args": ["model"], "kwargs": [["mapping", "None"], ["inplace", "False"]]}
+{"code": "torch.quantization.convert(module,mapping=None,inplace=False)\u00b6", "function_name": "convert", "args": ["module"], "kwargs": [["mapping", "None"], ["inplace", "False"]]}
+{"code": "torchvision.models.googlenet(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "googlenet", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.shufflenet_v2_x0_5(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "shufflenet_v2_x0_5", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.shufflenet_v2_x1_0(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "shufflenet_v2_x1_0", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.shufflenet_v2_x1_5(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "shufflenet_v2_x1_5", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.shufflenet_v2_x2_0(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "shufflenet_v2_x2_0", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.mobilenet_v2(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "mobilenet_v2", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.resnext50_32x4d(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnext50_32x4d", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.resnext101_32x8d(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "resnext101_32x8d", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.wide_resnet50_2(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "wide_resnet50_2", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.wide_resnet101_2(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "wide_resnet101_2", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.mnasnet0_5(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "mnasnet0_5", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.mnasnet0_75(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "mnasnet0_75", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.mnasnet1_0(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "mnasnet1_0", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torch.onnx.export(model,args,f,export_params=True,verbose=False,training=False,input_names=None,output_names=None,aten=False,export_raw_ir=False,operator_export_type=None,opset_version=None,_retain_param_name=True,do_constant_folding=False,example_outputs=None,strip_doc_string=True,dynamic_axes=None,keep_initializers_as_inputs=None)\u00b6", "function_name": "export", "args": ["model", "args", "f"], "kwargs": [["export_params", "True"], ["verbose", "False"], ["training", "False"], ["input_names", "None"], ["output_names", "None"], ["aten", "False"], ["export_raw_ir", "False"], ["operator_export_type", "None"], ["opset_version", "None"], ["_retain_param_name", "True"], ["do_constant_folding", "False"], ["example_outputs", "None"], ["strip_doc_string", "True"], ["dynamic_axes", "None"], ["keep_initializers_as_inputs", "None"]]}
+{"code": "torch.nn.init.calculate_gain(nonlinearity,param=None)\u00b6", "function_name": "calculate_gain", "args": ["nonlinearity"], "kwargs": [["param", "None"]]}
+{"code": "torch.hub.list(github,force_reload=False)\u00b6", "function_name": "list", "args": ["github"], "kwargs": [["force_reload", "False"]]}
+{"code": "torch.autograd.backward(tensors,grad_tensors=None,retain_graph=None,create_graph=False,grad_variables=None)\u00b6", "function_name": "backward", "args": ["tensors"], "kwargs": [["grad_tensors", "None"], ["retain_graph", "None"], ["create_graph", "False"], ["grad_variables", "None"]]}
+{"code": "torchvision.models.mnasnet1_3(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "mnasnet1_3", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torch.onnx.register_custom_op_symbolic(symbolic_name,symbolic_fn,opset_version)\u00b6", "function_name": "register_custom_op_symbolic", "args": ["symbolic_name", "symbolic_fn", "opset_version"], "kwargs": []}
+{"code": "torch.onnx.operators.shape_as_tensor(x)\u00b6", "function_name": "shape_as_tensor", "args": ["x"], "kwargs": []}
+{"code": "torch.onnx.set_training(model,mode)\u00b6", "function_name": "set_training", "args": ["model", "mode"], "kwargs": []}
+{"code": "torch.nn.init.uniform_(tensor,a=0.0,b=1.0)\u00b6", "function_name": "uniform_", "args": ["tensor"], "kwargs": [["a", "0.0"], ["b", "1.0"]]}
+{"code": "torch.nn.init.normal_(tensor,mean=0.0,std=1.0)\u00b6", "function_name": "normal_", "args": ["tensor"], "kwargs": [["mean", "0.0"], ["std", "1.0"]]}
+{"code": "torch.nn.init.constant_(tensor,val)\u00b6", "function_name": "constant_", "args": ["tensor", "val"], "kwargs": []}
+{"code": "torch.nn.init.ones_(tensor)\u00b6", "function_name": "ones_", "args": ["tensor"], "kwargs": []}
+{"code": "torch.nn.init.zeros_(tensor)\u00b6", "function_name": "zeros_", "args": ["tensor"], "kwargs": []}
+{"code": "torch.nn.init.eye_(tensor)\u00b6", "function_name": "eye_", "args": ["tensor"], "kwargs": []}
+{"code": "torch.nn.init.dirac_(tensor)\u00b6", "function_name": "dirac_", "args": ["tensor"], "kwargs": []}
+{"code": "torch.nn.init.xavier_uniform_(tensor,gain=1.0)\u00b6", "function_name": "xavier_uniform_", "args": ["tensor"], "kwargs": [["gain", "1.0"]]}
+{"code": "torch.nn.init.xavier_normal_(tensor,gain=1.0)\u00b6", "function_name": "xavier_normal_", "args": ["tensor"], "kwargs": [["gain", "1.0"]]}
+{"code": "torch.hub.help(github,model,force_reload=False)\u00b6", "function_name": "help", "args": ["github", "model"], "kwargs": [["force_reload", "False"]]}
+{"code": "torch.hub.load(github,model,*args,**kwargs)\u00b6", "function_name": "load", "args": ["github", "model", "*args", "**kwargs"], "kwargs": []}
+{"code": "torch.hub.download_url_to_file(url,dst,hash_prefix=None,progress=True)\u00b6", "function_name": "download_url_to_file", "args": ["url", "dst"], "kwargs": [["hash_prefix", "None"], ["progress", "True"]]}
+{"code": "torch.hub.load_state_dict_from_url(url,model_dir=None,map_location=None,progress=True,check_hash=False)\u00b6", "function_name": "load_state_dict_from_url", "args": ["url"], "kwargs": [["model_dir", "None"], ["map_location", "None"], ["progress", "True"], ["check_hash", "False"]]}
+{"code": "torch.hub.set_dir(d)\u00b6", "function_name": "set_dir", "args": ["d"], "kwargs": []}
+{"code": "torch.autograd.grad(outputs,inputs,grad_outputs=None,retain_graph=None,create_graph=False,only_inputs=True,allow_unused=False)\u00b6", "function_name": "grad", "args": ["outputs", "inputs"], "kwargs": [["grad_outputs", "None"], ["retain_graph", "None"], ["create_graph", "False"], ["only_inputs", "True"], ["allow_unused", "False"]]}
+{"code": "torchvision.models.segmentation.fcn_resnet50(pretrained=False,progress=True,num_classes=21,aux_loss=None,**kwargs)\u00b6", "function_name": "fcn_resnet50", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "21"], ["aux_loss", "None"]]}
+{"code": "torchvision.models.segmentation.fcn_resnet101(pretrained=False,progress=True,num_classes=21,aux_loss=None,**kwargs)\u00b6", "function_name": "fcn_resnet101", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "21"], ["aux_loss", "None"]]}
+{"code": "torchvision.models.segmentation.deeplabv3_resnet50(pretrained=False,progress=True,num_classes=21,aux_loss=None,**kwargs)\u00b6", "function_name": "deeplabv3_resnet50", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "21"], ["aux_loss", "None"]]}
+{"code": "torchvision.models.segmentation.deeplabv3_resnet101(pretrained=False,progress=True,num_classes=21,aux_loss=None,**kwargs)\u00b6", "function_name": "deeplabv3_resnet101", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "21"], ["aux_loss", "None"]]}
+{"code": "torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=False,progress=True,num_classes=91,pretrained_backbone=True,**kwargs)\u00b6", "function_name": "fasterrcnn_resnet50_fpn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "91"], ["pretrained_backbone", "True"]]}
+{"code": "torchvision.models.detection.maskrcnn_resnet50_fpn(pretrained=False,progress=True,num_classes=91,pretrained_backbone=True,**kwargs)\u00b6", "function_name": "maskrcnn_resnet50_fpn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "91"], ["pretrained_backbone", "True"]]}
+{"code": "torchvision.models.detection.keypointrcnn_resnet50_fpn(pretrained=False,progress=True,num_classes=2,num_keypoints=17,pretrained_backbone=True,**kwargs)\u00b6", "function_name": "keypointrcnn_resnet50_fpn", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"], ["num_classes", "2"], ["num_keypoints", "17"], ["pretrained_backbone", "True"]]}
+{"code": "torchvision.models.video.r3d_18(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "r3d_18", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.video.mc3_18(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "mc3_18", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torchvision.models.video.r2plus1d_18(pretrained=False,progress=True,**kwargs)\u00b6", "function_name": "r2plus1d_18", "args": ["**kwargs"], "kwargs": [["pretrained", "False"], ["progress", "True"]]}
+{"code": "torch.jit.script(obj)\u00b6", "function_name": "script", "args": ["obj"], "kwargs": []}
+{"code": "torch.distributions.kl.kl_divergence(p,q)\u00b6", "function_name": "kl_divergence", "args": ["p", "q"], "kwargs": []}
+{"code": "torch.onnx.is_in_onnx_export()\u00b6", "function_name": "is_in_onnx_export", "args": [""], "kwargs": []}
+{"code": "bernoulli_(p=0.5,*,generator=None)\u2192Tensor", "function_name": "bernoulli_", "args": ["*"], "kwargs": [["p", "0.5"], ["generator", "None"]]}
+{"code": "torch.cuda.current_blas_handle()\u00b6", "function_name": "current_blas_handle", "args": [""], "kwargs": []}
+{"code": "torch.distributions.kl.register_kl(type_p,type_q)\u00b6", "function_name": "register_kl", "args": ["type_p", "type_q"], "kwargs": []}
+{"code": "bernoulli_(p_tensor,*,generator=None)\u2192Tensor", "function_name": "bernoulli_", "args": ["p_tensor", "*"], "kwargs": [["generator", "None"]]}
+{"code": "to(dtype,non_blocking=False,copy=False)\u2192Tensor", "function_name": "to", "args": ["dtype"], "kwargs": [["non_blocking", "False"], ["copy", "False"]]}
+{"code": "to(device=None,dtype=None,non_blocking=False,copy=False)\u2192Tensor", "function_name": "to", "args": [], "kwargs": [["device", "None"], ["dtype", "None"], ["non_blocking", "False"], ["copy", "False"]]}
+{"code": "to(other,non_blocking=False,copy=False)\u2192Tensor", "function_name": "to", "args": ["other"], "kwargs": [["non_blocking", "False"], ["copy", "False"]]}
+{"code": "all()\u2192bool", "function_name": "all", "args": [""], "kwargs": []}
+{"code": "all(dim,keepdim=False,out=None)\u2192Tensor", "function_name": "all", "args": ["dim"], "kwargs": [["keepdim", "False"], ["out", "None"]]}
+{"code": "any()\u2192bool", "function_name": "any", "args": [""], "kwargs": []}
+{"code": "any(dim,keepdim=False,out=None)\u2192Tensor", "function_name": "any", "args": ["dim"], "kwargs": [["keepdim", "False"], ["out", "None"]]}
+{"code": "torch.cuda.current_device()\u00b6", "function_name": "current_device", "args": [""], "kwargs": []}
+{"code": "torch.cuda.current_stream(device=None)\u00b6", "function_name": "current_stream", "args": [], "kwargs": [["device", "None"]]}
+{"code": "torch.cuda.default_stream(device=None)\u00b6", "function_name": "default_stream", "args": [], "kwargs": [["device", "None"]]}
+{"code": "torch.nn.functional.conv1d(input,weight,bias=None,stride=1,padding=0,dilation=1,groups=1)\u2192Tensor\u00b6", "function_name": "conv1d", "args": ["input", "weight"], "kwargs": [["bias", "None"], ["stride", "1"], ["padding", "0"], ["dilation", "1"], ["groups", "1"]]}
+{"code": "torch.cuda.device_count()\u00b6", "function_name": "device_count", "args": [""], "kwargs": []}
+{"code": "torch.cuda.get_device_capability(device=None)\u00b6", "function_name": "get_device_capability", "args": [], "kwargs": [["device", "None"]]}
+{"code": "torch.cuda.get_device_name(device=None)\u00b6", "function_name": "get_device_name", "args": [], "kwargs": [["device", "None"]]}
+{"code": "torch.cuda.init()\u00b6", "function_name": "init", "args": [""], "kwargs": []}
+{"code": "torch.cuda.ipc_collect()\u00b6", "function_name": "ipc_collect", "args": [""], "kwargs": []}
+{"code": "torch.cuda.is_available()\u00b6", "function_name": "is_available", "args": [""], "kwargs": []}
+{"code": "torch.cuda.is_initialized()\u00b6", "function_name": "is_initialized", "args": [""], "kwargs": []}
+{"code": "torch.cuda.set_device(device)\u00b6", "function_name": "set_device", "args": ["device"], "kwargs": []}
+{"code": "torch.cuda.stream(stream)\u00b6", "function_name": "stream", "args": ["stream"], "kwargs": []}
+{"code": "torch.cuda.synchronize(device=None)\u00b6", "function_name": "synchronize", "args": [], "kwargs": [["device", "None"]]}
+{"code": "torch.nn.functional.conv2d(input,weight,bias=None,stride=1,padding=0,dilation=1,groups=1)\u2192Tensor\u00b6", "function_name": "conv2d", "args": ["input", "weight"], "kwargs": [["bias", "None"], ["stride", "1"], ["padding", "0"], ["dilation", "1"], ["groups", "1"]]}
+{"code": "torch.nn.functional.conv3d(input,weight,bias=None,stride=1,padding=0,dilation=1,groups=1)\u2192Tensor\u00b6", "function_name": "conv3d", "args": ["input", "weight"], "kwargs": [["bias", "None"], ["stride", "1"], ["padding", "0"], ["dilation", "1"], ["groups", "1"]]}
+{"code": "torch.nn.functional.conv_transpose1d(input,weight,bias=None,stride=1,padding=0,output_padding=0,groups=1,dilation=1)\u2192Tensor\u00b6", "function_name": "conv_transpose1d", "args": ["input", "weight"], "kwargs": [["bias", "None"], ["stride", "1"], ["padding", "0"], ["output_padding", "0"], ["groups", "1"], ["dilation", "1"]]}
+{"code": "torch.nn.functional.conv_transpose2d(input,weight,bias=None,stride=1,padding=0,output_padding=0,groups=1,dilation=1)\u2192Tensor\u00b6", "function_name": "conv_transpose2d", "args": ["input", "weight"], "kwargs": [["bias", "None"], ["stride", "1"], ["padding", "0"], ["output_padding", "0"], ["groups", "1"], ["dilation", "1"]]}
+{"code": "torch.nn.functional.conv_transpose3d(input,weight,bias=None,stride=1,padding=0,output_padding=0,groups=1,dilation=1)\u2192Tensor\u00b6", "function_name": "conv_transpose3d", "args": ["input", "weight"], "kwargs": [["bias", "None"], ["stride", "1"], ["padding", "0"], ["output_padding", "0"], ["groups", "1"], ["dilation", "1"]]}
+{"code": "torch.nn.functional.unfold(input,kernel_size,dilation=1,padding=0,stride=1)\u00b6", "function_name": "unfold", "args": ["input", "kernel_size"], "kwargs": [["dilation", "1"], ["padding", "0"], ["stride", "1"]]}
+{"code": "torch.nn.functional.fold(input,output_size,kernel_size,dilation=1,padding=0,stride=1)\u00b6", "function_name": "fold", "args": ["input", "output_size", "kernel_size"], "kwargs": [["dilation", "1"], ["padding", "0"], ["stride", "1"]]}
+{"code": "torch.nn.functional.avg_pool1d(input,kernel_size,stride=None,padding=0,ceil_mode=False,count_include_pad=True)\u2192Tensor\u00b6", "function_name": "avg_pool1d", "args": ["input", "kernel_size"], "kwargs": [["stride", "None"], ["padding", "0"], ["ceil_mode", "False"], ["count_include_pad", "True"]]}
+{"code": "torch.nn.functional.avg_pool2d(input,kernel_size,stride=None,padding=0,ceil_mode=False,count_include_pad=True,divisor_override=None)\u2192Tensor\u00b6", "function_name": "avg_pool2d", "args": ["input", "kernel_size"], "kwargs": [["stride", "None"], ["padding", "0"], ["ceil_mode", "False"], ["count_include_pad", "True"], ["divisor_override", "None"]]}
+{"code": "torch.nn.functional.avg_pool3d(input,kernel_size,stride=None,padding=0,ceil_mode=False,count_include_pad=True,divisor_override=None)\u2192Tensor\u00b6", "function_name": "avg_pool3d", "args": ["input", "kernel_size"], "kwargs": [["stride", "None"], ["padding", "0"], ["ceil_mode", "False"], ["count_include_pad", "True"], ["divisor_override", "None"]]}
+{"code": "torch.nn.functional.max_pool1d(*args,**kwargs)\u00b6", "function_name": "max_pool1d", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.nn.functional.max_pool2d(*args,**kwargs)\u00b6", "function_name": "max_pool2d", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.nn.functional.max_pool3d(*args,**kwargs)\u00b6", "function_name": "max_pool3d", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.nn.functional.max_unpool1d(input,indices,kernel_size,stride=None,padding=0,output_size=None)\u00b6", "function_name": "max_unpool1d", "args": ["input", "indices", "kernel_size"], "kwargs": [["stride", "None"], ["padding", "0"], ["output_size", "None"]]}
+{"code": "torch.nn.functional.max_unpool2d(input,indices,kernel_size,stride=None,padding=0,output_size=None)\u00b6", "function_name": "max_unpool2d", "args": ["input", "indices", "kernel_size"], "kwargs": [["stride", "None"], ["padding", "0"], ["output_size", "None"]]}
+{"code": "torch.is_tensor(obj)\u00b6", "function_name": "is_tensor", "args": ["obj"], "kwargs": []}
+{"code": "to(device=None,dtype=None,non_blocking=False)", "function_name": "to", "args": [], "kwargs": [["device", "None"], ["dtype", "None"], ["non_blocking", "False"]]}
+{"code": "torch.nn.functional.max_unpool3d(input,indices,kernel_size,stride=None,padding=0,output_size=None)\u00b6", "function_name": "max_unpool3d", "args": ["input", "indices", "kernel_size"], "kwargs": [["stride", "None"], ["padding", "0"], ["output_size", "None"]]}
+{"code": "torch.nn.functional.lp_pool1d(input,norm_type,kernel_size,stride=None,ceil_mode=False)\u00b6", "function_name": "lp_pool1d", "args": ["input", "norm_type", "kernel_size"], "kwargs": [["stride", "None"], ["ceil_mode", "False"]]}
+{"code": "torch.nn.functional.lp_pool2d(input,norm_type,kernel_size,stride=None,ceil_mode=False)\u00b6", "function_name": "lp_pool2d", "args": ["input", "norm_type", "kernel_size"], "kwargs": [["stride", "None"], ["ceil_mode", "False"]]}
+{"code": "torch.nn.functional.adaptive_max_pool1d(*args,**kwargs)\u00b6", "function_name": "adaptive_max_pool1d", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.nn.functional.adaptive_max_pool2d(*args,**kwargs)\u00b6", "function_name": "adaptive_max_pool2d", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.nn.functional.adaptive_max_pool3d(*args,**kwargs)\u00b6", "function_name": "adaptive_max_pool3d", "args": ["*args", "**kwargs"], "kwargs": []}
+{"code": "torch.nn.functional.adaptive_avg_pool1d(input,output_size)\u2192Tensor\u00b6", "function_name": "adaptive_avg_pool1d", "args": ["input", "output_size"], "kwargs": []}
+{"code": "torch.nn.functional.adaptive_avg_pool2d(input,output_size)\u00b6", "function_name": "adaptive_avg_pool2d", "args": ["input", "output_size"], "kwargs": []}
+{"code": "torch.nn.functional.adaptive_avg_pool3d(input,output_size)\u00b6", "function_name": "adaptive_avg_pool3d", "args": ["input", "output_size"], "kwargs": []}
+{"code": "torch.nn.functional.threshold(input,threshold,value,inplace=False)\u00b6", "function_name": "threshold", "args": ["input", "threshold", "value"], "kwargs": [["inplace", "False"]]}
+{"code": "torch.nn.functional.threshold_(input,threshold,value)\u2192Tensor\u00b6", "function_name": "threshold_", "args": ["input", "threshold", "value"], "kwargs": []}
+{"code": "torch.nn.functional.relu(input,inplace=False)\u2192Tensor\u00b6", "function_name": "relu", "args": ["input"], "kwargs": [["inplace", "False"]]}
+{"code": "torch.nn.functional.relu_(input)\u2192Tensor\u00b6", "function_name": "relu_", "args": ["input"], "kwargs": []}
+{"code": "torch.is_storage(obj)\u00b6", "function_name": "is_storage", "args": ["obj"], "kwargs": []}
+{"code": "torch.is_floating_point(input)-&gt;(bool)\u00b6", "function_name": "is_floating_point", "args": ["input"], "kwargs": []}
+{"code": "torch.set_default_dtype(d)\u00b6", "function_name": "set_default_dtype", "args": ["d"], "kwargs": []}
+{"code": "torch.get_default_dtype()\u2192torch.dtype\u00b6", "function_name": "get_default_dtype", "args": [""], "kwargs": []}
+{"code": "torch.set_default_tensor_type(t)\u00b6", "function_name": "set_default_tensor_type", "args": ["t"], "kwargs": []}
+{"code": "torch.numel(input)\u2192int\u00b6", "function_name": "numel", "args": ["input"], "kwargs": []}
+{"code": "torch.set_printoptions(precision=None,threshold=None,edgeitems=None,linewidth=None,profile=None,sci_mode=None)\u00b6", "function_name": "set_printoptions", "args": [], "kwargs": [["precision", "None"], ["threshold", "None"], ["edgeitems", "None"], ["linewidth", "None"], ["profile", "None"], ["sci_mode", "None"]]}
+{"code": "torch.set_flush_denormal(mode)\u2192bool\u00b6", "function_name": "set_flush_denormal", "args": ["mode"], "kwargs": []}
+{"code": "torch.tensor(data,dtype=None,device=None,requires_grad=False,pin_memory=False)\u2192Tensor\u00b6", "function_name": "tensor", "args": ["data"], "kwargs": [["dtype", "None"], ["device", "None"], ["requires_grad", "False"], ["pin_memory", "False"]]}
+{"code": "torch.sparse_coo_tensor(indices,values,size=None,dtype=None,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "sparse_coo_tensor", "args": ["indices", "values"], "kwargs": [["size", "None"], ["dtype", "None"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.as_tensor(data,dtype=None,device=None)\u2192Tensor\u00b6", "function_name": "as_tensor", "args": ["data"], "kwargs": [["dtype", "None"], ["device", "None"]]}
+{"code": "torch.as_strided(input,size,stride,storage_offset=0)\u2192Tensor\u00b6", "function_name": "as_strided", "args": ["input", "size", "stride"], "kwargs": [["storage_offset", "0"]]}
+{"code": "to(dtype,non_blocking=False)", "function_name": "to", "args": ["dtype"], "kwargs": [["non_blocking", "False"]]}
+{"code": "to(tensor,non_blocking=False)", "function_name": "to", "args": ["tensor"], "kwargs": [["non_blocking", "False"]]}
+{"code": "torch.nn.utils.clip_grad_norm_(parameters,max_norm,norm_type=2)\u00b6", "function_name": "clip_grad_norm_", "args": ["parameters", "max_norm"], "kwargs": [["norm_type", "2"]]}
+{"code": "torch.nn.utils.clip_grad_value_(parameters,clip_value)\u00b6", "function_name": "clip_grad_value_", "args": ["parameters", "clip_value"], "kwargs": []}
+{"code": "torch.nn.utils.parameters_to_vector(parameters)\u00b6", "function_name": "parameters_to_vector", "args": ["parameters"], "kwargs": []}
+{"code": "torch.nn.utils.vector_to_parameters(vec,parameters)\u00b6", "function_name": "vector_to_parameters", "args": ["vec", "parameters"], "kwargs": []}
+{"code": "torch.nn.utils.prune.identity(module,name)\u00b6", "function_name": "identity", "args": ["module", "name"], "kwargs": []}
+{"code": "torch.nn.utils.prune.random_unstructured(module,name,amount)\u00b6", "function_name": "random_unstructured", "args": ["module", "name", "amount"], "kwargs": []}
+{"code": "torch.nn.utils.prune.l1_unstructured(module,name,amount)\u00b6", "function_name": "l1_unstructured", "args": ["module", "name", "amount"], "kwargs": []}
+{"code": "torch.nn.utils.prune.random_structured(module,name,amount,dim)\u00b6", "function_name": "random_structured", "args": ["module", "name", "amount", "dim"], "kwargs": []}
+{"code": "torch.nn.utils.prune.ln_structured(module,name,amount,n,dim)\u00b6", "function_name": "ln_structured", "args": ["module", "name", "amount", "n", "dim"], "kwargs": []}
+{"code": "torch.nn.utils.prune.global_unstructured(parameters,pruning_method,**kwargs)\u00b6", "function_name": "global_unstructured", "args": ["parameters", "pruning_method", "**kwargs"], "kwargs": []}
+{"code": "torch.from_numpy(ndarray)\u2192Tensor\u00b6", "function_name": "from_numpy", "args": ["ndarray"], "kwargs": []}
+{"code": "torch.zeros(*size,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "zeros", "args": ["*size"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.zeros_like(input,dtype=None,layout=None,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "zeros_like", "args": ["input"], "kwargs": [["dtype", "None"], ["layout", "None"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.ones(*size,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "ones", "args": ["*size"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.ones_like(input,dtype=None,layout=None,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "ones_like", "args": ["input"], "kwargs": [["dtype", "None"], ["layout", "None"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.arange(start=0,end,step=1,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "arange", "args": ["end"], "kwargs": [["start", "0"], ["step", "1"], ["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.range(start=0,end,step=1,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "range", "args": ["end"], "kwargs": [["start", "0"], ["step", "1"], ["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.linspace(start,end,steps=100,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "linspace", "args": ["start", "end"], "kwargs": [["steps", "100"], ["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.logspace(start,end,steps=100,base=10.0,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "logspace", "args": ["start", "end"], "kwargs": [["steps", "100"], ["base", "10.0"], ["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.eye(n,m=None,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "eye", "args": ["n"], "kwargs": [["m", "None"], ["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.empty(*size,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False,pin_memory=False)\u2192Tensor\u00b6", "function_name": "empty", "args": ["*size"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"], ["pin_memory", "False"]]}
+{"code": "torch.empty_like(input,dtype=None,layout=None,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "empty_like", "args": ["input"], "kwargs": [["dtype", "None"], ["layout", "None"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.empty_strided(size,stride,dtype=None,layout=None,device=None,requires_grad=False,pin_memory=False)\u2192Tensor\u00b6", "function_name": "empty_strided", "args": ["size", "stride"], "kwargs": [["dtype", "None"], ["layout", "None"], ["device", "None"], ["requires_grad", "False"], ["pin_memory", "False"]]}
+{"code": "torch.nn.utils.prune.custom_from_mask(module,name,mask)\u00b6", "function_name": "custom_from_mask", "args": ["module", "name", "mask"], "kwargs": []}
+{"code": "torch.nn.utils.prune.remove(module,name)\u00b6", "function_name": "remove", "args": ["module", "name"], "kwargs": []}
+{"code": "torch.nn.utils.prune.is_pruned(module)\u00b6", "function_name": "is_pruned", "args": ["module"], "kwargs": []}
+{"code": "torch.full(size,fill_value,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "full", "args": ["size", "fill_value"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.full_like(input,fill_value,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "full_like", "args": ["input", "fill_value"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.quantize_per_tensor(input,scale,zero_point,dtype)\u2192Tensor\u00b6", "function_name": "quantize_per_tensor", "args": ["input", "scale", "zero_point", "dtype"], "kwargs": []}
+{"code": "torch.quantize_per_channel(input,scales,zero_points,axis,dtype)\u2192Tensor\u00b6", "function_name": "quantize_per_channel", "args": ["input", "scales", "zero_points", "axis", "dtype"], "kwargs": []}
+{"code": "torch.cat(tensors,dim=0,out=None)\u2192Tensor\u00b6", "function_name": "cat", "args": ["tensors"], "kwargs": [["dim", "0"], ["out", "None"]]}
+{"code": "torch.chunk(input,chunks,dim=0)\u2192ListofTensors\u00b6", "function_name": "chunk", "args": ["input", "chunks"], "kwargs": [["dim", "0"]]}
+{"code": "torch.gather(input,dim,index,out=None,sparse_grad=False)\u2192Tensor\u00b6", "function_name": "gather", "args": ["input", "dim", "index"], "kwargs": [["out", "None"], ["sparse_grad", "False"]]}
+{"code": "torch.index_select(input,dim,index,out=None)\u2192Tensor\u00b6", "function_name": "index_select", "args": ["input", "dim", "index"], "kwargs": [["out", "None"]]}
+{"code": "torch.masked_select(input,mask,out=None)\u2192Tensor\u00b6", "function_name": "masked_select", "args": ["input", "mask"], "kwargs": [["out", "None"]]}
+{"code": "torch.narrow(input,dim,start,length)\u2192Tensor\u00b6", "function_name": "narrow", "args": ["input", "dim", "start", "length"], "kwargs": []}
+{"code": "torch.nonzero(input,*,out=None,as_tuple=False)\u2192LongTensorortupleofLongTensors\u00b6", "function_name": "nonzero", "args": ["input", "*"], "kwargs": [["out", "None"], ["as_tuple", "False"]]}
+{"code": "torch.reshape(input,shape)\u2192Tensor\u00b6", "function_name": "reshape", "args": ["input", "shape"], "kwargs": []}
+{"code": "torch.split(tensor,split_size_or_sections,dim=0)\u00b6", "function_name": "split", "args": ["tensor", "split_size_or_sections"], "kwargs": [["dim", "0"]]}
+{"code": "torch.squeeze(input,dim=None,out=None)\u2192Tensor\u00b6", "function_name": "squeeze", "args": ["input"], "kwargs": [["dim", "None"], ["out", "None"]]}
+{"code": "torch.stack(tensors,dim=0,out=None)\u2192Tensor\u00b6", "function_name": "stack", "args": ["tensors"], "kwargs": [["dim", "0"], ["out", "None"]]}
+{"code": "torch.t(input)\u2192Tensor\u00b6", "function_name": "t", "args": ["input"], "kwargs": []}
+{"code": "torch.take(input,index)\u2192Tensor\u00b6", "function_name": "take", "args": ["input", "index"], "kwargs": []}
+{"code": "torch.transpose(input,dim0,dim1)\u2192Tensor\u00b6", "function_name": "transpose", "args": ["input", "dim0", "dim1"], "kwargs": []}
+{"code": "torch.unbind(input,dim=0)\u2192seq\u00b6", "function_name": "unbind", "args": ["input"], "kwargs": [["dim", "0"]]}
+{"code": "torch.unsqueeze(input,dim,out=None)\u2192Tensor\u00b6", "function_name": "unsqueeze", "args": ["input", "dim"], "kwargs": [["out", "None"]]}
 {"code": "torch.where()\u00b6", "function_name": "where", "args": [""], "kwargs": []}
-{"code": "torch.where(condition, x, y) \u2192 Tensor", "function_name": "where", "args": ["condition", " x", " y"], "kwargs": []}
-{"code": "torch.where(condition) \u2192 tuple of LongTensor", "function_name": "where", "args": ["condition"], "kwargs": []}
-{"code": "torch.seed()[source]\u00b6", "function_name": "seed", "args": [""], "kwargs": []}
-{"code": "torch.manual_seed(seed)[source]\u00b6", "function_name": "manual_seed", "args": ["seed"], "kwargs": []}
-{"code": "torch.initial_seed()[source]\u00b6", "function_name": "initial_seed", "args": [""], "kwargs": []}
-{"code": "torch.get_rng_state()[source]\u00b6", "function_name": "get_rng_state", "args": [""], "kwargs": []}
-{"code": "torch.set_rng_state(new_state)[source]\u00b6", "function_name": "set_rng_state", "args": ["new_state"], "kwargs": []}
-{"code": "torch.bernoulli(input, *, generator=None, out=None) \u2192 Tensor\u00b6", "function_name": "bernoulli", "args": ["input", " *"], "kwargs": [[" generator", "None"], [" out", "None"]]}
-{"code": "torch.multinomial(input, num_samples, replacement=False, *, generator=None, out=None) \u2192 LongTensor\u00b6", "function_name": "multinomial", "args": ["input", " num_samples", " *"], "kwargs": [[" replacement", "False"], [" generator", "None"], [" out", "None"]]}
+{"code": "torch.where(condition,x,y)\u2192Tensor", "function_name": "where", "args": ["condition", "x", "y"], "kwargs": []}
+{"code": "torch.where(condition)\u2192tupleofLongTensor", "function_name": "where", "args": ["condition"], "kwargs": []}
+{"code": "torch.seed()\u00b6", "function_name": "seed", "args": [""], "kwargs": []}
+{"code": "torch.manual_seed(seed)\u00b6", "function_name": "manual_seed", "args": ["seed"], "kwargs": []}
+{"code": "torch.initial_seed()\u00b6", "function_name": "initial_seed", "args": [""], "kwargs": []}
+{"code": "torch.get_rng_state()\u00b6", "function_name": "get_rng_state", "args": [""], "kwargs": []}
+{"code": "torch.set_rng_state(new_state)\u00b6", "function_name": "set_rng_state", "args": ["new_state"], "kwargs": []}
+{"code": "torch.bernoulli(input,*,generator=None,out=None)\u2192Tensor\u00b6", "function_name": "bernoulli", "args": ["input", "*"], "kwargs": [["generator", "None"], ["out", "None"]]}
+{"code": "torch.multinomial(input,num_samples,replacement=False,*,generator=None,out=None)\u2192LongTensor\u00b6", "function_name": "multinomial", "args": ["input", "num_samples", "*"], "kwargs": [["replacement", "False"], ["generator", "None"], ["out", "None"]]}
 {"code": "torch.normal()\u00b6", "function_name": "normal", "args": [""], "kwargs": []}
-{"code": "torch.normal(mean, std, *, generator=None, out=None) \u2192 Tensor", "function_name": "normal", "args": ["mean", " std", " *"], "kwargs": [[" generator", "None"], [" out", "None"]]}
-{"code": "torch.normal(mean=0.0, std, out=None) \u2192 Tensor", "function_name": "normal", "args": [" std"], "kwargs": [["mean", "0.0"], [" out", "None"]]}
-{"code": "torch.normal(mean, std=1.0, out=None) \u2192 Tensor", "function_name": "normal", "args": ["mean"], "kwargs": [[" std", "1.0"], [" out", "None"]]}
-{"code": "torch.normal(mean, std, size, *, out=None) \u2192 Tensor", "function_name": "normal", "args": ["mean", " std", " size", " *"], "kwargs": [[" out", "None"]]}
-{"code": "torch.rand(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "rand", "args": ["*size"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.rand_like(input, dtype=None, layout=None, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "rand_like", "args": ["input"], "kwargs": [[" dtype", "None"], [" layout", "None"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.randint(low=0, high, size, *, generator=None, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "randint", "args": [" high", " size", " *"], "kwargs": [["low", "0"], [" generator", "None"], [" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.randint_like(input, low=0, high, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "randint_like", "args": ["input", " high"], "kwargs": [[" low", "0"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.randn(*size, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "randn", "args": ["*size"], "kwargs": [[" out", "None"], [" dtype", "None"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.randn_like(input, dtype=None, layout=None, device=None, requires_grad=False) \u2192 Tensor\u00b6", "function_name": "randn_like", "args": ["input"], "kwargs": [[" dtype", "None"], [" layout", "None"], [" device", "None"], [" requires_grad", "False"]]}
-{"code": "torch.randperm(n, out=None, dtype=torch.int64, layout=torch.strided, device=None, requires_grad=False) \u2192 LongTensor\u00b6", "function_name": "randperm", "args": ["n"], "kwargs": [[" out", "None"], [" dtype", "torch.int64"], [" layout", "torch.strided"], [" device", "None"], [" requires_grad", "False"]]}
+{"code": "torch.normal(mean,std,*,generator=None,out=None)\u2192Tensor", "function_name": "normal", "args": ["mean", "std", "*"], "kwargs": [["generator", "None"], ["out", "None"]]}
+{"code": "torch.normal(mean=0.0,std,out=None)\u2192Tensor", "function_name": "normal", "args": ["std"], "kwargs": [["mean", "0.0"], ["out", "None"]]}
+{"code": "torch.normal(mean,std=1.0,out=None)\u2192Tensor", "function_name": "normal", "args": ["mean"], "kwargs": [["std", "1.0"], ["out", "None"]]}
+{"code": "torch.normal(mean,std,size,*,out=None)\u2192Tensor", "function_name": "normal", "args": ["mean", "std", "size", "*"], "kwargs": [["out", "None"]]}
+{"code": "torch.rand(*size,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "rand", "args": ["*size"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.rand_like(input,dtype=None,layout=None,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "rand_like", "args": ["input"], "kwargs": [["dtype", "None"], ["layout", "None"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.randint(low=0,high,size,*,generator=None,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "randint", "args": ["high", "size", "*"], "kwargs": [["low", "0"], ["generator", "None"], ["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.randint_like(input,low=0,high,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "randint_like", "args": ["input", "high"], "kwargs": [["low", "0"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.randn(*size,out=None,dtype=None,layout=torch.strided,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "randn", "args": ["*size"], "kwargs": [["out", "None"], ["dtype", "None"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.randn_like(input,dtype=None,layout=None,device=None,requires_grad=False)\u2192Tensor\u00b6", "function_name": "randn_like", "args": ["input"], "kwargs": [["dtype", "None"], ["layout", "None"], ["device", "None"], ["requires_grad", "False"]]}
+{"code": "torch.randperm(n,out=None,dtype=torch.int64,layout=torch.strided,device=None,requires_grad=False)\u2192LongTensor\u00b6", "function_name": "randperm", "args": ["n"], "kwargs": [["out", "None"], ["dtype", "torch.int64"], ["layout", "torch.strided"], ["device", "None"], ["requires_grad", "False"]]}
