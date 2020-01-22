@@ -17,7 +17,6 @@ A multi-language library for translating commands between PyTorch, TensorFlow, a
   - [Table of Contents](#table-of-contents)
   - [Install](#install)
   - [Usage](#usage)
-  - [Contributors](#contributors)
   - [License](#license)
 
 
@@ -29,12 +28,6 @@ A multi-language library for translating commands between PyTorch, TensorFlow, a
 npm install threepio
 ```
 
-[yarn][]:
-
-```sh
-yarn add threepio
-```
-
 
 ## Usage
 
@@ -42,18 +35,7 @@ yarn add threepio
 const Threepio = require('threepio');
 
 const threepio = new Threepio();
-
-console.log(threepio.renderName());
-// script
 ```
-
-
-## Contributors
-
-| Name           | Website                 |
-| -------------- | ----------------------- |
-| **Mike Nolan** | <https://nolski.rocks/> |
-
 
 ## License
 

@@ -1,21 +1,20 @@
 {
-  "name": "threepio",
+  "name": "@openmined/threepio",
   "description": "my mind-blowing project",
   "version": "0.0.0",
-  "author": "Mike Nolan <me@michael-nolan.com> (https://nolski.rocks/)",
+  "author": "OpenMined",
+  "browser": "dist/index.js",
   "bugs": {
-    "url": "https://github.com/OpenMined/threepio/issues",
-    "email": "me@michael-nolan.com"
+    "url": "https://github.com/OpenMined/threepio/issues"
   },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
     ]
   },
-  "contributors": [
-    "Mike Nolan <me@michael-nolan.com> (https://nolski.rocks/)"
-  ],
-  "dependencies": {},
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.5.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
@@ -30,6 +29,14 @@
     "nyc": "latest",
     "remark-cli": "latest",
     "remark-preset-github": "latest",
+    "rollup": "^1.27.14",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^6.2.1",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
     "xo": "latest"
   },
   "engines": {
@@ -46,7 +53,7 @@
     "lass",
     "threepio"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "lint-staged": {
     "*.js": [
       "xo --fix",
@@ -58,6 +65,7 @@
     ]
   },
   "main": "index.js",
+  "module": "dist/index.esm.js",
   "nyc": {
     "check-coverage": true,
     "lines": 80,
@@ -96,6 +104,9 @@
     "space": true,
     "extends": [
       "xo-lass"
-    ]
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    }
   }
 }
