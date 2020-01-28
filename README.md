@@ -25,7 +25,7 @@ A multi-language library for translating commands between PyTorch, TensorFlow, a
 [npm][]:
 
 ```sh
-npm install threepio
+npm install --save threepio
 ```
 
 
