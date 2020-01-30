@@ -16,6 +16,7 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@joseph184/rollup-plugin-node-builtins": "^2.1.4",
     "ava": "latest",
     "codecov": "latest",
     "cross-env": "latest",
@@ -32,7 +33,6 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-filesize": "^6.2.1",
     "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "xo": "latest"
