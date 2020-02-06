@@ -1,3 +1,4 @@
+import os
 # -*- coding: utf-8 -*-
 
 # Scrapy settings for docs project
@@ -64,11 +65,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    'docs.pipelines.OutputPipeline': 3000,
-}
-
+FEED_URI = f'file://{os.getcwd()}/output/%(name)s/%(version)s.json'
 FEED_FORMAT = 'json'
+FEED_EXPORTERS = {'json': 'scrapy.exporters.JsonItemExporter'}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
