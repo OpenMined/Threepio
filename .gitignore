@@ -54,3 +54,6 @@ venv.bak/
 node_modules
 coverage
 .nyc_output
+
+# Editor
+*.code-workspace

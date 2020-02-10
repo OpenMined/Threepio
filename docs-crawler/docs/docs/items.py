@@ -8,12 +8,6 @@
 import scrapy
 
 
-class DocsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
-
-
 class ApiItem(scrapy.Item):
     code = scrapy.Field()
     function_name = scrapy.Field()
