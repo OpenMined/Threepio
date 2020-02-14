@@ -19,6 +19,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@joseph184/rollup-plugin-node-builtins": "^2.1.4",
+    "@tensorflow/tfjs": "^1.2.5",
     "babel-jest": "^24.9.0",
     "codecov": "latest",
     "cross-env": "latest",
@@ -88,7 +89,7 @@
     ]
   },
   "peerDependencies": {
-    "@tensorflow/tfjs": "^1.5.1"
+    "@tensorflow/tfjs": "^1.2.5"
   },
   "prettier": {
     "singleQuote": true,
