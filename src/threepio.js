@@ -18,6 +18,22 @@ export default class Threepio {
       .toLowerCase();
   }
 
+  matchArgs(args, argMap) {
+    // Sort args by index
+    argMap.args.sort((a, b) =>
+      a.index === b.index ? 0 : a.index < b.index ? -1 : 1
+    );
+    for (const [i, arg] of args.entries()) {
+      // TODO: match args based on fromLibrary name
+      // TODO: Ensure order is preserved
+      // TODO: Ensure there are not any missing required arguments
+      console.log(i, arg);
+      continue;
+    }
+
+    return args;
+  }
+
   translate(func) {
     if (
       !('code' in func) ||
