@@ -34,7 +34,7 @@ class TorchSpider(CrawlSpider):
         for text in defs:
             split = self.split_def.match(text)
             if split is None:
-                return
+                continue
             
             function_name = split.groups()[0].split('.')[-1]
             params = split.groups()[1].split(',')
