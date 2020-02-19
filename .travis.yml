@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - '12'
 before_install:
-  cd threepio.js/
+  cd js/
 script:
   npm run test-coverage
 after_success:
