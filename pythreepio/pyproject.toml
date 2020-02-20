@@ -8,6 +8,7 @@ authors = ["OpenMined"]
 python = "^3.7"
 numpy = "^1.18"
 torch = "^1.4"
+tensorflow = "^2.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"

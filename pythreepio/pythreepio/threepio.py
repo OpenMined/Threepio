@@ -1,5 +1,6 @@
 import re
 import torch
+import tensorflow as tf
 
 from .utils import get_mapped_commands, Command
 
@@ -18,7 +19,7 @@ class Threepio(object):
         while len(t['attrs']) > 0:
             translated_cmd = getattr(translated_cmd, t['attrs'].pop(0))
         
-        translated_cmd(*cmd.args, **cmd.kwargs)
+        return translated_cmd(*cmd.args, **cmd.kwargs)
 
 
 if __name__ == '__main__':
