@@ -21,25 +21,29 @@ class Compiler(object):
         alpha = re.compile('[^a-zA-Z]')
         return alpha.sub('', name).lower()
 
+    def generate_attrs(self, code):
+        split_def = re.compile('^([\w\.]+)\((.*)\)')
+        try:
+            r = split_def.match(code)[1].split('.')
+        except Exception as e:
+            print(e)
+            import ipdb; ipdb.set_trace()
+            print('aaa')
+        return r
+
+    def populate_command(self, lib):
+        for f in getattr(self, lib):
+            nfunc = self.normalize_func_name(f['function_name'])
+            f['attrs'] = self.generate_attrs(f['code'])
+            f['args'] = self.hydrate_args(f['args'], f['kwargs'])
+            del f['kwargs']
+            self.main_map[lib][nfunc] = f
+            self.base_defs.add(nfunc)
+
     def load_base_defs(self):
-        for f in self.tf:
-            nfunc = self.normalize_func_name(f['function_name'])
-            f['args'] = self.hydrate_args(f['args'], f['kwargs'])
-            del f['kwargs']
-            self.main_map['tf'][nfunc] = f
-            self.base_defs.add(nfunc)
-        for f in self.tfjs:
-            nfunc = self.normalize_func_name(f['function_name'])
-            f['args'] = self.hydrate_args(f['args'], f['kwargs'])
-            del f['kwargs']
-            self.main_map['tfjs'][nfunc] = f
-            self.base_defs.add(nfunc)
-        for f in self.torch:
-            nfunc = self.normalize_func_name(f['function_name'])
-            f['args'] = self.hydrate_args(f['args'], f['kwargs'])
-            del f['kwargs']
-            self.main_map['torch'][nfunc] = f
-            self.base_defs.add(nfunc)
+        self.populate_command('tf')
+        self.populate_command('tfjs')
+        self.populate_command('torch')
     
     def hydrate_args(self, base_args, base_kwargs):
         ba = [{
@@ -89,7 +93,7 @@ class Compiler(object):
                 self.main_map[from_lang][d]['args'] = self.match_arg_names(base_args, match_args, to_lang)
 
     def output_data(self):
-        with open('output.json', 'w', encoding='utf8') as f:
+        with open('../../static/mapped_commands.json', 'w', encoding='utf8') as f:
             json.dump(self.main_map, f, indent=4, ensure_ascii=False)
 
 def main():
