@@ -32,7 +32,7 @@ class TfjsSpider(scrapy.Spider):
             split = self.split_def.match(text)
             if split is None:
                 return
-            
+
             function_name = split.groups()[0].split('.')[-1]
             params = split.groups()[1].split(',')
             args = [p for p in params if '=' not in p]

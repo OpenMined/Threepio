@@ -6,6 +6,7 @@ class DocsPipeline(object):
     def process_item(self, item, spider):
         return item
 
+
 class OutputPipeline(object):
 
     def open_spider(self, spider):

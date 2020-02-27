@@ -15,11 +15,11 @@ class TorchSpider(CrawlSpider):
 
     rules = (
         Rule(LinkExtractor(
-                allow=(re.compile('.+\.html')),
-                restrict_css='.toctree-l1'), 
+            allow=(re.compile('.+\.html')),
+            restrict_css='.toctree-l1'),
             callback='parse_api',),
     )
-    
+
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
@@ -35,7 +35,7 @@ class TorchSpider(CrawlSpider):
             split = self.split_def.match(text)
             if split is None:
                 continue
-            
+
             function_name = split.groups()[0].split('.')[-1]
             params = split.groups()[1].split(',')
             args = [p for p in params if '=' not in p]
