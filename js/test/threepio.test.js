@@ -1,5 +1,5 @@
 import Threepio from '../src/threepio';
-import { add } from './scaffolding/pytorch';
+import { add } from './fixtures/pytorch';
 const { test, describe, expect } = global; // import jest from global
 
 describe('Threepio', () => {
