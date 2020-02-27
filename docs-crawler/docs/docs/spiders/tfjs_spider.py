@@ -7,7 +7,7 @@ from w3lib.html import remove_tags
 class TfjsSpider(scrapy.Spider):
     name = "tfjs"
     version = "1.5.1"
-    split_def = re.compile('^([\w\.]+)\((.*)\)$')
+    split_def = re.compile(r'^([\w\.]+)\((.*)\)$')
 
     def start_requests(self):
         urls = [

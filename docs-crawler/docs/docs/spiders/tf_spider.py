@@ -1,5 +1,4 @@
 import re
-import scrapy
 from docs.items import ApiItem
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.linkextractors import LinkExtractor
@@ -13,11 +12,11 @@ class TfSpider(CrawlSpider):
     start_urls = [
         f'https://www.tensorflow.org/versions/r{version}/api_docs/python/tf'
     ]
-    split_def = re.compile('^([\w\.]+)\((.*)\)$')
+    split_def = re.compile(r'^([\w\.]+)\((.*)\)$')
 
     rules = (
         Rule(LinkExtractor(
-            allow=(re.compile('.+api_docs\/python\/tf')),
+            allow=(re.compile(r'.+api_docs\/python\/tf')),
             restrict_css='.devsite-nav-title'),
             callback='parse_api',),
     )

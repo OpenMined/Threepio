@@ -22,7 +22,7 @@ class Compiler(object):
         return alpha.sub('', name).lower()
 
     def generate_attrs(self, code):
-        split_def = re.compile('^([\w\.]+)\((.*)\)')
+        split_def = re.compile(r'^([\w\.]+)\((.*)\)')
         return split_def.match(code)[1].split('.')
 
     def populate_command(self, lib):
@@ -64,7 +64,7 @@ class Compiler(object):
                     m for m in match if m.get('name') == base_arg.get('name')
                 )
                 base_arg[to_lang] = match_arg.get('name', None)
-            except:
+            except Exception:
                 # TODO: check for alternate word level translations
                 base_arg[to_lang] = None
         return base

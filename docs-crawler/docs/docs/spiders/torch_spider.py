@@ -1,5 +1,4 @@
 import re
-import scrapy
 from docs.items import ApiItem
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.linkextractors import LinkExtractor
@@ -11,11 +10,11 @@ class TorchSpider(CrawlSpider):
     version = "1.4.0"
     allowed_domains = ['pytorch.org']
     start_urls = [f'https://pytorch.org/docs/{version}/index.html']
-    split_def = re.compile('^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
+    split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     rules = (
         Rule(LinkExtractor(
-            allow=(re.compile('.+\.html')),
+            allow=(re.compile(r'.+\.html')),
             restrict_css='.toctree-l1'),
             callback='parse_api',),
     )
