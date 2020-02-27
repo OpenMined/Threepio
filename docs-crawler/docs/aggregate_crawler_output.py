@@ -93,8 +93,18 @@ class Compiler(object):
                 self.main_map[from_lang][d]['args'] = self.match_arg_names(base_args, match_args, to_lang)
 
     def output_data(self):
+<<<<<<< HEAD
         with open('../../static/mapped_commands.json', 'w', encoding='utf8') as f:
             json.dump(self.main_map, f, indent=4, ensure_ascii=False)
+=======
+        with open('./output/tf/2.1.json', 'w', encoding='utf8') as tf_file, \
+            open('./output/tfjs/1.5.1.json', 'w', encoding='utf8') as tfjs_file, \
+            open('./output/torch/1.4.0.json', 'w', encoding='utf8') as torch_file:
+            json.dump(self.main_map['tf'], tf_file, indent=4, ensure_ascii=False)
+            json.dump(self.main_map['tfjs'], tfjs_file, indent=4, ensure_ascii=False)
+            json.dump(self.main_map['torch'], torch_file, indent=4, ensure_ascii=False)
+
+>>>>>>> 4f1c331... fix: remove merged conflict
 
 def main():
     c = Compiler()

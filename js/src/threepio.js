@@ -1,13 +1,12 @@
 import * as tf from '@tensorflow/tfjs';
-import tfMap from '../docs-crawler/docs/output/tfjs/1.5.1.json';
-import { MISSING_ARGUMENTS } from './_errors';
+import mappedCommands from '../../static/mapped_commands.json';
 import { NORMALIZATION_REGEX } from './_constants';
 
 export default class Threepio {
   constructor(from, version) {
     this.form = from;
     this.version = version;
-    this.tfMap = tfMap;
+    this.mappedCommands = mappedCommands;
     this.tf = tf;
   }
 
@@ -34,19 +33,16 @@ export default class Threepio {
     return args;
   }
 
-  translate(func) {
-    if (
-      !('code' in func) ||
-      !('function_name' in func) ||
-      !('args' in func) ||
-      !('kwargs' in func)
-    ) {
-      throw new Error(MISSING_ARGUMENTS);
+  translate(toLang, cmd) {
+    const cmdInfo = this.mappedCommands[toLang][
+      this.normalizeFunctionName(cmd.functionName)
+    ];
+
+    let translatedCmd = this[cmdInfo.attrs.shift()];
+    while (cmdInfo.attrs.length > 0) {
+      translatedCmd = translatedCmd[cmdInfo.attrs.shift()];
     }
 
-    const command = this.tfMap[this.normalizeFunctionName(func.function_name)];
-    if (command) {
-      tf[command.function_name](...func.args);
-    }
+    translatedCmd(...cmd.args);
   }
 }
