@@ -18,7 +18,7 @@ class Compiler(object):
             self.torch = json.load(torch_file)
 
     def normalize_func_name(self, name):
-        alpha = re.compile('[^a-zA-Z]')
+        alpha = re.compile('[a-zA-Z]')
         return alpha.sub('', name).lower()
 
     def generate_attrs(self, code):

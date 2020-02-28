@@ -14,16 +14,20 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@joseph184/rollup-plugin-node-builtins": "^2.1.4",
-    "ava": "latest",
+    "@tensorflow/tfjs": "^1.2.5",
+    "babel-jest": "^24.9.0",
     "codecov": "latest",
     "cross-env": "latest",
     "eslint": "latest",
     "eslint-config-xo-lass": "latest",
     "fixpack": "latest",
     "husky": "latest",
+    "jest": "^24.9.0",
     "lint-staged": "latest",
     "nyc": "latest",
     "remark-cli": "latest",
@@ -45,6 +49,15 @@
     "hooks": {
       "pre-commit": "lint-staged && npm test",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "**/src/**/*.js"
+    ],
+    "globals": {
+      "window": {}
     }
   },
   "keywords": [
@@ -76,7 +89,7 @@
     ]
   },
   "peerDependencies": {
-    "@tensorflow/tfjs": "^1.5.1"
+    "@tensorflow/tfjs": "^1.2.5"
   },
   "prettier": {
     "singleQuote": true,
@@ -95,11 +108,13 @@
   "scripts": {
     "ava": "cross-env NODE_ENV=test ava",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "jest": "jest --coverage",
     "lint": "xo",
-    "nyc": "cross-env NODE_ENV=test nyc ava",
-    "test": "npm run lint && npm run ava",
+    "nyc": "cross-env NODE_ENV=test nyc jest",
+    "test": "npm run lint && jest",
     "test-coverage": "npm run lint && npm run nyc"
   },
+  "type": "module",
   "xo": {
     "prettier": true,
     "space": true,
