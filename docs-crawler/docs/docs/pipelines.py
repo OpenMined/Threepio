@@ -1,10 +1,10 @@
 import os
-import json
 
 
 class DocsPipeline(object):
     def process_item(self, item, spider):
         return item
+
 
 class OutputPipeline(object):
 

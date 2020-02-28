@@ -1,5 +1,4 @@
 import re
-import scrapy
 from docs.items import ApiItem
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.linkextractors import LinkExtractor
@@ -10,13 +9,15 @@ class TfSpider(CrawlSpider):
     name = "tf"
     version = "2.1"
     allowed_domains = ['tensorflow.org']
-    start_urls = [f'https://www.tensorflow.org/versions/r{version}/api_docs/python/tf']
-    split_def = re.compile('^([\w\.]+)\((.*)\)$')
+    start_urls = [
+        f'https://www.tensorflow.org/versions/r{version}/api_docs/python/tf'
+    ]
+    split_def = re.compile(r'^([\w\.]+)\((.*)\)$')
 
     rules = (
         Rule(LinkExtractor(
-                allow=(re.compile('.+api_docs\/python\/tf')),
-                restrict_css='.devsite-nav-title'), 
+            allow=(re.compile(r'.+api_docs\/python\/tf')),
+            restrict_css='.devsite-nav-title'),
             callback='parse_api',),
     )
 
@@ -33,7 +34,7 @@ class TfSpider(CrawlSpider):
         split = self.split_def.match(text)
         if split is None:
             return
-        
+
         function_name = split.groups()[0].split('.')[-1]
         params = split.groups()[1].split(',')
         args = [p for p in params if '=' not in p]
@@ -41,7 +42,6 @@ class TfSpider(CrawlSpider):
 
         if '__' in text or 'compat' in text:
             return
-
 
         item['code'] = text
         item['function_name'] = function_name

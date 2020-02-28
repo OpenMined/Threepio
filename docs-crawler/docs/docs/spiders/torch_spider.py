@@ -1,5 +1,4 @@
 import re
-import scrapy
 from docs.items import ApiItem
 from scrapy.spiders import Rule, CrawlSpider
 from scrapy.linkextractors import LinkExtractor
@@ -11,15 +10,15 @@ class TorchSpider(CrawlSpider):
     version = "1.4.0"
     allowed_domains = ['pytorch.org']
     start_urls = [f'https://pytorch.org/docs/{version}/index.html']
-    split_def = re.compile('^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
+    split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     rules = (
         Rule(LinkExtractor(
-                allow=(re.compile('.+\.html')),
-                restrict_css='.toctree-l1'), 
+            allow=(re.compile(r'.+\.html')),
+            restrict_css='.toctree-l1'),
             callback='parse_api',),
     )
-    
+
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
@@ -35,7 +34,7 @@ class TorchSpider(CrawlSpider):
             split = self.split_def.match(text)
             if split is None:
                 continue
-            
+
             function_name = split.groups()[0].split('.')[-1]
             params = split.groups()[1].split(',')
             args = [p for p in params if '=' not in p]
