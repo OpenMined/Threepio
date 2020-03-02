@@ -43,6 +43,7 @@ export default class Threepio {
       translatedCmd = translatedCmd[cmdInfo.attrs.shift()];
     }
 
-    translatedCmd(...cmd.args);
+    cmd.execFn = translatedCmd;
+    return cmd;
   }
 }
