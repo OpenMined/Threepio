@@ -6,7 +6,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import filesize from 'rollup-plugin-filesize';
 
-import pkg from './package.json';
+import pkg from '../package.json';
 
 const sharedOutput = {
   name: 'threepio',
@@ -18,7 +18,7 @@ const sharedOutput = {
 };
 
 export default {
-  input: 'src/index.js',
+  input: 'js/src/index.js',
   output: [
     {
       file: pkg.browser,
