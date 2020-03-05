@@ -111,10 +111,10 @@
     "jest": "jest --coverage",
     "lint": "xo",
     "nyc": "cross-env NODE_ENV=test nyc jest",
+    "prepare": "rollup --config js/rollup.config.js",
     "test": "npm run lint && jest",
     "test-coverage": "npm run lint && npm run nyc"
   },
-  "type": "module",
   "xo": {
     "prettier": true,
     "space": true,
