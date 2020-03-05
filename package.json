@@ -115,7 +115,6 @@
     "test": "npm run lint && jest",
     "test-coverage": "npm run lint && npm run nyc"
   },
-  "type": "module",
   "xo": {
     "prettier": true,
     "space": true,
