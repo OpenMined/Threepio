@@ -1,0 +1,7797 @@
+[{
+    "code": "numpy.broadcast_to(array,shape,subok=False)\u00b6",
+    "function_name": "broadcast_to",
+    "args": ["array", "shape"],
+    "kwargs": [
+      ["subok", "False"]
+    ]
+  },
+  {
+    "code": "numpy.bmat(obj,ldict=None,gdict=None)\u00b6",
+    "function_name": "bmat",
+    "args": ["obj"],
+    "kwargs": [
+      ["ldict", "None"],
+      ["gdict", "None"]
+    ]
+  },
+  {
+    "code": "numpy.block(arrays)\u00b6",
+    "function_name": "block",
+    "args": ["arrays"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.blackman(M)\u00b6",
+    "function_name": "blackman",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vstack(tup)\u00b6",
+    "function_name": "vstack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vsplit(ary,indices_or_sections)\u00b6",
+    "function_name": "vsplit",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vdot(a,b)\u00b6",
+    "function_name": "vdot",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vander(x,N=None,increasing=False)\u00b6",
+    "function_name": "vander",
+    "args": ["x"],
+    "kwargs": [
+      ["N", "None"],
+      ["increasing", "False"]
+    ]
+  },
+  {
+    "code": "numpy.unique(ar,return_index=False,return_inverse=False,return_counts=False,axis=None)\u00b6",
+    "function_name": "unique",
+    "args": ["ar"],
+    "kwargs": [
+      ["return_index", "False"],
+      ["return_inverse", "False"],
+      ["return_counts", "False"],
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.union1d(ar1,ar2)\u00b6",
+    "function_name": "union1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.typename(char)\u00b6",
+    "function_name": "typename",
+    "args": ["char"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.triu_indices(n,k=0,m=None)\u00b6",
+    "function_name": "triu_indices",
+    "args": ["n"],
+    "kwargs": [
+      ["k", "0"],
+      ["m", "None"]
+    ]
+  },
+  {
+    "code": "numpy.triu(m,k=0)\u00b6",
+    "function_name": "triu",
+    "args": ["m"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.tril_indices_from(arr,k=0)\u00b6",
+    "function_name": "tril_indices_from",
+    "args": ["arr"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.triu_indices_from(arr,k=0)\u00b6",
+    "function_name": "triu_indices_from",
+    "args": ["arr"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.tril_indices(n,k=0,m=None)\u00b6",
+    "function_name": "tril_indices",
+    "args": ["n"],
+    "kwargs": [
+      ["k", "0"],
+      ["m", "None"]
+    ]
+  },
+  {
+    "code": "numpy.tril(m,k=0)\u00b6",
+    "function_name": "tril",
+    "args": ["m"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.broadcast_arrays(*args,**kwargs)\u00b6",
+    "function_name": "broadcast_arrays",
+    "args": ["*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.transpose(a,axes=None)\u00b6",
+    "function_name": "transpose",
+    "args": ["a"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.tile(A,reps)\u00b6",
+    "function_name": "tile",
+    "args": ["A", "reps"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.run_module_suite(file_to_run=None,argv=None)\u00b6",
+    "function_name": "run_module_suite",
+    "args": [],
+    "kwargs": [
+      ["file_to_run", "None"],
+      ["argv", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.rundocs(filename=None,raise_on_error=True)\u00b6",
+    "function_name": "rundocs",
+    "args": [],
+    "kwargs": [
+      ["filename", "None"],
+      ["raise_on_error", "True"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.setastest(tf=True)\u00b6",
+    "function_name": "setastest",
+    "args": [],
+    "kwargs": [
+      ["tf", "True"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.skipif(skip_condition,msg=None)\u00b6",
+    "function_name": "skipif",
+    "args": ["skip_condition"],
+    "kwargs": [
+      ["msg", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.slow(t)\u00b6",
+    "function_name": "slow",
+    "args": ["t"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.decorators.deprecated(conditional=True)\u00b6",
+    "function_name": "deprecated",
+    "args": [],
+    "kwargs": [
+      ["conditional", "True"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.knownfailureif(fail_condition,msg=None)\u00b6",
+    "function_name": "knownfailureif",
+    "args": ["fail_condition"],
+    "kwargs": [
+      ["msg", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorate_methods(cls,decorator,testmatch=None)\u00b6",
+    "function_name": "decorate_methods",
+    "args": ["cls", "decorator"],
+    "kwargs": [
+      ["testmatch", "None"]
+    ]
+  },
+  {
+    "code": "numpy.trace(a,offset=0,axis1=0,axis2=1,dtype=None,out=None)\u00b6",
+    "function_name": "trace",
+    "args": ["a"],
+    "kwargs": [
+      ["offset", "0"],
+      ["axis1", "0"],
+      ["axis2", "1"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.assert_warns(warning_class,*args,**kwargs)\u00b6",
+    "function_name": "assert_warns",
+    "args": ["warning_class", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_string_equal(actual,desired)\u00b6",
+    "function_name": "assert_string_equal",
+    "args": ["actual", "desired"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_raises_regex(exception_class,expected_regexp,callable,*args,**kwargs)assert_raises_regex(exception_class,expected_regexp)\u00b6",
+    "function_name": "assert_raises_regex",
+    "args": ["exception_class", "expected_regexp", "callable", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_raises(exception_class,callable,*args,**kwargs)assert_raises(exception_class)\u00b6",
+    "function_name": "assert_raises",
+    "args": ["exception_class", "callable", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_array_almost_equal_nulp(x,y,nulp=1)\u00b6",
+    "function_name": "assert_array_almost_equal_nulp",
+    "args": ["x", "y"],
+    "kwargs": [
+      ["nulp", "1"]
+    ]
+  },
+  {
+    "code": "numpy.tensordot(a,b,axes=2)\u00b6",
+    "function_name": "tensordot",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["axes", "2"]
+    ]
+  },
+  {
+    "code": "numpy.testing.assert_array_max_ulp(a,b,maxulp=1,dtype=None)\u00b6",
+    "function_name": "assert_array_max_ulp",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["maxulp", "1"],
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.take_along_axis(arr,indices,axis)\u00b6",
+    "function_name": "take_along_axis",
+    "args": ["arr", "indices", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.swapaxes(a,axis1,axis2)\u00b6",
+    "function_name": "swapaxes",
+    "args": ["a", "axis1", "axis2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.stack(arrays,axis=0,out=None)\u00b6",
+    "function_name": "stack",
+    "args": ["arrays"],
+    "kwargs": [
+      ["axis", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.squeeze(a,axis=None)\u00b6",
+    "function_name": "squeeze",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.split(ary,indices_or_sections,axis=0)\u00b6",
+    "function_name": "split",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": [
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.sort_complex(a)\u00b6",
+    "function_name": "sort_complex",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.shares_memory(a,b,max_work=None)\u00b6",
+    "function_name": "shares_memory",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["max_work", "None"]
+    ]
+  },
+  {
+    "code": "numpy.setxor1d(ar1,ar2,assume_unique=False)\u00b6",
+    "function_name": "setxor1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"]
+    ]
+  },
+  {
+    "code": "numpy.seterrobj(errobj)\u00b6",
+    "function_name": "seterrobj",
+    "args": ["errobj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.seterrcall(func)\u00b6",
+    "function_name": "seterrcall",
+    "args": ["func"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.seterr(all=None,divide=None,over=None,under=None,invalid=None)\u00b6",
+    "function_name": "seterr",
+    "args": [],
+    "kwargs": [
+      ["all", "None"],
+      ["divide", "None"],
+      ["over", "None"],
+      ["under", "None"],
+      ["invalid", "None"]
+    ]
+  },
+  {
+    "code": "numpy.setdiff1d(ar1,ar2,assume_unique=False)\u00b6",
+    "function_name": "setdiff1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"]
+    ]
+  },
+  {
+    "code": "numpy.setbufsize(size)\u00b6",
+    "function_name": "setbufsize",
+    "args": ["size"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.set_printoptions(precision=None,threshold=None,edgeitems=None,linewidth=None,suppress=None,nanstr=None,infstr=None,formatter=None,sign=None,floatmode=None,**kwarg)\u00b6",
+    "function_name": "set_printoptions",
+    "args": ["**kwarg"],
+    "kwargs": [
+      ["precision", "None"],
+      ["threshold", "None"],
+      ["edgeitems", "None"],
+      ["linewidth", "None"],
+      ["suppress", "None"],
+      ["nanstr", "None"],
+      ["infstr", "None"],
+      ["formatter", "None"],
+      ["sign", "None"],
+      ["floatmode", "None"]
+    ]
+  },
+  {
+    "code": "numpy.select(condlist,choicelist,default=0)\u00b6",
+    "function_name": "select",
+    "args": ["condlist", "choicelist"],
+    "kwargs": [
+      ["default", "0"]
+    ]
+  },
+  {
+    "code": "numpy.sctype2char(sctype)\u00b6",
+    "function_name": "sctype2char",
+    "args": ["sctype"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.savez_compressed(file,*args,**kwds)\u00b6",
+    "function_name": "savez_compressed",
+    "args": ["file", "*args", "**kwds"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.savez(file,*args,**kwds)\u00b6",
+    "function_name": "savez",
+    "args": ["file", "*args", "**kwds"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.sinc(x)\u00b6",
+    "function_name": "sinc",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.set_string_function(f,repr=True)\u00b6",
+    "function_name": "set_string_function",
+    "args": ["f"],
+    "kwargs": [
+      ["repr", "True"]
+    ]
+  },
+  {
+    "code": "numpy.save(file,arr,allow_pickle=True,fix_imports=True)\u00b6",
+    "function_name": "save",
+    "args": ["file", "arr"],
+    "kwargs": [
+      ["allow_pickle", "True"],
+      ["fix_imports", "True"]
+    ]
+  },
+  {
+    "code": "numpy.round_(a,decimals=0,out=None)\u00b6",
+    "function_name": "round_",
+    "args": ["a"],
+    "kwargs": [
+      ["decimals", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.rollaxis(a,axis,start=0)\u00b6",
+    "function_name": "rollaxis",
+    "args": ["a", "axis"],
+    "kwargs": [
+      ["start", "0"]
+    ]
+  },
+  {
+    "code": "numpy.roll(a,shift,axis=None)\u00b6",
+    "function_name": "roll",
+    "args": ["a", "shift"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.result_type(*arrays_and_dtypes)\u00b6",
+    "function_name": "result_type",
+    "args": ["*arrays_and_dtypes"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.resize(a,new_shape)\u00b6",
+    "function_name": "resize",
+    "args": ["a", "new_shape"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.roots(p)\u00b6",
+    "function_name": "roots",
+    "args": ["p"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.require(a,dtype=None,requirements=None)\u00b6",
+    "function_name": "require",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["requirements", "None"]
+    ]
+  },
+  {
+    "code": "numpy.repeat(a,repeats,axis=None)\u00b6",
+    "function_name": "repeat",
+    "args": ["a", "repeats"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.real_if_close(a,tol=100)\u00b6",
+    "function_name": "real_if_close",
+    "args": ["a"],
+    "kwargs": [
+      ["tol", "100"]
+    ]
+  },
+  {
+    "code": "numpy.putmask(a,mask,values)\u00b6",
+    "function_name": "putmask",
+    "args": ["a", "mask", "values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.put_along_axis(arr,indices,values,axis)\u00b6",
+    "function_name": "put_along_axis",
+    "args": ["arr", "indices", "values", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.promote_types(type1,type2)\u00b6",
+    "function_name": "promote_types",
+    "args": ["type1", "type2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.real(val)\u00b6",
+    "function_name": "real",
+    "args": ["val"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.printoptions(*args,**kwargs)\u00b6",
+    "function_name": "printoptions",
+    "args": ["*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polysub(a1,a2)\u00b6",
+    "function_name": "polysub",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.as_series(alist,trim=True)\u00b6",
+    "function_name": "as_series",
+    "args": ["alist"],
+    "kwargs": [
+      ["trim", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polyutils.mapparms(old,new)\u00b6",
+    "function_name": "mapparms",
+    "args": ["old", "new"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.getdomain(x)\u00b6",
+    "function_name": "getdomain",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.mapdomain(x,old,new)\u00b6",
+    "function_name": "mapdomain",
+    "args": ["x", "old", "new"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.trimseq(seq)\u00b6",
+    "function_name": "trimseq",
+    "args": ["seq"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polyval(p,x)\u00b6",
+    "function_name": "polyval",
+    "args": ["p", "x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvander3d(x,y,z,deg)\u00b6",
+    "function_name": "polyvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvander2d(x,y,deg)\u00b6",
+    "function_name": "polyvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvander(x,deg)\u00b6",
+    "function_name": "polyvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvalfromroots(x,r,tensor=True)\u00b6",
+    "function_name": "polyvalfromroots",
+    "args": ["x", "r"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyval(x,c,tensor=True)\u00b6",
+    "function_name": "polyval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyval3d(x,y,z,c)\u00b6",
+    "function_name": "polyval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyval2d(x,y,c)\u00b6",
+    "function_name": "polyval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polytrim(c,tol=0)\u00b6",
+    "function_name": "polytrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polysub(c1,c2)\u00b6",
+    "function_name": "polysub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyroots(c)\u00b6",
+    "function_name": "polyroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polypow(c,pow,maxpower=None)\u00b6",
+    "function_name": "polypow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polymul(c1,c2)\u00b6",
+    "function_name": "polymul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyline(off,scl)\u00b6",
+    "function_name": "polyline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polymulx(c)\u00b6",
+    "function_name": "polymulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polygrid3d(x,y,z,c)\u00b6",
+    "function_name": "polygrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polygrid2d(x,y,c)\u00b6",
+    "function_name": "polygrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyfromroots(roots)\u00b6",
+    "function_name": "polyfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "polyfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polydiv(c1,c2)\u00b6",
+    "function_name": "polydiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "polyder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polycompanion(c)\u00b6",
+    "function_name": "polycompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyadd(c1,c2)\u00b6",
+    "function_name": "polyadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.poly2leg(pol)\u00b6",
+    "function_name": "poly2leg",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legvander2d(x,y,deg)\u00b6",
+    "function_name": "legvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legvander3d(x,y,z,deg)\u00b6",
+    "function_name": "legvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legweight(x)\u00b6",
+    "function_name": "legweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legvander(x,deg)\u00b6",
+    "function_name": "legvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legval3d(x,y,z,c)\u00b6",
+    "function_name": "legval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legval2d(x,y,c)\u00b6",
+    "function_name": "legval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legtrim(c,tol=0)\u00b6",
+    "function_name": "legtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legval(x,c,tensor=True)\u00b6",
+    "function_name": "legval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legsub(c1,c2)\u00b6",
+    "function_name": "legsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legroots(c)\u00b6",
+    "function_name": "legroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "legpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legmulx(c)\u00b6",
+    "function_name": "legmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legmul(c1,c2)\u00b6",
+    "function_name": "legmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legline(off,scl)\u00b6",
+    "function_name": "legline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leggrid3d(x,y,z,c)\u00b6",
+    "function_name": "leggrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leggrid2d(x,y,c)\u00b6",
+    "function_name": "leggrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leggauss(deg)\u00b6",
+    "function_name": "leggauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legfromroots(roots)\u00b6",
+    "function_name": "legfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "legfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legdiv(c1,c2)\u00b6",
+    "function_name": "legdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legcompanion(c)\u00b6",
+    "function_name": "legcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "legder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legadd(c1,c2)\u00b6",
+    "function_name": "legadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leg2poly(c)\u00b6",
+    "function_name": "leg2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.trimcoef(c,tol=0)\u00b6",
+    "function_name": "trimcoef",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.poly2lag(pol)\u00b6",
+    "function_name": "poly2lag",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagweight(x)\u00b6",
+    "function_name": "lagweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagvander3d(x,y,z,deg)\u00b6",
+    "function_name": "lagvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagvander2d(x,y,deg)\u00b6",
+    "function_name": "lagvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagvander(x,deg)\u00b6",
+    "function_name": "lagvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagval2d(x,y,c)\u00b6",
+    "function_name": "lagval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagval3d(x,y,z,c)\u00b6",
+    "function_name": "lagval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagtrim(c,tol=0)\u00b6",
+    "function_name": "lagtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagsub(c1,c2)\u00b6",
+    "function_name": "lagsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagval(x,c,tensor=True)\u00b6",
+    "function_name": "lagval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagroots(c)\u00b6",
+    "function_name": "lagroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "lagpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagline(off,scl)\u00b6",
+    "function_name": "lagline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagmulx(c)\u00b6",
+    "function_name": "lagmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagmul(c1,c2)\u00b6",
+    "function_name": "lagmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.laggrid3d(x,y,z,c)\u00b6",
+    "function_name": "laggrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.laggrid2d(x,y,c)\u00b6",
+    "function_name": "laggrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.laggauss(deg)\u00b6",
+    "function_name": "laggauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagfromroots(roots)\u00b6",
+    "function_name": "lagfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "lagfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "lagder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagdiv(c1,c2)\u00b6",
+    "function_name": "lagdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagcompanion(c)\u00b6",
+    "function_name": "lagcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagadd(c1,c2)\u00b6",
+    "function_name": "lagadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lag2poly(c)\u00b6",
+    "function_name": "lag2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.poly2herme(pol)\u00b6",
+    "function_name": "poly2herme",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeweight(x)\u00b6",
+    "function_name": "hermeweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermevander3d(x,y,z,deg)\u00b6",
+    "function_name": "hermevander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermevander2d(x,y,deg)\u00b6",
+    "function_name": "hermevander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermevander(x,deg)\u00b6",
+    "function_name": "hermevander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeval3d(x,y,z,c)\u00b6",
+    "function_name": "hermeval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeval2d(x,y,c)\u00b6",
+    "function_name": "hermeval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeval(x,c,tensor=True)\u00b6",
+    "function_name": "hermeval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeroots(c)\u00b6",
+    "function_name": "hermeroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermetrim(c,tol=0)\u00b6",
+    "function_name": "hermetrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermesub(c1,c2)\u00b6",
+    "function_name": "hermesub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermepow(c,pow,maxpower=16)\u00b6",
+    "function_name": "hermepow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermemulx(c)\u00b6",
+    "function_name": "hermemulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermemul(c1,c2)\u00b6",
+    "function_name": "hermemul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermegrid3d(x,y,z,c)\u00b6",
+    "function_name": "hermegrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeline(off,scl)\u00b6",
+    "function_name": "hermeline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermegrid2d(x,y,c)\u00b6",
+    "function_name": "hermegrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermegauss(deg)\u00b6",
+    "function_name": "hermegauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermefromroots(roots)\u00b6",
+    "function_name": "hermefromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermefit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "hermefit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermediv(c1,c2)\u00b6",
+    "function_name": "hermediv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermecompanion(c)\u00b6",
+    "function_name": "hermecompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "hermeder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.herme2poly(c)\u00b6",
+    "function_name": "herme2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeadd(c1,c2)\u00b6",
+    "function_name": "hermeadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.poly2herm(pol)\u00b6",
+    "function_name": "poly2herm",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermweight(x)\u00b6",
+    "function_name": "hermweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermvander3d(x,y,z,deg)\u00b6",
+    "function_name": "hermvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermvander2d(x,y,deg)\u00b6",
+    "function_name": "hermvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermvander(x,deg)\u00b6",
+    "function_name": "hermvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermtrim(c,tol=0)\u00b6",
+    "function_name": "hermtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermval3d(x,y,z,c)\u00b6",
+    "function_name": "hermval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermval2d(x,y,c)\u00b6",
+    "function_name": "hermval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermval(x,c,tensor=True)\u00b6",
+    "function_name": "hermval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermroots(c)\u00b6",
+    "function_name": "hermroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermsub(c1,c2)\u00b6",
+    "function_name": "hermsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "hermpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermmulx(c)\u00b6",
+    "function_name": "hermmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermline(off,scl)\u00b6",
+    "function_name": "hermline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermmul(c1,c2)\u00b6",
+    "function_name": "hermmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermgauss(deg)\u00b6",
+    "function_name": "hermgauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermgrid3d(x,y,z,c)\u00b6",
+    "function_name": "hermgrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermgrid2d(x,y,c)\u00b6",
+    "function_name": "hermgrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermfromroots(roots)\u00b6",
+    "function_name": "hermfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "hermfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermcompanion(c)\u00b6",
+    "function_name": "hermcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermdiv(c1,c2)\u00b6",
+    "function_name": "hermdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "hermder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermadd(c1,c2)\u00b6",
+    "function_name": "hermadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.herm2poly(c)\u00b6",
+    "function_name": "herm2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.poly2cheb(pol)\u00b6",
+    "function_name": "poly2cheb",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebvander3d(x,y,z,deg)\u00b6",
+    "function_name": "chebvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebvander2d(x,y,deg)\u00b6",
+    "function_name": "chebvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebvander(x,deg)\u00b6",
+    "function_name": "chebvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebval3d(x,y,z,c)\u00b6",
+    "function_name": "chebval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebval2d(x,y,c)\u00b6",
+    "function_name": "chebval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebval(x,c,tensor=True)\u00b6",
+    "function_name": "chebval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebtrim(c,tol=0)\u00b6",
+    "function_name": "chebtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebsub(c1,c2)\u00b6",
+    "function_name": "chebsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "chebpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebroots(c)\u00b6",
+    "function_name": "chebroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebmulx(c)\u00b6",
+    "function_name": "chebmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebmul(c1,c2)\u00b6",
+    "function_name": "chebmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebline(off,scl)\u00b6",
+    "function_name": "chebline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebgrid3d(x,y,z,c)\u00b6",
+    "function_name": "chebgrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebgrid2d(x,y,c)\u00b6",
+    "function_name": "chebgrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebgauss(deg)\u00b6",
+    "function_name": "chebgauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebfromroots(roots)\u00b6",
+    "function_name": "chebfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "chebfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebdiv(c1,c2)\u00b6",
+    "function_name": "chebdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "chebder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebcompanion(c)\u00b6",
+    "function_name": "chebcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebadd(c1,c2)\u00b6",
+    "function_name": "chebadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.cheb2poly(c)\u00b6",
+    "function_name": "cheb2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebweight(x)\u00b6",
+    "function_name": "chebweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polymul(a1,a2)\u00b6",
+    "function_name": "polymul",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polyint(p,m=1,k=None)\u00b6",
+    "function_name": "polyint",
+    "args": ["p"],
+    "kwargs": [
+      ["m", "1"],
+      ["k", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polyder(p,m=1)\u00b6",
+    "function_name": "polyder",
+    "args": ["p"],
+    "kwargs": [
+      ["m", "1"]
+    ]
+  },
+  {
+    "code": "numpy.polyadd(a1,a2)\u00b6",
+    "function_name": "polyadd",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polydiv(u,v)\u00b6",
+    "function_name": "polydiv",
+    "args": ["u", "v"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polyfit(x,y,deg,rcond=None,full=False,w=None,cov=False)\u00b6",
+    "function_name": "polyfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"],
+      ["cov", "False"]
+    ]
+  },
+  {
+    "code": "numpy.place(arr,mask,vals)\u00b6",
+    "function_name": "place",
+    "args": ["arr", "mask", "vals"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.outer(a,b,out=None)\u00b6",
+    "function_name": "outer",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.obj2sctype(rep,default=None)\u00b6",
+    "function_name": "obj2sctype",
+    "args": ["rep"],
+    "kwargs": [
+      ["default", "None"]
+    ]
+  },
+  {
+    "code": "numpy.npv(rate,values)\u00b6",
+    "function_name": "npv",
+    "args": ["rate", "values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nested_iters()\u00b6",
+    "function_name": "nested_iters",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nonzero(a)\u00b6",
+    "function_name": "nonzero",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.poly(seq_of_zeros)\u00b6",
+    "function_name": "poly",
+    "args": ["seq_of_zeros"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.piecewise(x,condlist,funclist,*args,**kw)\u00b6",
+    "function_name": "piecewise",
+    "args": ["x", "condlist", "funclist", "*args", "**kw"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nancumsum(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "nancumsum",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.nancumprod(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "nancumprod",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.nanargmin(a,axis=None)\u00b6",
+    "function_name": "nanargmin",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.nanargmax(a,axis=None)\u00b6",
+    "function_name": "nanargmax",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.msort(a)\u00b6",
+    "function_name": "msort",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.moveaxis(a,source,destination)\u00b6",
+    "function_name": "moveaxis",
+    "args": ["a", "source", "destination"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nan_to_num(x,copy=True,nan=0.0,posinf=None,neginf=None)\u00b6",
+    "function_name": "nan_to_num",
+    "args": ["x"],
+    "kwargs": [
+      ["copy", "True"],
+      ["nan", "0.0"],
+      ["posinf", "None"],
+      ["neginf", "None"]
+    ]
+  },
+  {
+    "code": "numpy.meshgrid(*xi,**kwargs)\u00b6",
+    "function_name": "meshgrid",
+    "args": ["*xi", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.min_scalar_type(a)\u00b6",
+    "function_name": "min_scalar_type",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.mirr(values,finance_rate,reinvest_rate)\u00b6",
+    "function_name": "mirr",
+    "args": ["values", "finance_rate", "reinvest_rate"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.median(a,axis=None,out=None,overwrite_input=False,keepdims=False)\u00b6",
+    "function_name": "median",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"],
+      ["overwrite_input", "False"],
+      ["keepdims", "False"]
+    ]
+  },
+  {
+    "code": "numpy.may_share_memory(a,b,max_work=None)\u00b6",
+    "function_name": "may_share_memory",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["max_work", "None"]
+    ]
+  },
+  {
+    "code": "numpy.maximum_sctype(t)\u00b6",
+    "function_name": "maximum_sctype",
+    "args": ["t"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.repmat(a,m,n)\u00b6",
+    "function_name": "repmat",
+    "args": ["a", "m", "n"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.randn(*args)\u00b6",
+    "function_name": "randn",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.rand(*args)\u00b6",
+    "function_name": "rand",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.identity(n,dtype=None)\u00b6",
+    "function_name": "identity",
+    "args": ["n"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.mat(data,dtype=None)\u00b6",
+    "function_name": "mat",
+    "args": ["data"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.transpose(a,axes=None)\u00b6",
+    "function_name": "transpose",
+    "args": ["a"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.vander(x,n=None)\u00b6",
+    "function_name": "vander",
+    "args": ["x"],
+    "kwargs": [
+      ["n", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.squeeze(a,axis=None)\u00b6",
+    "function_name": "squeeze",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.size(obj,axis=None)\u00b6",
+    "function_name": "size",
+    "args": ["obj"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.mask_indices(n,mask_func,k=0)\u00b6",
+    "function_name": "mask_indices",
+    "args": ["n", "mask_func"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.shape(obj)\u00b6",
+    "function_name": "shape",
+    "args": ["obj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.round(a,decimals=0,out=None)\u00b6",
+    "function_name": "round",
+    "args": ["a"],
+    "kwargs": [
+      ["decimals", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.set_fill_value(a,fill_value)\u00b6",
+    "function_name": "set_fill_value",
+    "args": ["a", "fill_value"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.resize(x,new_shape)\u00b6",
+    "function_name": "resize",
+    "args": ["x", "new_shape"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.power(a,b,third=None)\u00b6",
+    "function_name": "power",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["third", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.polyfit(x,y,deg,rcond=None,full=False,w=None,cov=False)\u00b6",
+    "function_name": "polyfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"],
+      ["cov", "False"]
+    ]
+  },
+  {
+    "code": "numpy.ma.outer(a,b)\u00b6",
+    "function_name": "outer",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.outerproduct(a,b)\u00b6",
+    "function_name": "outerproduct",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.notmasked_edges(a,axis=None)\u00b6",
+    "function_name": "notmasked_edges",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.notmasked_contiguous(a,axis=None)\u00b6",
+    "function_name": "notmasked_contiguous",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.median(a,axis=None,out=None,overwrite_input=False,keepdims=False)\u00b6",
+    "function_name": "median",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"],
+      ["overwrite_input", "False"],
+      ["keepdims", "False"]
+    ]
+  },
+  {
+    "code": "numpy.ma.maximum_fill_value(obj)\u00b6",
+    "function_name": "maximum_fill_value",
+    "args": ["obj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.masked_where(condition,a,copy=True)\u00b6",
+    "function_name": "masked_where",
+    "args": ["condition", "a"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_outside(x,v1,v2,copy=True)\u00b6",
+    "function_name": "masked_outside",
+    "args": ["x", "v1", "v2"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_object(x,value,copy=True,shrink=True)\u00b6",
+    "function_name": "masked_object",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"],
+      ["shrink", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_not_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_not_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_less(x,value,copy=True)\u00b6",
+    "function_name": "masked_less",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_less_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_less_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_invalid(a,copy=True)\u00b6",
+    "function_name": "masked_invalid",
+    "args": ["a"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_inside(x,v1,v2,copy=True)\u00b6",
+    "function_name": "masked_inside",
+    "args": ["x", "v1", "v2"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_greater(x,value,copy=True)\u00b6",
+    "function_name": "masked_greater",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_greater_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_greater_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_all_like(arr)\u00b6",
+    "function_name": "masked_all_like",
+    "args": ["arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.mask_rows(a,axis=None)\u00b6",
+    "function_name": "mask_rows",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.mask_or(m1,m2,copy=False,shrink=True)\u00b6",
+    "function_name": "mask_or",
+    "args": ["m1", "m2"],
+    "kwargs": [
+      ["copy", "False"],
+      ["shrink", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.mask_cols(a,axis=None)\u00b6",
+    "function_name": "mask_cols",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.mask_rowcols(a,axis=None)\u00b6",
+    "function_name": "mask_rowcols",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.make_mask_none(newshape,dtype=None)\u00b6",
+    "function_name": "make_mask_none",
+    "args": ["newshape"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.loads(strg)\u00b6",
+    "function_name": "loads",
+    "args": ["strg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.make_mask_descr(ndtype)\u00b6",
+    "function_name": "make_mask_descr",
+    "args": ["ndtype"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.is_masked(x)\u00b6",
+    "function_name": "is_masked",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.load(F)\u00b6",
+    "function_name": "load",
+    "args": ["F"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.is_mask(m)\u00b6",
+    "function_name": "is_mask",
+    "args": ["m"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.innerproduct(a,b)\u00b6",
+    "function_name": "innerproduct",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.inner(a,b)\u00b6",
+    "function_name": "inner",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.getmaskarray(arr)\u00b6",
+    "function_name": "getmaskarray",
+    "args": ["arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.getmask(a)\u00b6",
+    "function_name": "getmask",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.getdata(a,subok=True)\u00b6",
+    "function_name": "getdata",
+    "args": ["a"],
+    "kwargs": [
+      ["subok", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.flatnotmasked_edges(a)\u00b6",
+    "function_name": "flatnotmasked_edges",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.fix_invalid(a,mask=False,copy=True,fill_value=None)\u00b6",
+    "function_name": "fix_invalid",
+    "args": ["a"],
+    "kwargs": [
+      ["mask", "False"],
+      ["copy", "True"],
+      ["fill_value", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.flatnotmasked_contiguous(a)\u00b6",
+    "function_name": "flatnotmasked_contiguous",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.filled(a,fill_value=None)\u00b6",
+    "function_name": "filled",
+    "args": ["a"],
+    "kwargs": [
+      ["fill_value", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.expand_dims(a,axis)\u00b6",
+    "function_name": "expand_dims",
+    "args": ["a", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.ediff1d(arr,to_end=None,to_begin=None)\u00b6",
+    "function_name": "ediff1d",
+    "args": ["arr"],
+    "kwargs": [
+      ["to_end", "None"],
+      ["to_begin", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.dumps(a)\u00b6",
+    "function_name": "dumps",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.dump(a,F)\u00b6",
+    "function_name": "dump",
+    "args": ["a", "F"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.diag(v,k=0)\u00b6",
+    "function_name": "diag",
+    "args": ["v"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.dot(a,b,strict=False,out=None)\u00b6",
+    "function_name": "dot",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["strict", "False"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.default_fill_value(obj)\u00b6",
+    "function_name": "default_fill_value",
+    "args": ["obj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.cov(x,y=None,rowvar=True,bias=False,allow_masked=True,ddof=None)\u00b6",
+    "function_name": "cov",
+    "args": ["x"],
+    "kwargs": [
+      ["y", "None"],
+      ["rowvar", "True"],
+      ["bias", "False"],
+      ["allow_masked", "True"],
+      ["ddof", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.count_masked(arr,axis=None)\u00b6",
+    "function_name": "count_masked",
+    "args": ["arr"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.concatenate(arrays,axis=0)\u00b6",
+    "function_name": "concatenate",
+    "args": ["arrays"],
+    "kwargs": [
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.compressed(x)\u00b6",
+    "function_name": "compressed",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.compress_rows(a)\u00b6",
+    "function_name": "compress_rows",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.compress_cols(a)\u00b6",
+    "function_name": "compress_cols",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.compress_rowcols(x,axis=None)\u00b6",
+    "function_name": "compress_rowcols",
+    "args": ["x"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.clump_unmasked(a)\u00b6",
+    "function_name": "clump_unmasked",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.clump_masked(a)\u00b6",
+    "function_name": "clump_masked",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.common_fill_value(a,b)\u00b6",
+    "function_name": "common_fill_value",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.clip(a,a_min,a_max,out=None,**kwargs)\u00b6",
+    "function_name": "clip",
+    "args": ["a", "a_min", "a_max", "**kwargs"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.asarray(a,dtype=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.average(a,axis=None,weights=None,returned=False)\u00b6",
+    "function_name": "average",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["weights", "None"],
+      ["returned", "False"]
+    ]
+  },
+  {
+    "code": "numpy.ma.asanyarray(a,dtype=None)\u00b6",
+    "function_name": "asanyarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.array(data,dtype=None,copy=False,order=None,mask=False,fill_value=None,keep_mask=True,hard_mask=False,shrink=True,subok=True,ndmin=0)\u00b6",
+    "function_name": "array",
+    "args": ["data"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["copy", "False"],
+      ["order", "None"],
+      ["mask", "False"],
+      ["fill_value", "None"],
+      ["keep_mask", "True"],
+      ["hard_mask", "False"],
+      ["shrink", "True"],
+      ["subok", "True"],
+      ["ndmin", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.apply_along_axis(func1d,axis,arr,*args,**kwargs)\u00b6",
+    "function_name": "apply_along_axis",
+    "args": ["func1d", "axis", "arr", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.append(a,b,axis=None)\u00b6",
+    "function_name": "append",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.allequal(a,b,fill_value=True)\u00b6",
+    "function_name": "allequal",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["fill_value", "True"]
+    ]
+  },
+  {
+    "code": "numpy.logspace(start,stop,num=50,endpoint=True,base=10.0,dtype=None,axis=0)\u00b6",
+    "function_name": "logspace",
+    "args": ["start", "stop"],
+    "kwargs": [
+      ["num", "50"],
+      ["endpoint", "True"],
+      ["base", "10.0"],
+      ["dtype", "None"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.lookfor(what,module=None,import_modules=True,regenerate=False,output=None)\u00b6",
+    "function_name": "lookfor",
+    "args": ["what"],
+    "kwargs": [
+      ["module", "None"],
+      ["import_modules", "True"],
+      ["regenerate", "False"],
+      ["output", "None"]
+    ]
+  },
+  {
+    "code": "numpy.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None,axis=0)\u00b6",
+    "function_name": "linspace",
+    "args": ["start", "stop"],
+    "kwargs": [
+      ["num", "50"],
+      ["endpoint", "True"],
+      ["retstep", "False"],
+      ["dtype", "None"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.tensorsolve(a,b,axes=None)\u00b6",
+    "function_name": "tensorsolve",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.tensorinv(a,ind=2)\u00b6",
+    "function_name": "tensorinv",
+    "args": ["a"],
+    "kwargs": [
+      ["ind", "2"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.solve(a,b)\u00b6",
+    "function_name": "solve",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.slogdet(a)\u00b6",
+    "function_name": "slogdet",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.svd(a,full_matrices=True,compute_uv=True,hermitian=False)\u00b6",
+    "function_name": "svd",
+    "args": ["a"],
+    "kwargs": [
+      ["full_matrices", "True"],
+      ["compute_uv", "True"],
+      ["hermitian", "False"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.norm(x,ord=None,axis=None,keepdims=False)\u00b6",
+    "function_name": "norm",
+    "args": ["x"],
+    "kwargs": [
+      ["ord", "None"],
+      ["axis", "None"],
+      ["keepdims", "False"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.multi_dot(arrays)\u00b6",
+    "function_name": "multi_dot",
+    "args": ["arrays"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.matrix_rank(M,tol=None,hermitian=False)\u00b6",
+    "function_name": "matrix_rank",
+    "args": ["M"],
+    "kwargs": [
+      ["tol", "None"],
+      ["hermitian", "False"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.matrix_power(a,n)\u00b6",
+    "function_name": "matrix_power",
+    "args": ["a", "n"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.inv(a)\u00b6",
+    "function_name": "inv",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.eig(a)\u00b6",
+    "function_name": "eig",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.eigvals(a)\u00b6",
+    "function_name": "eigvals",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.det(a)\u00b6",
+    "function_name": "det",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.cond(x,p=None)\u00b6",
+    "function_name": "cond",
+    "args": ["x"],
+    "kwargs": [
+      ["p", "None"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.cholesky(a)\u00b6",
+    "function_name": "cholesky",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.lib.stride_tricks.as_strided(x,shape=None,strides=None,subok=False,writeable=True)\u00b6",
+    "function_name": "as_strided",
+    "args": ["x"],
+    "kwargs": [
+      ["shape", "None"],
+      ["strides", "None"],
+      ["subok", "False"],
+      ["writeable", "True"]
+    ]
+  },
+  {
+    "code": "numpy.kron(a,b)\u00b6",
+    "function_name": "kron",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.kaiser(M,beta)\u00b6",
+    "function_name": "kaiser",
+    "args": ["M", "beta"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ix_(*args)\u00b6",
+    "function_name": "ix_",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issubdtype(arg1,arg2)\u00b6",
+    "function_name": "issubdtype",
+    "args": ["arg1", "arg2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issubsctype(arg1,arg2)\u00b6",
+    "function_name": "issubsctype",
+    "args": ["arg1", "arg2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issctype(rep)\u00b6",
+    "function_name": "issctype",
+    "args": ["rep"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issubclass_(arg1,arg2)\u00b6",
+    "function_name": "issubclass_",
+    "args": ["arg1", "arg2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isrealobj(x)\u00b6",
+    "function_name": "isrealobj",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isposinf(x,out=None)\u00b6",
+    "function_name": "isposinf",
+    "args": ["x"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.isscalar(num)\u00b6",
+    "function_name": "isscalar",
+    "args": ["num"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isneginf(x,out=None)\u00b6",
+    "function_name": "isneginf",
+    "args": ["x"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.isreal(x)\u00b6",
+    "function_name": "isreal",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isfortran(a)\u00b6",
+    "function_name": "isfortran",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.irr(values)\u00b6",
+    "function_name": "irr",
+    "args": ["values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.intersect1d(ar1,ar2,assume_unique=False,return_indices=False)\u00b6",
+    "function_name": "intersect1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"],
+      ["return_indices", "False"]
+    ]
+  },
+  {
+    "code": "numpy.iscomplexobj(x)\u00b6",
+    "function_name": "iscomplexobj",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.interp(x,xp,fp,left=None,right=None,period=None)\u00b6",
+    "function_name": "interp",
+    "args": ["x", "xp", "fp"],
+    "kwargs": [
+      ["left", "None"],
+      ["right", "None"],
+      ["period", "None"]
+    ]
+  },
+  {
+    "code": "numpy.isin(element,test_elements,assume_unique=False,invert=False)\u00b6",
+    "function_name": "isin",
+    "args": ["element", "test_elements"],
+    "kwargs": [
+      ["assume_unique", "False"],
+      ["invert", "False"]
+    ]
+  },
+  {
+    "code": "numpy.insert(arr,obj,values,axis=None)\u00b6",
+    "function_name": "insert",
+    "args": ["arr", "obj", "values"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.inner(a,b)\u00b6",
+    "function_name": "inner",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.iscomplex(x)\u00b6",
+    "function_name": "iscomplex",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.in1d(ar1,ar2,assume_unique=False,invert=False)\u00b6",
+    "function_name": "in1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"],
+      ["invert", "False"]
+    ]
+  },
+  {
+    "code": "numpy.imag(val)\u00b6",
+    "function_name": "imag",
+    "args": ["val"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.identity(n,dtype=None)\u00b6",
+    "function_name": "identity",
+    "args": ["n"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.i0(x)\u00b6",
+    "function_name": "i0",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.hstack(tup)\u00b6",
+    "function_name": "hstack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.hsplit(ary,indices_or_sections)\u00b6",
+    "function_name": "hsplit",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.histogramdd(sample,bins=10,range=None,normed=None,weights=None,density=None)\u00b6",
+    "function_name": "histogramdd",
+    "args": ["sample"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["normed", "None"],
+      ["weights", "None"],
+      ["density", "None"]
+    ]
+  },
+  {
+    "code": "numpy.histogram_bin_edges(a,bins=10,range=None,weights=None)\u00b6",
+    "function_name": "histogram_bin_edges",
+    "args": ["a"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["weights", "None"]
+    ]
+  },
+  {
+    "code": "numpy.histogram(a,bins=10,range=None,normed=None,weights=None,density=None)\u00b6",
+    "function_name": "histogram",
+    "args": ["a"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["normed", "None"],
+      ["weights", "None"],
+      ["density", "None"]
+    ]
+  },
+  {
+    "code": "numpy.hanning(M)\u00b6",
+    "function_name": "hanning",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.histogram2d(x,y,bins=10,range=None,normed=None,weights=None,density=None)\u00b6",
+    "function_name": "histogram2d",
+    "args": ["x", "y"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["normed", "None"],
+      ["weights", "None"],
+      ["density", "None"]
+    ]
+  },
+  {
+    "code": "numpy.gradient(f,*varargs,**kwargs)\u00b6",
+    "function_name": "gradient",
+    "args": ["f", "*varargs", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geterrcall()\u00b6",
+    "function_name": "geterrcall",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geterrobj()\u00b6",
+    "function_name": "geterrobj",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.get_printoptions()\u00b6",
+    "function_name": "get_printoptions",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geterr()\u00b6",
+    "function_name": "geterr",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.getbufsize()\u00b6",
+    "function_name": "getbufsize",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geomspace(start,stop,num=50,endpoint=True,dtype=None,axis=0)\u00b6",
+    "function_name": "geomspace",
+    "args": ["start", "stop"],
+    "kwargs": [
+      ["num", "50"],
+      ["endpoint", "True"],
+      ["dtype", "None"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.hamming(M)\u00b6",
+    "function_name": "hamming",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.frompyfunc(func,nin,nout)\u00b6",
+    "function_name": "frompyfunc",
+    "args": ["func", "nin", "nout"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fromregex(file,regexp,dtype,encoding=None)\u00b6",
+    "function_name": "fromregex",
+    "args": ["file", "regexp", "dtype"],
+    "kwargs": [
+      ["encoding", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fromfunction(function,shape,**kwargs)\u00b6",
+    "function_name": "fromfunction",
+    "args": ["function", "shape", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.flipud(m)\u00b6",
+    "function_name": "flipud",
+    "args": ["m"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.flip(m,axis=None)\u00b6",
+    "function_name": "flip",
+    "args": ["m"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.flatnonzero(a)\u00b6",
+    "function_name": "flatnonzero",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fliplr(m)\u00b6",
+    "function_name": "fliplr",
+    "args": ["m"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fix(x,out=None)\u00b6",
+    "function_name": "fix",
+    "args": ["x"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fill_diagonal(a,val,wrap=False)\u00b6",
+    "function_name": "fill_diagonal",
+    "args": ["a", "val"],
+    "kwargs": [
+      ["wrap", "False"]
+    ]
+  },
+  {
+    "code": "numpy.fft.rfftfreq(n,d=1.0)\u00b6",
+    "function_name": "rfftfreq",
+    "args": ["n"],
+    "kwargs": [
+      ["d", "1.0"]
+    ]
+  },
+  {
+    "code": "numpy.fft.rfftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "rfftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.ifftshift(x,axes=None)\u00b6",
+    "function_name": "ifftshift",
+    "args": ["x"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.ifftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "ifftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.fftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "fftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.fftshift(x,axes=None)\u00b6",
+    "function_name": "fftshift",
+    "args": ["x"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.extract(condition,arr)\u00b6",
+    "function_name": "extract",
+    "args": ["condition", "arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.expand_dims(a,axis)\u00b6",
+    "function_name": "expand_dims",
+    "args": ["a", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fft.fftfreq(n,d=1.0)\u00b6",
+    "function_name": "fftfreq",
+    "args": ["n"],
+    "kwargs": [
+      ["d", "1.0"]
+    ]
+  },
+  {
+    "code": "numpy.ediff1d(ary,to_end=None,to_begin=None)\u00b6",
+    "function_name": "ediff1d",
+    "args": ["ary"],
+    "kwargs": [
+      ["to_end", "None"],
+      ["to_begin", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.irfftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "irfftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.dstack(tup)\u00b6",
+    "function_name": "dstack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.dot(a,b,out=None)\u00b6",
+    "function_name": "dot",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.dsplit(ary,indices_or_sections)\u00b6",
+    "function_name": "dsplit",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.find_common_type(array_types,scalar_types)\u00b6",
+    "function_name": "find_common_type",
+    "args": ["array_types", "scalar_types"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.system_info.get_standard_file(fname)\u00b6",
+    "function_name": "get_standard_file",
+    "args": ["fname"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.red_text(s)\u00b6",
+    "function_name": "red_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.is_local_src_dir(directory)\u00b6",
+    "function_name": "is_local_src_dir",
+    "args": ["directory"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.yellow_text(s)\u00b6",
+    "function_name": "yellow_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.green_text(s)\u00b6",
+    "function_name": "green_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_script_files(scripts)\u00b6",
+    "function_name": "get_script_files",
+    "args": ["scripts"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_ext_source_files(ext)\u00b6",
+    "function_name": "get_ext_source_files",
+    "args": ["ext"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.system_info.get_info(name,notfound_action=0)\u00b6",
+    "function_name": "get_info",
+    "args": ["name"],
+    "kwargs": [
+      ["notfound_action", "0"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.misc_util.terminal_has_colors()\u00b6",
+    "function_name": "terminal_has_colors",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_dependencies(sources)\u00b6",
+    "function_name": "get_dependencies",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.generate_config_py(target)\u00b6",
+    "function_name": "generate_config_py",
+    "args": ["target"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.dot_join(*args)\u00b6",
+    "function_name": "dot_join",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.has_f_sources(sources)\u00b6",
+    "function_name": "has_f_sources",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.dict_append(d,**kws)\u00b6",
+    "function_name": "dict_append",
+    "args": ["d", "**kws"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.cyg2win32(path)\u00b6",
+    "function_name": "cyg2win32",
+    "args": ["path"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.has_cxx_sources(sources)\u00b6",
+    "function_name": "has_cxx_sources",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.cyan_text(s)\u00b6",
+    "function_name": "cyan_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.appendpath(prefix,path)\u00b6",
+    "function_name": "appendpath",
+    "args": ["prefix", "path"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.allpath(name)\u00b6",
+    "function_name": "allpath",
+    "args": ["name"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.all_strings(lst)\u00b6",
+    "function_name": "all_strings",
+    "args": ["lst"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.log.set_verbosity(v,force=False)\u00b6",
+    "function_name": "set_verbosity",
+    "args": ["v"],
+    "kwargs": [
+      ["force", "False"]
+    ]
+  },
+  {
+    "code": "numpy.digitize(x,bins,right=False)\u00b6",
+    "function_name": "digitize",
+    "args": ["x", "bins"],
+    "kwargs": [
+      ["right", "False"]
+    ]
+  },
+  {
+    "code": "numpy.diagonal(a,offset=0,axis1=0,axis2=1)\u00b6",
+    "function_name": "diagonal",
+    "args": ["a"],
+    "kwargs": [
+      ["offset", "0"],
+      ["axis1", "0"],
+      ["axis2", "1"]
+    ]
+  },
+  {
+    "code": "numpy.diagflat(v,k=0)\u00b6",
+    "function_name": "diagflat",
+    "args": ["v"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.diag_indices_from(arr)\u00b6",
+    "function_name": "diag_indices_from",
+    "args": ["arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.diag_indices(n,ndim=2)\u00b6",
+    "function_name": "diag_indices",
+    "args": ["n"],
+    "kwargs": [
+      ["ndim", "2"]
+    ]
+  },
+  {
+    "code": "numpy.diag(v,k=0)\u00b6",
+    "function_name": "diag",
+    "args": ["v"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.delete(arr,obj,axis=None)\u00b6",
+    "function_name": "delete",
+    "args": ["arr", "obj"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.cumsum(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "cumsum",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.cumprod(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "cumprod",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.cov(m,y=None,rowvar=True,bias=False,ddof=None,fweights=None,aweights=None)\u00b6",
+    "function_name": "cov",
+    "args": ["m"],
+    "kwargs": [
+      ["y", "None"],
+      ["rowvar", "True"],
+      ["bias", "False"],
+      ["ddof", "None"],
+      ["fweights", "None"],
+      ["aweights", "None"]
+    ]
+  },
+  {
+    "code": "numpy.count_nonzero(a,axis=None)\u00b6",
+    "function_name": "count_nonzero",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromstring(datastring,dtype=None,shape=None,offset=0,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromstring",
+    "args": ["datastring"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["offset", "0"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromrecords(recList,dtype=None,shape=None,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromrecords",
+    "args": ["recList"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromfile(fd,dtype=None,shape=None,offset=0,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromfile",
+    "args": ["fd"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["offset", "0"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromarrays(arrayList,dtype=None,shape=None,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromarrays",
+    "args": ["arrayList"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.defchararray.asarray(obj,itemsize=None,unicode=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.array(obj,dtype=None,shape=None,offset=0,strides=None,formats=None,names=None,titles=None,aligned=False,byteorder=None,copy=True)\u00b6",
+    "function_name": "array",
+    "args": ["obj"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["offset", "0"],
+      ["strides", "None"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"],
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.core.defchararray.array(obj,itemsize=None,copy=True,unicode=None,order=None)\u00b6",
+    "function_name": "array",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["copy", "True"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.compress(condition,a,axis=None,out=None)\u00b6",
+    "function_name": "compress",
+    "args": ["condition", "a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.common_type(*arrays)\u00b6",
+    "function_name": "common_type",
+    "args": ["*arrays"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.column_stack(tup)\u00b6",
+    "function_name": "column_stack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.clip(a,a_min,a_max,out=None,**kwargs)\u00b6",
+    "function_name": "clip",
+    "args": ["a", "a_min", "a_max", "**kwargs"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.misc_util.filter_sources(sources)\u00b6",
+    "function_name": "filter_sources",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.blue_text(s)\u00b6",
+    "function_name": "blue_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.upper(a)\u00b6",
+    "function_name": "upper",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.zfill(a,width)\u00b6",
+    "function_name": "zfill",
+    "args": ["a", "width"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.title(a)\u00b6",
+    "function_name": "title",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.translate(a,table,deletechars=None)\u00b6",
+    "function_name": "translate",
+    "args": ["a", "table"],
+    "kwargs": [
+      ["deletechars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.swapcase(a)\u00b6",
+    "function_name": "swapcase",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.strip(a,chars=None)\u00b6",
+    "function_name": "strip",
+    "args": ["a"],
+    "kwargs": [
+      ["chars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.splitlines(a,keepends=None)\u00b6",
+    "function_name": "splitlines",
+    "args": ["a"],
+    "kwargs": [
+      ["keepends", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.startswith(a,prefix,start=0,end=None)\u00b6",
+    "function_name": "startswith",
+    "args": ["a", "prefix"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.str_len(a)\u00b6",
+    "function_name": "str_len",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.split(a,sep=None,maxsplit=None)\u00b6",
+    "function_name": "split",
+    "args": ["a"],
+    "kwargs": [
+      ["sep", "None"],
+      ["maxsplit", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rstrip(a,chars=None)\u00b6",
+    "function_name": "rstrip",
+    "args": ["a"],
+    "kwargs": [
+      ["chars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rsplit(a,sep=None,maxsplit=None)\u00b6",
+    "function_name": "rsplit",
+    "args": ["a"],
+    "kwargs": [
+      ["sep", "None"],
+      ["maxsplit", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rpartition(a,sep)\u00b6",
+    "function_name": "rpartition",
+    "args": ["a", "sep"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.rindex(a,sub,start=0,end=None)\u00b6",
+    "function_name": "rindex",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rfind(a,sub,start=0,end=None)\u00b6",
+    "function_name": "rfind",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.replace(a,old,new,count=None)\u00b6",
+    "function_name": "replace",
+    "args": ["a", "old", "new"],
+    "kwargs": [
+      ["count", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.mod(a,values)\u00b6",
+    "function_name": "mod",
+    "args": ["a", "values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.partition(a,sep)\u00b6",
+    "function_name": "partition",
+    "args": ["a", "sep"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.lstrip(a,chars=None)\u00b6",
+    "function_name": "lstrip",
+    "args": ["a"],
+    "kwargs": [
+      ["chars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.lower(a)\u00b6",
+    "function_name": "lower",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.not_equal(x1,x2)\u00b6",
+    "function_name": "not_equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.multiply(a,i)\u00b6",
+    "function_name": "multiply",
+    "args": ["a", "i"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.less(x1,x2)\u00b6",
+    "function_name": "less",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.join(sep,seq)\u00b6",
+    "function_name": "join",
+    "args": ["sep", "seq"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.less_equal(x1,x2)\u00b6",
+    "function_name": "less_equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isupper(a)\u00b6",
+    "function_name": "isupper",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.istitle(a)\u00b6",
+    "function_name": "istitle",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isspace(a)\u00b6",
+    "function_name": "isspace",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isnumeric(a)\u00b6",
+    "function_name": "isnumeric",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.islower(a)\u00b6",
+    "function_name": "islower",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isdigit(a)\u00b6",
+    "function_name": "isdigit",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isdecimal(a)\u00b6",
+    "function_name": "isdecimal",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isalnum(a)\u00b6",
+    "function_name": "isalnum",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.index(a,sub,start=0,end=None)\u00b6",
+    "function_name": "index",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.greater_equal(x1,x2)\u00b6",
+    "function_name": "greater_equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isalpha(a)\u00b6",
+    "function_name": "isalpha",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.expandtabs(a,tabsize=8)\u00b6",
+    "function_name": "expandtabs",
+    "args": ["a"],
+    "kwargs": [
+      ["tabsize", "8"]
+    ]
+  },
+  {
+    "code": "numpy.char.equal(x1,x2)\u00b6",
+    "function_name": "equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.greater(x1,x2)\u00b6",
+    "function_name": "greater",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.endswith(a,suffix,start=0,end=None)\u00b6",
+    "function_name": "endswith",
+    "args": ["a", "suffix"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.find(a,sub,start=0,end=None)\u00b6",
+    "function_name": "find",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.encode(a,encoding=None,errors=None)\u00b6",
+    "function_name": "encode",
+    "args": ["a"],
+    "kwargs": [
+      ["encoding", "None"],
+      ["errors", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.decode(a,encoding=None,errors=None)\u00b6",
+    "function_name": "decode",
+    "args": ["a"],
+    "kwargs": [
+      ["encoding", "None"],
+      ["errors", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.count(a,sub,start=0,end=None)\u00b6",
+    "function_name": "count",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_numpy_include_dirs()\u00b6",
+    "function_name": "get_numpy_include_dirs",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.capitalize(a)\u00b6",
+    "function_name": "capitalize",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.asarray(obj,itemsize=None,unicode=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.array(obj,itemsize=None,copy=True,unicode=None,order=None)\u00b6",
+    "function_name": "array",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["copy", "True"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.add(x1,x2)\u00b6",
+    "function_name": "add",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.binary_repr(num,width=None)\u00b6",
+    "function_name": "binary_repr",
+    "args": ["num"],
+    "kwargs": [
+      ["width", "None"]
+    ]
+  },
+  {
+    "code": "numpy.bincount(x,weights=None,minlength=0)\u00b6",
+    "function_name": "bincount",
+    "args": ["x"],
+    "kwargs": [
+      ["weights", "None"],
+      ["minlength", "0"]
+    ]
+  },
+  {
+    "code": "numpy.base_repr(number,base=2,padding=0)\u00b6",
+    "function_name": "base_repr",
+    "args": ["number"],
+    "kwargs": [
+      ["base", "2"],
+      ["padding", "0"]
+    ]
+  },
+  {
+    "code": "numpy.bartlett(M)\u00b6",
+    "function_name": "bartlett",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.atleast_3d(*arys)\u00b6",
+    "function_name": "atleast_3d",
+    "args": ["*arys"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.average(a,axis=None,weights=None,returned=False)\u00b6",
+    "function_name": "average",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["weights", "None"],
+      ["returned", "False"]
+    ]
+  },
+  {
+    "code": "numpy.atleast_1d(*arys)\u00b6",
+    "function_name": "atleast_1d",
+    "args": ["*arys"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.atleast_2d(*arys)\u00b6",
+    "function_name": "atleast_2d",
+    "args": ["*arys"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.asscalar(a)\u00b6",
+    "function_name": "asscalar",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.asmatrix(data,dtype=None)\u00b6",
+    "function_name": "asmatrix",
+    "args": ["data"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asfortranarray(a,dtype=None)\u00b6",
+    "function_name": "asfortranarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asarray(a,dtype=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asanyarray(a,dtype=None,order=None)\u00b6",
+    "function_name": "asanyarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.array_str(a,max_line_width=None,precision=None,suppress_small=None)\u00b6",
+    "function_name": "array_str",
+    "args": ["a"],
+    "kwargs": [
+      ["max_line_width", "None"],
+      ["precision", "None"],
+      ["suppress_small", "None"]
+    ]
+  },
+  {
+    "code": "numpy.array_split(ary,indices_or_sections,axis=0)\u00b6",
+    "function_name": "array_split",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": [
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.array_repr(arr,max_line_width=None,precision=None,suppress_small=None)\u00b6",
+    "function_name": "array_repr",
+    "args": ["arr"],
+    "kwargs": [
+      ["max_line_width", "None"],
+      ["precision", "None"],
+      ["suppress_small", "None"]
+    ]
+  },
+  {
+    "code": "numpy.array_equiv(a1,a2)\u00b6",
+    "function_name": "array_equiv",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.array_equal(a1,a2)\u00b6",
+    "function_name": "array_equal",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ascontiguousarray(a,dtype=None)\u00b6",
+    "function_name": "ascontiguousarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.argwhere(a)\u00b6",
+    "function_name": "argwhere",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.around(a,decimals=0,out=None)\u00b6",
+    "function_name": "around",
+    "args": ["a"],
+    "kwargs": [
+      ["decimals", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.argmin(a,axis=None,out=None)\u00b6",
+    "function_name": "argmin",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.argmax(a,axis=None,out=None)\u00b6",
+    "function_name": "argmax",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asarray_chkfinite(a,dtype=None,order=None)\u00b6",
+    "function_name": "asarray_chkfinite",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.apply_over_axes(func,a,axes)\u00b6",
+    "function_name": "apply_over_axes",
+    "args": ["func", "a", "axes"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.append(arr,values,axis=None)\u00b6",
+    "function_name": "append",
+    "args": ["arr", "values"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.angle(z,deg=False)\u00b6",
+    "function_name": "angle",
+    "args": ["z"],
+    "kwargs": [
+      ["deg", "False"]
+    ]
+  },
+  {
+    "code": "numpy.apply_along_axis(func1d,axis,arr,*args,**kwargs)\u00b6",
+    "function_name": "apply_along_axis",
+    "args": ["func1d", "axis", "arr", "*args", "**kwargs"],
+    "kwargs": []
+  }
+][{
+    "code": "numpy.broadcast_arrays(*args,**kwargs)\u00b6",
+    "function_name": "broadcast_arrays",
+    "args": ["*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.bmat(obj,ldict=None,gdict=None)\u00b6",
+    "function_name": "bmat",
+    "args": ["obj"],
+    "kwargs": [
+      ["ldict", "None"],
+      ["gdict", "None"]
+    ]
+  },
+  {
+    "code": "numpy.blackman(M)\u00b6",
+    "function_name": "blackman",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.block(arrays)\u00b6",
+    "function_name": "block",
+    "args": ["arrays"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vsplit(ary,indices_or_sections)\u00b6",
+    "function_name": "vsplit",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vstack(tup)\u00b6",
+    "function_name": "vstack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vdot(a,b)\u00b6",
+    "function_name": "vdot",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.vander(x,N=None,increasing=False)\u00b6",
+    "function_name": "vander",
+    "args": ["x"],
+    "kwargs": [
+      ["N", "None"],
+      ["increasing", "False"]
+    ]
+  },
+  {
+    "code": "numpy.unique(ar,return_index=False,return_inverse=False,return_counts=False,axis=None)\u00b6",
+    "function_name": "unique",
+    "args": ["ar"],
+    "kwargs": [
+      ["return_index", "False"],
+      ["return_inverse", "False"],
+      ["return_counts", "False"],
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.union1d(ar1,ar2)\u00b6",
+    "function_name": "union1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.typename(char)\u00b6",
+    "function_name": "typename",
+    "args": ["char"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.triu_indices_from(arr,k=0)\u00b6",
+    "function_name": "triu_indices_from",
+    "args": ["arr"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.triu_indices(n,k=0,m=None)\u00b6",
+    "function_name": "triu_indices",
+    "args": ["n"],
+    "kwargs": [
+      ["k", "0"],
+      ["m", "None"]
+    ]
+  },
+  {
+    "code": "numpy.triu(m,k=0)\u00b6",
+    "function_name": "triu",
+    "args": ["m"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.tril_indices_from(arr,k=0)\u00b6",
+    "function_name": "tril_indices_from",
+    "args": ["arr"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.tril_indices(n,k=0,m=None)\u00b6",
+    "function_name": "tril_indices",
+    "args": ["n"],
+    "kwargs": [
+      ["k", "0"],
+      ["m", "None"]
+    ]
+  },
+  {
+    "code": "numpy.tril(m,k=0)\u00b6",
+    "function_name": "tril",
+    "args": ["m"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.transpose(a,axes=None)\u00b6",
+    "function_name": "transpose",
+    "args": ["a"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.tile(A,reps)\u00b6",
+    "function_name": "tile",
+    "args": ["A", "reps"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.rundocs(filename=None,raise_on_error=True)\u00b6",
+    "function_name": "rundocs",
+    "args": [],
+    "kwargs": [
+      ["filename", "None"],
+      ["raise_on_error", "True"]
+    ]
+  },
+  {
+    "code": "numpy.testing.run_module_suite(file_to_run=None,argv=None)\u00b6",
+    "function_name": "run_module_suite",
+    "args": [],
+    "kwargs": [
+      ["file_to_run", "None"],
+      ["argv", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.slow(t)\u00b6",
+    "function_name": "slow",
+    "args": ["t"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.decorators.skipif(skip_condition,msg=None)\u00b6",
+    "function_name": "skipif",
+    "args": ["skip_condition"],
+    "kwargs": [
+      ["msg", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.knownfailureif(fail_condition,msg=None)\u00b6",
+    "function_name": "knownfailureif",
+    "args": ["fail_condition"],
+    "kwargs": [
+      ["msg", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.deprecated(conditional=True)\u00b6",
+    "function_name": "deprecated",
+    "args": [],
+    "kwargs": [
+      ["conditional", "True"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorators.setastest(tf=True)\u00b6",
+    "function_name": "setastest",
+    "args": [],
+    "kwargs": [
+      ["tf", "True"]
+    ]
+  },
+  {
+    "code": "numpy.testing.decorate_methods(cls,decorator,testmatch=None)\u00b6",
+    "function_name": "decorate_methods",
+    "args": ["cls", "decorator"],
+    "kwargs": [
+      ["testmatch", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.assert_warns(warning_class,*args,**kwargs)\u00b6",
+    "function_name": "assert_warns",
+    "args": ["warning_class", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_string_equal(actual,desired)\u00b6",
+    "function_name": "assert_string_equal",
+    "args": ["actual", "desired"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_raises_regex(exception_class,expected_regexp,callable,*args,**kwargs)assert_raises_regex(exception_class,expected_regexp)\u00b6",
+    "function_name": "assert_raises_regex",
+    "args": ["exception_class", "expected_regexp", "callable", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_raises(exception_class,callable,*args,**kwargs)assert_raises(exception_class)\u00b6",
+    "function_name": "assert_raises",
+    "args": ["exception_class", "callable", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.testing.assert_array_max_ulp(a,b,maxulp=1,dtype=None)\u00b6",
+    "function_name": "assert_array_max_ulp",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["maxulp", "1"],
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.trace(a,offset=0,axis1=0,axis2=1,dtype=None,out=None)\u00b6",
+    "function_name": "trace",
+    "args": ["a"],
+    "kwargs": [
+      ["offset", "0"],
+      ["axis1", "0"],
+      ["axis2", "1"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.testing.assert_array_almost_equal_nulp(x,y,nulp=1)\u00b6",
+    "function_name": "assert_array_almost_equal_nulp",
+    "args": ["x", "y"],
+    "kwargs": [
+      ["nulp", "1"]
+    ]
+  },
+  {
+    "code": "numpy.take_along_axis(arr,indices,axis)\u00b6",
+    "function_name": "take_along_axis",
+    "args": ["arr", "indices", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.swapaxes(a,axis1,axis2)\u00b6",
+    "function_name": "swapaxes",
+    "args": ["a", "axis1", "axis2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.stack(arrays,axis=0,out=None)\u00b6",
+    "function_name": "stack",
+    "args": ["arrays"],
+    "kwargs": [
+      ["axis", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.tensordot(a,b,axes=2)\u00b6",
+    "function_name": "tensordot",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["axes", "2"]
+    ]
+  },
+  {
+    "code": "numpy.squeeze(a,axis=None)\u00b6",
+    "function_name": "squeeze",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.sort_complex(a)\u00b6",
+    "function_name": "sort_complex",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.sinc(x)\u00b6",
+    "function_name": "sinc",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.shares_memory(a,b,max_work=None)\u00b6",
+    "function_name": "shares_memory",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["max_work", "None"]
+    ]
+  },
+  {
+    "code": "numpy.seterrobj(errobj)\u00b6",
+    "function_name": "seterrobj",
+    "args": ["errobj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.setxor1d(ar1,ar2,assume_unique=False)\u00b6",
+    "function_name": "setxor1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"]
+    ]
+  },
+  {
+    "code": "numpy.seterrcall(func)\u00b6",
+    "function_name": "seterrcall",
+    "args": ["func"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.seterr(all=None,divide=None,over=None,under=None,invalid=None)\u00b6",
+    "function_name": "seterr",
+    "args": [],
+    "kwargs": [
+      ["all", "None"],
+      ["divide", "None"],
+      ["over", "None"],
+      ["under", "None"],
+      ["invalid", "None"]
+    ]
+  },
+  {
+    "code": "numpy.split(ary,indices_or_sections,axis=0)\u00b6",
+    "function_name": "split",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": [
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.setdiff1d(ar1,ar2,assume_unique=False)\u00b6",
+    "function_name": "setdiff1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"]
+    ]
+  },
+  {
+    "code": "numpy.set_string_function(f,repr=True)\u00b6",
+    "function_name": "set_string_function",
+    "args": ["f"],
+    "kwargs": [
+      ["repr", "True"]
+    ]
+  },
+  {
+    "code": "numpy.setbufsize(size)\u00b6",
+    "function_name": "setbufsize",
+    "args": ["size"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.set_printoptions(precision=None,threshold=None,edgeitems=None,linewidth=None,suppress=None,nanstr=None,infstr=None,formatter=None,sign=None,floatmode=None,**kwarg)\u00b6",
+    "function_name": "set_printoptions",
+    "args": ["**kwarg"],
+    "kwargs": [
+      ["precision", "None"],
+      ["threshold", "None"],
+      ["edgeitems", "None"],
+      ["linewidth", "None"],
+      ["suppress", "None"],
+      ["nanstr", "None"],
+      ["infstr", "None"],
+      ["formatter", "None"],
+      ["sign", "None"],
+      ["floatmode", "None"]
+    ]
+  },
+  {
+    "code": "numpy.select(condlist,choicelist,default=0)\u00b6",
+    "function_name": "select",
+    "args": ["condlist", "choicelist"],
+    "kwargs": [
+      ["default", "0"]
+    ]
+  },
+  {
+    "code": "numpy.sctype2char(sctype)\u00b6",
+    "function_name": "sctype2char",
+    "args": ["sctype"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.savez(file,*args,**kwds)\u00b6",
+    "function_name": "savez",
+    "args": ["file", "*args", "**kwds"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.savez_compressed(file,*args,**kwds)\u00b6",
+    "function_name": "savez_compressed",
+    "args": ["file", "*args", "**kwds"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.save(file,arr,allow_pickle=True,fix_imports=True)\u00b6",
+    "function_name": "save",
+    "args": ["file", "arr"],
+    "kwargs": [
+      ["allow_pickle", "True"],
+      ["fix_imports", "True"]
+    ]
+  },
+  {
+    "code": "numpy.rollaxis(a,axis,start=0)\u00b6",
+    "function_name": "rollaxis",
+    "args": ["a", "axis"],
+    "kwargs": [
+      ["start", "0"]
+    ]
+  },
+  {
+    "code": "numpy.round_(a,decimals=0,out=None)\u00b6",
+    "function_name": "round_",
+    "args": ["a"],
+    "kwargs": [
+      ["decimals", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.roots(p)\u00b6",
+    "function_name": "roots",
+    "args": ["p"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.roll(a,shift,axis=None)\u00b6",
+    "function_name": "roll",
+    "args": ["a", "shift"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.result_type(*arrays_and_dtypes)\u00b6",
+    "function_name": "result_type",
+    "args": ["*arrays_and_dtypes"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.resize(a,new_shape)\u00b6",
+    "function_name": "resize",
+    "args": ["a", "new_shape"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.require(a,dtype=None,requirements=None)\u00b6",
+    "function_name": "require",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["requirements", "None"]
+    ]
+  },
+  {
+    "code": "numpy.repeat(a,repeats,axis=None)\u00b6",
+    "function_name": "repeat",
+    "args": ["a", "repeats"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.real(val)\u00b6",
+    "function_name": "real",
+    "args": ["val"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.putmask(a,mask,values)\u00b6",
+    "function_name": "putmask",
+    "args": ["a", "mask", "values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.put_along_axis(arr,indices,values,axis)\u00b6",
+    "function_name": "put_along_axis",
+    "args": ["arr", "indices", "values", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.real_if_close(a,tol=100)\u00b6",
+    "function_name": "real_if_close",
+    "args": ["a"],
+    "kwargs": [
+      ["tol", "100"]
+    ]
+  },
+  {
+    "code": "numpy.printoptions(*args,**kwargs)\u00b6",
+    "function_name": "printoptions",
+    "args": ["*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.promote_types(type1,type2)\u00b6",
+    "function_name": "promote_types",
+    "args": ["type1", "type2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polyval(p,x)\u00b6",
+    "function_name": "polyval",
+    "args": ["p", "x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polysub(a1,a2)\u00b6",
+    "function_name": "polysub",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.trimseq(seq)\u00b6",
+    "function_name": "trimseq",
+    "args": ["seq"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.trimcoef(c,tol=0)\u00b6",
+    "function_name": "trimcoef",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polyutils.mapparms(old,new)\u00b6",
+    "function_name": "mapparms",
+    "args": ["old", "new"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.mapdomain(x,old,new)\u00b6",
+    "function_name": "mapdomain",
+    "args": ["x", "old", "new"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.getdomain(x)\u00b6",
+    "function_name": "getdomain",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvander3d(x,y,z,deg)\u00b6",
+    "function_name": "polyvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvander2d(x,y,deg)\u00b6",
+    "function_name": "polyvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvander(x,deg)\u00b6",
+    "function_name": "polyvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyvalfromroots(x,r,tensor=True)\u00b6",
+    "function_name": "polyvalfromroots",
+    "args": ["x", "r"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyval3d(x,y,z,c)\u00b6",
+    "function_name": "polyval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polyutils.as_series(alist,trim=True)\u00b6",
+    "function_name": "as_series",
+    "args": ["alist"],
+    "kwargs": [
+      ["trim", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyval2d(x,y,c)\u00b6",
+    "function_name": "polyval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyval(x,c,tensor=True)\u00b6",
+    "function_name": "polyval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polysub(c1,c2)\u00b6",
+    "function_name": "polysub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyroots(c)\u00b6",
+    "function_name": "polyroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polypow(c,pow,maxpower=None)\u00b6",
+    "function_name": "polypow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polymulx(c)\u00b6",
+    "function_name": "polymulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyline(off,scl)\u00b6",
+    "function_name": "polyline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polymul(c1,c2)\u00b6",
+    "function_name": "polymul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polygrid2d(x,y,c)\u00b6",
+    "function_name": "polygrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyfromroots(roots)\u00b6",
+    "function_name": "polyfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "polyfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polydiv(c1,c2)\u00b6",
+    "function_name": "polydiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "polyder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polyadd(c1,c2)\u00b6",
+    "function_name": "polyadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polygrid3d(x,y,z,c)\u00b6",
+    "function_name": "polygrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polycompanion(c)\u00b6",
+    "function_name": "polycompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.poly2leg(pol)\u00b6",
+    "function_name": "poly2leg",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legweight(x)\u00b6",
+    "function_name": "legweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legvander(x,deg)\u00b6",
+    "function_name": "legvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legvander2d(x,y,deg)\u00b6",
+    "function_name": "legvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legval3d(x,y,z,c)\u00b6",
+    "function_name": "legval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legval2d(x,y,c)\u00b6",
+    "function_name": "legval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.polynomial.polytrim(c,tol=0)\u00b6",
+    "function_name": "polytrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legval(x,c,tensor=True)\u00b6",
+    "function_name": "legval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legtrim(c,tol=0)\u00b6",
+    "function_name": "legtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legsub(c1,c2)\u00b6",
+    "function_name": "legsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legvander3d(x,y,z,deg)\u00b6",
+    "function_name": "legvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legroots(c)\u00b6",
+    "function_name": "legroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "legpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legmul(c1,c2)\u00b6",
+    "function_name": "legmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legline(off,scl)\u00b6",
+    "function_name": "legline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leggrid2d(x,y,c)\u00b6",
+    "function_name": "leggrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leggauss(deg)\u00b6",
+    "function_name": "leggauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legfromroots(roots)\u00b6",
+    "function_name": "legfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "legfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legdiv(c1,c2)\u00b6",
+    "function_name": "legdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "legder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.legendre.legcompanion(c)\u00b6",
+    "function_name": "legcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legadd(c1,c2)\u00b6",
+    "function_name": "legadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leg2poly(c)\u00b6",
+    "function_name": "leg2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.leggrid3d(x,y,z,c)\u00b6",
+    "function_name": "leggrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.legendre.legmulx(c)\u00b6",
+    "function_name": "legmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.poly2lag(pol)\u00b6",
+    "function_name": "poly2lag",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagvander3d(x,y,z,deg)\u00b6",
+    "function_name": "lagvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagvander2d(x,y,deg)\u00b6",
+    "function_name": "lagvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagweight(x)\u00b6",
+    "function_name": "lagweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagval3d(x,y,z,c)\u00b6",
+    "function_name": "lagval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagvander(x,deg)\u00b6",
+    "function_name": "lagvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagval(x,c,tensor=True)\u00b6",
+    "function_name": "lagval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagtrim(c,tol=0)\u00b6",
+    "function_name": "lagtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagroots(c)\u00b6",
+    "function_name": "lagroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagsub(c1,c2)\u00b6",
+    "function_name": "lagsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagval2d(x,y,c)\u00b6",
+    "function_name": "lagval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "lagpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagmulx(c)\u00b6",
+    "function_name": "lagmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagmul(c1,c2)\u00b6",
+    "function_name": "lagmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.laggrid2d(x,y,c)\u00b6",
+    "function_name": "laggrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.laggauss(deg)\u00b6",
+    "function_name": "laggauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagline(off,scl)\u00b6",
+    "function_name": "lagline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.laggrid3d(x,y,z,c)\u00b6",
+    "function_name": "laggrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagfromroots(roots)\u00b6",
+    "function_name": "lagfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "lagfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagcompanion(c)\u00b6",
+    "function_name": "lagcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagdiv(c1,c2)\u00b6",
+    "function_name": "lagdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "lagder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lagadd(c1,c2)\u00b6",
+    "function_name": "lagadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.laguerre.lag2poly(c)\u00b6",
+    "function_name": "lag2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.poly2herme(pol)\u00b6",
+    "function_name": "poly2herme",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeweight(x)\u00b6",
+    "function_name": "hermeweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermevander3d(x,y,z,deg)\u00b6",
+    "function_name": "hermevander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermevander2d(x,y,deg)\u00b6",
+    "function_name": "hermevander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermevander(x,deg)\u00b6",
+    "function_name": "hermevander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeval3d(x,y,z,c)\u00b6",
+    "function_name": "hermeval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeval(x,c,tensor=True)\u00b6",
+    "function_name": "hermeval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeval2d(x,y,c)\u00b6",
+    "function_name": "hermeval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermesub(c1,c2)\u00b6",
+    "function_name": "hermesub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermetrim(c,tol=0)\u00b6",
+    "function_name": "hermetrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeroots(c)\u00b6",
+    "function_name": "hermeroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermepow(c,pow,maxpower=16)\u00b6",
+    "function_name": "hermepow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermemulx(c)\u00b6",
+    "function_name": "hermemulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermemul(c1,c2)\u00b6",
+    "function_name": "hermemul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermegrid3d(x,y,z,c)\u00b6",
+    "function_name": "hermegrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeline(off,scl)\u00b6",
+    "function_name": "hermeline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermegrid2d(x,y,c)\u00b6",
+    "function_name": "hermegrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermefromroots(roots)\u00b6",
+    "function_name": "hermefromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermediv(c1,c2)\u00b6",
+    "function_name": "hermediv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermegauss(deg)\u00b6",
+    "function_name": "hermegauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermefit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "hermefit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermecompanion(c)\u00b6",
+    "function_name": "hermecompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeadd(c1,c2)\u00b6",
+    "function_name": "hermeadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.herme2poly(c)\u00b6",
+    "function_name": "herme2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite_e.hermeder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "hermeder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.poly2herm(pol)\u00b6",
+    "function_name": "poly2herm",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermweight(x)\u00b6",
+    "function_name": "hermweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermvander2d(x,y,deg)\u00b6",
+    "function_name": "hermvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermvander3d(x,y,z,deg)\u00b6",
+    "function_name": "hermvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermvander(x,deg)\u00b6",
+    "function_name": "hermvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermval2d(x,y,c)\u00b6",
+    "function_name": "hermval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermval(x,c,tensor=True)\u00b6",
+    "function_name": "hermval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermsub(c1,c2)\u00b6",
+    "function_name": "hermsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "hermpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermroots(c)\u00b6",
+    "function_name": "hermroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermmulx(c)\u00b6",
+    "function_name": "hermmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermline(off,scl)\u00b6",
+    "function_name": "hermline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermgrid3d(x,y,z,c)\u00b6",
+    "function_name": "hermgrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermgrid2d(x,y,c)\u00b6",
+    "function_name": "hermgrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermgauss(deg)\u00b6",
+    "function_name": "hermgauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermfromroots(roots)\u00b6",
+    "function_name": "hermfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "hermfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermval3d(x,y,z,c)\u00b6",
+    "function_name": "hermval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermdiv(c1,c2)\u00b6",
+    "function_name": "hermdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "hermder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermcompanion(c)\u00b6",
+    "function_name": "hermcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.herm2poly(c)\u00b6",
+    "function_name": "herm2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermadd(c1,c2)\u00b6",
+    "function_name": "hermadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermmul(c1,c2)\u00b6",
+    "function_name": "hermmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.hermite.hermtrim(c,tol=0)\u00b6",
+    "function_name": "hermtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.poly2cheb(pol)\u00b6",
+    "function_name": "poly2cheb",
+    "args": ["pol"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebweight(x)\u00b6",
+    "function_name": "chebweight",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebvander3d(x,y,z,deg)\u00b6",
+    "function_name": "chebvander3d",
+    "args": ["x", "y", "z", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebvander2d(x,y,deg)\u00b6",
+    "function_name": "chebvander2d",
+    "args": ["x", "y", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebvander(x,deg)\u00b6",
+    "function_name": "chebvander",
+    "args": ["x", "deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebval2d(x,y,c)\u00b6",
+    "function_name": "chebval2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebval(x,c,tensor=True)\u00b6",
+    "function_name": "chebval",
+    "args": ["x", "c"],
+    "kwargs": [
+      ["tensor", "True"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebtrim(c,tol=0)\u00b6",
+    "function_name": "chebtrim",
+    "args": ["c"],
+    "kwargs": [
+      ["tol", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebroots(c)\u00b6",
+    "function_name": "chebroots",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebsub(c1,c2)\u00b6",
+    "function_name": "chebsub",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebmul(c1,c2)\u00b6",
+    "function_name": "chebmul",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebmulx(c)\u00b6",
+    "function_name": "chebmulx",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebline(off,scl)\u00b6",
+    "function_name": "chebline",
+    "args": ["off", "scl"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebgrid3d(x,y,z,c)\u00b6",
+    "function_name": "chebgrid3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebgauss(deg)\u00b6",
+    "function_name": "chebgauss",
+    "args": ["deg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebfromroots(roots)\u00b6",
+    "function_name": "chebfromroots",
+    "args": ["roots"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebgrid2d(x,y,c)\u00b6",
+    "function_name": "chebgrid2d",
+    "args": ["x", "y", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebfit(x,y,deg,rcond=None,full=False,w=None)\u00b6",
+    "function_name": "chebfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebdiv(c1,c2)\u00b6",
+    "function_name": "chebdiv",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebcompanion(c)\u00b6",
+    "function_name": "chebcompanion",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebder(c,m=1,scl=1,axis=0)\u00b6",
+    "function_name": "chebder",
+    "args": ["c"],
+    "kwargs": [
+      ["m", "1"],
+      ["scl", "1"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebpow(c,pow,maxpower=16)\u00b6",
+    "function_name": "chebpow",
+    "args": ["c", "pow"],
+    "kwargs": [
+      ["maxpower", "16"]
+    ]
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebadd(c1,c2)\u00b6",
+    "function_name": "chebadd",
+    "args": ["c1", "c2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.cheb2poly(c)\u00b6",
+    "function_name": "cheb2poly",
+    "args": ["c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polymul(a1,a2)\u00b6",
+    "function_name": "polymul",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polyint(p,m=1,k=None)\u00b6",
+    "function_name": "polyint",
+    "args": ["p"],
+    "kwargs": [
+      ["m", "1"],
+      ["k", "None"]
+    ]
+  },
+  {
+    "code": "numpy.polyfit(x,y,deg,rcond=None,full=False,w=None,cov=False)\u00b6",
+    "function_name": "polyfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"],
+      ["cov", "False"]
+    ]
+  },
+  {
+    "code": "numpy.polydiv(u,v)\u00b6",
+    "function_name": "polydiv",
+    "args": ["u", "v"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polyder(p,m=1)\u00b6",
+    "function_name": "polyder",
+    "args": ["p"],
+    "kwargs": [
+      ["m", "1"]
+    ]
+  },
+  {
+    "code": "numpy.polyadd(a1,a2)\u00b6",
+    "function_name": "polyadd",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.poly(seq_of_zeros)\u00b6",
+    "function_name": "poly",
+    "args": ["seq_of_zeros"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.place(arr,mask,vals)\u00b6",
+    "function_name": "place",
+    "args": ["arr", "mask", "vals"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.piecewise(x,condlist,funclist,*args,**kw)\u00b6",
+    "function_name": "piecewise",
+    "args": ["x", "condlist", "funclist", "*args", "**kw"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.outer(a,b,out=None)\u00b6",
+    "function_name": "outer",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.obj2sctype(rep,default=None)\u00b6",
+    "function_name": "obj2sctype",
+    "args": ["rep"],
+    "kwargs": [
+      ["default", "None"]
+    ]
+  },
+  {
+    "code": "numpy.npv(rate,values)\u00b6",
+    "function_name": "npv",
+    "args": ["rate", "values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nonzero(a)\u00b6",
+    "function_name": "nonzero",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nested_iters()\u00b6",
+    "function_name": "nested_iters",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.polynomial.chebyshev.chebval3d(x,y,z,c)\u00b6",
+    "function_name": "chebval3d",
+    "args": ["x", "y", "z", "c"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nancumprod(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "nancumprod",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.nanargmin(a,axis=None)\u00b6",
+    "function_name": "nanargmin",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.nanargmax(a,axis=None)\u00b6",
+    "function_name": "nanargmax",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.nan_to_num(x,copy=True,nan=0.0,posinf=None,neginf=None)\u00b6",
+    "function_name": "nan_to_num",
+    "args": ["x"],
+    "kwargs": [
+      ["copy", "True"],
+      ["nan", "0.0"],
+      ["posinf", "None"],
+      ["neginf", "None"]
+    ]
+  },
+  {
+    "code": "numpy.moveaxis(a,source,destination)\u00b6",
+    "function_name": "moveaxis",
+    "args": ["a", "source", "destination"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.msort(a)\u00b6",
+    "function_name": "msort",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.nancumsum(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "nancumsum",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.mirr(values,finance_rate,reinvest_rate)\u00b6",
+    "function_name": "mirr",
+    "args": ["values", "finance_rate", "reinvest_rate"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.min_scalar_type(a)\u00b6",
+    "function_name": "min_scalar_type",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.meshgrid(*xi,**kwargs)\u00b6",
+    "function_name": "meshgrid",
+    "args": ["*xi", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.median(a,axis=None,out=None,overwrite_input=False,keepdims=False)\u00b6",
+    "function_name": "median",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"],
+      ["overwrite_input", "False"],
+      ["keepdims", "False"]
+    ]
+  },
+  {
+    "code": "numpy.may_share_memory(a,b,max_work=None)\u00b6",
+    "function_name": "may_share_memory",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["max_work", "None"]
+    ]
+  },
+  {
+    "code": "numpy.maximum_sctype(t)\u00b6",
+    "function_name": "maximum_sctype",
+    "args": ["t"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.repmat(a,m,n)\u00b6",
+    "function_name": "repmat",
+    "args": ["a", "m", "n"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.rand(*args)\u00b6",
+    "function_name": "rand",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.randn(*args)\u00b6",
+    "function_name": "randn",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.matlib.identity(n,dtype=None)\u00b6",
+    "function_name": "identity",
+    "args": ["n"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.mat(data,dtype=None)\u00b6",
+    "function_name": "mat",
+    "args": ["data"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.mask_indices(n,mask_func,k=0)\u00b6",
+    "function_name": "mask_indices",
+    "args": ["n", "mask_func"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.squeeze(a,axis=None)\u00b6",
+    "function_name": "squeeze",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.size(obj,axis=None)\u00b6",
+    "function_name": "size",
+    "args": ["obj"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.shape(obj)\u00b6",
+    "function_name": "shape",
+    "args": ["obj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.set_fill_value(a,fill_value)\u00b6",
+    "function_name": "set_fill_value",
+    "args": ["a", "fill_value"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.vander(x,n=None)\u00b6",
+    "function_name": "vander",
+    "args": ["x"],
+    "kwargs": [
+      ["n", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.round(a,decimals=0,out=None)\u00b6",
+    "function_name": "round",
+    "args": ["a"],
+    "kwargs": [
+      ["decimals", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.resize(x,new_shape)\u00b6",
+    "function_name": "resize",
+    "args": ["x", "new_shape"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.power(a,b,third=None)\u00b6",
+    "function_name": "power",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["third", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.polyfit(x,y,deg,rcond=None,full=False,w=None,cov=False)\u00b6",
+    "function_name": "polyfit",
+    "args": ["x", "y", "deg"],
+    "kwargs": [
+      ["rcond", "None"],
+      ["full", "False"],
+      ["w", "None"],
+      ["cov", "False"]
+    ]
+  },
+  {
+    "code": "numpy.ma.outer(a,b)\u00b6",
+    "function_name": "outer",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.transpose(a,axes=None)\u00b6",
+    "function_name": "transpose",
+    "args": ["a"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.notmasked_edges(a,axis=None)\u00b6",
+    "function_name": "notmasked_edges",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.notmasked_contiguous(a,axis=None)\u00b6",
+    "function_name": "notmasked_contiguous",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.median(a,axis=None,out=None,overwrite_input=False,keepdims=False)\u00b6",
+    "function_name": "median",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"],
+      ["overwrite_input", "False"],
+      ["keepdims", "False"]
+    ]
+  },
+  {
+    "code": "numpy.ma.maximum_fill_value(obj)\u00b6",
+    "function_name": "maximum_fill_value",
+    "args": ["obj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.masked_where(condition,a,copy=True)\u00b6",
+    "function_name": "masked_where",
+    "args": ["condition", "a"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_not_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_not_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_inside(x,v1,v2,copy=True)\u00b6",
+    "function_name": "masked_inside",
+    "args": ["x", "v1", "v2"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_less_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_less_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_outside(x,v1,v2,copy=True)\u00b6",
+    "function_name": "masked_outside",
+    "args": ["x", "v1", "v2"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_less(x,value,copy=True)\u00b6",
+    "function_name": "masked_less",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_object(x,value,copy=True,shrink=True)\u00b6",
+    "function_name": "masked_object",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"],
+      ["shrink", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_greater_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_greater_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_greater(x,value,copy=True)\u00b6",
+    "function_name": "masked_greater",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_equal(x,value,copy=True)\u00b6",
+    "function_name": "masked_equal",
+    "args": ["x", "value"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.outerproduct(a,b)\u00b6",
+    "function_name": "outerproduct",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.masked_invalid(a,copy=True)\u00b6",
+    "function_name": "masked_invalid",
+    "args": ["a"],
+    "kwargs": [
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.masked_all_like(arr)\u00b6",
+    "function_name": "masked_all_like",
+    "args": ["arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.mask_rows(a,axis=None)\u00b6",
+    "function_name": "mask_rows",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.mask_rowcols(a,axis=None)\u00b6",
+    "function_name": "mask_rowcols",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.mask_or(m1,m2,copy=False,shrink=True)\u00b6",
+    "function_name": "mask_or",
+    "args": ["m1", "m2"],
+    "kwargs": [
+      ["copy", "False"],
+      ["shrink", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.make_mask_descr(ndtype)\u00b6",
+    "function_name": "make_mask_descr",
+    "args": ["ndtype"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.loads(strg)\u00b6",
+    "function_name": "loads",
+    "args": ["strg"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.load(F)\u00b6",
+    "function_name": "load",
+    "args": ["F"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.is_masked(x)\u00b6",
+    "function_name": "is_masked",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.is_mask(m)\u00b6",
+    "function_name": "is_mask",
+    "args": ["m"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.make_mask_none(newshape,dtype=None)\u00b6",
+    "function_name": "make_mask_none",
+    "args": ["newshape"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.innerproduct(a,b)\u00b6",
+    "function_name": "innerproduct",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.inner(a,b)\u00b6",
+    "function_name": "inner",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.getmask(a)\u00b6",
+    "function_name": "getmask",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.getmaskarray(arr)\u00b6",
+    "function_name": "getmaskarray",
+    "args": ["arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.getdata(a,subok=True)\u00b6",
+    "function_name": "getdata",
+    "args": ["a"],
+    "kwargs": [
+      ["subok", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.flatnotmasked_contiguous(a)\u00b6",
+    "function_name": "flatnotmasked_contiguous",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.mask_cols(a,axis=None)\u00b6",
+    "function_name": "mask_cols",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.fix_invalid(a,mask=False,copy=True,fill_value=None)\u00b6",
+    "function_name": "fix_invalid",
+    "args": ["a"],
+    "kwargs": [
+      ["mask", "False"],
+      ["copy", "True"],
+      ["fill_value", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.filled(a,fill_value=None)\u00b6",
+    "function_name": "filled",
+    "args": ["a"],
+    "kwargs": [
+      ["fill_value", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.expand_dims(a,axis)\u00b6",
+    "function_name": "expand_dims",
+    "args": ["a", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.dumps(a)\u00b6",
+    "function_name": "dumps",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.ediff1d(arr,to_end=None,to_begin=None)\u00b6",
+    "function_name": "ediff1d",
+    "args": ["arr"],
+    "kwargs": [
+      ["to_end", "None"],
+      ["to_begin", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.dump(a,F)\u00b6",
+    "function_name": "dump",
+    "args": ["a", "F"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.dot(a,b,strict=False,out=None)\u00b6",
+    "function_name": "dot",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["strict", "False"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.diag(v,k=0)\u00b6",
+    "function_name": "diag",
+    "args": ["v"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.default_fill_value(obj)\u00b6",
+    "function_name": "default_fill_value",
+    "args": ["obj"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.cov(x,y=None,rowvar=True,bias=False,allow_masked=True,ddof=None)\u00b6",
+    "function_name": "cov",
+    "args": ["x"],
+    "kwargs": [
+      ["y", "None"],
+      ["rowvar", "True"],
+      ["bias", "False"],
+      ["allow_masked", "True"],
+      ["ddof", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.count_masked(arr,axis=None)\u00b6",
+    "function_name": "count_masked",
+    "args": ["arr"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.compressed(x)\u00b6",
+    "function_name": "compressed",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.compress_rows(a)\u00b6",
+    "function_name": "compress_rows",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.compress_cols(a)\u00b6",
+    "function_name": "compress_cols",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.common_fill_value(a,b)\u00b6",
+    "function_name": "common_fill_value",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.concatenate(arrays,axis=0)\u00b6",
+    "function_name": "concatenate",
+    "args": ["arrays"],
+    "kwargs": [
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.average(a,axis=None,weights=None,returned=False)\u00b6",
+    "function_name": "average",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["weights", "None"],
+      ["returned", "False"]
+    ]
+  },
+  {
+    "code": "numpy.ma.clip(a,a_min,a_max,out=None,**kwargs)\u00b6",
+    "function_name": "clip",
+    "args": ["a", "a_min", "a_max", "**kwargs"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.compress_rowcols(x,axis=None)\u00b6",
+    "function_name": "compress_rowcols",
+    "args": ["x"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.clump_unmasked(a)\u00b6",
+    "function_name": "clump_unmasked",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.clump_masked(a)\u00b6",
+    "function_name": "clump_masked",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.asarray(a,dtype=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.array(data,dtype=None,copy=False,order=None,mask=False,fill_value=None,keep_mask=True,hard_mask=False,shrink=True,subok=True,ndmin=0)\u00b6",
+    "function_name": "array",
+    "args": ["data"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["copy", "False"],
+      ["order", "None"],
+      ["mask", "False"],
+      ["fill_value", "None"],
+      ["keep_mask", "True"],
+      ["hard_mask", "False"],
+      ["shrink", "True"],
+      ["subok", "True"],
+      ["ndmin", "0"]
+    ]
+  },
+  {
+    "code": "numpy.ma.asanyarray(a,dtype=None)\u00b6",
+    "function_name": "asanyarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.apply_along_axis(func1d,axis,arr,*args,**kwargs)\u00b6",
+    "function_name": "apply_along_axis",
+    "args": ["func1d", "axis", "arr", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ma.append(a,b,axis=None)\u00b6",
+    "function_name": "append",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ma.allequal(a,b,fill_value=True)\u00b6",
+    "function_name": "allequal",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["fill_value", "True"]
+    ]
+  },
+  {
+    "code": "numpy.ma.flatnotmasked_edges(a)\u00b6",
+    "function_name": "flatnotmasked_edges",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.lookfor(what,module=None,import_modules=True,regenerate=False,output=None)\u00b6",
+    "function_name": "lookfor",
+    "args": ["what"],
+    "kwargs": [
+      ["module", "None"],
+      ["import_modules", "True"],
+      ["regenerate", "False"],
+      ["output", "None"]
+    ]
+  },
+  {
+    "code": "numpy.logspace(start,stop,num=50,endpoint=True,base=10.0,dtype=None,axis=0)\u00b6",
+    "function_name": "logspace",
+    "args": ["start", "stop"],
+    "kwargs": [
+      ["num", "50"],
+      ["endpoint", "True"],
+      ["base", "10.0"],
+      ["dtype", "None"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.tensorinv(a,ind=2)\u00b6",
+    "function_name": "tensorinv",
+    "args": ["a"],
+    "kwargs": [
+      ["ind", "2"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.slogdet(a)\u00b6",
+    "function_name": "slogdet",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linspace(start,stop,num=50,endpoint=True,retstep=False,dtype=None,axis=0)\u00b6",
+    "function_name": "linspace",
+    "args": ["start", "stop"],
+    "kwargs": [
+      ["num", "50"],
+      ["endpoint", "True"],
+      ["retstep", "False"],
+      ["dtype", "None"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.solve(a,b)\u00b6",
+    "function_name": "solve",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.norm(x,ord=None,axis=None,keepdims=False)\u00b6",
+    "function_name": "norm",
+    "args": ["x"],
+    "kwargs": [
+      ["ord", "None"],
+      ["axis", "None"],
+      ["keepdims", "False"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.multi_dot(arrays)\u00b6",
+    "function_name": "multi_dot",
+    "args": ["arrays"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.tensorsolve(a,b,axes=None)\u00b6",
+    "function_name": "tensorsolve",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.matrix_rank(M,tol=None,hermitian=False)\u00b6",
+    "function_name": "matrix_rank",
+    "args": ["M"],
+    "kwargs": [
+      ["tol", "None"],
+      ["hermitian", "False"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.svd(a,full_matrices=True,compute_uv=True,hermitian=False)\u00b6",
+    "function_name": "svd",
+    "args": ["a"],
+    "kwargs": [
+      ["full_matrices", "True"],
+      ["compute_uv", "True"],
+      ["hermitian", "False"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.inv(a)\u00b6",
+    "function_name": "inv",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.eigvals(a)\u00b6",
+    "function_name": "eigvals",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.eig(a)\u00b6",
+    "function_name": "eig",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.det(a)\u00b6",
+    "function_name": "det",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.cond(x,p=None)\u00b6",
+    "function_name": "cond",
+    "args": ["x"],
+    "kwargs": [
+      ["p", "None"]
+    ]
+  },
+  {
+    "code": "numpy.linalg.cholesky(a)\u00b6",
+    "function_name": "cholesky",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.linalg.matrix_power(a,n)\u00b6",
+    "function_name": "matrix_power",
+    "args": ["a", "n"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.lib.stride_tricks.as_strided(x,shape=None,strides=None,subok=False,writeable=True)\u00b6",
+    "function_name": "as_strided",
+    "args": ["x"],
+    "kwargs": [
+      ["shape", "None"],
+      ["strides", "None"],
+      ["subok", "False"],
+      ["writeable", "True"]
+    ]
+  },
+  {
+    "code": "numpy.kron(a,b)\u00b6",
+    "function_name": "kron",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ix_(*args)\u00b6",
+    "function_name": "ix_",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.kaiser(M,beta)\u00b6",
+    "function_name": "kaiser",
+    "args": ["M", "beta"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issubclass_(arg1,arg2)\u00b6",
+    "function_name": "issubclass_",
+    "args": ["arg1", "arg2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issctype(rep)\u00b6",
+    "function_name": "issctype",
+    "args": ["rep"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isrealobj(x)\u00b6",
+    "function_name": "isrealobj",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isreal(x)\u00b6",
+    "function_name": "isreal",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isposinf(x,out=None)\u00b6",
+    "function_name": "isposinf",
+    "args": ["x"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.isneginf(x,out=None)\u00b6",
+    "function_name": "isneginf",
+    "args": ["x"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.issubdtype(arg1,arg2)\u00b6",
+    "function_name": "issubdtype",
+    "args": ["arg1", "arg2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isin(element,test_elements,assume_unique=False,invert=False)\u00b6",
+    "function_name": "isin",
+    "args": ["element", "test_elements"],
+    "kwargs": [
+      ["assume_unique", "False"],
+      ["invert", "False"]
+    ]
+  },
+  {
+    "code": "numpy.isfortran(a)\u00b6",
+    "function_name": "isfortran",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.isscalar(num)\u00b6",
+    "function_name": "isscalar",
+    "args": ["num"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.iscomplexobj(x)\u00b6",
+    "function_name": "iscomplexobj",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.iscomplex(x)\u00b6",
+    "function_name": "iscomplex",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.issubsctype(arg1,arg2)\u00b6",
+    "function_name": "issubsctype",
+    "args": ["arg1", "arg2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.intersect1d(ar1,ar2,assume_unique=False,return_indices=False)\u00b6",
+    "function_name": "intersect1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"],
+      ["return_indices", "False"]
+    ]
+  },
+  {
+    "code": "numpy.interp(x,xp,fp,left=None,right=None,period=None)\u00b6",
+    "function_name": "interp",
+    "args": ["x", "xp", "fp"],
+    "kwargs": [
+      ["left", "None"],
+      ["right", "None"],
+      ["period", "None"]
+    ]
+  },
+  {
+    "code": "numpy.insert(arr,obj,values,axis=None)\u00b6",
+    "function_name": "insert",
+    "args": ["arr", "obj", "values"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.inner(a,b)\u00b6",
+    "function_name": "inner",
+    "args": ["a", "b"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.irr(values)\u00b6",
+    "function_name": "irr",
+    "args": ["values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.in1d(ar1,ar2,assume_unique=False,invert=False)\u00b6",
+    "function_name": "in1d",
+    "args": ["ar1", "ar2"],
+    "kwargs": [
+      ["assume_unique", "False"],
+      ["invert", "False"]
+    ]
+  },
+  {
+    "code": "numpy.imag(val)\u00b6",
+    "function_name": "imag",
+    "args": ["val"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.identity(n,dtype=None)\u00b6",
+    "function_name": "identity",
+    "args": ["n"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.i0(x)\u00b6",
+    "function_name": "i0",
+    "args": ["x"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.hstack(tup)\u00b6",
+    "function_name": "hstack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.hsplit(ary,indices_or_sections)\u00b6",
+    "function_name": "hsplit",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.histogramdd(sample,bins=10,range=None,normed=None,weights=None,density=None)\u00b6",
+    "function_name": "histogramdd",
+    "args": ["sample"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["normed", "None"],
+      ["weights", "None"],
+      ["density", "None"]
+    ]
+  },
+  {
+    "code": "numpy.histogram_bin_edges(a,bins=10,range=None,weights=None)\u00b6",
+    "function_name": "histogram_bin_edges",
+    "args": ["a"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["weights", "None"]
+    ]
+  },
+  {
+    "code": "numpy.hamming(M)\u00b6",
+    "function_name": "hamming",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.histogram2d(x,y,bins=10,range=None,normed=None,weights=None,density=None)\u00b6",
+    "function_name": "histogram2d",
+    "args": ["x", "y"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["normed", "None"],
+      ["weights", "None"],
+      ["density", "None"]
+    ]
+  },
+  {
+    "code": "numpy.histogram(a,bins=10,range=None,normed=None,weights=None,density=None)\u00b6",
+    "function_name": "histogram",
+    "args": ["a"],
+    "kwargs": [
+      ["bins", "10"],
+      ["range", "None"],
+      ["normed", "None"],
+      ["weights", "None"],
+      ["density", "None"]
+    ]
+  },
+  {
+    "code": "numpy.hanning(M)\u00b6",
+    "function_name": "hanning",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geterrobj()\u00b6",
+    "function_name": "geterrobj",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geterr()\u00b6",
+    "function_name": "geterr",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geterrcall()\u00b6",
+    "function_name": "geterrcall",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.getbufsize()\u00b6",
+    "function_name": "getbufsize",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.gradient(f,*varargs,**kwargs)\u00b6",
+    "function_name": "gradient",
+    "args": ["f", "*varargs", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.get_printoptions()\u00b6",
+    "function_name": "get_printoptions",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.geomspace(start,stop,num=50,endpoint=True,dtype=None,axis=0)\u00b6",
+    "function_name": "geomspace",
+    "args": ["start", "stop"],
+    "kwargs": [
+      ["num", "50"],
+      ["endpoint", "True"],
+      ["dtype", "None"],
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.fromregex(file,regexp,dtype,encoding=None)\u00b6",
+    "function_name": "fromregex",
+    "args": ["file", "regexp", "dtype"],
+    "kwargs": [
+      ["encoding", "None"]
+    ]
+  },
+  {
+    "code": "numpy.frompyfunc(func,nin,nout)\u00b6",
+    "function_name": "frompyfunc",
+    "args": ["func", "nin", "nout"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fromfunction(function,shape,**kwargs)\u00b6",
+    "function_name": "fromfunction",
+    "args": ["function", "shape", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.flipud(m)\u00b6",
+    "function_name": "flipud",
+    "args": ["m"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fliplr(m)\u00b6",
+    "function_name": "fliplr",
+    "args": ["m"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.flip(m,axis=None)\u00b6",
+    "function_name": "flip",
+    "args": ["m"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.flatnonzero(a)\u00b6",
+    "function_name": "flatnonzero",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.find_common_type(array_types,scalar_types)\u00b6",
+    "function_name": "find_common_type",
+    "args": ["array_types", "scalar_types"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.fill_diagonal(a,val,wrap=False)\u00b6",
+    "function_name": "fill_diagonal",
+    "args": ["a", "val"],
+    "kwargs": [
+      ["wrap", "False"]
+    ]
+  },
+  {
+    "code": "numpy.fft.rfftfreq(n,d=1.0)\u00b6",
+    "function_name": "rfftfreq",
+    "args": ["n"],
+    "kwargs": [
+      ["d", "1.0"]
+    ]
+  },
+  {
+    "code": "numpy.fft.rfftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "rfftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.irfftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "irfftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fix(x,out=None)\u00b6",
+    "function_name": "fix",
+    "args": ["x"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.ifftshift(x,axes=None)\u00b6",
+    "function_name": "ifftshift",
+    "args": ["x"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.ifftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "ifftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.fftfreq(n,d=1.0)\u00b6",
+    "function_name": "fftfreq",
+    "args": ["n"],
+    "kwargs": [
+      ["d", "1.0"]
+    ]
+  },
+  {
+    "code": "numpy.fft.fftn(a,s=None,axes=None,norm=None)\u00b6",
+    "function_name": "fftn",
+    "args": ["a"],
+    "kwargs": [
+      ["s", "None"],
+      ["axes", "None"],
+      ["norm", "None"]
+    ]
+  },
+  {
+    "code": "numpy.fft.fftshift(x,axes=None)\u00b6",
+    "function_name": "fftshift",
+    "args": ["x"],
+    "kwargs": [
+      ["axes", "None"]
+    ]
+  },
+  {
+    "code": "numpy.extract(condition,arr)\u00b6",
+    "function_name": "extract",
+    "args": ["condition", "arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.expand_dims(a,axis)\u00b6",
+    "function_name": "expand_dims",
+    "args": ["a", "axis"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.ediff1d(ary,to_end=None,to_begin=None)\u00b6",
+    "function_name": "ediff1d",
+    "args": ["ary"],
+    "kwargs": [
+      ["to_end", "None"],
+      ["to_begin", "None"]
+    ]
+  },
+  {
+    "code": "numpy.dsplit(ary,indices_or_sections)\u00b6",
+    "function_name": "dsplit",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.dstack(tup)\u00b6",
+    "function_name": "dstack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.dot(a,b,out=None)\u00b6",
+    "function_name": "dot",
+    "args": ["a", "b"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.system_info.get_standard_file(fname)\u00b6",
+    "function_name": "get_standard_file",
+    "args": ["fname"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.system_info.get_info(name,notfound_action=0)\u00b6",
+    "function_name": "get_info",
+    "args": ["name"],
+    "kwargs": [
+      ["notfound_action", "0"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.misc_util.yellow_text(s)\u00b6",
+    "function_name": "yellow_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.terminal_has_colors()\u00b6",
+    "function_name": "terminal_has_colors",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.is_local_src_dir(directory)\u00b6",
+    "function_name": "is_local_src_dir",
+    "args": ["directory"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.red_text(s)\u00b6",
+    "function_name": "red_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.green_text(s)\u00b6",
+    "function_name": "green_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.has_f_sources(sources)\u00b6",
+    "function_name": "has_f_sources",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.has_cxx_sources(sources)\u00b6",
+    "function_name": "has_cxx_sources",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_script_files(scripts)\u00b6",
+    "function_name": "get_script_files",
+    "args": ["scripts"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_numpy_include_dirs()\u00b6",
+    "function_name": "get_numpy_include_dirs",
+    "args": [""],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.generate_config_py(target)\u00b6",
+    "function_name": "generate_config_py",
+    "args": ["target"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_dependencies(sources)\u00b6",
+    "function_name": "get_dependencies",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.dot_join(*args)\u00b6",
+    "function_name": "dot_join",
+    "args": ["*args"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.filter_sources(sources)\u00b6",
+    "function_name": "filter_sources",
+    "args": ["sources"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.cyg2win32(path)\u00b6",
+    "function_name": "cyg2win32",
+    "args": ["path"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.cyan_text(s)\u00b6",
+    "function_name": "cyan_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.blue_text(s)\u00b6",
+    "function_name": "blue_text",
+    "args": ["s"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.appendpath(prefix,path)\u00b6",
+    "function_name": "appendpath",
+    "args": ["prefix", "path"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.allpath(name)\u00b6",
+    "function_name": "allpath",
+    "args": ["name"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.misc_util.all_strings(lst)\u00b6",
+    "function_name": "all_strings",
+    "args": ["lst"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.distutils.log.set_verbosity(v,force=False)\u00b6",
+    "function_name": "set_verbosity",
+    "args": ["v"],
+    "kwargs": [
+      ["force", "False"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.misc_util.dict_append(d,**kws)\u00b6",
+    "function_name": "dict_append",
+    "args": ["d", "**kws"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.digitize(x,bins,right=False)\u00b6",
+    "function_name": "digitize",
+    "args": ["x", "bins"],
+    "kwargs": [
+      ["right", "False"]
+    ]
+  },
+  {
+    "code": "numpy.diagonal(a,offset=0,axis1=0,axis2=1)\u00b6",
+    "function_name": "diagonal",
+    "args": ["a"],
+    "kwargs": [
+      ["offset", "0"],
+      ["axis1", "0"],
+      ["axis2", "1"]
+    ]
+  },
+  {
+    "code": "numpy.diagflat(v,k=0)\u00b6",
+    "function_name": "diagflat",
+    "args": ["v"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.diag_indices_from(arr)\u00b6",
+    "function_name": "diag_indices_from",
+    "args": ["arr"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.diag(v,k=0)\u00b6",
+    "function_name": "diag",
+    "args": ["v"],
+    "kwargs": [
+      ["k", "0"]
+    ]
+  },
+  {
+    "code": "numpy.diag_indices(n,ndim=2)\u00b6",
+    "function_name": "diag_indices",
+    "args": ["n"],
+    "kwargs": [
+      ["ndim", "2"]
+    ]
+  },
+  {
+    "code": "numpy.distutils.misc_util.get_ext_source_files(ext)\u00b6",
+    "function_name": "get_ext_source_files",
+    "args": ["ext"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.delete(arr,obj,axis=None)\u00b6",
+    "function_name": "delete",
+    "args": ["arr", "obj"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.cumsum(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "cumsum",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.cumprod(a,axis=None,dtype=None,out=None)\u00b6",
+    "function_name": "cumprod",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["dtype", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.count_nonzero(a,axis=None)\u00b6",
+    "function_name": "count_nonzero",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromstring(datastring,dtype=None,shape=None,offset=0,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromstring",
+    "args": ["datastring"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["offset", "0"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromrecords(recList,dtype=None,shape=None,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromrecords",
+    "args": ["recList"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.cov(m,y=None,rowvar=True,bias=False,ddof=None,fweights=None,aweights=None)\u00b6",
+    "function_name": "cov",
+    "args": ["m"],
+    "kwargs": [
+      ["y", "None"],
+      ["rowvar", "True"],
+      ["bias", "False"],
+      ["ddof", "None"],
+      ["fweights", "None"],
+      ["aweights", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromfile(fd,dtype=None,shape=None,offset=0,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromfile",
+    "args": ["fd"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["offset", "0"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.fromarrays(arrayList,dtype=None,shape=None,formats=None,names=None,titles=None,aligned=False,byteorder=None)\u00b6",
+    "function_name": "fromarrays",
+    "args": ["arrayList"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.records.array(obj,dtype=None,shape=None,offset=0,strides=None,formats=None,names=None,titles=None,aligned=False,byteorder=None,copy=True)\u00b6",
+    "function_name": "array",
+    "args": ["obj"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["shape", "None"],
+      ["offset", "0"],
+      ["strides", "None"],
+      ["formats", "None"],
+      ["names", "None"],
+      ["titles", "None"],
+      ["aligned", "False"],
+      ["byteorder", "None"],
+      ["copy", "True"]
+    ]
+  },
+  {
+    "code": "numpy.core.defchararray.asarray(obj,itemsize=None,unicode=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.core.defchararray.array(obj,itemsize=None,copy=True,unicode=None,order=None)\u00b6",
+    "function_name": "array",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["copy", "True"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.common_type(*arrays)\u00b6",
+    "function_name": "common_type",
+    "args": ["*arrays"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.compress(condition,a,axis=None,out=None)\u00b6",
+    "function_name": "compress",
+    "args": ["condition", "a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.column_stack(tup)\u00b6",
+    "function_name": "column_stack",
+    "args": ["tup"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.clip(a,a_min,a_max,out=None,**kwargs)\u00b6",
+    "function_name": "clip",
+    "args": ["a", "a_min", "a_max", "**kwargs"],
+    "kwargs": [
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.zfill(a,width)\u00b6",
+    "function_name": "zfill",
+    "args": ["a", "width"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.str_len(a)\u00b6",
+    "function_name": "str_len",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.startswith(a,prefix,start=0,end=None)\u00b6",
+    "function_name": "startswith",
+    "args": ["a", "prefix"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.upper(a)\u00b6",
+    "function_name": "upper",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.swapcase(a)\u00b6",
+    "function_name": "swapcase",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.rsplit(a,sep=None,maxsplit=None)\u00b6",
+    "function_name": "rsplit",
+    "args": ["a"],
+    "kwargs": [
+      ["sep", "None"],
+      ["maxsplit", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rpartition(a,sep)\u00b6",
+    "function_name": "rpartition",
+    "args": ["a", "sep"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.rstrip(a,chars=None)\u00b6",
+    "function_name": "rstrip",
+    "args": ["a"],
+    "kwargs": [
+      ["chars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rindex(a,sub,start=0,end=None)\u00b6",
+    "function_name": "rindex",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.translate(a,table,deletechars=None)\u00b6",
+    "function_name": "translate",
+    "args": ["a", "table"],
+    "kwargs": [
+      ["deletechars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.rfind(a,sub,start=0,end=None)\u00b6",
+    "function_name": "rfind",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.splitlines(a,keepends=None)\u00b6",
+    "function_name": "splitlines",
+    "args": ["a"],
+    "kwargs": [
+      ["keepends", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.replace(a,old,new,count=None)\u00b6",
+    "function_name": "replace",
+    "args": ["a", "old", "new"],
+    "kwargs": [
+      ["count", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.partition(a,sep)\u00b6",
+    "function_name": "partition",
+    "args": ["a", "sep"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.title(a)\u00b6",
+    "function_name": "title",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.not_equal(x1,x2)\u00b6",
+    "function_name": "not_equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.multiply(a,i)\u00b6",
+    "function_name": "multiply",
+    "args": ["a", "i"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.mod(a,values)\u00b6",
+    "function_name": "mod",
+    "args": ["a", "values"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.lstrip(a,chars=None)\u00b6",
+    "function_name": "lstrip",
+    "args": ["a"],
+    "kwargs": [
+      ["chars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.lower(a)\u00b6",
+    "function_name": "lower",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.less_equal(x1,x2)\u00b6",
+    "function_name": "less_equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.less(x1,x2)\u00b6",
+    "function_name": "less",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.join(sep,seq)\u00b6",
+    "function_name": "join",
+    "args": ["sep", "seq"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.strip(a,chars=None)\u00b6",
+    "function_name": "strip",
+    "args": ["a"],
+    "kwargs": [
+      ["chars", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.isupper(a)\u00b6",
+    "function_name": "isupper",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.istitle(a)\u00b6",
+    "function_name": "istitle",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isspace(a)\u00b6",
+    "function_name": "isspace",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isnumeric(a)\u00b6",
+    "function_name": "isnumeric",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.islower(a)\u00b6",
+    "function_name": "islower",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isdigit(a)\u00b6",
+    "function_name": "isdigit",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.split(a,sep=None,maxsplit=None)\u00b6",
+    "function_name": "split",
+    "args": ["a"],
+    "kwargs": [
+      ["sep", "None"],
+      ["maxsplit", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.isdecimal(a)\u00b6",
+    "function_name": "isdecimal",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isalpha(a)\u00b6",
+    "function_name": "isalpha",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.isalnum(a)\u00b6",
+    "function_name": "isalnum",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.greater_equal(x1,x2)\u00b6",
+    "function_name": "greater_equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.index(a,sub,start=0,end=None)\u00b6",
+    "function_name": "index",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.greater(x1,x2)\u00b6",
+    "function_name": "greater",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.find(a,sub,start=0,end=None)\u00b6",
+    "function_name": "find",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.expandtabs(a,tabsize=8)\u00b6",
+    "function_name": "expandtabs",
+    "args": ["a"],
+    "kwargs": [
+      ["tabsize", "8"]
+    ]
+  },
+  {
+    "code": "numpy.char.equal(x1,x2)\u00b6",
+    "function_name": "equal",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.endswith(a,suffix,start=0,end=None)\u00b6",
+    "function_name": "endswith",
+    "args": ["a", "suffix"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.encode(a,encoding=None,errors=None)\u00b6",
+    "function_name": "encode",
+    "args": ["a"],
+    "kwargs": [
+      ["encoding", "None"],
+      ["errors", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.decode(a,encoding=None,errors=None)\u00b6",
+    "function_name": "decode",
+    "args": ["a"],
+    "kwargs": [
+      ["encoding", "None"],
+      ["errors", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.count(a,sub,start=0,end=None)\u00b6",
+    "function_name": "count",
+    "args": ["a", "sub"],
+    "kwargs": [
+      ["start", "0"],
+      ["end", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.capitalize(a)\u00b6",
+    "function_name": "capitalize",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.char.asarray(obj,itemsize=None,unicode=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.array(obj,itemsize=None,copy=True,unicode=None,order=None)\u00b6",
+    "function_name": "array",
+    "args": ["obj"],
+    "kwargs": [
+      ["itemsize", "None"],
+      ["copy", "True"],
+      ["unicode", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.char.add(x1,x2)\u00b6",
+    "function_name": "add",
+    "args": ["x1", "x2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.broadcast_to(array,shape,subok=False)\u00b6",
+    "function_name": "broadcast_to",
+    "args": ["array", "shape"],
+    "kwargs": [
+      ["subok", "False"]
+    ]
+  },
+  {
+    "code": "numpy.bincount(x,weights=None,minlength=0)\u00b6",
+    "function_name": "bincount",
+    "args": ["x"],
+    "kwargs": [
+      ["weights", "None"],
+      ["minlength", "0"]
+    ]
+  },
+  {
+    "code": "numpy.binary_repr(num,width=None)\u00b6",
+    "function_name": "binary_repr",
+    "args": ["num"],
+    "kwargs": [
+      ["width", "None"]
+    ]
+  },
+  {
+    "code": "numpy.base_repr(number,base=2,padding=0)\u00b6",
+    "function_name": "base_repr",
+    "args": ["number"],
+    "kwargs": [
+      ["base", "2"],
+      ["padding", "0"]
+    ]
+  },
+  {
+    "code": "numpy.average(a,axis=None,weights=None,returned=False)\u00b6",
+    "function_name": "average",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["weights", "None"],
+      ["returned", "False"]
+    ]
+  },
+  {
+    "code": "numpy.atleast_2d(*arys)\u00b6",
+    "function_name": "atleast_2d",
+    "args": ["*arys"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.atleast_3d(*arys)\u00b6",
+    "function_name": "atleast_3d",
+    "args": ["*arys"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.atleast_1d(*arys)\u00b6",
+    "function_name": "atleast_1d",
+    "args": ["*arys"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.asscalar(a)\u00b6",
+    "function_name": "asscalar",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.asmatrix(data,dtype=None)\u00b6",
+    "function_name": "asmatrix",
+    "args": ["data"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.bartlett(M)\u00b6",
+    "function_name": "bartlett",
+    "args": ["M"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.asfortranarray(a,dtype=None)\u00b6",
+    "function_name": "asfortranarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.ascontiguousarray(a,dtype=None)\u00b6",
+    "function_name": "ascontiguousarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asarray_chkfinite(a,dtype=None,order=None)\u00b6",
+    "function_name": "asarray_chkfinite",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asarray(a,dtype=None,order=None)\u00b6",
+    "function_name": "asarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.asanyarray(a,dtype=None,order=None)\u00b6",
+    "function_name": "asanyarray",
+    "args": ["a"],
+    "kwargs": [
+      ["dtype", "None"],
+      ["order", "None"]
+    ]
+  },
+  {
+    "code": "numpy.array_str(a,max_line_width=None,precision=None,suppress_small=None)\u00b6",
+    "function_name": "array_str",
+    "args": ["a"],
+    "kwargs": [
+      ["max_line_width", "None"],
+      ["precision", "None"],
+      ["suppress_small", "None"]
+    ]
+  },
+  {
+    "code": "numpy.array_repr(arr,max_line_width=None,precision=None,suppress_small=None)\u00b6",
+    "function_name": "array_repr",
+    "args": ["arr"],
+    "kwargs": [
+      ["max_line_width", "None"],
+      ["precision", "None"],
+      ["suppress_small", "None"]
+    ]
+  },
+  {
+    "code": "numpy.array_split(ary,indices_or_sections,axis=0)\u00b6",
+    "function_name": "array_split",
+    "args": ["ary", "indices_or_sections"],
+    "kwargs": [
+      ["axis", "0"]
+    ]
+  },
+  {
+    "code": "numpy.array_equiv(a1,a2)\u00b6",
+    "function_name": "array_equiv",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.array_equal(a1,a2)\u00b6",
+    "function_name": "array_equal",
+    "args": ["a1", "a2"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.argmin(a,axis=None,out=None)\u00b6",
+    "function_name": "argmin",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.around(a,decimals=0,out=None)\u00b6",
+    "function_name": "around",
+    "args": ["a"],
+    "kwargs": [
+      ["decimals", "0"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.argwhere(a)\u00b6",
+    "function_name": "argwhere",
+    "args": ["a"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.argmax(a,axis=None,out=None)\u00b6",
+    "function_name": "argmax",
+    "args": ["a"],
+    "kwargs": [
+      ["axis", "None"],
+      ["out", "None"]
+    ]
+  },
+  {
+    "code": "numpy.apply_over_axes(func,a,axes)\u00b6",
+    "function_name": "apply_over_axes",
+    "args": ["func", "a", "axes"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.apply_along_axis(func1d,axis,arr,*args,**kwargs)\u00b6",
+    "function_name": "apply_along_axis",
+    "args": ["func1d", "axis", "arr", "*args", "**kwargs"],
+    "kwargs": []
+  },
+  {
+    "code": "numpy.append(arr,values,axis=None)\u00b6",
+    "function_name": "append",
+    "args": ["arr", "values"],
+    "kwargs": [
+      ["axis", "None"]
+    ]
+  },
+  {
+    "code": "numpy.angle(z,deg=False)\u00b6",
+    "function_name": "angle",
+    "args": ["z"],
+    "kwargs": [
+      ["deg", "False"]
+    ]
+  }
+]
