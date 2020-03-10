@@ -85,29 +85,28 @@ export const argmax = new Command(
   [['out', 'None']]
 );
 
-// MISSING
 export const t = new Command(
   'torch.t(input)',
   't',
-  [tf.tensor([1])],
+  [
+    tf.tensor([
+      [1, 2, 3],
+      [4, 5, 6]
+    ])
+  ],
   [['out', 'None']]
 );
 
 export const softmax = new Command(
   'torch.softmax(input, dim=None, other)',
   'softmax',
-  [tf.tensor([1]), 1],
+  [tf.tensor([2, 1, 0.1])],
   [['out', 'None']]
 );
 
 export const relu = new Command(
-  'todo',
+  'torch.nn.functional.relu',
   'relu',
-  [tf.tensor([1]), tf.tensor([1])],
-  [['out', 'None']]
+  [[1, -2, 3]],
+  []
 );
-
-export const numToTensor = new Command('todo', 'todo', [], []);
-export const to = new Command('todo', 'todo', [], []);
-export const size = new Command('todo', 'todo', [], []);
-export const sub = new Command('todo', 'todo', [], []);
