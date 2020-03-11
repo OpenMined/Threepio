@@ -12,25 +12,20 @@ class NumpySpider(CrawlSpider):
     start_urls = [f'https://docs.scipy.org/doc/numpy/reference/generated/']
     split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
-    rules = (
-        Rule(LinkExtractor(
-            allow=(re.compile(r'.+\.html')),
-            ),
-            callback='parse_api',),
-    )
+    rules = (Rule(
+        LinkExtractor(allow=(re.compile(r'.+\.html')), ),
+        callback='parse_api',
+    ), )
 
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
         defs = []
         for selector in fdef:
-            text = (remove_tags(selector.get())
-                    .replace('\n', '')
-                    .replace(' ', '')
-                    .replace('[source]', ''))
+            text = (remove_tags(selector.get()).replace('\n', '').replace(
+                ' ', '').replace('[source]', ''))
             defs.append(text)
-            print(text)
-            
+
         for text in defs:
             split = self.split_def.match(text)
             if split is None:
