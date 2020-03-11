@@ -29,7 +29,7 @@ class JaxSpider(CrawlSpider):
                     .replace(' ', '')
                     .replace('[source]', ''))
             defs.append(text)
-            
+
         for text in defs:
             split = self.split_def.match(text)
             if split is None:

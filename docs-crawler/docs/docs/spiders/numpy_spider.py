@@ -15,7 +15,7 @@ class NumpySpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(
             allow=(re.compile(r'.+\.html')),
-            ),
+        ),
             callback='parse_api',),
     )
 
@@ -30,7 +30,7 @@ class NumpySpider(CrawlSpider):
                     .replace('[source]', ''))
             defs.append(text)
             print(text)
-            
+
         for text in defs:
             split = self.split_def.match(text)
             if split is None:
