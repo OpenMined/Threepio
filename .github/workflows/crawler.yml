@@ -1,6 +1,6 @@
 name: Threepio Crawler
 
-on: [push]
+on: [pull_request]
 
 jobs:
   build:
