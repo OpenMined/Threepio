@@ -1,7 +1,7 @@
 import { MISSING_ARGUMENTS, NOT_TRANSLATED } from './_errors';
 
 export default class Command {
-  constructor(code, functionName, args, kwargs) {
+  constructor(code, functionName, args, kwargs, execFn) {
     if (!code || !functionName || !args || !kwargs) {
       throw new Error(MISSING_ARGUMENTS);
     }
@@ -10,7 +10,7 @@ export default class Command {
     this.functionName = functionName;
     this.args = args;
     this.kwargs = kwargs;
-    this.execFn = undefined;
+    this.execFn = execFn || undefined;
   }
 
   executeRoutine() {
