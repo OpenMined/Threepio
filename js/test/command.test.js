@@ -1,6 +1,6 @@
 import * as tf from '@tensorflow/tfjs';
 import Command from '../src/command';
-const { test, describe, expect } = global; // import jest from global
+const { test, describe, expect } = global; // Import jest from global
 
 describe('Command', () => {
   test('instantiate broken command', () => {

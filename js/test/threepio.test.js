@@ -77,12 +77,16 @@ describe('Threepio', () => {
     processTests(t);
   });
 
-  test.skip('translates softmax', () => {
-    const translation = threepio.translate(softmax);
-    const result = translation.executeRoutine().dataSync();
-    const answer = result.dataSync();
-    for (const [i, r] of result.entries()) {
-      expect(r).toBeCloseTo(answer[i], 3);
+  test('translates softmax', () => {
+    for (const [i, input] of softmax.inputs.entries()) {
+      const translation = threepio.translate(input);
+      const result = translation.executeRoutine().arraySync();
+      const answer = softmax.answers[i].arraySync();
+      for (const [j, entry] of result.entries()) {
+        for (const [k, r] of entry.entries()) {
+          expect(r).toBeCloseTo(answer[j][k], 3);
+        }
+      }
     }
   });
 

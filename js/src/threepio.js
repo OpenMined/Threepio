@@ -31,7 +31,7 @@ export default class Threepio {
   }
 
   orderArgs(cmd, fromInfo, toInfo) {
-    let newArgs = [];
+    const newArgs = [];
     for (const [i, arg] of cmd.args.entries()) {
       const fArg = fromInfo.args.filter(a => a.index === i)[0];
       const tArg = toInfo.args.filter(a => a.name === fArg[this.toLang])[0];
@@ -70,9 +70,10 @@ export default class Threepio {
       this._normalizeFunctionName(cmd.functionName, this.toLang)
     ];
 
-    let translatedCmd = this[toInfo.attrs.shift()];
-    while (toInfo.attrs.length > 0) {
-      translatedCmd = translatedCmd[toInfo.attrs.shift()];
+    const attrs = [...toInfo.attrs];
+    let translatedCmd = this[attrs.shift()];
+    while (attrs.length > 0) {
+      translatedCmd = translatedCmd[attrs.shift()];
     }
 
     const args = this.orderArgs(cmd, fromInfo, toInfo);

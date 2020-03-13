@@ -57,9 +57,7 @@ export const mean = {
 };
 
 export const mul = {
-  inputs: [
-    new Command('mul', [tf.tensor([10, 20, 30]), 100], [['out', 'None']])
-  ],
+  inputs: [new Command('mul', [tf.tensor([10, 20, 30]), 100], [])],
   answers: [tf.tensor([1000, 2000, 3000])]
 };
 
@@ -102,11 +100,28 @@ export const argmax = {
   inputs: [
     new Command(
       'argmax',
-      [tf.tensor([0, 10, 2])],
+      [
+        tf.tensor([
+          [0, 10, 2],
+          [1, 20, 30],
+          [10, 0, 0]
+        ])
+      ],
+      [['dim', 0]]
+    ),
+    new Command(
+      'argmax',
+      [
+        tf.tensor([
+          [0, 10, 2],
+          [1, 20, 30],
+          [10, 0, 0]
+        ])
+      ],
       [['dim', 1]]
     )
   ],
-  answers: [tf.tensor([1])]
+  answers: [tf.tensor([2, 1, 1]), tf.tensor([1, 2, 0])]
 };
 
 export const t = {
@@ -135,11 +150,23 @@ export const softmax = {
   inputs: [
     new Command(
       'softmax',
-      [tf.tensor([2, 1, 0.1])],
-      []
+      [
+        tf.tensor([
+          [2, 1, 0.1],
+          [2, 1, 0.1],
+          [2, 1, 0.1]
+        ])
+      ],
+      [['dim', -1]]
     )
   ],
-  answers: [tf.tensor([0.659, 0.2424, 0.0985])]
+  answers: [
+    tf.tensor([
+      [0.659, 0.2424, 0.0985],
+      [0.659, 0.2424, 0.0985],
+      [0.659, 0.2424, 0.0985]
+    ])
+  ]
 };
 
 export const relu = {
