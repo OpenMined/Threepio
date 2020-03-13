@@ -12,6 +12,6 @@ describe('Command', () => {
 
   test('throws error', () => {
     const args = [tf.tensor([1])];
-    expect(() => new Command('torch.matmul', 'matmul', args)).toThrow(Error);
+    expect(() => new Command('matmul', args)).toThrow(Error);
   });
 });
