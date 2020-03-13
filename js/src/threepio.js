@@ -1,7 +1,7 @@
 import * as tf from '@tensorflow/tfjs';
 import mappedCommands from '../../static/mapped_commands.json';
 import { translationMissing } from './_errors';
-import { NORMALIZATION_REGEX, WORD_TRANSLATIONS } from './_constants';
+import { NORMALIZATION_REGEX } from './_constants';
 import Command from './command';
 
 export default class Threepio {
@@ -13,18 +13,14 @@ export default class Threepio {
     this.tf = tf;
   }
 
-  _normalizeFunctionName(name) {
+  _normalizeFunctionName(name, lang) {
     const result = name
       .match(NORMALIZATION_REGEX)
       .join('')
       .toLowerCase();
 
-    if (result in this.mappedCommands[this.toLang]) {
+    if (result in this.mappedCommands[lang]) {
       return result;
-    }
-
-    if (result in WORD_TRANSLATIONS) {
-      return WORD_TRANSLATIONS[result];
     }
 
     throw new Error(translationMissing(name));
@@ -63,11 +59,11 @@ export default class Threepio {
   }
 
   translate(cmd) {
-    const toInfo = this.mappedCommands[this.toLang][
-      this._normalizeFunctionName(cmd.functionName, this.toLang)
-    ];
     const fromInfo = this.mappedCommands[this.fromLang][
-      this._normalizeFunctionName(cmd.functionName, this.toLang)
+      this._normalizeFunctionName(cmd.functionName, this.fromLang)
+    ];
+    const toInfo = this.mappedCommands[this.toLang][
+      this._normalizeFunctionName(fromInfo[this.toLang], this.toLang)
     ];
 
     const attrs = [...toInfo.attrs];
