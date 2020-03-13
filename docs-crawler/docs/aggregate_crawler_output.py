@@ -1,6 +1,12 @@
 import json
 import re
 
+TRANSLATIONS = {
+    'dim': 'axis',
+    'input': 'a',
+    'other': 'b'
+}
+
 
 class Compiler(object):
     tf = []
@@ -18,7 +24,7 @@ class Compiler(object):
             self.torch = json.load(torch_file)
 
     def normalize_func_name(self, name):
-        alpha = re.compile('[a-zA-Z]')
+        alpha = re.compile(r'[\W][a-zA-Z0-9]*')
         return alpha.sub('', name).lower()
 
     def generate_attrs(self, code):
@@ -40,13 +46,17 @@ class Compiler(object):
         self.populate_command('torch')
 
     def hydrate_args(self, base_args, base_kwargs):
+        base_args = list(filter(lambda a: a not in ['', '?'], base_args))
+        base_kwargs = list(
+            filter(lambda a: a[0] not in ['', '?'], base_kwargs)
+        )
         ba = [
             {
                 'name': self.normalize_func_name(a),
                 'is_kwarg': False,
                 'optional': a.endswith('?'),
                 'index': i
-            } for i, a in enumerate(base_args)
+            } for i, a in enumerate(base_args) if a != ''
         ]
         bk = [
             {
@@ -65,8 +75,7 @@ class Compiler(object):
                 )
                 base_arg[to_lang] = match_arg.get('name', None)
             except Exception:
-                # TODO: check for alternate word level translations
-                base_arg[to_lang] = None
+                base_arg[to_lang] = TRANSLATIONS.get(base_arg['name'], None)
         return base
 
     def load_translations(self, from_lang):
