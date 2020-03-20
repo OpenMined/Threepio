@@ -2,6 +2,7 @@ import * as tf from '@tensorflow/tfjs';
 import Threepio from '../src/threepio';
 import {
   add,
+  add2,
   matmul,
   mean,
   mul,
@@ -41,6 +42,10 @@ describe('Threepio', () => {
 
   test('translates add', () => {
     processTests(add);
+  });
+
+  test('translates __add__', () => {
+    processTests(add2);
   });
 
   test('translates matmul', () => {

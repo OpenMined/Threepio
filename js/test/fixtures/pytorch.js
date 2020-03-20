@@ -26,6 +26,31 @@ export const add = {
   ]
 };
 
+export const add2 = {
+  inputs: [
+    new Command(
+      '__add__',
+      [
+        tf.tensor([
+          [1, 0],
+          [0, 1]
+        ]),
+        tf.tensor([
+          [0, 1],
+          [1, 0]
+        ])
+      ],
+      []
+    )
+  ],
+  answers: [
+    tf.tensor([
+      [1, 1],
+      [1, 1]
+    ])
+  ]
+};
+
 export const matmul = {
   inputs: [
     new Command(
