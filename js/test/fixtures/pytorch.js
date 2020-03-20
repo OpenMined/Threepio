@@ -132,21 +132,10 @@ export const argmax = {
           [10, 0, 0]
         ])
       ],
-      [['dim', 0]]
-    ),
-    new Command(
-      'argmax',
-      [
-        tf.tensor([
-          [0, 10, 2],
-          [1, 20, 30],
-          [10, 0, 0]
-        ])
-      ],
-      [['dim', 1]]
+      { dim: -1 }
     )
   ],
-  answers: [tf.tensor([2, 1, 1]), tf.tensor([1, 2, 0])]
+  answers: [tf.tensor([1, 2, 0])]
 };
 
 export const t = {
@@ -182,7 +171,7 @@ export const softmax = {
           [2, 1, 0.1]
         ])
       ],
-      [['dim', -1]]
+      { dim: -1 }
     )
   ],
   answers: [

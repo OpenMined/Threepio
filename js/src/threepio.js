@@ -38,8 +38,7 @@ export default class Threepio {
       newArgs.splice(tArg.index, 0, arg);
     }
 
-    for (const [, kwarg] of cmd.kwargs.entries()) {
-      const [k, v] = kwarg;
+    for (const [k, v] of Object.entries(cmd.kwargs)) {
       const fArg = fromInfo.args.filter(a => a.name === k)[0];
       const tArg = toInfo.args.filter(a => a.name === fArg[this.toLang])[0];
 
