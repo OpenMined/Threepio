@@ -16,7 +16,7 @@ import {
 const { test, describe, expect } = global; // import jest from global
 
 describe('Threepio', () => {
-  const threepio = new Threepio('torch', 'tfjs');
+  const threepio = new Threepio('torch', 'tfjs', tf);
 
   const checkAnswer = (result, answer) => {
     const eq = tf

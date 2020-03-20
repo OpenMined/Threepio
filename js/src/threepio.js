@@ -1,16 +1,15 @@
-import * as tf from '@tensorflow/tfjs';
 import mappedCommands from '../../static/mapped_commands.json';
 import { translationMissing } from './_errors';
 import { NORMALIZATION_REGEX } from './_constants';
 import Command from './command';
 
 export default class Threepio {
-  constructor(from, to, version) {
+  constructor(from, to, framework, version) {
     this.fromLang = from;
     this.toLang = to;
     this.version = version;
     this.mappedCommands = mappedCommands;
-    this.tf = tf;
+    this.framework = framework;
   }
 
   _normalizeFunctionName(name, lang) {
@@ -26,7 +25,7 @@ export default class Threepio {
     throw new Error(translationMissing(name));
   }
 
-  orderArgs(cmd, fromInfo, toInfo) {
+  _orderArgs(cmd, fromInfo, toInfo) {
     const newArgs = [];
     for (const [i, arg] of cmd.args.entries()) {
       const fArg = fromInfo.args.filter(a => a.index === i)[0];
@@ -67,12 +66,13 @@ export default class Threepio {
     ];
 
     const attrs = [...toInfo.attrs];
-    let translatedCmd = this[attrs.shift()];
+    attrs.shift();
+    let translatedCmd = this.framework;
     while (attrs.length > 0) {
       translatedCmd = translatedCmd[attrs.shift()];
     }
 
-    const args = this.orderArgs(cmd, fromInfo, toInfo);
+    const args = this._orderArgs(cmd, fromInfo, toInfo);
 
     return new Command(cmd.functionName, args, cmd.kwargs, translatedCmd);
   }
