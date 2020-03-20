@@ -73,6 +73,6 @@ export default class Threepio {
 
     const args = this._orderArgs(cmd, fromInfo, toInfo);
 
-    return new Command(cmd.functionName, args, cmd.kwargs, translatedCmd);
+    return new Command(toInfo.function_name, args, {}, translatedCmd);
   }
 }

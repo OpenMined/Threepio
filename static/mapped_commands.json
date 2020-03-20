@@ -10176,18 +10176,21 @@
                     "name": "x",
                     "is_kwarg": false,
                     "optional": false,
-                    "index": 0
+                    "index": 0,
+                    "tfjs": null
                 },
                 {
                     "name": "y",
                     "is_kwarg": false,
                     "optional": false,
-                    "index": 1
+                    "index": 1,
+                    "tfjs": null
                 },
                 {
                     "name": "name",
                     "is_kwarg": true,
-                    "optional": true
+                    "optional": true,
+                    "tfjs": null
                 }
             ],
             "attrs": [
@@ -10196,7 +10199,7 @@
                 "truediv"
             ],
             "torch": null,
-            "tfjs": null
+            "tfjs": "div"
         },
         "top_k": {
             "code": "tf.math.top_k(input,k=1,sorted=True,name=None)",
@@ -47568,22 +47571,24 @@
                     "is_kwarg": false,
                     "optional": false,
                     "index": 0,
-                    "torch": null
+                    "torch": null,
+                    "tf": null
                 },
                 {
                     "name": "b",
                     "is_kwarg": false,
                     "optional": false,
                     "index": 1,
-                    "torch": null
+                    "torch": null,
+                    "tf": null
                 }
             ],
             "attrs": [
                 "tf",
                 "div"
             ],
-            "torch": "div",
-            "tf": null
+            "torch": null,
+            "tf": "truediv"
         },
         "addn": {
             "code": "tf.addN(tensors)",
@@ -48635,8 +48640,8 @@
                 "tf",
                 "transpose"
             ],
-            "torch": "t",
-            "tf": null
+            "torch": "transpose",
+            "tf": "transpose"
         },
         "avgpool": {
             "code": "tf.avgPool(x,filterSize,strides,pad,dimRoundingMode?)",
@@ -49768,8 +49773,8 @@
                 "tf",
                 "equal"
             ],
-            "torch": "eq",
-            "tf": null
+            "torch": "equal",
+            "tf": "equal"
         },
         "greater": {
             "code": "tf.greater(a,b)",

@@ -7,7 +7,8 @@ TRANSLATIONS = {
         'input': 'a',
         'other': 'b',
         'eq': 'equal',
-        't': 'transpose'
+        't': 'transpose',
+        'truediv': 'div'
     },
     'torch': {},
     'tf': {}

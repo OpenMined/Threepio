@@ -1,6 +1,7 @@
 import * as tf from '@tensorflow/tfjs';
 import Threepio from '../src/threepio';
 import {
+  abs,
   add,
   add2,
   matmul,
@@ -38,6 +39,10 @@ describe('Threepio', () => {
 
   test('returns itself', () => {
     expect(threepio).toBeInstanceOf(Threepio);
+  });
+
+  test('translates abs', () => {
+    processTests(abs);
   });
 
   test('translates add', () => {

@@ -1,6 +1,11 @@
 import * as tf from '@tensorflow/tfjs';
 import Command from '../../src/command';
 
+export const abs = {
+  inputs: [new Command('abs', [tf.tensor([1, -2, 3, -4])], {})],
+  answers: [tf.tensor([1, 2, 3, 4])]
+};
+
 export const add = {
   inputs: [
     new Command(
