@@ -1,6 +1,19 @@
 import json
 import re
 
+TRANSLATIONS = {
+    'tfjs': {
+        'dim': 'axis',
+        'input': 'a',
+        'other': 'b',
+        'eq': 'equal',
+        't': 'transpose',
+        'truediv': 'div'
+    },
+    'torch': {},
+    'tf': {}
+}
+
 
 class Compiler(object):
     tf = []
@@ -18,7 +31,7 @@ class Compiler(object):
             self.torch = json.load(torch_file)
 
     def normalize_func_name(self, name):
-        alpha = re.compile('[a-zA-Z]')
+        alpha = re.compile(r'[\W][a-zA-Z0-9]*')
         return alpha.sub('', name).lower()
 
     def generate_attrs(self, code):
@@ -40,6 +53,10 @@ class Compiler(object):
         self.populate_command('torch')
 
     def hydrate_args(self, base_args, base_kwargs):
+        base_args = list(filter(lambda a: a not in ['', '?'], base_args))
+        base_kwargs = list(
+            filter(lambda a: a[0] not in ['', '?'], base_kwargs)
+        )
         ba = [
             {
                 'name': self.normalize_func_name(a),
@@ -65,8 +82,8 @@ class Compiler(object):
                 )
                 base_arg[to_lang] = match_arg.get('name', None)
             except Exception:
-                # TODO: check for alternate word level translations
-                base_arg[to_lang] = None
+                base_arg[to_lang] = TRANSLATIONS[to_lang].get(
+                    base_arg['name'], None)
         return base
 
     def load_translations(self, from_lang):
@@ -74,23 +91,28 @@ class Compiler(object):
         langs.pop(langs.index(from_lang))
 
         for d in self.base_defs:
+            # First perform any word level translations
+            from_d = TRANSLATIONS[from_lang].get(d, False) or d
+
             # Check if translation exists in our from language
-            if d not in self.main_map[from_lang]:
+            if from_d not in self.main_map[from_lang]:
                 continue
 
-            base_args = self.main_map[from_lang][d]['args']
+            base_args = self.main_map[from_lang][from_d]['args']
             # Check if translatable to other langs
             for to_lang in langs:
-                if d not in self.main_map[to_lang]:
-                    for a in self.main_map[from_lang][d]['args']:
-                        a.update({to_lang: None})
+                # Perform word level translation for target language
+                to_d = TRANSLATIONS[to_lang].get(d, False) or d
+                if to_d not in self.main_map[to_lang]:
+                    self.main_map[from_lang][from_d][to_lang] = None
                     continue
 
+                self.main_map[from_lang][from_d][to_lang] = to_d
+
                 # Format & match args
-                match_args = self.main_map[to_lang][d]['args']
-                self.main_map[from_lang][d]['args'] = self.match_arg_names(
-                    base_args, match_args, to_lang
-                )
+                match_args = self.main_map[to_lang][to_d]['args']
+                self.main_map[from_lang][from_d]['args'] = \
+                    self.match_arg_names(base_args, match_args, to_lang)
 
     def output_data(self):
         with open('../../static/mapped_commands.json', 'w',
