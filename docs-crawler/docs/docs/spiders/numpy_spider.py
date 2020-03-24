@@ -19,6 +19,7 @@ class NumpySpider(CrawlSpider):
             callback='parse_api',),
     )
 
+
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
@@ -29,7 +30,6 @@ class NumpySpider(CrawlSpider):
                     .replace(' ', '')
                     .replace('[source]', ''))
             defs.append(text)
-            print(text)
 
         for text in defs:
             split = self.split_def.match(text)

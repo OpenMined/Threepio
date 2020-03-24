@@ -1,7 +1,7 @@
 {
   "name": "@openmined/threepio",
   "description": "A multi-language library for translating commands between PyTorch, TensorFlow, and TensorFlow.js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "OpenMined",
   "browser": "js/dist/index.js",
   "bugs": {
@@ -44,6 +44,9 @@
   "engines": {
     "node": ">=8.3"
   },
+  "files": [
+    "./js/"
+  ],
   "homepage": "https://github.com/OpenMined/threepio",
   "husky": {
     "hooks": {
@@ -95,6 +98,9 @@
     "singleQuote": true,
     "bracketSpacing": true,
     "trailingComma": "none"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "remarkConfig": {
     "plugins": [
