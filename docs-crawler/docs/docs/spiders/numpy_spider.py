@@ -19,7 +19,6 @@ class NumpySpider(CrawlSpider):
             callback='parse_api',),
     )
 
-
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
