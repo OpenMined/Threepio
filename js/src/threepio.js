@@ -1,4 +1,4 @@
-import mappedCommands from '../../static/mapped_commands.json';
+import mappedCommands from '../../static/mapped_commands_torch_tfjs.json';
 import { translationMissing } from './_errors';
 import { NORMALIZATION_REGEX } from './_constants';
 import Command from './command';
@@ -28,21 +28,25 @@ export default class Threepio {
   _orderArgs(cmd, fromInfo, toInfo) {
     const newArgs = [];
     for (const [i, arg] of cmd.args.entries()) {
-      const fArg = fromInfo.args.filter(a => a.index === i)[0];
-      const tArg = toInfo.args.filter(a => a.name === fArg[this.toLang])[0];
-      if (typeof tArg === 'undefined') {
+      const fArg = fromInfo.args[i];
+      const tArgIndex = toInfo.args.findIndex(
+        a => a.name === fArg[this.toLang]
+      );
+      if (tArgIndex === -1) {
         newArgs.push(arg);
         continue;
       }
 
-      newArgs.splice(tArg.index, 0, arg);
+      newArgs.splice(tArgIndex, 0, arg);
     }
 
     for (const [k, v] of Object.entries(cmd.kwargs)) {
       const fArg = fromInfo.args.filter(a => a.name === k)[0];
-      const tArg = toInfo.args.filter(a => a.name === fArg[this.toLang])[0];
+      const tArgIndex = toInfo.args.findIndex(
+        a => a.name === fArg[this.toLang]
+      );
 
-      if (typeof tArg === 'undefined') {
+      if (tArgIndex === -1) {
         // throw warning for kwarg translation missing
         console.warn(
           `Unable to translare kwarg ${k} for command ${cmd.functionName}`
@@ -50,7 +54,7 @@ export default class Threepio {
         continue;
       }
 
-      newArgs.splice(tArg.index, 0, v);
+      newArgs.splice(tArgIndex, 0, v);
     }
 
     return newArgs;
@@ -73,6 +77,6 @@ export default class Threepio {
 
     const args = this._orderArgs(cmd, fromInfo, toInfo);
 
-    return new Command(toInfo.function_name, args, {}, translatedCmd);
+    return new Command(toInfo.name, args, {}, translatedCmd);
   }
 }

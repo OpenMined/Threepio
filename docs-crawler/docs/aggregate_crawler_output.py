@@ -43,7 +43,10 @@ class Compiler(object):
             nfunc = self.normalize_func_name(f['function_name'])
             f['attrs'] = self.generate_attrs(f['code'])
             f['args'] = self.hydrate_args(f['args'], f['kwargs'])
+            f['name'] = f['function_name']
             del f['kwargs']
+            del f['code']
+            del f['function_name']
             self.main_map[lib][nfunc] = f
             self.base_defs.add(nfunc)
 
@@ -60,16 +63,15 @@ class Compiler(object):
         ba = [
             {
                 'name': self.normalize_func_name(a),
-                'is_kwarg': False,
-                'optional': a.endswith('?'),
-                'index': i
+                'kwarg': False,
+                'opt': a.endswith('?'),
             } for i, a in enumerate(base_args)
         ]
         bk = [
             {
                 'name': self.normalize_func_name(a[0]),
-                'is_kwarg': True,
-                'optional': True
+                'kwarg': True,
+                'opt': True
             } for a in base_kwargs
         ]
         return ba + bk
@@ -80,10 +82,14 @@ class Compiler(object):
                 match_arg = next(
                     m for m in match if m.get('name') == base_arg.get('name')
                 )
-                base_arg[to_lang] = match_arg.get('name', None)
+                match_name = match_arg.get('name', None)
+                if match_name is not None:
+                    base_arg[to_lang] = match_name
             except Exception:
-                base_arg[to_lang] = TRANSLATIONS[to_lang].get(
+                match_name = TRANSLATIONS[to_lang].get(
                     base_arg['name'], None)
+                if match_name is not None:
+                    base_arg[to_lang] = match_name
         return base
 
     def load_translations(self, from_lang):
@@ -104,7 +110,6 @@ class Compiler(object):
                 # Perform word level translation for target language
                 to_d = TRANSLATIONS[to_lang].get(d, False) or d
                 if to_d not in self.main_map[to_lang]:
-                    self.main_map[from_lang][from_d][to_lang] = None
                     continue
 
                 self.main_map[from_lang][from_d][to_lang] = to_d
@@ -114,10 +119,42 @@ class Compiler(object):
                 self.main_map[from_lang][from_d]['args'] = \
                     self.match_arg_names(base_args, match_args, to_lang)
 
+    def slim_output(self, from_lang, to_lang):
+        input_dict = {
+            from_lang: self.main_map[from_lang],
+            to_lang: self.main_map[to_lang]
+        }
+        output = {
+            from_lang: {},
+            to_lang: {}
+        }
+
+        def hydrate_keys(input_dict, output, from_lang, to_lang):
+            for k, v in input_dict[from_lang].items():
+                translated_k = TRANSLATIONS[to_lang].get(k, False) or k
+                if translated_k in input_dict[to_lang]:
+                    output[from_lang][k] = v
+            return output
+
+        output = hydrate_keys(input_dict, output, from_lang, to_lang)
+        output = hydrate_keys(input_dict, output, to_lang, from_lang)
+
+        return output
+
     def output_data(self):
-        with open('../../static/mapped_commands.json', 'w',
+        with open('../../static/mapped_commands_full.json', 'w',
                   encoding='utf8') as f:
             json.dump(self.main_map, f, indent=4, ensure_ascii=False)
+        # Compressed map with only torch & tfjs
+        torch_tfjs_map = self.slim_output('torch', 'tfjs')
+        with open('../../static/mapped_commands_torch_tfjs.json', 'w',
+                  encoding='ascii') as f:
+            json.dump(
+                torch_tfjs_map,
+                f,
+                separators=(',', ':'),
+                ensure_ascii=False
+            )
 
 
 def main():
