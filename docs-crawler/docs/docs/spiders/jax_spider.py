@@ -5,17 +5,17 @@ from scrapy.linkextractors import LinkExtractor
 from w3lib.html import remove_tags
 
 
-class NumpySpider(CrawlSpider):
-    name = "numpy"
-    version = "1.17.0"
-    allowed_domains = ['scipy.org']
-    start_urls = [f'https://docs.scipy.org/doc/numpy/reference/generated/']
+class JaxSpider(CrawlSpider):
+    name = "jax"
+    version = "0.1.59"
+    allowed_domains = ['jax.readthedocs.io']
+    start_urls = [f'https://jax.readthedocs.io/']
     split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     rules = (
         Rule(LinkExtractor(
             allow=(re.compile(r'.+\.html')),
-        ),
+            restrict_css='.toctree-l1'),
             callback='parse_api',),
     )
 
