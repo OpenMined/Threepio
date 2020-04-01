@@ -1,6 +1,4 @@
 import re
-import torch  # noqa: F401
-import tensorflow as tf  # noqa: F401
 
 from typing import Tuple
 from .utils import get_mapped_commands, Command

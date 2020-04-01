@@ -1,15 +1,13 @@
+import importlib.resources as pkg_resources
 import json
+import static
 from typing import Callable
 from pythreepio.errors import TranslationMissing
 
-COMMANDS_FILE_PATH = '../static/mapped_commands_full.json'
-
 
 def get_mapped_commands() -> dict:
-    commands = {}
-    with open(COMMANDS_FILE_PATH, 'r') as f:
-        commands = json.load(f)
-    return commands
+    json_txt = pkg_resources.read_text(static, 'mapped_commands_full.json')
+    return json.loads(json_txt)
 
 
 class Command(object):

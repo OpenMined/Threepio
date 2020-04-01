@@ -142,7 +142,7 @@ class Compiler(object):
         return output
 
     def output_data(self):
-        with open('../../static/mapped_commands_full.json', 'w',
+        with open('../../pythreepio/static/mapped_commands_full.json', 'w',
                   encoding='utf8') as f:
             json.dump(self.main_map, f, indent=4, ensure_ascii=False)
         # Compressed map with only torch & tfjs
