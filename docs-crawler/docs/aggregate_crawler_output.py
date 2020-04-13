@@ -1,18 +1,6 @@
 import json
 import re
-
-TRANSLATIONS = {
-    'tfjs': {
-        'dim': 'axis',
-        'input': 'a',
-        'other': 'b',
-        'eq': 'equal',
-        't': 'transpose',
-        'truediv': 'div'
-    },
-    'torch': {},
-    'tf': {}
-}
+from translations import WORD_TRANSLATIONS, COMMAND_TRANSLATIONS
 
 
 class Compiler(object):
@@ -86,7 +74,7 @@ class Compiler(object):
                 if match_name is not None:
                     base_arg[to_lang] = match_name
             except Exception:
-                match_name = TRANSLATIONS[to_lang].get(
+                match_name = WORD_TRANSLATIONS[to_lang].get(
                     base_arg['name'], None)
                 if match_name is not None:
                     base_arg[to_lang] = match_name
@@ -98,7 +86,7 @@ class Compiler(object):
 
         for d in self.base_defs:
             # First perform any word level translations
-            from_d = TRANSLATIONS[from_lang].get(d, False) or d
+            from_d = WORD_TRANSLATIONS[from_lang].get(d, False) or d
 
             # Check if translation exists in our from language
             if from_d not in self.main_map[from_lang]:
@@ -108,7 +96,7 @@ class Compiler(object):
             # Check if translatable to other langs
             for to_lang in langs:
                 # Perform word level translation for target language
-                to_d = TRANSLATIONS[to_lang].get(d, False) or d
+                to_d = WORD_TRANSLATIONS[to_lang].get(d, False) or d
                 if to_d not in self.main_map[to_lang]:
                     continue
 
@@ -131,8 +119,7 @@ class Compiler(object):
 
         def hydrate_keys(input_dict, output, from_lang, to_lang):
             for k, v in input_dict[from_lang].items():
-                translated_k = TRANSLATIONS[to_lang].get(k, False) or k
-                if translated_k in input_dict[to_lang]:
+                if v.get(to_lang, '') in input_dict[to_lang]:
                     output[from_lang][k] = v
             return output
 
@@ -140,6 +127,10 @@ class Compiler(object):
         output = hydrate_keys(input_dict, output, to_lang, from_lang)
 
         return output
+
+    def load_manual_translations(self):
+        for lang, commands in COMMAND_TRANSLATIONS.items():
+            self.main_map[lang].update(commands)
 
     def output_data(self):
         with open('../../pythreepio/static/mapped_commands_full.json', 'w',
@@ -160,6 +151,7 @@ class Compiler(object):
 def main():
     c = Compiler()
     c.load_base_defs()
+    c.load_manual_translations()
     c.load_translations('tfjs')
     c.load_translations('torch')
     c.load_translations('tf')

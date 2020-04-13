@@ -13,10 +13,7 @@ export default class Threepio {
   }
 
   _normalizeFunctionName(name, lang) {
-    const result = name
-      .match(NORMALIZATION_REGEX)
-      .join('')
-      .toLowerCase();
+    const result = name.match(NORMALIZATION_REGEX).join('').toLowerCase();
 
     if (result in this.mappedCommands[lang]) {
       return result;
@@ -30,7 +27,7 @@ export default class Threepio {
     for (const [i, arg] of cmd.args.entries()) {
       const fArg = fromInfo.args[i];
       const tArgIndex = toInfo.args.findIndex(
-        a => a.name === fArg[this.toLang]
+        (a) => a.name === fArg[this.toLang]
       );
       if (tArgIndex === -1) {
         newArgs.push(arg);
@@ -41,9 +38,9 @@ export default class Threepio {
     }
 
     for (const [k, v] of Object.entries(cmd.kwargs)) {
-      const fArg = fromInfo.args.filter(a => a.name === k)[0];
+      const fArg = fromInfo.args.filter((a) => a.name === k)[0];
       const tArgIndex = toInfo.args.findIndex(
-        a => a.name === fArg[this.toLang]
+        (a) => a.name === fArg[this.toLang]
       );
 
       if (tArgIndex === -1) {

@@ -32,7 +32,7 @@ class Threepio(object):
                     index for index, d in enumerate(
                         to_info['args']
                     )
-                    if d['name'] == from_arg.get(self.to_lang, {}).get('name')
+                    if d['name'] == from_arg.get(self.to_lang, None)
                 ),
                 None
             )
@@ -51,7 +51,7 @@ class Threepio(object):
                     index for index, d in enumerate(
                         to_info['args']
                     )
-                    if d['name'] == from_arg.get(self.to_lang, {}).get('name')
+                    if d['name'] == from_arg.get(self.to_lang, {})
                 ),
                 None
             )
@@ -68,7 +68,10 @@ class Threepio(object):
             self._normalize_func_name(cmd.function_name, self.from_lang)
         ]
         to_info = self.commands[self.to_lang][
-            self._normalize_func_name(from_info[self.to_lang], self.to_lang)
+            self._normalize_func_name(
+                from_info.get(self.to_lang),
+                self.to_lang
+            )
         ]
 
         attrs = to_info['attrs'][1:]
