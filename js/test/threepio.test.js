@@ -13,7 +13,9 @@ import {
   argmax,
   t,
   softmax,
-  relu
+  relu,
+  sub,
+  truediv
 } from './fixtures/pytorch';
 const { test, describe, expect } = global; // import jest from global
 
@@ -21,14 +23,11 @@ describe('Threepio', () => {
   const threepio = new Threepio('torch', 'tfjs', tf);
 
   const checkAnswer = (result, answer) => {
-    const eq = tf
-      .equal(result, answer)
-      .all()
-      .dataSync();
+    const eq = tf.equal(result, answer).all().dataSync();
     expect(eq).toEqual(new Uint8Array([1]));
   };
 
-  const processTests = command => {
+  const processTests = (command) => {
     for (const [i, input] of command.inputs.entries()) {
       const translation = threepio.translate(input);
       const result = translation.executeRoutine();
@@ -81,10 +80,16 @@ describe('Threepio', () => {
     processTests(argmax);
   });
 
-  // TODO: Write tests for kwargs use of dim
-
   test('translates transpose', () => {
     processTests(t);
+  });
+
+  test('translates subtract', () => {
+    processTests(sub);
+  });
+
+  test('translates truediv', () => {
+    processTests(truediv);
   });
 
   test('translates softmax', () => {

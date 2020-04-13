@@ -192,3 +192,31 @@ export const relu = {
   inputs: [new Command('relu', [[1, -2, 3]], [])],
   answers: [tf.tensor([1, 0, 3])]
 };
+
+export const sub = {
+  inputs: [
+    new Command(
+      'sub',
+      [
+        [1, 2, 3],
+        [1, 2, 3]
+      ],
+      {}
+    )
+  ],
+  answers: [tf.tensor([0, 0, 0])]
+};
+
+export const truediv = {
+  inputs: [
+    new Command(
+      'truediv',
+      [
+        [1, 2, 3],
+        [1, 2, 3]
+      ],
+      {}
+    )
+  ],
+  answers: [tf.tensor([1, 1, 1])]
+};

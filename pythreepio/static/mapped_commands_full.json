@@ -8610,7 +8610,7 @@
                 "truediv"
             ],
             "name": "truediv",
-            "tfjs": "div"
+            "torch": "truediv"
         },
         "top_k": {
             "args": [
@@ -40309,7 +40309,8 @@
                 "tf",
                 "sub"
             ],
-            "name": "sub"
+            "name": "sub",
+            "torch": "sub"
         },
         "mul": {
             "args": [
@@ -40349,8 +40350,7 @@
                 "div"
             ],
             "name": "div",
-            "torch": "div",
-            "tf": "truediv"
+            "torch": "div"
         },
         "addn": {
             "args": [
@@ -41212,7 +41212,7 @@
                 "transpose"
             ],
             "name": "transpose",
-            "torch": "t",
+            "torch": "transpose",
             "tf": "transpose"
         },
         "avgpool": {
@@ -42120,7 +42120,7 @@
                 "equal"
             ],
             "name": "equal",
-            "torch": "equal",
+            "torch": "eq",
             "tf": "equal"
         },
         "greater": {
@@ -56562,6 +56562,56 @@
                 "promote_types"
             ],
             "name": "promote_types"
+        },
+        "truediv": {
+            "args": [
+                {
+                    "name": "input",
+                    "kwarg": false,
+                    "opt": false,
+                    "tfjs": "x"
+                },
+                {
+                    "name": "other",
+                    "kwarg": false,
+                    "opt": false,
+                    "tfjs": "y"
+                },
+                {
+                    "name": "out",
+                    "kwarg": true,
+                    "opt": true
+                }
+            ],
+            "attrs": [
+                "torch",
+                "div"
+            ],
+            "name": "truediv",
+            "tfjs": "div",
+            "tf": "truediv"
+        },
+        "sub": {
+            "args": [
+                {
+                    "name": "value",
+                    "kwarg": false,
+                    "opt": false,
+                    "tfjs": "a"
+                },
+                {
+                    "name": "other",
+                    "kwarg": false,
+                    "opt": false,
+                    "tfjs": "b"
+                }
+            ],
+            "attrs": [
+                "torch",
+                "sub"
+            ],
+            "name": "sub",
+            "tfjs": "sub"
         }
     }
 }
