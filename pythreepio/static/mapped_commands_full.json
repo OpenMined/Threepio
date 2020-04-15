@@ -41212,7 +41212,7 @@
                 "transpose"
             ],
             "name": "transpose",
-            "torch": "transpose",
+            "torch": "t",
             "tf": "transpose"
         },
         "avgpool": {
@@ -42141,7 +42141,8 @@
                 "greater"
             ],
             "name": "greater",
-            "tf": "greater"
+            "tf": "greater",
+            "torch": "gt"
         },
         "greaterequal": {
             "args": [
@@ -54588,12 +54589,14 @@
                 {
                     "name": "input",
                     "kwarg": false,
-                    "opt": false
+                    "opt": false,
+                    "tfjs": "a"
                 },
                 {
                     "name": "other",
                     "kwarg": false,
-                    "opt": false
+                    "opt": false,
+                    "tfjs": "b"
                 },
                 {
                     "name": "out",
@@ -54605,7 +54608,8 @@
                 "torch",
                 "gt"
             ],
-            "name": "gt"
+            "name": "gt",
+            "tfjs": "greater"
         },
         "isfinite": {
             "args": [],

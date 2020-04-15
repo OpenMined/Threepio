@@ -5,6 +5,7 @@ WORD_TRANSLATIONS = {
         'other': 'b',
         'eq': 'equal',
         't': 'transpose',
+        'gt': 'greater'
     },
     'torch': {},
     'tf': {}
