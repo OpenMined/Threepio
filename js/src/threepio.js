@@ -1,6 +1,7 @@
 import mappedCommands from '../../static/mapped_commands_torch_tfjs.json';
 import { translationMissing } from './_errors';
 import { NORMALIZATION_REGEX } from './_constants';
+import { CUSTOM_IMPLEMENTATIONS } from './_translations';
 import Command from './command';
 
 export default class Threepio {
@@ -58,22 +59,35 @@ export default class Threepio {
   }
 
   translate(cmd) {
-    const fromInfo = this.mappedCommands[this.fromLang][
-      this._normalizeFunctionName(cmd.functionName, this.fromLang)
-    ];
-    const toInfo = this.mappedCommands[this.toLang][
-      this._normalizeFunctionName(fromInfo[this.toLang], this.toLang)
-    ];
+    let name;
+    let args;
+    let attrs;
+    if (cmd.functionName in CUSTOM_IMPLEMENTATIONS[this.fromLang]) {
+      const translation = CUSTOM_IMPLEMENTATIONS[this.fromLang][
+        cmd.functionName
+      ](cmd);
+      name = translation.command.functionName;
+      attrs = translation.attrs;
+      args = translation.command.args;
+    } else {
+      const fromInfo = this.mappedCommands[this.fromLang][
+        this._normalizeFunctionName(cmd.functionName, this.fromLang)
+      ];
+      const toInfo = this.mappedCommands[this.toLang][
+        this._normalizeFunctionName(fromInfo[this.toLang], this.toLang)
+      ];
 
-    const attrs = [...toInfo.attrs];
+      name = toInfo.name;
+      args = this._orderArgs(cmd, fromInfo, toInfo);
+      attrs = [...toInfo.attrs];
+    }
+
     attrs.shift();
     let translatedCmd = this.framework;
     while (attrs.length > 0) {
       translatedCmd = translatedCmd[attrs.shift()];
     }
 
-    const args = this._orderArgs(cmd, fromInfo, toInfo);
-
-    return new Command(toInfo.name, args, {}, translatedCmd);
+    return new Command(name, args, {}, translatedCmd);
   }
 }
