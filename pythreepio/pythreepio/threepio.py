@@ -84,4 +84,5 @@ class Threepio(object):
 
         args, kwargs = self._order_args(cmd, from_info, to_info)
 
-        return Command(to_info['name'], args, kwargs, exec_fn=translated_cmd)
+        return Command(to_info['name'], args, kwargs, attrs=to_info['attrs'],
+                       exec_fn=translated_cmd)

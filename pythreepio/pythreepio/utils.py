@@ -13,10 +13,11 @@ def get_mapped_commands() -> dict:
 class Command(object):
 
     def __init__(self, function_name: str, args: list,
-                 kwargs: dict, exec_fn: Callable = None):
+                 kwargs: dict, attrs: list = [], exec_fn: Callable = None):
         self.function_name = function_name
         self.args = args
         self.kwargs = kwargs
+        self.attrs = attrs
         self.exec_fn = exec_fn
 
     def execute_routine(self):
