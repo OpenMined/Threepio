@@ -9,7 +9,7 @@ class NumpySpider(CrawlSpider):
     name = "numpy"
     version = "1.17.0"
     allowed_domains = ['scipy.org']
-    start_urls = [f'https://docs.scipy.org/doc/numpy/reference/generated/']
+    start_urls = ['https://docs.scipy.org/doc/numpy/reference/generated/']
     split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     rules = (
