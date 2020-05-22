@@ -1,4 +1,7 @@
-import importlib.resources as pkg_resources
+try:
+    import importlib.resources as pkg_resources
+except ImportError:
+    import importlib_resources as pkg_resources
 import json
 import static
 from typing import Callable
@@ -13,14 +16,15 @@ def get_mapped_commands() -> dict:
 class Command(object):
 
     def __init__(self, function_name: str, args: list,
-                 kwargs: dict, exec_fn: Callable = None):
+                 kwargs: dict, attrs: list = [], exec_fn: Callable = None):
         self.function_name = function_name
         self.args = args
         self.kwargs = kwargs
+        self.attrs = attrs
         self.exec_fn = exec_fn
 
     def execute_routine(self):
         if self.exec_fn is None:
-            raise TranslationMissing()
+            raise TranslationMissing(self.name)
 
         return self.exec_fn(*self.args, **self.kwargs)

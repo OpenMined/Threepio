@@ -22,7 +22,8 @@ def test_tf_torch_matmul(threepio_torch):
     expected_answer = torch.tensor([[11, 14], [35, 46]])
 
     c = threepio_torch.translate(
-        Command('matmul', [tensor_a, tensor_b], {})
+        Command('matmul', [tensor_a, tensor_b], {}),
+        lookup_command=True
     )
     r = c.execute_routine()
 
@@ -34,7 +35,10 @@ def test_torch_tf_matmul(threepio_tf):
     tensor_b = tf.constant([[1, 2], [5, 6]])
     expected_answer = tf.constant([[11, 14], [35, 46]])
 
-    c = threepio_tf.translate(Command('matmul', [tensor_a, tensor_b], {}))
+    c = threepio_tf.translate(
+        Command('matmul', [tensor_a, tensor_b], {}),
+        lookup_command=True
+    )
     r = c.execute_routine()
 
     assert tf.reduce_all(tf.equal(r, expected_answer))

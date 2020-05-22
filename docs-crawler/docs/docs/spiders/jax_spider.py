@@ -9,7 +9,7 @@ class JaxSpider(CrawlSpider):
     name = "jax"
     version = "0.1.59"
     allowed_domains = ['jax.readthedocs.io']
-    start_urls = [f'https://jax.readthedocs.io/']
+    start_urls = ['https://jax.readthedocs.io/']
     split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     rules = (

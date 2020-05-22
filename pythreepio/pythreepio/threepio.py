@@ -63,7 +63,7 @@ class Threepio(object):
 
         return new_args, new_kwargs
 
-    def translate(self, cmd: Command) -> Command:
+    def translate(self, cmd: Command, lookup_command: bool = False) -> Command:
         from_info = self.commands[self.from_lang][
             self._normalize_func_name(cmd.function_name, self.from_lang)
         ]
@@ -75,11 +75,14 @@ class Threepio(object):
         ]
 
         attrs = to_info['attrs'][1:]
-        translated_cmd = self.framework
+        translated_cmd = None
+        if lookup_command:
+            translated_cmd = self.framework
 
-        while len(attrs) > 0:
-            translated_cmd = getattr(translated_cmd, attrs.pop(0))
+            while len(attrs) > 0:
+                translated_cmd = getattr(translated_cmd, attrs.pop(0))
 
         args, kwargs = self._order_args(cmd, from_info, to_info)
 
-        return Command(to_info['name'], args, kwargs, translated_cmd)
+        return Command(to_info['name'], args, kwargs, attrs=to_info['attrs'],
+                       exec_fn=translated_cmd)
