@@ -4,41 +4,86 @@ import tensorflow as tf
 
 from pythreepio.threepio import Threepio
 from pythreepio.utils import Command
-
+from tests.fixtures.torch import (
+  abs as torch_abs,
+  add,
+  add2,
+  matmul,
+  mean,
+  mul,
+  div,
+  eq,
+  sum as torch_sum,
+  argmax,
+  t,
+  softmax,
+  relu,
+  sub,
+  truediv
+)
 
 @pytest.fixture
-def threepio_tf():
+def threepio():
     return Threepio('torch', 'tf', tf)
 
+def round(val, decimals=0):
+    multiplier = tf.constant(10**decimals, dtype=val.dtype)
+    return tf.round(val * multiplier) / multiplier
 
-@pytest.fixture
-def threepio_torch():
-    return Threepio('tf', 'torch', torch)
+def check_answer(result, answer):
+    assert tf.reduce_all(tf.equal(round(result, 3), round(answer, 3)))
 
+def process_tests(command, threepio):
+    for i, input in enumerate(command['inputs']):
+        translations = threepio.translate(input, lookup_command=True)
+        for j, translation in enumerate(translations):
+            result = translation.execute_routine()
+            answer = command['answers'][i][j]
+            check_answer(result, answer)
 
-def test_tf_torch_matmul(threepio_torch):
-    tensor_a = torch.tensor([[1, 2], [5, 6]])
-    tensor_b = torch.tensor([[1, 2], [5, 6]])
-    expected_answer = torch.tensor([[11, 14], [35, 46]])
+def test_translates_abs(threepio):
+    process_tests(torch_abs, threepio)
 
-    c = threepio_torch.translate(
-        Command('matmul', [tensor_a, tensor_b], {}),
-        lookup_command=True
-    )
-    r = c.execute_routine()
+@pytest.mark.skip(reason="Translate to keras.layers.add instead of math.add")
+def test_translates_add(threepio):
+    process_tests(add, threepio)
 
-    assert torch.equal(r, expected_answer)
+@pytest.mark.skip(reason="Translate to keras.layers.add instead of math.add")
+def test_translates_d_add():
+    process_tests(add2)
 
+def test_translates_matmul(threepio):
+    process_tests(matmul, threepio)
 
-def test_torch_tf_matmul(threepio_tf):
-    tensor_a = tf.constant([[1, 2], [5, 6]])
-    tensor_b = tf.constant([[1, 2], [5, 6]])
-    expected_answer = tf.constant([[11, 14], [35, 46]])
+def test_translates_mean(threepio):
+    process_tests(mean, threepio)
 
-    c = threepio_tf.translate(
-        Command('matmul', [tensor_a, tensor_b], {}),
-        lookup_command=True
-    )
-    r = c.execute_routine()
+@pytest.mark.skip(reason="Requires mul -> multiply mapping")
+def test_translates_mul(threepio):
+    process_tests(mul, threepio)
 
-    assert tf.reduce_all(tf.equal(r, expected_answer))
+@pytest.mark.skip(reason="Requires div -> truediv mapping")
+def test_translates_div(threepio):
+    process_tests(div, threepio)
+
+@pytest.mark.skip(reason="Requires eq -> equal mapping")
+def test_translates_eq(threepio):
+    process_tests(eq, threepio)
+
+def test_translates_sum(threepio):
+    process_tests(torch_sum, threepio)
+
+@pytest.mark.skip(reason="Requires dim -> axis mapping")
+def test_translates_argmax(threepio):
+    process_tests(argmax, threepio)
+
+@pytest.mark.skip(reason="Requires t -> transpose mapping")
+def test_translates_transpose(threepio):
+    process_tests(t, threepio)
+
+@pytest.mark.skip(reason="Requires sub -> subtract mapping")
+def test_translates_subtract(threepio):
+    process_tests(sub, threepio)
+
+def test_translates_truediv(threepio):
+    process_tests(truediv, threepio)
