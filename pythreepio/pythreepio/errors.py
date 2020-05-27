@@ -1,7 +1,7 @@
 class TranslationMissing(Exception):
-    def __init__(self, message):
+    def __init__(self, name):
         super().__init__(
-            f'Translation for the command {message} is not currently supported'
+            f'Translation for the command {name} is not currently supported'
         )
 
 

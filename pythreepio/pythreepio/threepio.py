@@ -14,12 +14,8 @@ class Threepio(object):
 
     def _normalize_func_name(self, name: str, lang: str) -> str:
         alpha = re.compile('[^a-zA-Z]')
-        result = alpha.sub('', name).lower()
+        return alpha.sub('', name).lower()
 
-        if result in self.commands[lang]:
-            return result
-
-        raise TranslationMissing(name)
 
     def _order_args(self, cmd: Command, from_info: dict,
                     to_info: dict) -> Tuple[list, dict]:
@@ -58,6 +54,7 @@ class Threepio(object):
 
             if to_arg_index is None:
                 new_kwargs[k] = v
+                continue
 
             new_args.insert(to_arg_index, v)
 
@@ -67,6 +64,13 @@ class Threepio(object):
         from_info = self.commands[self.from_lang][
             self._normalize_func_name(cmd.function_name, self.from_lang)
         ]
+        if len(from_info) > 1:
+            raise Exception('Cannot translate from multi-action command')
+        from_info = from_info[0]
+
+        if from_info.get(self.to_lang, None) is None:
+            raise TranslationMissing(cmd.function_name)
+
         to_info = self.commands[self.to_lang][
             self._normalize_func_name(
                 from_info.get(self.to_lang),
@@ -74,15 +78,26 @@ class Threepio(object):
             )
         ]
 
-        attrs = to_info['attrs'][1:]
-        translated_cmd = None
-        if lookup_command:
-            translated_cmd = self.framework
+        commands = []
+        # TODO: Assume to_info is a list
+        for to_command in to_info:
+            attrs = to_command['attrs'][1:]
+            translated_cmd = None
+            if lookup_command:
+                translated_cmd = self.framework
 
-            while len(attrs) > 0:
-                translated_cmd = getattr(translated_cmd, attrs.pop(0))
+                while len(attrs) > 0:
+                    translated_cmd = getattr(translated_cmd, attrs.pop(0))
 
-        args, kwargs = self._order_args(cmd, from_info, to_info)
+            args, kwargs = self._order_args(cmd, from_info, to_command)
 
-        return Command(to_info['name'], args, kwargs, attrs=to_info['attrs'],
-                       exec_fn=translated_cmd)
+            commands.append(
+                Command(
+                    to_command['name'],
+                    args,
+                    kwargs,
+                    attrs=to_command['attrs'],
+                    exec_fn=translated_cmd
+                )
+            )
+        return commands

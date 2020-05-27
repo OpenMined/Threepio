@@ -25,6 +25,6 @@ class Command(object):
 
     def execute_routine(self):
         if self.exec_fn is None:
-            raise TranslationMissing(self.name)
+            raise TranslationMissing(self.function_name)
 
         return self.exec_fn(*self.args, **self.kwargs)
