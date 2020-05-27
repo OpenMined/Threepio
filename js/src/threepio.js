@@ -72,10 +72,11 @@ export default class Threepio {
     } else {
       const fromInfo = this.mappedCommands[this.fromLang][
         this._normalizeFunctionName(cmd.functionName, this.fromLang)
-      ];
+      ][0];
+
       const toInfo = this.mappedCommands[this.toLang][
         this._normalizeFunctionName(fromInfo[this.toLang], this.toLang)
-      ];
+      ][0];
 
       name = toInfo.name;
       args = this._orderArgs(cmd, fromInfo, toInfo);
