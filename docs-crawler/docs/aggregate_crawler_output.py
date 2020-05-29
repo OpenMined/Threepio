@@ -107,7 +107,11 @@ class Compiler(object):
 
                 # Format & match args
                 to_args = to_def['args']
-                to_def['args'] = self.match_arg_names(from_args, to_args, to_lang)
+                from_def['args'] = self.match_arg_names(
+                    from_args,
+                    to_args,
+                    to_lang
+                )
 
     def slim_output(self, from_lang, to_lang):
         input_dict = {
