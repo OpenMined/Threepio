@@ -15,7 +15,7 @@ COMMAND_TRANSLATIONS = {
     'tf': {},
     'tfjs': {},
     'torch': {
-        "truediv": {
+        "truediv": [{
             "args": [
                 {
                     "name": "input",
@@ -42,8 +42,8 @@ COMMAND_TRANSLATIONS = {
             "name": "truediv",
             "tfjs": "div",
             "tf": "Truediv"
-        },
-        "sub": {
+        }],
+        "sub": [{
             "args": [
                 {
                     "name": "value",
@@ -64,6 +64,6 @@ COMMAND_TRANSLATIONS = {
             ],
             "name": "sub",
             "tfjs": "sub"
-        },
+        }],
     }
 }
