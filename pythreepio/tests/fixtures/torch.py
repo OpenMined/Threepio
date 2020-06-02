@@ -1,6 +1,6 @@
 import torch
 import tensorflow as tf
-from pythreepio.utils import Command
+from pythreepio.command import Command
 
 abs = {
     "inputs": [Command("abs", [tf.constant([1, -2, 3, -4])], {})],
@@ -109,4 +109,13 @@ sub = {
 truediv = {
     "inputs": [Command("truediv", [[1, 2, 3], [1, 2, 3]], {})],
     "answers": [[tf.constant([1, 1, 1])]],
+}
+
+linear = {
+    "inputs": [
+        Command(
+            "linear", [tf.constant([[0, 0], [1, 1]]), tf.constant([[1, 1], [0, 0]])], {}
+        )
+    ],
+    "answers": [tf.constant([[0, 0], [2, 0]])],
 }
