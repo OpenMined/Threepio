@@ -35,7 +35,7 @@ class Compiler(object):
             del f['kwargs']
             del f['code']
             del f['function_name']
-            self.main_map[lib][nfunc] = f
+            self.main_map[lib][nfunc] = [f]
             self.base_defs.add(nfunc)
 
     def load_base_defs(self):
@@ -64,21 +64,21 @@ class Compiler(object):
         ]
         return ba + bk
 
-    def match_arg_names(self, base, match, to_lang):
-        for base_arg in base:
+    def match_arg_names(self, from_args, to_args, to_lang):
+        for from_arg in from_args:
             try:
-                match_arg = next(
-                    m for m in match if m.get('name') == base_arg.get('name')
+                to_arg = next(
+                    m for m in to_args if m.get('name') == from_arg.get('name')
                 )
-                match_name = match_arg.get('name', None)
-                if match_name is not None:
-                    base_arg[to_lang] = match_name
+                to_name = to_arg.get('name', None)
+                if to_name is not None:
+                    from_arg[to_lang] = to_name
             except Exception:
-                match_name = WORD_TRANSLATIONS[to_lang].get(
-                    base_arg['name'], None)
-                if match_name is not None:
-                    base_arg[to_lang] = match_name
-        return base
+                to_name = WORD_TRANSLATIONS[to_lang].get(
+                    from_arg['name'], None)
+                if to_name is not None:
+                    from_arg[to_lang] = to_name
+        return from_args
 
     def load_translations(self, from_lang):
         langs = ['torch', 'tfjs', 'tf']
@@ -86,26 +86,32 @@ class Compiler(object):
 
         for d in self.base_defs:
             # First perform any word level translations
-            from_d = WORD_TRANSLATIONS[from_lang].get(d, False) or d
+            from_name = WORD_TRANSLATIONS[from_lang].get(d, False) or d
 
             # Check if translation exists in our from language
-            if from_d not in self.main_map[from_lang]:
+            if from_name not in self.main_map[from_lang]:
                 continue
 
-            base_args = self.main_map[from_lang][from_d]['args']
+            # TODO: Treat as list
+            from_def = self.main_map[from_lang][from_name][0]
+            from_args = from_def['args']
             # Check if translatable to other langs
             for to_lang in langs:
                 # Perform word level translation for target language
-                to_d = WORD_TRANSLATIONS[to_lang].get(d, False) or d
-                if to_d not in self.main_map[to_lang]:
+                to_name = WORD_TRANSLATIONS[to_lang].get(d, False) or d
+                if to_name not in self.main_map[to_lang]:
                     continue
-
-                self.main_map[from_lang][from_d][to_lang] = to_d
+                # TODO: Treat as list
+                to_def = self.main_map[to_lang][to_name][0]
+                from_def[to_lang] = to_name
 
                 # Format & match args
-                match_args = self.main_map[to_lang][to_d]['args']
-                self.main_map[from_lang][from_d]['args'] = \
-                    self.match_arg_names(base_args, match_args, to_lang)
+                to_args = to_def['args']
+                from_def['args'] = self.match_arg_names(
+                    from_args,
+                    to_args,
+                    to_lang
+                )
 
     def slim_output(self, from_lang, to_lang):
         input_dict = {
@@ -119,8 +125,10 @@ class Compiler(object):
 
         def hydrate_keys(input_dict, output, from_lang, to_lang):
             for k, v in input_dict[from_lang].items():
+                # TODO: Treat as list
+                v = v[0]
                 if v.get(to_lang, '') in input_dict[to_lang]:
-                    output[from_lang][k] = v
+                    output[from_lang][k] = [v]
             return output
 
         output = hydrate_keys(input_dict, output, from_lang, to_lang)
