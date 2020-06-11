@@ -17,7 +17,7 @@ const sharedOutput = {
   }
 };
 
-export default {
+const defaultExport = {
   input: 'js/src/index.js',
   output: [
     {
@@ -48,3 +48,5 @@ export default {
     filesize()
   ]
 };
+
+export default defaultExport;
