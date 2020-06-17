@@ -1,6 +1,6 @@
-# Threepio Documentation Crawler
+# Threepio Automatic Translation Generator
 
-This documentation web crawler is used to generate a set of static JSON files which we can use to help perform certain automatic translations between PyTorch, Tensorflow, and Tensorflow.js.
+This translation generator is used to generate a set of static JSON files which we can use to help perform certain automatic translations between PyTorch, Tensorflow, and Tensorflow.js.
 
 ## Installation
 
@@ -13,10 +13,35 @@ poetry shell # This activates the virtualenv
 
 ## Usage
 
+To generate the most recent automatic translations, we must complete two steps:
+
+ - Crawl the most recent version of the documentation sites
+ - Generate translations from the updated definitions
+
+
+### Crawl the docs
+
+To run the crawlers (this will pull the latest version of the docs)
+
 ```bash
 cd docs && sh run_crawlers.sh
 ```
-The static json files are generated in the `output` directory.
+
+The static json files are generated and stored in the `output` directory.
+
+### Generate the definitions
+
+Currently generating the definitions is perfomed by the script `aggregate_crawler_output.py`
+
+To run it you simply
+
+```bash
+cd docs && python aggregate_crawler_output.py
+```
+
+This will generate and store new output files in `threepio/static/` (for js) and `threepio/pythreepio/static/` (for python).
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+For adding manual translations, you will want to look in our [translations.py](https://github.com/OpenMined/Threepio/blob/master/docs-crawler/docs/translations.py) file and follow the existing translation schema.
