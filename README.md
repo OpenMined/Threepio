@@ -1,13 +1,24 @@
 ![open mined-logo](https://github.com/OpenMined/design-assets/blob/master/logos/OM/horizontal-primary-trans.png)
 
-![Tests](https://img.shields.io/github/workflow/status/OpenMined/threepio/Tests)
 ![Coverage](https://img.shields.io/codecov/c/github/OpenMined/threepio)
 ![License](https://img.shields.io/github/license/OpenMined/threepio)
 ![OpenCollective](https://img.shields.io/opencollective/all/openmined)
 
 # Threepio
 
-Threepio is a multi-language library for translating commands between PyTorch, TensorFlow, and TensorFlow.js 
+Threepio makes it _dead simple_ to translate commands between machine learning frameworks such as **PyTorch, Tensorflow.js, and Tensorflow Python**.
+It acts as a core component in PySyft and Syft.js.
+Some of the life changing features this library provides are:
+
+ - :robot: Automatic bi-directional translation between same named commands `add`, `abs`, etc.
+ - :brain: Smart argument mapping between automaticaly translated commands
+ - :repeat: Word level translation between libraries
+ - :wrench: Custom command translation
+ - :herb: One to many command translation
+ - :zap: Translation of tensor methods _(in progress)_
+ - :mag: Support for fuzzy match in automatic command translation _(in progress)_
+ - :card_index_dividers: Support for framework versioning in automatic translation _(in progress)_
+ - :mage_man: Support for automatic argument type casting (tensorflow tensor -> pytorch tensor) _(in progress)_
 
 Threepio is made up of three main components:
 - :spider: [Documentation Crawler](https://github.com/OpenMined/Threepio/tree/master/docs-crawler) - This generates the majority of our automatic translations for Threepio
@@ -29,7 +40,7 @@ pip install 3p0
 
 #### Usage
 
-Please check out our usage document for further guidelines.
+Please check out our [usage document](https://github.com/OpenMined/Threepio/blob/master/pythreepio/README.md) for further guidelines.
 
 ### Javascript
 Use the package manager [npm](https://www.npmjs.com/) to install threepio.
@@ -40,7 +51,7 @@ npm install @openmined/threepio
 
 #### Usage
 
-Please check out our usage document for further guidelines.
+Please check out our [usage document](https://github.com/OpenMined/Threepio/blob/master/js/README.md) for further guidelines.
 
 ## Support
 
