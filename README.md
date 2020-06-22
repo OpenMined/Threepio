@@ -7,7 +7,7 @@
 # Threepio
 
 Threepio makes it _dead simple_ to translate commands between machine learning frameworks such as **PyTorch, Tensorflow.js, and Tensorflow Python**.
-It acts as a core component in PySyft and Syft.js.
+It acts as a core component in [PySyft](https://github.com/OpenMined/PySyft) and [syft.js](https://github.com/OpenMined/syft.js).
 Some of the life changing features this library provides are:
 
  - :robot: Automatic bi-directional translation between same named commands `add`, `abs`, etc.
