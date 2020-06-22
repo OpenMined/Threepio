@@ -21,9 +21,9 @@ Some of the life changing features this library provides are:
  - :mage_man: Support for automatic argument type casting (tensorflow tensor -> pytorch tensor) _(in progress)_
 
 Threepio is made up of three main components:
-- :spider: [Documentation Crawler](https://github.com/OpenMined/Threepio/tree/master/docs-crawler) - This generates the majority of our automatic translations for Threepio
-- :snake: [Python translation library](https://github.com/OpenMined/Threepio/tree/master/pythreepio) - This is the python library for using threepio
-- :coffee: [JS translation library](https://github.com/OpenMined/Threepio/tree/master/js) - This is the javascript library for using threepio
+- :spider: [Documentation Crawler](/docs-crawler) - This generates the majority of our automatic translations for Threepio
+- :snake: [Python translation library](/pythreepio) - This is the python library for using threepio
+- :coffee: [JS translation library](/js) - This is the javascript library for using threepio
 
 And has clients in both Python and Javascript!
 
