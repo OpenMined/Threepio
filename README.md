@@ -17,6 +17,7 @@ A multi-language library for translating commands between PyTorch, TensorFlow, a
   - [Table of Contents](#table-of-contents)
   - [Install](#install)
   - [Usage](#usage)
+  - [Support](#support)
   - [License](#license)
 
 
@@ -36,6 +37,10 @@ const Threepio = require('threepio');
 
 const threepio = new Threepio();
 ```
+
+## Support
+
+For support in using this library, please join the **#lib_threepio** Slack channel. If you’d like to follow along with any code changes to the library, please join the **#code_threepio** Slack channel. [Click here to join our Slack community!](https://slack.openmined.org)
 
 ## License
 
