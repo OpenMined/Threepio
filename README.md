@@ -40,7 +40,7 @@ pip install 3p0
 
 #### Usage
 
-Please check out our [usage document](https://github.com/OpenMined/Threepio/blob/master/pythreepio/README.md) for further guidelines.
+Please check out our [usage document](/pythreepio/README.md) for further guidelines.
 
 ### Javascript
 Use the package manager [npm](https://www.npmjs.com/) to install threepio.
@@ -51,7 +51,7 @@ npm install @openmined/threepio
 
 #### Usage
 
-Please check out our [usage document](https://github.com/OpenMined/Threepio/blob/master/js/README.md) for further guidelines.
+Please check out our [usage document](/js/README.md) for further guidelines.
 
 ## Support
 
