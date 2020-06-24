@@ -24,6 +24,10 @@ COMMAND_TRANSLATIONS = {
                 "name": "linear_weight",
                 "kwarg": False,
                 "opt": False
+            }, {
+                "name": "linear_bias",
+                "kwarg": True,
+                "opt": True
             }],
             "placeholder_output": "linear_ret"
         }, {
