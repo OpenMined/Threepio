@@ -48933,6 +48933,11 @@
                         "name": "linear_weight",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "linear_bias",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "placeholder_output": "linear_ret",
