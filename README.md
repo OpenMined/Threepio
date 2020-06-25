@@ -1,4 +1,4 @@
-![open mined-logo](https://github.com/OpenMined/design-assets/blob/master/logos/OM/horizontal-primary-trans.png)
+![Threepio logo](/threepio.png)
 
 ![Coverage](https://img.shields.io/codecov/c/github/OpenMined/threepio)
 ![License](https://img.shields.io/github/license/OpenMined/threepio)
