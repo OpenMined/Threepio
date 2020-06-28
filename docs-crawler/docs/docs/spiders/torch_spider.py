@@ -2,7 +2,7 @@
 
 # Crawl modules in the Pytorch documentation to extract, format and return existing functions
 #
-# See documentation in:
+# To understand how CrawlSpider works, See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spiders.html
 import re
 from docs.items import ApiItem
@@ -39,7 +39,7 @@ class TorchSpider(CrawlSpider):
         # Each item in the list fdef contains documentation of a function in the module currently being crawled.
         # The loop goes through each function documentation to extract Information about the function call and cache.
         for selector in fdef:
-            cmd_info = {} # Caches the processed function call format of a function in the module
+            cmd_info = {} # Caches the processed function call format of the current function in the module
             func_header = selector.css('dt') # Stores the function call format, The dt tag contains the Function call format for the currently crawled function.
             text = (remove_tags(func_header.get()) # Preprocesses func_header and stores the simplified representation.
                     .replace('\n', '')             # For example, in the format - torch.this_is_a_function(obj)¶
