@@ -15,17 +15,23 @@ class TorchSpider(CrawlSpider):
     name = "torch"  # Name of web crawler
     version = "1.4.0"  # Version of Pytorch documentation to crawl
     allowed_domains = ['pytorch.org']  # Crawl only links from pytorch
-    start_urls = [f'https://pytorch.org/docs/{version}/index.html']  # Crawler starts crawling from this url
-    split_def = re.compile(r'^([\w\.]+)\(([\w,\s=\*\'\.\-]*)\)')  # Regex rules for compiling a string to a Regex object.
 
-    # Rule(), guides the crawler starting at https://pytorch.org/docs/1.4.0/index.html to look for
+    # Base URL for crawling
+    start_urls = [f'https://pytorch.org/docs/{version}/index.html']
+
+    # Regex rules for compiling a string to a Regex object.
+    split_def = re.compile(r'^([\w\.]+)\(([\w,\s=\*\'\.\-]*)\)')
+
+    # Rule(), guides the crawler starting at
+    # https://pytorch.org/docs/1.4.0/index.html to look for
     # the selector '.toctree-l1' to extract links.
-    # The response of the links direct to different Pytorch modules and are passed to parse_api() for crawling.
+    # The response of the links direct to different Pytorch modules
+    # and are passed to parse_api() for crawling.
     rules = (
         Rule(LinkExtractor(
-            allow=(re.compile(r'.+\.html')), # Allows only links ending with .html.
-            restrict_css='.toctree-l1'), # Starts crawling from .toctree-l1.
-            callback='parse_api',), # Passes the responses to the parse_api() method.
+            allow=(re.compile(r'.+\.html')),  # Allows only links with .html.
+            restrict_css='.toctree-l1'),  # Starts crawling from .toctree-l1.
+            callback='parse_api',),  # calls parse_api() with response.
     )
 
     # The parse_api() method is the callback method that parses the response from each link extracted with the Rule above.
