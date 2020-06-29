@@ -34,21 +34,35 @@ class TorchSpider(CrawlSpider):
             callback='parse_api',),  # calls parse_api() with response.
     )
 
-    # The parse_api() method is the callback method that parses the response from each link extracted with the Rule above.
-    # The response is a webpage containing documentations of the functions for that particular PyTorch module.
-    # The goal is to process each function call format and cache in ApiItem to yield.
+    # The parse_api() method is the callback method that parses the response
+    # from each link extracted with the Rule above.
+    # The response is a webpage containing documentations of the functions for
+    # that particular PyTorch module.
+    # The goal is to process the function call format inorder to yield.
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
-        fdef = response.css('dl.function') # Crawls the selector to create a list of each function documentation in the Module
-        defs = {} # Caches the processed function call format of all functions in the module
 
-        # Each item in the list fdef contains documentation of a function in the module currently being crawled.
-        # The loop goes through each function documentation to extract Information about the function call and cache.
+        # Crawls the selector to create a list of each function doc.
+        fdef = response.css('dl.function')
+
+        defs = {}  # Caches the processed call format of all functions
+
+        # Each item in the list fdef contains documentation of a function
+        # in the module currently being crawled.
+        # The loop goes through each function documentation to extract
+        # Information about the function call and cache.
         for selector in fdef:
-            cmd_info = {} # Caches the processed function call format of the current function in the module
-            func_header = selector.css('dt') # Stores the function call format, The dt tag contains the Function call format for the currently crawled function.
-            text = (remove_tags(func_header.get()) # Preprocesses func_header and stores the simplified representation.
-                    .replace('\n', '')             # For example, in the format - torch.this_is_a_function(obj)¶
+
+            cmd_info = {}  # Caches processed format of the current function
+
+            # Stores the function call format, The dt tag contains the
+            # Function call format for the currently crawled function.
+            func_header = selector.css('dt')
+
+            # Preprocesses func_header and stores the processed representation.
+            # For example, in the format - torch.this_is_a_function(obj)¶
+            text = (remove_tags(func_header.get())
+                    .replace('\n', '')
                     .replace('\\', '')
                     .replace('&gt', '')
                     .replace('&lt', '')
@@ -57,25 +71,41 @@ class TorchSpider(CrawlSpider):
             if 'torchvision' in text:
                 continue
 
-            split_cmd = self.split_def.match(text) # Uses the Regex rules created earlers to convert to a Regex object for the simplified extraction of different parts of the function call.
+            # Uses the Regex rules to compile the function call
+            split_cmd = self.split_def.match(text)
+
             if split_cmd is None:
                 continue
 
-            function_name = split_cmd.groups()[0].split('.')[-1] # Extracts only the function name from the Regex encoded text
+            # Extracts only the function name from the Regex encoded text
+            function_name = split_cmd.groups()[0].split('.')[-1]
 
-            cmd_info['code'] = text # Caches the formatted function call
-            params = split_cmd.groups()[1].split(',') # Extracts every function input parameter and stores in a list
+            cmd_info['code'] = text  # Caches the formatted function call
 
-            cmd_info['args'] = [p for p in params if '=' not in p] # Caches only Default parameters
-            cmd_info['kwargs'] = [p.split('=') for p in params if '=' in p] # Caches other parameters
+            # Extracts every function input parameter and stores in a list
+            params = split_cmd.groups()[1].split(',')
 
-            defs[function_name] = cmd_info # Stores the function cache in the global function cache
+            # Caches only Default parameters
+            cmd_info['args'] = [p for p in params if '=' not in p]
+
+            # Caches other parameters
+            cmd_info['kwargs'] = [p.split('=') for p in params if '=' in p]
+
+            # Stores the function cache in the global function cache
+            defs[function_name] = cmd_info
 
         # Loops through the global function cache to yield each function.
         for function_name, cmd_info in defs.items():
-            item = ApiItem() # Initializes a Scrapy Item object, docs at https://docs.scrapy.org/en/latest/topics/items.html
-            item['code'] = cmd_info['code'] # Stores the preprocessed function call
-            item['function_name'] = function_name # Stores the function name
-            item['args'] = cmd_info['args'] # Stores the function default parameters
-            item['kwargs'] = cmd_info['kwargs'] # Stores the function parameters
-            yield item  # Yields a structured representation of the function call format.
+
+            print(function_name)
+            # Initializes a Scrapy Item object
+            # Check docs at https://docs.scrapy.org/en/latest/topics/items.html
+            item = ApiItem()
+
+            item['code'] = cmd_info['code']  # Caches the function call
+            item['function_name'] = function_name  # Caches the function name
+            item['args'] = cmd_info['args']  # Caches the default paramaters
+            item['kwargs'] = cmd_info['kwargs']  # Caches other parameters
+
+            # Yields a structured representation of the function call format.
+            yield item
