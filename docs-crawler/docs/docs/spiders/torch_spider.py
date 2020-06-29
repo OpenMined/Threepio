@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Crawl modules in the Pytorch documentation to extract, format and return existing functions
+# Crawl modules in the Pytorch docs to extract functions
 #
 # To understand how CrawlSpider works, See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spiders.html
@@ -12,10 +12,10 @@ from w3lib.html import remove_tags
 
 
 class TorchSpider(CrawlSpider):
-    name = "torch" # Name of web crawler
-    version = "1.4.0" # Version of Pytorch documentation to crawl
-    allowed_domains = ['pytorch.org'] # Crawl only links from pytorch
-    start_urls = [f'https://pytorch.org/docs/{version}/index.html'] # Crawler starts crawling from this url
+    name = "torch"  # Name of web crawler
+    version = "1.4.0"  # Version of Pytorch documentation to crawl
+    allowed_domains = ['pytorch.org']  # Crawl only links from pytorch
+    start_urls = [f'https://pytorch.org/docs/{version}/index.html']  # Crawler starts crawling from this url
     split_def = re.compile(r'^([\w\.]+)\(([\w,\s=\*\'\.\-]*)\)')  # Regex rules for compiling a string to a Regex object.
 
     # Rule(), guides the crawler starting at https://pytorch.org/docs/1.4.0/index.html to look for
