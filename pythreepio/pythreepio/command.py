@@ -25,7 +25,7 @@ class Command(object):
         self.attrs = attrs
         self.placeholder_output = placeholder_output
         self.exec_fn = exec_fn
-        self.frameworks = {"tf": "tensorflow"}
+        self.frameworks = {"tf": "tensorflow", "torch": "torch"}
 
     def execute_routine(self, store={}):
         if self.exec_fn is None:

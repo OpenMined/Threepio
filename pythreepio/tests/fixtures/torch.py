@@ -1,4 +1,3 @@
-import torch
 import tensorflow as tf
 from pythreepio.command import Command
 
