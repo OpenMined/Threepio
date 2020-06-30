@@ -82,13 +82,13 @@ class TorchSpider(CrawlSpider):
 
             cmd_info['code'] = text  # Caches the formatted function call
 
-            # Extracts every function input parameter and stores in a list
+            # Extracts the function input parameters and stores in a list
             params = split_cmd.groups()[1].split(',')
 
-            # Caches only Default parameters
+            # Caches other arguments
             cmd_info['args'] = [p for p in params if '=' not in p]
 
-            # Caches other parameters
+            # Caches only keyword arguments
             cmd_info['kwargs'] = [p.split('=') for p in params if '=' in p]
 
             # Stores the function cache in the global function cache
@@ -104,8 +104,8 @@ class TorchSpider(CrawlSpider):
 
             item['code'] = cmd_info['code']  # Caches the function call
             item['function_name'] = function_name  # Caches the function name
-            item['args'] = cmd_info['args']  # Caches the default paramaters
-            item['kwargs'] = cmd_info['kwargs']  # Caches other parameters
+            item['args'] = cmd_info['args']  # Caches other arguments
+            item['kwargs'] = cmd_info['kwargs']  # Caches keyword arguments
 
             # Yields a structured representation of the function call format.
             yield item
