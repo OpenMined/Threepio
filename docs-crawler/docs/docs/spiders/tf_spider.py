@@ -1,10 +1,14 @@
-# _*_ coding: utf-8 -*-
+"""
+ _*_ coding: utf-8 -*-
 
 
-# Crawl modules in the TensorFlow docs to extract functions
-#
-# To understand how CrawlSpider works, See documentation in
-# https://docs.scrapy.org/en/latest/topics/spiders.html
+Crawl modules in the TensorFlow docs to extract functions
+
+To understand how CrawlSpider works, See documentation in
+https://docs.scrapy.org/en/latest/topics/spiders.html
+
+"""
+
 import re
 from docs.items import ApiItem
 from scrapy.spiders import Rule, CrawlSpider
@@ -28,43 +32,63 @@ class TfSpider(CrawlSpider):
 
 
     # Rule(), guides the crawler starting at
+    # https://www.tensorflow.org/api_docs/python/tf to look for 
+    # the selector '.devsite-nav-title' to extract links.
     # The reponse of the links direct to different TensorFlow modules
     # and are passed to parse_api() for crawling.
     rules = (
         Rule(LinkExtractor(
-            allow=(re.compile(r'.+api_docs\/python\/tf')), # allow the links under api_docs
+            allow=(re.compile(r'.+api_docs\/python\/tf')), # Allows the links under api_docs.
             restrict_css='.devsite-nav-title'), # Starts crawling from .devsite-nav-title.
-            callback='parse_api',), # calls parse_api() with response.
+            callback='parse_api',), # Calls parse_api() with response.
     )
 
 
     # The parse_api() method is the callback method that parses the response 
-    # from each link extracted with the rule above.
+    # from each link extracted with the Rule above.
+    # The response is a webpage containing documentations of the functions
+    # for that particular TensorFlow module.
+    # The goal is to process the function call format inorder to yield.
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         item = ApiItem()
-        function_header = response.css('.lang-python')
+
+        # Crawls the selector to create a list of each python doc.
+        function_header = response.css('.lang-python') 
         if len(function_header) == 0:
             return
+
+
+        # Preprocess the func_header and stores the processed representation.        
         text = remove_tags(function_header.get())\
             .replace('\n', '')\
             .replace(' ', '')
-
+        
+        # Uses the Regex rules to compile the function call
         split = self.split_def.match(text)
         if split is None:
             return
 
+        # Extracts only the function name from the Regex encoded text
         function_name = split.groups()[0].split('.')[-1]
+
+        # Extracts every function input parameter and stores in a list
         params = split.groups()[1].split(',')
+
+        # Caches only Default parameters
         args = [p for p in params if '=' not in p]
+
+        # Caches other parameters
         kwargs = [p.split('=') for p in params if '=' in p]
 
         if '__' in text or 'compat' in text:
             return
 
-        item['code'] = text
-        item['function_name'] = function_name
-        item['args'] = args
-        item['kwargs'] = kwargs
+        item['code'] = text # Caches the function call
+        item['function_name'] = function_name # Caches the function name
+        item['args'] = args # Caches the default paramaters
+        item['kwargs'] = kwargs # Caches other parameters
 
+
+        # Yields a structured representation of the function call format.
         yield item
