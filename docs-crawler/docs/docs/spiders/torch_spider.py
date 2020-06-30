@@ -97,7 +97,6 @@ class TorchSpider(CrawlSpider):
         # Loops through the global function cache to yield each function.
         for function_name, cmd_info in defs.items():
 
-            print(function_name)
             # Initializes a Scrapy Item object
             # Check docs at https://docs.scrapy.org/en/latest/topics/items.html
             item = ApiItem()
