@@ -26594,7 +26594,8 @@
                     "gfile",
                     "copy"
                 ],
-                "name": "copy"
+                "name": "copy",
+                "torch": "copy"
             }
         ],
         "write_graph": [
@@ -60953,13 +60954,13 @@
                         "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "x"
+                        "tfjs": "a"
                     },
                     {
                         "name": "other",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "y"
+                        "tfjs": "b"
                     },
                     {
                         "name": "out",
@@ -60974,6 +60975,35 @@
                 "name": "Truediv",
                 "tfjs": "div",
                 "tf": "truediv"
+            }
+        ],
+        "rtruediv": [
+            {
+                "args": [
+                    {
+                        "name": "input",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "b"
+                    },
+                    {
+                        "name": "other",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "a"
+                    },
+                    {
+                        "name": "out",
+                        "kwarg": true,
+                        "opt": true
+                    }
+                ],
+                "attrs": [
+                    "torch",
+                    "div"
+                ],
+                "name": "rtruediv",
+                "tfjs": "div"
             }
         ],
         "sub": [
@@ -60998,6 +61028,48 @@
                 ],
                 "name": "sub",
                 "tfjs": "sub"
+            }
+        ],
+        "copy": [
+            {
+                "args": [
+                    {
+                        "name": "value",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "x"
+                    }
+                ],
+                "attrs": [
+                    "copy"
+                ],
+                "name": "copy",
+                "tfjs": "clone",
+                "tf": "copy"
+            }
+        ],
+        "float": [
+            {
+                "args": [
+                    {
+                        "name": "value",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "x"
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": false,
+                        "opt": false,
+                        "value": "float32",
+                        "tfjs": "dtype"
+                    }
+                ],
+                "attrs": [
+                    "float"
+                ],
+                "name": "float",
+                "tfjs": "cast"
             }
         ]
     }

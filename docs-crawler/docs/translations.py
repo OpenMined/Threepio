@@ -85,13 +85,13 @@ COMMAND_TRANSLATIONS = {
                     "name": "input",
                     "kwarg": False,
                     "opt": False,
-                    "tfjs": "x"
+                    "tfjs": "a"
                 },
                 {
                     "name": "other",
                     "kwarg": False,
                     "opt": False,
-                    "tfjs": "y"
+                    "tfjs": "b"
                 },
                 {
                     "name": "out",
@@ -106,6 +106,33 @@ COMMAND_TRANSLATIONS = {
             "name": "Truediv",
             "tfjs": "div",
             "tf": "Truediv"
+        }],
+        "rtruediv": [{
+            "args": [
+                {
+                    "name": "input",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "b"
+                },
+                {
+                    "name": "other",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "a"
+                },
+                {
+                    "name": "out",
+                    "kwarg": True,
+                    "opt": True
+                }
+            ],
+            "attrs": [
+                "torch",
+                "div"
+            ],
+            "name": "rtruediv",
+            "tfjs": "div",
         }],
         "sub": [{
             "args": [
@@ -128,6 +155,43 @@ COMMAND_TRANSLATIONS = {
             ],
             "name": "sub",
             "tfjs": "sub"
+        }],
+        "copy": [{
+            "args": [
+                {
+                    "name": "value",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "x"
+                },
+            ],
+            "attrs": [
+                "copy"
+            ],
+            "name": "copy",
+            "tfjs": "clone"
+        }],
+        "float": [{
+            "args": [
+                {
+                    "name": "value",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "x"
+                },
+                {
+                    "name": "dtype",
+                    "kwarg": False,
+                    "opt": False,
+                    "value": "float32",
+                    "tfjs": "dtype"
+                },
+            ],
+            "attrs": [
+                "float"
+            ],
+            "name": "float",
+            "tfjs": "cast"
         }],
     }
 }
