@@ -22,9 +22,10 @@ class Threepio(object):
     ) -> Tuple[list, dict]:
         new_args = []
         new_kwargs = {}
-        for i, arg in enumerate(cmd.args):
-            from_arg = from_info["args"][i]
-            to_arg_index = next(
+
+        def get_to_arg_index(from_arg):
+            """Returns index for the original argument in the translated command arguments list"""
+            return next(
                 (
                     index
                     for index, d in enumerate(to_info["args"])
@@ -33,11 +34,22 @@ class Threepio(object):
                 None,
             )
 
+        for i, arg in enumerate(cmd.args):
+            from_arg = from_info["args"][i]
+            to_arg_index = get_to_arg_index(from_arg)
+
             if to_arg_index is None:
                 new_args.append(arg)
                 continue
 
             new_args.insert(to_arg_index, arg)
+
+        # Add static args, if any
+        for from_arg in from_info["args"]:
+            if "value" in from_arg:
+                to_arg_index = get_to_arg_index(from_arg)
+                if to_arg_index is not None:
+                    new_args.insert(to_arg_index, from_arg["value"])
 
         # If any kwargs are normal args, splice them in as well
         for k, v in cmd.kwargs.items():
