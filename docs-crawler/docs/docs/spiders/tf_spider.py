@@ -21,7 +21,7 @@ class TfSpider(CrawlSpider):
         f'https://www.tensorflow.org/versions/r{version}/api_docs/python/tf'
     ]
 
-    # Base URL for crawling
+    # Regex rules for compiling a string to a Regex object.
     split_def = re.compile(r'^([\w\.]+)\((.*)\)$')
 
     # Rule(), guides the crawler starting at
