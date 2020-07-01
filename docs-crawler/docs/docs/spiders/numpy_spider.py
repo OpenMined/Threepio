@@ -27,10 +27,10 @@ class NumpySpider(CrawlSpider):
     # The reponse of the links direct to different modules
     # and are passed to parse_api() for crawling
     rules = (
-      Rule(LinkExtractor(
-        allow=(re.compile(r'.+\.html')),
-      ),
-      callback='parse_api', ),
+        Rule(LinkExtractor(
+            allow=(re.compile(r'.+\.html')),
+        ),
+            callback='parse_api', ),
     )
 
     # The parse_api() method is the callback method that parses the response
