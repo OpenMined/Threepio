@@ -18,6 +18,10 @@ class JaxSpider(CrawlSpider):
     start_urls = ['https://jax.readthedocs.io/']  # Base URL for crawling
 
     # Regex rules for compiling a string to a Regex object.
+    # Here the rules match on to two groups and expect a
+    # fucntion call similar to foo.bar(arg1, arg2)
+    # the first group refers to foo.bar
+    # the second group refers to arg1, arg2
     split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
     # Rule(), guides the crawler starting at
