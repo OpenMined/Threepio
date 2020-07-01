@@ -12,13 +12,13 @@ from w3lib.html import remove_tags
 class NumpySpider(CrawlSpider):
     name = "numpy"  #  Name of The Web crawler
     version = "1.17.0"  # Version Used
-    allowed_domains = ['scipy.org'] # Crawls only links from scipy
+    allowed_domains = ['scipy.org']  # Crawls only links from scipy
 
     # Base URL which is needed for crawling
     start_urls = ['https://docs.scipy.org/doc/numpy/reference/generated/']
 
-    #Following part is Regex expression, used to define the search pattern
-    #which follows the Regex rules.
+    # Following part is Regex expression, used to define the search pattern
+    # which follows the Regex rules.
 
     split_def = re.compile(r'^([\w\.]+)\(([\w\,\s=\*\.]*)\)')
 
@@ -29,16 +29,16 @@ class NumpySpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(
           # Allows links under api_docs.
-            allow=(re.compile(r'.+\.html')),
+          allow=(re.compile(r'.+\.html')),
         ),
-            callback='parse_api',), # Calls parse_api() with response.
+            callback='parse_api',),  # Calls parse_api() with response.
     )
 
     # The parse_api() method is the callback method that parses the response
     # from each link extracted with the Rule above.
     # The response is a webpage containing documentations of the functions
     # for that particular scipy module.
-    #The objective is to format the function call method to yield
+    # The objective is to format the function call method to yield
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
         fdef = response.css('dl.function > dt')
@@ -46,10 +46,10 @@ class NumpySpider(CrawlSpider):
         for selector in fdef:
 
             text = (remove_tags(selector.get())
-                    .replace('\n', '')  #Used to replace the newline character
-                    .replace(' ', '')  #Used to replace the space character
-                    .replace('[source]', ''))  #Used to replace '[source]'
-            defs.append(text)  #Adding the appended text in defs
+                    .replace('\n', '')  # Used to replace the newline character
+                    .replace(' ', '')  # Used to replace the space character
+                    .replace('[source]', ''))  # Used to replace '[source]'
+            defs.append(text)  # Adding the appended text in defs
 
         for text in defs:
 
@@ -70,9 +70,9 @@ class NumpySpider(CrawlSpider):
             kwargs = [p.split('=') for p in params if '=' in p]
 
             item = ApiItem()
-            item['code'] = text # Caches the function call
-            item['function_name'] = function_name # Caches the function name
-            item['args'] = args # Caches the default arguments
-            item['kwargs'] = kwargs # Caches other arguments
+            item['code'] = text  # Caches the function call
+            item['function_name'] = function_name  # Caches the function name
+            item['args'] = args  # Caches the default arguments
+            item['kwargs'] = kwargs  # Caches other arguments
             # Yields a structured representation of the function call format.
             yield item
