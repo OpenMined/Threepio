@@ -10,7 +10,7 @@ from w3lib.html import remove_tags
 
 
 class NumpySpider(CrawlSpider):
-    name = "numpy"  #  Name of The Web crawler
+    name = "numpy"  # Name of The Web crawler
     version = "1.17.0"  # Version Used
     allowed_domains = ['scipy.org']  # Crawls only links from scipy
 
@@ -27,11 +27,10 @@ class NumpySpider(CrawlSpider):
     # The reponse of the links direct to different modules
     # and are passed to parse_api() for crawling
     rules = (
-        Rule(LinkExtractor(
-          # Allows links under api_docs.
-          allow=(re.compile(r'.+\.html')),
-        ),
-            callback='parse_api',),  # Calls parse_api() with response.
+      Rule(LinkExtractor(
+        allow=(re.compile(r'.+\.html')),
+      ),
+        callback='parse_api', ),
     )
 
     # The parse_api() method is the callback method that parses the response
