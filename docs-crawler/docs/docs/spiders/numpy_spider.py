@@ -1,7 +1,5 @@
 # _*_ coding: utf-8 -*-
-
 # Crawl modules in the scipy docs to extract functions
-
 # To understand how CrawlSpider works, See documentation in
 # https://docs.scrapy.org/en/latest/topics/spiders.html
 import re
@@ -48,10 +46,10 @@ class NumpySpider(CrawlSpider):
         for selector in fdef:
 
             text = (remove_tags(selector.get())
-                    .replace('\n', '')#Used to replace the newline character
-                    .replace(' ', '')#Used to replace the space character
-                    .replace('[source]', ''))#Used to replace '[source]'
-            defs.append(text)#Adding the appended text in defs
+                    .replace('\n', '')  #Used to replace the newline character
+                    .replace(' ', '')  #Used to replace the space character
+                    .replace('[source]', ''))  #Used to replace '[source]'
+            defs.append(text)  #Adding the appended text in defs
 
         for text in defs:
 
