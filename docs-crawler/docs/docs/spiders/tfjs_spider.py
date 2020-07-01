@@ -46,7 +46,6 @@ class TfjsSpider(scrapy.Spider):
         # Information about the function call and cache.
         for selector in fdef:
             # Preprocesses func_header and stores the processed representation.
-            # For example, in the format - torch.this_is_a_function(obj)¶
             text = remove_tags(selector.get())\
                 .replace('\n', '')\
                 .replace(' ', '')\
