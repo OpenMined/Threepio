@@ -68,5 +68,3 @@ Please make sure to fill this section in with **all former and current** contrib
 
 ## License
 [Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)
-
-Test
