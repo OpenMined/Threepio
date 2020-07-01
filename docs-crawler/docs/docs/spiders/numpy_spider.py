@@ -30,7 +30,7 @@ class NumpySpider(CrawlSpider):
       Rule(LinkExtractor(
         allow=(re.compile(r'.+\.html')),
       ),
-        callback='parse_api', ),
+      callback='parse_api', ),
     )
 
     # The parse_api() method is the callback method that parses the response
