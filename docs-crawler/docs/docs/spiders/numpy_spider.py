@@ -73,7 +73,6 @@ class NumpySpider(CrawlSpider):
             # Caches the processed function in the global functions cache.
             defs.append(text)
 
-
         # The loop goes through each simplified function call
         # to extract important segments and then yield through
         # a Scrapy Item object.
