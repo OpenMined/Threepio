@@ -39,7 +39,8 @@ class Compiler(object):
                 if len(f['attrs']) > len(existing_f['attrs']):
                     warnings.warn(
                         f'Ignoring op: {f}: {nfunc} is already defined in '
-                        f'{lib} with shallower or same attrs path: {existing_f}'
+                        f'{lib} with shallower or '
+                        f'same attrs path: {existing_f}'
                     )
                     continue
                 else:
