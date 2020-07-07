@@ -14,16 +14,22 @@ from translations import WORD_TRANSLATIONS, COMMAND_TRANSLATIONS
 
 
 class Compiler(object):
-    tf = []  # Create empyt array for TensorFlow.
-    tfjs = []  # Create empty array for TensorFlow.js.
-    torch = []  # Create empty array for Pytorch.
+    # Create empyt array for TensorFlow, Pytorch and tensorflow.js
+    # output files for separating the fucntions for each library.
+    tf = []
+    tfjs = []
+    torch = []
     # Create dictionary for TensorFlow, TensorFlow.js and Pytorch.
+    # These dictionary contain function name as header and then has
+    # it's attributes, function calls and arguments.
     main_map = {'tf': {}, 'tfjs': {}, 'torch': {}}
     base_defs = set()
 
-    # This constructor calls all our data from tesnorFlow, Tensorflow.js
-    # and Pytorch crawler output files and creates instances for further usage.
     def __init__(self):
+        """This constructor calls all our data from tesnorFlow, Tensorflow.js
+        and Pytorch crawler output files and creates instances
+        for further usage.
+        """
         with open('./output/tf/2.1.json') as tf_file, \
                 open('./output/torch/1.4.0.json') as torch_file, \
                 open('./output/tfjs/1.5.1.json') as tfjs_file:
@@ -31,26 +37,41 @@ class Compiler(object):
             self.tfjs = json.load(tfjs_file)
             self.torch = json.load(torch_file)
 
-    # The normalize_func_name() function is a method which takes
-    # all the string values under function name from the target
-    # file and normalizizes them into header format.
-    def normalize_func_name(self, name):
-        # Regex rules for compiling a string to a Regex object.
-        # Here the rules match on to two types of characters in a string.
-        alpha = re.compile(r'[\W][a-zA-Z0-9]*')
-        return alpha.sub('', name).lower()
+        def normalize_func_name(self, name):
+            """The normalize_func_name() function is a method which takes
+             all the string values under function name from the target
+            file and normalizizes them into header format.
 
-    # The generate_attrs() function is a method which takes all
-    # the fucntion calls from the targeted code.
+            Args :
+            name: Name of the fucntion from the output files from each
+                    library.
+             """
+            # Regex rules for compiling a string to a Regex object.
+            # Here the rules match on to two types of characters in a string.
+            alpha = re.compile(r'[\W][a-zA-Z0-9]*')
+            return alpha.sub('', name).lower()
+
     def generate_attrs(self, code):
+        """The generate_attrs() function is a method which takes all
+        the fucntion calls from the targeted code.
+
+        Args:
+            code: Initialization code or the arguments repective to the
+            fucntion name form the output file of that library.
+        """
         # Regex rules for compiling a string to a Regex object.
         # Here the rules match on to two types of groups in a given code.
         split_def = re.compile(r'^([\w\.]+)\((.*)\)')
         return split_def.match(code)[1].split('.')
 
-    # The populate_command() fucntion arranges all the output
-    # that is generated into proper order and with appropriate header name.
     def populate_command(self, lib):
+        """The populate_command() fucntion arranges all the output
+        that is generated into a proper order and with appropriate header name.
+
+        Args:
+            lib: A dictionary consisting of both fucntion name and function
+            calls separated according to the libararies that are considered.
+        """
         for f in getattr(self, lib):
             # generates a header for the fucntion under which all the
             # related arguments are placed in the output file.
@@ -67,19 +88,29 @@ class Compiler(object):
             self.main_map[lib][nfunc] = [f]
             self.base_defs.add(nfunc)
 
-    # The load_base_defs() function itirates through the libraries
-    # and generates a normalized output.
     def load_base_defs(self):
+        """The load_base_defs() function itirates through the libraries
+            and generates a normalized output.
+
+            Here base_defs() links to the dictionaries created by importing
+            functions from the output files of the considered libraries.
+        """
         self.populate_command('tf')
         self.populate_command('tfjs')
         self.populate_command('torch')
 
-    # The hydrate_args() fucntion maps the generated list and filters
-    # them out with selected arguments according to the operators and
-    # stores in variable as a list.
-    # These list are divided into list of normal arguments and
-    # keyword arguments as ba and bk respectively.
     def hydrate_args(self, base_args, base_kwargs):
+        """The hydrate_args() fucntion maps the generated list and filters
+        them out with selected arguments according to the operators and
+        stores in variable as a list.
+
+        Args:
+            base_args: List of argumnets that are stored in the list
+                and are passed to the fucntion.
+
+            base_kwargs: List of keywords and variable-length arguments
+                that are passed through the function.
+        """
         base_args = list(filter(lambda a: a not in ['', '?'], base_args))
         base_kwargs = list(
             filter(lambda a: a[0] not in ['', '?'], base_kwargs)
@@ -102,15 +133,25 @@ class Compiler(object):
         ]
         return ba + bk
 
-    # The match_arg_names() fucntion creates a loop that goes through
-    # all the fucntion and checks for the order issues between
-    # the fucntion considered.
-    # For example : There is a fucntion mapping to Pytorch matmul
-    # and TensorFlow matmul that may take same arguments but
-    # in different order.
-    # This fucntion compares the arguments between the two and fixes
-    # any issue related to order between the two.
     def match_arg_names(self, from_args, to_args, to_lang):
+        """The match_arg_names() fucntion creates a loop that goes through
+        all the fucntion and checks for the order issues between
+        the fucntion considered.
+
+        Example: There is a fucntion mapping to Pytorch matmul
+        and TensorFlow matmul that may take same arguments but in
+        different order.
+        This fucntion compares the arguments between the two and fixes
+        any issue related to order between the two.
+
+        Args:
+        from_args: list of arguments for calling a fuunction.
+
+        to_args: list of arguments for the same function but for
+            different library.
+
+        to_lang: arguments for the fucntion calling.
+        """
         for from_arg in from_args:
             try:
                 to_arg = next(
@@ -126,9 +167,10 @@ class Compiler(object):
                     from_arg[to_lang] = to_name
         return from_args
 
-    # The load_translations() method that translates the list
-    # generated by all the crawlers with help of word translation.
     def load_translations(self, from_lang):
+        """The load_translations() method that translates the list
+        generated by all the crawlers with help of word translation.
+        """
         langs = ['torch', 'tfjs', 'tf']
         langs.pop(langs.index(from_lang))
 
@@ -161,10 +203,16 @@ class Compiler(object):
                     to_lang
                 )
 
-    # The slim_output() fucntion creates dictinoary from the
-    # language lists with a labeled header and returns it to
-    # the output variable as a list.
     def slim_output(self, from_lang, to_lang):
+        """The slim_output() fucntion creates dictionary from the
+        language lists with a labeled header and returns it to
+        the output variable as a list.
+
+        Args:
+            from_lang: list of arguments for calling a fuunction.
+
+            to_lang: List of language
+        """
         input_dict = {
             from_lang: self.main_map[from_lang],
             to_lang: self.main_map[to_lang]
@@ -174,9 +222,21 @@ class Compiler(object):
             to_lang: {}
         }
 
-        # The hydrate_keys() function generates dictionary from the
-        # given input variables by sorting them according to their labels.
         def hydrate_keys(input_dict, output, from_lang, to_lang):
+            """The hydrate_keys() function generates dictionary from the
+            given input variables by sorting them according to their labels.
+
+            Args:
+                input_dict: Dictionary conatining the cluster for the
+                arguments for the function.
+
+                output: Dictionary mapping to the language list
+                    and label header.
+
+                from_lang: list of arguments for calling a fuunction.
+
+                to_lang: arguments for the fucntion calling.
+            """
             for k, v in input_dict[from_lang].items():
                 # TODO: Treat as list
                 v = v[0]

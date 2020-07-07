@@ -45108,8 +45108,8 @@
                     "greater"
                 ],
                 "name": "greater",
-                "torch": "gt",
-                "tf": "greater"
+                "tf": "greater",
+                "torch": "gt"
             }
         ],
         "greaterequal": [
