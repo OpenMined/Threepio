@@ -41896,23 +41896,6 @@
                 "name": "getLayer"
             }
         ],
-        "add": [
-            {
-                "args": [
-                    {
-                        "name": "layer",
-                        "kwarg": false,
-                        "opt": false
-                    }
-                ],
-                "attrs": [
-                    "add"
-                ],
-                "name": "add",
-                "torch": "add",
-                "tf": "add"
-            }
-        ],
         "deregisterop": [
             {
                 "args": [
@@ -42555,6 +42538,29 @@
                 ],
                 "name": "upSampling2d",
                 "tf": "upsampling2d"
+            }
+        ],
+        "add": [
+            {
+                "args": [
+                    {
+                        "name": "a",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "b",
+                        "kwarg": false,
+                        "opt": false
+                    }
+                ],
+                "attrs": [
+                    "tf",
+                    "add"
+                ],
+                "name": "add",
+                "torch": "add",
+                "tf": "add"
             }
         ],
         "average": [
@@ -45317,7 +45323,7 @@
                     "equal"
                 ],
                 "name": "equal",
-                "torch": "eq",
+                "torch": "equal",
                 "tf": "equal"
             }
         ],
