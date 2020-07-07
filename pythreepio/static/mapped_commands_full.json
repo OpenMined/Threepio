@@ -44353,7 +44353,7 @@
                     "transpose"
                 ],
                 "name": "transpose",
-                "torch": "t",
+                "torch": "transpose",
                 "tf": "transpose"
             }
         ],
@@ -45317,7 +45317,7 @@
                     "equal"
                 ],
                 "name": "equal",
-                "torch": "equal",
+                "torch": "eq",
                 "tf": "equal"
             }
         ],
@@ -56109,7 +56109,6 @@
                         "tf": "shape"
                     }
                 ],
-
                 "attrs": [
                     "torch",
                     "reshape"
