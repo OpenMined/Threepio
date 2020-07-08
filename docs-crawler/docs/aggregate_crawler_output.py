@@ -1,5 +1,6 @@
 import json
 import re
+import warnings
 from translations import WORD_TRANSLATIONS, COMMAND_TRANSLATIONS
 
 
@@ -32,6 +33,22 @@ class Compiler(object):
             f['attrs'] = self.generate_attrs(f['code'])
             f['args'] = self.hydrate_args(f['args'], f['kwargs'])
             f['name'] = f['function_name']
+
+            if nfunc in self.main_map[lib]:
+                existing_f = self.main_map[lib][nfunc][0]
+                if len(f['attrs']) > len(existing_f['attrs']):
+                    warnings.warn(
+                        f'Ignoring op: {f}: {nfunc} is already defined in '
+                        f'{lib} with shallower or '
+                        f'same attrs path: {existing_f}'
+                    )
+                    continue
+                else:
+                    warnings.warn(
+                        f'Overwriting op: {existing_f} with {f} '
+                        'that has shallower attrs path'
+                    )
+
             del f['kwargs']
             del f['code']
             del f['function_name']
@@ -118,10 +135,7 @@ class Compiler(object):
             from_lang: self.main_map[from_lang],
             to_lang: self.main_map[to_lang]
         }
-        output = {
-            from_lang: {},
-            to_lang: {}
-        }
+        output = {from_lang: {}, to_lang: {}}
 
         def hydrate_keys(input_dict, output, from_lang, to_lang):
             for k, v in input_dict[from_lang].items():

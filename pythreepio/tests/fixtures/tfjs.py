@@ -22,3 +22,8 @@ rtruediv = {
     "inputs": [Command("rtruediv", [t2, t1], {})],
     "answers": [Command("div", [t1, t2], {}, ["tf", "div"])],
 }
+
+reshape = {
+    "inputs": [Command("reshape", [t1, [2, 2]], {})],
+    "answers": [Command("reshape", [t1, [2, 2]], {}, ["reshape"])],
+}

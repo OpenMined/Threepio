@@ -30,14 +30,12 @@ def test_translates_abs(torch_threepio):
     process_tests(torch_abs, torch_threepio, tf_check_answer)
 
 
-@pytest.mark.skip(reason="Translate to keras.layers.add instead of math.add")
 def test_translates_add(torch_threepio):
     process_tests(add, torch_threepio, tf_check_answer)
 
 
-@pytest.mark.skip(reason="Translate to keras.layers.add instead of math.add")
-def test_translates_d_add():
-    process_tests(add2)
+def test_translates_d_add(torch_threepio):
+    process_tests(add2, torch_threepio, tf_check_answer)
 
 
 def test_translates_matmul(torch_threepio):
