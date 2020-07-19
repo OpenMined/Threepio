@@ -30,20 +30,38 @@
                         "opt": false
                     },
                     {
-                        "name": "name",
+                        "name": "dtype",
                         "kwarg": true,
                         "opt": true
                     },
                     {
-                        "name": "dtype",
+                        "name": "parallel_iterations",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "back_prop",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "swap_memory",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "infer_shape",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
                     "map_fn"
                 ],
                 "name": "map_fn"
@@ -353,18 +371,23 @@
             {
                 "args": [
                     {
-                        "name": "gain",
+                        "name": "input",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "a"
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
-                        "opt": true
+                        "opt": true,
+                        "torch": "name"
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "initializers",
-                    "Identity"
+                    "identity"
                 ],
-                "name": "Identity",
+                "name": "identity",
                 "torch": "identity",
                 "tfjs": "identity"
             }
@@ -2328,15 +2351,29 @@
             {
                 "args": [
                     {
-                        "name": "tensor",
+                        "name": "sp_input",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "default_value",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "validate_indices",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "sparse",
                     "to_dense"
                 ],
                 "name": "to_dense"
@@ -2457,20 +2494,25 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "logits",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tfjs": "logits"
                     },
                     {
                         "name": "axis",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "nn",
                     "softmax"
                 ],
                 "name": "softmax",
@@ -2715,12 +2757,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "minimum"
                 ],
                 "name": "minimum",
@@ -2825,12 +2871,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "maximum"
                 ],
                 "name": "maximum",
@@ -3147,20 +3197,24 @@
             {
                 "args": [
                     {
-                        "name": "inputs",
+                        "name": "x",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "",
+                        "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "layers",
+                    "math",
                     "add"
                 ],
                 "name": "add",
@@ -4372,12 +4426,16 @@
                         "name": "seed",
                         "kwarg": true,
                         "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "random",
                     "truncated_normal"
                 ],
                 "name": "truncated_normal"
@@ -4411,7 +4469,8 @@
                     {
                         "name": "seed",
                         "kwarg": true,
-                        "opt": true
+                        "opt": true,
+                        "tfjs": "seed"
                     },
                     {
                         "name": "name",
@@ -4516,7 +4575,22 @@
             {
                 "args": [
                     {
-                        "name": "reduction",
+                        "name": "shape",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "lam",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "seed",
                         "kwarg": true,
                         "opt": true
                     },
@@ -4528,11 +4602,10 @@
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "losses",
-                    "Poisson"
+                    "random",
+                    "poisson"
                 ],
-                "name": "Poisson"
+                "name": "poisson"
             }
         ],
         "normal": [
@@ -6116,15 +6189,19 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "features",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "nn",
                     "softsign"
                 ],
                 "name": "softsign",
@@ -6266,16 +6343,19 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "features",
                         "kwarg": false,
-                        "opt": false,
-                        "tfjs": "x"
+                        "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "nn",
                     "selu"
                 ],
                 "name": "selu",
@@ -6287,39 +6367,29 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "depthwise_kernel",
+                        "name": "depthwise_filter",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "pointwise_kernel",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
+                        "name": "pointwise_filter",
                         "kwarg": false,
                         "opt": false
                     },
                     {
                         "name": "strides",
-                        "kwarg": true,
-                        "opt": true
+                        "kwarg": false,
+                        "opt": false
                     },
                     {
                         "name": "padding",
-                        "kwarg": true,
-                        "opt": true
+                        "kwarg": false,
+                        "opt": false
                     },
                     {
                         "name": "data_format",
@@ -6327,15 +6397,19 @@
                         "opt": true
                     },
                     {
-                        "name": "dilation_rate",
+                        "name": "dilations",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "separable_conv2d"
                 ],
                 "name": "separable_conv2d"
@@ -6389,31 +6463,19 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "features",
                         "kwarg": false,
-                        "opt": false,
-                        "tfjs": "x"
+                        "opt": false
                     },
                     {
-                        "name": "alpha",
-                        "kwarg": true,
-                        "opt": true
-                    },
-                    {
-                        "name": "max_value",
-                        "kwarg": true,
-                        "opt": true
-                    },
-                    {
-                        "name": "threshold",
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "nn",
                     "relu"
                 ],
                 "name": "relu",
@@ -7172,22 +7234,19 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "features",
                         "kwarg": false,
-                        "opt": false,
-                        "tfjs": "x"
+                        "opt": false
                     },
                     {
-                        "name": "alpha",
+                        "name": "name",
                         "kwarg": true,
-                        "opt": true,
-                        "torch": "alpha"
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "nn",
                     "elu"
                 ],
                 "name": "elu",
@@ -7279,9 +7338,10 @@
                         "tfjs": "x"
                     },
                     {
-                        "name": "level",
+                        "name": "rate",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tfjs": "rate"
                     },
                     {
                         "name": "noise_shape",
@@ -7293,12 +7353,16 @@
                         "kwarg": true,
                         "opt": true,
                         "tfjs": "seed"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "dropout"
                 ],
                 "name": "dropout",
@@ -7598,34 +7662,24 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "depthwise_kernel",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
+                        "name": "filter",
                         "kwarg": false,
                         "opt": false
                     },
                     {
                         "name": "strides",
-                        "kwarg": true,
-                        "opt": true
+                        "kwarg": false,
+                        "opt": false
                     },
                     {
                         "name": "padding",
-                        "kwarg": true,
-                        "opt": true
+                        "kwarg": false,
+                        "opt": false
                     },
                     {
                         "name": "data_format",
@@ -7633,15 +7687,19 @@
                         "opt": true
                     },
                     {
-                        "name": "dilation_rate",
+                        "name": "dilations",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "depthwise_conv2d"
                 ],
                 "name": "depthwise_conv2d"
@@ -7888,12 +7946,12 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "kernel",
+                        "name": "filters",
                         "kwarg": false,
                         "opt": false
                     },
@@ -7903,19 +7961,9 @@
                         "opt": false
                     },
                     {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
                         "name": "strides",
-                        "kwarg": true,
-                        "opt": true
+                        "kwarg": false,
+                        "opt": false
                     },
                     {
                         "name": "padding",
@@ -7928,15 +7976,19 @@
                         "opt": true
                     },
                     {
-                        "name": "dilation_rate",
+                        "name": "dilations",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "conv2d_transpose"
                 ],
                 "name": "conv2d_transpose"
@@ -7946,46 +7998,27 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "x"
+                        "torch": "input",
+                        "tfjs": "a"
                     },
                     {
-                        "name": "kernel",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
+                        "name": "filters",
                         "kwarg": false,
                         "opt": false
                     },
                     {
                         "name": "strides",
-                        "kwarg": true,
-                        "opt": true,
+                        "kwarg": false,
+                        "opt": false,
                         "tfjs": "strides"
                     },
                     {
                         "name": "padding",
-                        "kwarg": true,
-                        "opt": true,
+                        "kwarg": false,
+                        "opt": false,
                         "torch": "padding"
                     },
                     {
@@ -7994,15 +8027,20 @@
                         "opt": true
                     },
                     {
-                        "name": "dilation_rate",
+                        "name": "dilations",
+                        "kwarg": true,
+                        "opt": true,
+                        "tfjs": "dilations"
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "conv3d"
                 ],
                 "name": "conv3d",
@@ -8014,25 +8052,28 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "x"
+                        "torch": "input",
+                        "tfjs": "a"
                     },
                     {
-                        "name": "kernel",
+                        "name": "filters",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "strides",
-                        "kwarg": true,
-                        "opt": true
+                        "name": "stride",
+                        "kwarg": false,
+                        "opt": false,
+                        "torch": "stride",
+                        "tfjs": "stride"
                     },
                     {
                         "name": "padding",
-                        "kwarg": true,
-                        "opt": true,
+                        "kwarg": false,
+                        "opt": false,
                         "torch": "padding"
                     },
                     {
@@ -8041,15 +8082,19 @@
                         "opt": true
                     },
                     {
-                        "name": "dilation_rate",
+                        "name": "dilations",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "conv1d"
                 ],
                 "name": "conv1d",
@@ -8113,36 +8158,27 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "x"
+                        "torch": "input",
+                        "tfjs": "a"
                     },
                     {
-                        "name": "kernel",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "1",
+                        "name": "filters",
                         "kwarg": false,
                         "opt": false
                     },
                     {
                         "name": "strides",
-                        "kwarg": true,
-                        "opt": true,
+                        "kwarg": false,
+                        "opt": false,
                         "tfjs": "strides"
                     },
                     {
                         "name": "padding",
-                        "kwarg": true,
-                        "opt": true,
+                        "kwarg": false,
+                        "opt": false,
                         "torch": "padding"
                     },
                     {
@@ -8151,15 +8187,20 @@
                         "opt": true
                     },
                     {
-                        "name": "dilation_rate",
+                        "name": "dilations",
+                        "kwarg": true,
+                        "opt": true,
+                        "tfjs": "dilations"
+                    },
+                    {
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "conv2d"
                 ],
                 "name": "conv2d",
@@ -8208,7 +8249,7 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "value",
                         "kwarg": false,
                         "opt": false
                     },
@@ -8221,12 +8262,16 @@
                         "name": "data_format",
                         "kwarg": true,
                         "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "bias_add"
                 ],
                 "name": "bias_add"
@@ -8352,35 +8397,34 @@
                         "opt": false
                     },
                     {
-                        "name": "var",
+                        "name": "variance",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "beta",
+                        "name": "offset",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "gamma",
+                        "name": "scale",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "axis",
-                        "kwarg": true,
-                        "opt": true
+                        "name": "variance_epsilon",
+                        "kwarg": false,
+                        "opt": false
                     },
                     {
-                        "name": "epsilon",
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nn",
                     "batch_normalization"
                 ],
                 "name": "batch_normalization"
@@ -8717,15 +8761,19 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "structure",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "expand_composites",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "nest",
                     "flatten"
                 ],
                 "name": "flatten",
@@ -9149,12 +9197,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "math",
                     "tanh"
                 ],
                 "name": "tanh",
@@ -9278,18 +9330,27 @@
             {
                 "args": [
                     {
-                        "name": "",
+                        "name": "x",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "y",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "layers",
-                    "Subtract"
+                    "math",
+                    "subtract"
                 ],
-                "name": "Subtract"
+                "name": "subtract"
             }
         ],
         "square": [
@@ -9300,12 +9361,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "square"
                 ],
                 "name": "square",
@@ -9320,12 +9385,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "sqrt"
                 ],
                 "name": "sqrt",
@@ -9337,16 +9406,19 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "features",
                         "kwarg": false,
-                        "opt": false,
-                        "tfjs": "x"
+                        "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "math",
                     "softplus"
                 ],
                 "name": "softplus",
@@ -9362,12 +9434,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "sin"
                 ],
                 "name": "sin",
@@ -9383,12 +9459,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "sign"
                 ],
                 "name": "sign",
@@ -9456,12 +9536,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "activations",
+                    "math",
                     "sigmoid"
                 ],
                 "name": "sigmoid",
@@ -9558,12 +9642,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "round"
                 ],
                 "name": "round",
@@ -9956,15 +10044,19 @@
                         "opt": false
                     },
                     {
-                        "name": "a",
+                        "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "pow"
                 ],
                 "name": "pow",
@@ -10011,12 +10103,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "not_equal"
                 ],
                 "name": "not_equal"
@@ -10125,20 +10221,24 @@
             {
                 "args": [
                     {
-                        "name": "inputs",
+                        "name": "x",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "",
+                        "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "layers",
+                    "math",
                     "multiply"
                 ],
                 "name": "multiply",
@@ -10355,12 +10455,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "log"
                 ],
                 "name": "log",
@@ -10380,12 +10484,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "less_equal"
                 ],
                 "name": "less_equal"
@@ -10403,12 +10511,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "less"
                 ],
                 "name": "less",
@@ -10441,12 +10553,12 @@
             {
                 "args": [
                     {
-                        "name": "predictions",
+                        "name": "targets",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "targets",
+                        "name": "predictions",
                         "kwarg": false,
                         "opt": false
                     },
@@ -10454,12 +10566,16 @@
                         "name": "k",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "in_top_k"
                 ],
                 "name": "in_top_k"
@@ -10543,12 +10659,21 @@
                         "name": "axis",
                         "kwarg": true,
                         "opt": true
+                    },
+                    {
+                        "name": "epsilon",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "l2_normalize"
                 ],
                 "name": "l2_normalize"
@@ -10685,12 +10810,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "greater_equal"
                 ],
                 "name": "greater_equal"
@@ -10784,12 +10913,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "exp"
                 ],
                 "name": "exp",
@@ -10907,12 +11040,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "greater"
                 ],
                 "name": "greater",
@@ -11010,12 +11147,16 @@
                         "name": "y",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "equal"
                 ],
                 "name": "equal",
@@ -11052,20 +11193,35 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tfjs": "x"
+                        "opt": false
                     },
                     {
                         "name": "axis",
                         "kwarg": true,
                         "opt": true,
                         "tfjs": "axis"
+                    },
+                    {
+                        "name": "exclusive",
+                        "kwarg": true,
+                        "opt": true,
+                        "tfjs": "exclusive"
+                    },
+                    {
+                        "name": "reverse",
+                        "kwarg": true,
+                        "opt": true,
+                        "tfjs": "reverse"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "cumsum"
                 ],
                 "name": "cumsum",
@@ -11184,12 +11340,26 @@
                         "name": "axis",
                         "kwarg": true,
                         "opt": true
+                    },
+                    {
+                        "name": "exclusive",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "reverse",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "cumprod"
                 ],
                 "name": "cumprod",
@@ -11204,12 +11374,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "cos"
                 ],
                 "name": "cos",
@@ -11603,22 +11777,32 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "x"
+                        "torch": "input",
+                        "tfjs": "a"
                     },
                     {
                         "name": "axis",
                         "kwarg": true,
                         "opt": true,
                         "tfjs": "axis"
+                    },
+                    {
+                        "name": "output_type",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "argmin"
                 ],
                 "name": "argmin",
@@ -11630,22 +11814,32 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "x"
+                        "torch": "input",
+                        "tfjs": "a"
                     },
                     {
                         "name": "axis",
                         "kwarg": true,
                         "opt": true,
                         "tfjs": "axis"
+                    },
+                    {
+                        "name": "output_type",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "argmax"
                 ],
                 "name": "argmax",
@@ -11732,12 +11926,16 @@
                         "kwarg": false,
                         "opt": false,
                         "tfjs": "x"
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "backend",
+                    "math",
                     "abs"
                 ],
                 "name": "abs",
@@ -12578,9 +12776,14 @@
             {
                 "args": [
                     {
-                        "name": "x",
+                        "name": "tensor",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "ord",
+                        "kwarg": true,
+                        "opt": true
                     },
                     {
                         "name": "axis",
@@ -12588,15 +12791,14 @@
                         "opt": true
                     },
                     {
-                        "name": "order",
+                        "name": "name",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "keras",
-                    "utils",
+                    "linalg",
                     "normalize"
                 ],
                 "name": "normalize",
@@ -22157,17 +22359,20 @@
                     {
                         "name": "mean",
                         "kwarg": true,
-                        "opt": true
+                        "opt": true,
+                        "tfjs": "mean"
                     },
                     {
                         "name": "stddev",
                         "kwarg": true,
-                        "opt": true
+                        "opt": true,
+                        "tfjs": "stddev"
                     },
                     {
                         "name": "seed",
                         "kwarg": true,
-                        "opt": true
+                        "opt": true,
+                        "tfjs": "seed"
                     }
                 ],
                 "attrs": [
@@ -23447,13 +23652,15 @@
                     {
                         "name": "shape",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tfjs": "shape"
                     },
                     {
                         "name": "dtype",
                         "kwarg": true,
                         "opt": true,
-                        "torch": "dtype"
+                        "torch": "dtype",
+                        "tfjs": "dtype"
                     },
                     {
                         "name": "name",
@@ -24487,13 +24694,15 @@
                     {
                         "name": "shape",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tfjs": "shape"
                     },
                     {
                         "name": "dtype",
                         "kwarg": true,
                         "opt": true,
-                        "torch": "dtype"
+                        "torch": "dtype",
+                        "tfjs": "dtype"
                     },
                     {
                         "name": "name",
@@ -26661,20 +26870,19 @@
             {
                 "args": [
                     {
-                        "name": "filename",
+                        "name": "path",
                         "kwarg": false,
                         "opt": false
                     },
                     {
-                        "name": "compression_type",
+                        "name": "options",
                         "kwarg": true,
                         "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "data",
-                    "experimental",
+                    "io",
                     "TFRecordWriter"
                 ],
                 "name": "TFRecordWriter"
@@ -40008,10 +40216,23 @@
         ],
         "ones": [
             {
-                "args": [],
+                "args": [
+                    {
+                        "name": "shape",
+                        "kwarg": false,
+                        "opt": false,
+                        "tf": "shape"
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": false,
+                        "opt": true,
+                        "torch": "dtype",
+                        "tf": "dtype"
+                    }
+                ],
                 "attrs": [
                     "tf",
-                    "initializers",
                     "ones"
                 ],
                 "name": "ones",
@@ -40112,14 +40333,36 @@
             {
                 "args": [
                     {
-                        "name": "args",
+                        "name": "shape",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "mean",
+                        "kwarg": false,
+                        "opt": true,
+                        "tf": "mean"
+                    },
+                    {
+                        "name": "stddev",
+                        "kwarg": false,
+                        "opt": true,
+                        "tf": "stddev"
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "seed",
+                        "kwarg": false,
+                        "opt": true,
+                        "tf": "seed"
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "initializers",
                     "truncatedNormal"
                 ],
                 "name": "truncatedNormal",
@@ -40162,10 +40405,23 @@
         ],
         "zeros": [
             {
-                "args": [],
+                "args": [
+                    {
+                        "name": "shape",
+                        "kwarg": false,
+                        "opt": false,
+                        "tf": "shape"
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": false,
+                        "opt": true,
+                        "torch": "dtype",
+                        "tf": "dtype"
+                    }
+                ],
                 "attrs": [
                     "tf",
-                    "initializers",
                     "zeros"
                 ],
                 "name": "zeros",
@@ -40191,26 +40447,8 @@
         ],
         "flatten": [
             {
-                "args": [
-                    {
-                        "name": "arr",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "result",
-                        "kwarg": false,
-                        "opt": true
-                    },
-                    {
-                        "name": "skiptypedarray",
-                        "kwarg": false,
-                        "opt": true
-                    }
-                ],
+                "args": [],
                 "attrs": [
-                    "tf",
-                    "util",
                     "flatten"
                 ],
                 "name": "flatten",
@@ -40372,16 +40610,8 @@
         ],
         "array": [
             {
-                "args": [
-                    {
-                        "name": "items",
-                        "kwarg": false,
-                        "opt": false
-                    }
-                ],
+                "args": [],
                 "attrs": [
-                    "tf",
-                    "data",
                     "array"
                 ],
                 "name": "array"
@@ -40416,15 +40646,8 @@
         ],
         "dispose": [
             {
-                "args": [
-                    {
-                        "name": "container",
-                        "kwarg": false,
-                        "opt": false
-                    }
-                ],
+                "args": [],
                 "attrs": [
-                    "tf",
                     "dispose"
                 ],
                 "name": "dispose"
@@ -40461,14 +40684,12 @@
             {
                 "args": [
                     {
-                        "name": "args",
+                        "name": "newshape",
                         "kwarg": false,
                         "opt": false
                     }
                 ],
                 "attrs": [
-                    "tf",
-                    "layers",
                     "reshape"
                 ],
                 "name": "reshape",
@@ -40495,18 +40716,12 @@
             {
                 "args": [
                     {
-                        "name": "x",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
                         "name": "axis",
                         "kwarg": false,
                         "opt": true
                     }
                 ],
                 "attrs": [
-                    "tf",
                     "expandDims"
                 ],
                 "name": "expandDims"
@@ -40516,12 +40731,6 @@
             {
                 "args": [
                     {
-                        "name": "x",
-                        "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
-                    },
-                    {
                         "name": "axis",
                         "kwarg": false,
                         "opt": true,
@@ -40530,16 +40739,17 @@
                     {
                         "name": "exclusive",
                         "kwarg": false,
-                        "opt": true
+                        "opt": true,
+                        "tf": "exclusive"
                     },
                     {
                         "name": "reverse",
                         "kwarg": false,
-                        "opt": true
+                        "opt": true,
+                        "tf": "reverse"
                     }
                 ],
                 "attrs": [
-                    "tf",
                     "cumsum"
                 ],
                 "name": "cumsum",
@@ -40551,11 +40761,6 @@
             {
                 "args": [
                     {
-                        "name": "x",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
                         "name": "axis",
                         "kwarg": false,
                         "opt": true,
@@ -40563,7 +40768,6 @@
                     }
                 ],
                 "attrs": [
-                    "tf",
                     "squeeze"
                 ],
                 "name": "squeeze",
@@ -41121,14 +41325,33 @@
             {
                 "args": [
                     {
-                        "name": "args",
+                        "name": "shape",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "mean",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "stddev",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "seed",
+                        "kwarg": false,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "initializers",
                     "randomNormal"
                 ],
                 "name": "randomNormal"
@@ -41138,14 +41361,33 @@
             {
                 "args": [
                     {
-                        "name": "args",
+                        "name": "shape",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "minval",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "maxval",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "dtype",
+                        "kwarg": false,
+                        "opt": true
+                    },
+                    {
+                        "name": "seed",
+                        "kwarg": false,
+                        "opt": true
                     }
                 ],
                 "attrs": [
                     "tf",
-                    "initializers",
                     "randomUniform"
                 ],
                 "name": "randomUniform"
@@ -41654,29 +41896,6 @@
                 "name": "getLayer"
             }
         ],
-        "add": [
-            {
-                "args": [
-                    {
-                        "name": "a",
-                        "kwarg": false,
-                        "opt": false
-                    },
-                    {
-                        "name": "b",
-                        "kwarg": false,
-                        "opt": false
-                    }
-                ],
-                "attrs": [
-                    "tf",
-                    "add"
-                ],
-                "name": "add",
-                "torch": "add",
-                "tf": "add"
-            }
-        ],
         "deregisterop": [
             {
                 "args": [
@@ -41736,8 +41955,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     }
                 ],
                 "attrs": [
@@ -41801,8 +42019,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     }
                 ],
                 "attrs": [
@@ -41820,7 +42037,8 @@
                     {
                         "name": "logits",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tf": "logits"
                     },
                     {
                         "name": "dim",
@@ -41904,7 +42122,8 @@
                     {
                         "name": "rate",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tf": "rate"
                     },
                     {
                         "name": "noiseshape",
@@ -42006,8 +42225,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     },
                     {
                         "name": "filter",
@@ -42018,7 +42236,8 @@
                         "name": "stride",
                         "kwarg": false,
                         "opt": false,
-                        "torch": "stride"
+                        "torch": "stride",
+                        "tf": "stride"
                     },
                     {
                         "name": "pad",
@@ -42057,8 +42276,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     },
                     {
                         "name": "filter",
@@ -42084,7 +42302,8 @@
                     {
                         "name": "dilations",
                         "kwarg": false,
-                        "opt": true
+                        "opt": true,
+                        "tf": "dilations"
                     },
                     {
                         "name": "dimroundingmode",
@@ -42150,8 +42369,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     },
                     {
                         "name": "filter",
@@ -42177,7 +42395,8 @@
                     {
                         "name": "dilations",
                         "kwarg": false,
-                        "opt": true
+                        "opt": true,
+                        "tf": "dilations"
                     }
                 ],
                 "attrs": [
@@ -42319,6 +42538,29 @@
                 ],
                 "name": "upSampling2d",
                 "tf": "upsampling2d"
+            }
+        ],
+        "add": [
+            {
+                "args": [
+                    {
+                        "name": "a",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "b",
+                        "kwarg": false,
+                        "opt": false
+                    }
+                ],
+                "attrs": [
+                    "tf",
+                    "add"
+                ],
+                "name": "add",
+                "torch": "add",
+                "tf": "add"
             }
         ],
         "average": [
@@ -43803,8 +44045,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     }
                 ],
                 "attrs": [
@@ -43898,8 +44139,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     }
                 ],
                 "attrs": [
@@ -44119,7 +44359,7 @@
                     "transpose"
                 ],
                 "name": "transpose",
-                "torch": "t",
+                "torch": "transpose",
                 "tf": "transpose"
             }
         ],
@@ -44440,8 +44680,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     },
                     {
                         "name": "axis",
@@ -44465,8 +44704,7 @@
                     {
                         "name": "x",
                         "kwarg": false,
-                        "opt": false,
-                        "tf": "x"
+                        "opt": false
                     },
                     {
                         "name": "axis",
@@ -45085,7 +45323,7 @@
                     "equal"
                 ],
                 "name": "equal",
-                "torch": "eq",
+                "torch": "equal",
                 "tf": "equal"
             }
         ],
@@ -45108,8 +45346,8 @@
                     "greater"
                 ],
                 "name": "greater",
-                "torch": "gt",
-                "tf": "greater"
+                "tf": "greater",
+                "torch": "gt"
             }
         ],
         "greaterequal": [
@@ -47154,14 +47392,23 @@
             {
                 "args": [
                     {
-                        "name": "array",
+                        "name": "buffersize",
                         "kwarg": false,
                         "opt": false
+                    },
+                    {
+                        "name": "seed",
+                        "kwarg": false,
+                        "opt": true,
+                        "tf": "seed"
+                    },
+                    {
+                        "name": "reshuffleeachiteration",
+                        "kwarg": false,
+                        "opt": true
                     }
                 ],
                 "attrs": [
-                    "tf",
-                    "util",
                     "shuffle"
                 ],
                 "name": "shuffle",
@@ -49002,7 +49249,8 @@
                         "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "a"
+                        "tfjs": "a",
+                        "tf": "input"
                     },
                     {
                         "name": "weight",
@@ -49054,7 +49302,8 @@
                         "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "a"
+                        "tfjs": "a",
+                        "tf": "input"
                     },
                     {
                         "name": "weight",
@@ -50729,7 +50978,8 @@
                         "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "a"
+                        "tfjs": "a",
+                        "tf": "input"
                     },
                     {
                         "name": "weight",
@@ -50745,7 +50995,8 @@
                         "name": "stride",
                         "kwarg": true,
                         "opt": true,
-                        "tfjs": "stride"
+                        "tfjs": "stride",
+                        "tf": "stride"
                     },
                     {
                         "name": "padding",
@@ -51893,8 +52144,7 @@
                     {
                         "name": "alpha",
                         "kwarg": true,
-                        "opt": true,
-                        "tf": "alpha"
+                        "opt": true
                     },
                     {
                         "name": "inplace",
@@ -53912,7 +54162,8 @@
                     {
                         "name": "name",
                         "kwarg": false,
-                        "opt": false
+                        "opt": false,
+                        "tf": "name"
                     }
                 ],
                 "attrs": [
@@ -54745,6 +54996,7 @@
                         "name": "dtype",
                         "kwarg": true,
                         "opt": true,
+                        "tfjs": "dtype",
                         "tf": "dtype"
                     },
                     {
@@ -54828,6 +55080,7 @@
                         "name": "dtype",
                         "kwarg": true,
                         "opt": true,
+                        "tfjs": "dtype",
                         "tf": "dtype"
                     },
                     {
@@ -57847,7 +58100,8 @@
                         "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "a"
+                        "tfjs": "a",
+                        "tf": "input"
                     },
                     {
                         "name": "dim",
@@ -57877,7 +58131,8 @@
                         "name": "input",
                         "kwarg": false,
                         "opt": false,
-                        "tfjs": "a"
+                        "tfjs": "a",
+                        "tf": "input"
                     },
                     {
                         "name": "dim",

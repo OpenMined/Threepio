@@ -3,6 +3,7 @@ from pythreepio.threepio import Threepio
 from tests.fixtures.tfjs import abs as tfjs_abs
 from tests.fixtures.tfjs import to_float as tfjs_to_float
 from tests.fixtures.tfjs import rtruediv as tfjs_rtruediv
+from tests.fixtures.tfjs import reshape as tfjs_reshape
 
 
 @pytest.fixture
@@ -36,3 +37,12 @@ def test_translates_tfjs_rtruediv(tfjs_threepio):
             assert translation.kwargs == tfjs_rtruediv["answers"][i].kwargs
             assert translation.attrs == tfjs_rtruediv["answers"][i].attrs
 
+
+def test_translates_tfjs_reshape(tfjs_threepio):
+  for i, input in enumerate(tfjs_reshape["inputs"]):
+    translations = tfjs_threepio.translate(input, lookup_command=True)
+    for translation in translations:
+      assert translation.function_name == tfjs_reshape["answers"][i].function_name
+      assert translation.args == tfjs_reshape["answers"][i].args
+      assert translation.kwargs == tfjs_reshape["answers"][i].kwargs
+      assert translation.attrs == tfjs_reshape["answers"][i].attrs

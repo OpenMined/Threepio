@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
 
-# Crawl modules in the numpy docs to extract functions
-#
-# To understand how CrawlSpider works, See documentation in:
+# _*_ coding: utf-8 -*-
+# Crawl modules in the scipy docs to extract functions
+# To understand how CrawlSpider works, See documentation in
+
 # https://docs.scrapy.org/en/latest/topics/spiders.html
 import re
 from docs.items import ApiItem
@@ -12,6 +12,7 @@ from w3lib.html import remove_tags
 
 
 class NumpySpider(CrawlSpider):
+
     name = "numpy"  # Name of web crawler
     version = "1.19.0"  # Version of numpy module to crawl
     allowed_domains = ['numpy.org']  # Crawl only links from numpy
@@ -34,13 +35,16 @@ class NumpySpider(CrawlSpider):
             allow=(re.compile(r'.+\.html')),  # Allows only links with .html.
             restrict_css='.toctree-l1'),  # Starts crawling from .toctree-l1.
             callback='parse_api',),  # calls parse_api() with response.
+
     )
 
     # The parse_api() method is the callback method that parses the response
     # from each link extracted with the Rule above.
+
     # The response is a webpage containing documentations of the functions for
     # that particular numpy package.
     # The goal is to process the function call format inorder to yield.
+
     def parse_api(self, response):
         self.logger.info(f'Scraping {response.url}')
 
@@ -58,7 +62,6 @@ class NumpySpider(CrawlSpider):
         # The loop goes through each function call to extract, preprocess
         # and cache in defs.
         for selector in fdef:
-
             # Preprocesses the current function call(selector)
             # and stores the processed representation.
             # For example, in the format - foo(arg1, arg2=bar)¶
@@ -74,7 +77,6 @@ class NumpySpider(CrawlSpider):
         # to extract important segments and then yield through
         # a Scrapy Item object.
         for text in defs:
-
             # Uses the Regex rules to compile the function call
             split = self.split_def.match(text)
 
@@ -91,6 +93,7 @@ class NumpySpider(CrawlSpider):
             args = [p for p in params if '=' not in p]
 
             # Caches keyword arguments
+
             kwargs = [p.split('=') for p in params if '=' in p]
 
             # Initializes a Scrapy Item object
