@@ -25,6 +25,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Update Ownership
+      run: git update-index --chmod +x docs-crawler/docs/run_crawlers.sh
     - name: Run all crawlers
       run: docs-crawler/docs/run_crawlers.sh
         
