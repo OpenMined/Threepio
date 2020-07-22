@@ -231,8 +231,8 @@ export const select = {
   answers: [
     // Same as t.gather(1, 0).
     tf.tensor([
-      [1, 2],
-      [3, 4]
+      [5, 6],
+      [7, 8]
     ])
   ]
 };
