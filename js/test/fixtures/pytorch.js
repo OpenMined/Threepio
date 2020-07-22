@@ -212,13 +212,27 @@ export const select = {
     new Command(
       'select',
       [
-        [[[1, 2], [3, 4]], [[5, 6], [7, 8]]],
+        [
+          [
+            [1, 2],
+            [3, 4]
+          ],
+          [
+            [5, 6],
+            [7, 8]
+          ]
+        ],
         0, 1,
       ],
       {}
     )
   ],
-  answers: [tf.tensor([[1, 2], [3, 4]])]
+  answers: [
+    tf.tensor([
+      [1, 2],
+      [3, 4]
+    ])
+  ]
 };
 
 export const truediv = {
