@@ -223,7 +223,7 @@ export const select = {
           ]
         ],
         0,
-        1,
+        1
       ],
       {}
     )
