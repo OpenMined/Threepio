@@ -28,5 +28,5 @@ jobs:
     - name: check permission
       run: ls -l docs-crawler/docs/run_crawlers.sh
     - name: Run all crawlers
-      run: docs-crawler/docs/run_crawlers.sh
+      run: chmod +x docs-crawler/docs/run_crawlers.sh
         
