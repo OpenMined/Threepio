@@ -5,7 +5,7 @@
 
 # Threepio Python Client
 
-Threepio is a multi-language library for translating commands between PyTorch, TensorFlow, and TensorFlow.js 
+Threepio is a multi-language library for translating commands between PyTorch, TensorFlow, and TensorFlow.js
 This section of the code-base is for the [Python Client](https://pypi.org/project/3p0/).
 
 
@@ -14,7 +14,7 @@ This section of the code-base is for the [Python Client](https://pypi.org/projec
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install threepio.
 
 ```bash
-pip install 3p0
+pip install openmined.threepio
 ```
 
 ## Usage

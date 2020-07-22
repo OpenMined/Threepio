@@ -41,7 +41,6 @@ class Command(object):
                 args.append(store[arg.key])
             else:
                 args.append(arg)
-
         return self.exec_fn(*args, **self.kwargs)
 
 
