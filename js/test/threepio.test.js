@@ -14,6 +14,7 @@ import {
   t,
   softmax,
   relu,
+  select,
   sub,
   truediv
 } from './fixtures/pytorch';
@@ -86,6 +87,10 @@ describe('Threepio', () => {
 
   test('translates subtract', () => {
     processTests(sub);
+  });
+
+  test('translates select', () => {
+    processTests(select);
   });
 
   test('translates truediv', () => {
