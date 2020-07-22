@@ -38,19 +38,19 @@ class Compiler(object):
             self.tfjs = json.load(tfjs_file)
             self.torch = json.load(torch_file)
 
-        def normalize_func_name(self, name):
-            """The normalize_func_name() function is a method which takes
-             all the string values under function name from the target
-            file and normalizizes them into header format.
+    def normalize_func_name(self, name):
+        """The normalize_func_name() function is a method which takes
+         all the string values under function name from the target
+        file and normalizizes them into header format.
 
-            Args :
-            name: Name of the fucntion from the output files from each
-                    library.
-             """
-            # Regex rules for compiling a string to a Regex object.
-            # Here the rules match on to two types of characters in a string.
-            alpha = re.compile(r'[\W][a-zA-Z0-9]*')
-            return alpha.sub('', name).lower()
+        Args :
+        name: Name of the fucntion from the output files from each
+                library.
+         """
+        # Regex rules for compiling a string to a Regex object.
+        # Here the rules match on to two types of characters in a string.
+        alpha = re.compile(r'[\W][a-zA-Z0-9]*')
+        return alpha.sub('', name).lower()
 
     def generate_attrs(self, code):
         """The generate_attrs() function is a method which takes all

@@ -105,7 +105,7 @@ class Threepio(object):
 
     def translate(self, cmd: Command, lookup_command: bool = False) -> List[Command]:
         normalized_func_name = self._normalize_func_name(cmd.function_name, self.from_lang)
-        from_info = self.commands.get(normalized_func_name)
+        from_info = self.commands[self.from_lang].get(normalized_func_name)
         if from_info is None:
             raise TranslationMissing(cmd.function_name)
 
