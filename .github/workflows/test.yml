@@ -25,6 +25,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: check permission
+      run: ls -l docs-crawler/docs/run_crawlers.sh
     - name: Run all crawlers
-      run: sh docs-crawler/docs/run_crawlers.sh
+      run: docs-crawler/docs/run_crawlers.sh
         
