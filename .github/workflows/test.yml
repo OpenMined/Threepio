@@ -26,5 +26,5 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run all crawlers
-      run: .github/docs-crawler/docs/run_crawlers.sh
+      run: .github/Threepio/docs-crawler/docs/run_crawlers.sh
         
