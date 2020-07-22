@@ -1,6 +1,6 @@
 import torch
 from pythreepio.command import Command
-from itertools import islice
+
 abs = {
     "inputs": [Command("abs", [torch.Tensor([1, -2, 3, -4])], {})],
     "answers": [["tf", "abs"]],
