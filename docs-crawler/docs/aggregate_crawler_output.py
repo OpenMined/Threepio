@@ -155,12 +155,12 @@ class Compiler(object):
             self.main_map[lang].update(commands)
 
     def output_data(self):
-        with open('../../pythreepio/static/mapped_commands_full.json', 'w',
+        with open('pythreepio/static/mapped_commands_full.json', 'w',
                   encoding='utf8') as f:
             json.dump(self.main_map, f, indent=4, ensure_ascii=False)
         # Compressed map with only torch & tfjs
         torch_tfjs_map = self.slim_output('torch', 'tfjs')
-        with open('../../static/mapped_commands_torch_tfjs.json', 'w',
+        with open('static/mapped_commands_torch_tfjs.json', 'w',
                   encoding='ascii') as f:
             json.dump(
                 torch_tfjs_map,
