@@ -23,8 +23,15 @@ To generate the most recent automatic translations, we must complete two steps:
 
 To run the crawlers (this will pull the latest version of the docs)
 
+#### Run Instructions on osX / Linux
+
 ```bash
 cd docs && sh run_crawlers.sh
+```
+#### Run Instructions on Windows
+
+```bash
+cd docs && run_crawlers.bat
 ```
 
 The static json files are generated and stored in the `output` directory.
