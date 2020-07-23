@@ -61349,6 +61349,35 @@
                 "name": "float",
                 "tfjs": "cast"
             }
+        ],
+        "select": [
+            {
+                "args": [
+                    {
+                        "name": "value",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "x"
+                    },
+                    {
+                        "name": "dim",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "axis"
+                    },
+                    {
+                        "name": "index",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "indices"
+                    }
+                ],
+                "attrs": [
+                    "select"
+                ],
+                "name": "select",
+                "tfjs": "gather"
+            }
         ]
     }
 }

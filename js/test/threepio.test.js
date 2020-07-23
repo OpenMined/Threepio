@@ -14,6 +14,7 @@ import {
   t,
   softmax,
   relu,
+  select,
   sub,
   rsub,
   truediv
@@ -83,6 +84,10 @@ describe('Threepio', () => {
 
   test('translates transpose', () => {
     processTests(t);
+  });
+
+  test('translates select', () => {
+    processTests(select);
   });
 
   test('translates subtract', () => {

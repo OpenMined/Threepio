@@ -198,13 +198,43 @@ export const sub = {
     new Command(
       'sub',
       [
-        [1, 2, 3],
+        [2, 3, 4],
         [1, 2, 3]
       ],
       {}
     )
   ],
-  answers: [tf.tensor([0, 0, 0])]
+  answers: [tf.tensor([1, 1, 1])]
+};
+
+export const select = {
+  inputs: [
+    new Command(
+      'select',
+      [
+        [
+          [
+            [1, 2],
+            [3, 4]
+          ],
+          [
+            [5, 6],
+            [7, 8]
+          ]
+        ],
+        0,
+        1
+      ],
+      {}
+    )
+  ],
+  answers: [
+    // Same as t.gather(1, 0).
+    tf.tensor([
+      [5, 6],
+      [7, 8]
+    ])
+  ]
 };
 
 export const rsub = {
