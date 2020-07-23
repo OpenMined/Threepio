@@ -9,6 +9,7 @@ from .command import Command, cmd_from_info
 class Threepio(object):
     def __init__(self, from_lang: str, to_lang: str, framework: object):
         self.commands = get_mapped_commands()
+        assert from_lang in self.commands, f"\"{from_lang}\" is not in the mapped commands."
         self.from_lang = from_lang
         self.to_lang = to_lang
         self.framework = framework
