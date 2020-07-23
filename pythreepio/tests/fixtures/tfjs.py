@@ -29,6 +29,11 @@ to_float = {
     "answers": [Command("cast", [t1, "float32"], {}, ["tf", "cast"])],
 }
 
+rsub = {
+    "inputs": [Command("__rsub__", [t1, 1], {})],
+    "answers": [Command("sub", [1, t1], {}, ["tf", "sub"])],
+}
+
 rtruediv = {
     "inputs": [Command("rtruediv", [t2, t1], {})],
     "answers": [Command("div", [t1, t2], {}, ["tf", "div"])],
