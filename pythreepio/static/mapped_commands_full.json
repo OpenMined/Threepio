@@ -61285,6 +61285,29 @@
                 "tfjs": "sub"
             }
         ],
+        "rsub": [
+            {
+                "args": [
+                    {
+                        "name": "other",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "b"
+                    },
+                    {
+                        "name": "value",
+                        "kwarg": false,
+                        "opt": false,
+                        "tfjs": "a"
+                    }
+                ],
+                "attrs": [
+                    "__rsub__"
+                ],
+                "name": "rsub",
+                "tfjs": "sub"
+            }
+        ],
         "copy": [
             {
                 "args": [
