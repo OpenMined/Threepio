@@ -5,6 +5,7 @@ from tests.fixtures.tfjs import abs as tfjs_abs
 from tests.fixtures.tfjs import reshape as tfjs_reshape
 from tests.fixtures.tfjs import rsub as tfjs_rsub
 from tests.fixtures.tfjs import rtruediv as tfjs_rtruediv
+from tests.fixtures.tfjs import select as tfjs_select
 from tests.fixtures.tfjs import to_float as tfjs_to_float
 
 
@@ -58,3 +59,13 @@ def test_translates_tfjs_reshape(tfjs_threepio):
       assert translation.args == tfjs_reshape["answers"][i].args
       assert translation.kwargs == tfjs_reshape["answers"][i].kwargs
       assert translation.attrs == tfjs_reshape["answers"][i].attrs
+
+
+def test_translates_tfjs_select(tfjs_threepio):
+  for cmd, answer in zip(tfjs_select["inputs"], tfjs_select["answers"]):
+    translations = tfjs_threepio.translate(cmd, lookup_command=True)
+    for translation in translations:
+      assert translation.function_name == answer.function_name
+      assert translation.args == answer.args
+      assert translation.kwargs == answer.kwargs
+      assert translation.attrs == answer.attrs
