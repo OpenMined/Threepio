@@ -15,9 +15,30 @@ import static
 
 
 def get_mapped_commands() -> dict:
-  """
-     this function is used to read data from "mapped_commands_full.json" file and returns an  dictionary  based on JSON file
-     '->' this represents data type of returning value of the function
-  """
-  json_txt = pkg_resources.read_text(static, "mapped_commands_full.json")
-  return json.loads(json_txt)
+    """
+        Fetches data from a "mapped_commands_full.json" file 
+        Returns:
+            A dict mapping keys to the corresponding data fetched from json file.  
+        For example:
+          "args": [
+                        {
+                            "name": "fn",
+                            "kwarg": false,
+                            "opt": false
+                        },
+                        {
+                            "name": "elems",
+                            "kwarg": false,
+                            "opt": false
+                        },
+                        {
+                            "name": "dtype",
+                            "kwarg": true,
+                            "opt": true
+                        } 
+                    ]
+          If a key from the keys argument is missing from the dictionary,
+          then that key represing dat didn't existed.
+    """
+    json_txt = pkg_resources.read_text(static, "mapped_commands_full.json")
+    return json.loads(json_txt)
