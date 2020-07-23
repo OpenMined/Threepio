@@ -1,6 +1,7 @@
 import pytest
 
-from pythreepio.threepio import Threepio
+from pythreepio.command import Command
+from pythreepio.threepio import Threepio, TranslationMissing
 from tests.fixtures.tfjs import abs as tfjs_abs
 from tests.fixtures.tfjs import reshape as tfjs_reshape
 from tests.fixtures.tfjs import rsub as tfjs_rsub
@@ -12,6 +13,14 @@ from tests.fixtures.tfjs import to_float as tfjs_to_float
 @pytest.fixture
 def tfjs_threepio():
     return Threepio("torch", "tfjs", None)
+
+
+def test_translation_missing(tfjs_threepio):
+    try:
+        tfjs_threepio.translate(Command("fake junk", [], {}))
+        assert False, "Should throw exception."
+    except TranslationMissing:
+        pass
 
 
 def test_translates_tfjs_abs(tfjs_threepio):
