@@ -14,12 +14,14 @@ from tests.fixtures.tfjs import to_float as tfjs_to_float
 def tfjs_threepio():
     return Threepio("torch", "tfjs", None)
 
+
 def test_translation_missing(tfjs_threepio):
     try:
         tfjs_threepio.translate(Command("fake junk", [], {}))
         assert False, "Should throw exception."
     except TranslationMissing:
         pass
+
 
 def test_translates_tfjs_abs(tfjs_threepio):
     for i, input in enumerate(tfjs_abs["inputs"]):
