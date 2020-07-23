@@ -156,6 +156,27 @@ COMMAND_TRANSLATIONS = {
             "name": "sub",
             "tfjs": "sub"
         }],
+        "rsub": [{
+            "args": [
+                {
+                    "name": "other",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "b"
+                },
+                {
+                    "name": "value",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "a"
+                },
+            ],
+            "attrs": [
+                "__rsub__"
+            ],
+            "name": "rsub",
+            "tfjs": "sub"
+        }],
         "copy": [{
             "args": [
                 {

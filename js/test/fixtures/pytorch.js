@@ -207,6 +207,11 @@ export const sub = {
   answers: [tf.tensor([0, 0, 0])]
 };
 
+export const rsub = {
+  inputs: [new Command('__rsub__', [[1, 2, 3], 1], {})],
+  answers: [tf.tensor([0, -1, -2])]
+};
+
 export const truediv = {
   inputs: [
     new Command(
