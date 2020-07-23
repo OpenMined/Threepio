@@ -158,18 +158,18 @@ COMMAND_TRANSLATIONS = {
         }],
         "rsub": [{
             "args": [
-              {
-                "name": "other",
-                "kwarg": False,
-                "opt": False,
-                "tfjs": "b"
-              },
-              {
-                "name": "value",
-                "kwarg": False,
-                "opt": False,
-                "tfjs": "a"
-              },
+                {
+                    "name": "other",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "b"
+                },
+                {
+                    "name": "value",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "a"
+                },
             ],
             "attrs": [
                 "__rsub__"

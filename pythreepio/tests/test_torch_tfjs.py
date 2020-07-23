@@ -31,13 +31,13 @@ def test_translates_tfjs_to_float(tfjs_threepio):
 
 
 def test_translates_tfjs_rsub(tfjs_threepio):
-  for input, answer in zip(tfjs_rsub["inputs"], tfjs_rsub["answers"]):
-    translations = tfjs_threepio.translate(input, lookup_command=True)
-    for translation in translations:
-      assert translation.function_name == answer.function_name
-      assert translation.args == answer.args
-      assert translation.kwargs == answer.kwargs
-      assert translation.attrs == answer.attrs
+    for input, answer in zip(tfjs_rsub["inputs"], tfjs_rsub["answers"]):
+        translations = tfjs_threepio.translate(input, lookup_command=True)
+        for translation in translations:
+            assert translation.function_name == answer.function_name
+            assert translation.args == answer.args
+            assert translation.kwargs == answer.kwargs
+            assert translation.attrs == answer.attrs
 
 
 def test_translates_tfjs_rtruediv(tfjs_threepio):
