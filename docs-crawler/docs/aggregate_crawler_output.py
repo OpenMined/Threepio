@@ -13,7 +13,8 @@ class Compiler(object):
 
     def __init__(self):
         with open('docs-crawler/docs/output/tf/2.1.json') as tf_file, \
-                open('docs-crawler/docs/output/torch/1.4.0.json') as torch_file, \
+                open(
+                'docs-crawler/docs/output/torch/1.4.0.json') as torch_file, \
                 open('docs-crawler/docs/output/tfjs/1.5.1.json') as tfjs_file:
             self.tf = json.load(tf_file)
             self.tfjs = json.load(tfjs_file)
