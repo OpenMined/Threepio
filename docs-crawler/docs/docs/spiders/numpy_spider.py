@@ -93,7 +93,6 @@ class NumpySpider(CrawlSpider):
             args = [p for p in params if '=' not in p]
 
             # Caches keyword arguments
-
             kwargs = [p.split('=') for p in params if '=' in p]
 
             # Initializes a Scrapy Item object
