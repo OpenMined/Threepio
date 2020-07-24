@@ -1,14 +1,26 @@
 import pytest
-from pythreepio.threepio import Threepio
+
+from pythreepio.command import Command
+from pythreepio.threepio import Threepio, TranslationMissing
 from tests.fixtures.tfjs import abs as tfjs_abs
-from tests.fixtures.tfjs import to_float as tfjs_to_float
-from tests.fixtures.tfjs import rtruediv as tfjs_rtruediv
 from tests.fixtures.tfjs import reshape as tfjs_reshape
+from tests.fixtures.tfjs import rsub as tfjs_rsub
+from tests.fixtures.tfjs import rtruediv as tfjs_rtruediv
+from tests.fixtures.tfjs import select as tfjs_select
+from tests.fixtures.tfjs import to_float as tfjs_to_float
 
 
 @pytest.fixture
 def tfjs_threepio():
     return Threepio("torch", "tfjs", None)
+
+
+def test_translation_missing(tfjs_threepio):
+    try:
+        tfjs_threepio.translate(Command("fake junk", [], {}))
+        assert False, "Should throw exception."
+    except TranslationMissing:
+        pass
 
 
 def test_translates_tfjs_abs(tfjs_threepio):
@@ -26,6 +38,16 @@ def test_translates_tfjs_to_float(tfjs_threepio):
             assert translation.args == tfjs_to_float["answers"][i].args
             assert translation.kwargs == tfjs_to_float["answers"][i].kwargs
             assert translation.attrs == tfjs_to_float["answers"][i].attrs
+
+
+def test_translates_tfjs_rsub(tfjs_threepio):
+    for input, answer in zip(tfjs_rsub["inputs"], tfjs_rsub["answers"]):
+        translations = tfjs_threepio.translate(input, lookup_command=True)
+        for translation in translations:
+            assert translation.function_name == answer.function_name
+            assert translation.args == answer.args
+            assert translation.kwargs == answer.kwargs
+            assert translation.attrs == answer.attrs
 
 
 def test_translates_tfjs_rtruediv(tfjs_threepio):
@@ -46,3 +68,13 @@ def test_translates_tfjs_reshape(tfjs_threepio):
       assert translation.args == tfjs_reshape["answers"][i].args
       assert translation.kwargs == tfjs_reshape["answers"][i].kwargs
       assert translation.attrs == tfjs_reshape["answers"][i].attrs
+
+
+def test_translates_tfjs_select(tfjs_threepio):
+  for cmd, answer in zip(tfjs_select["inputs"], tfjs_select["answers"]):
+    translations = tfjs_threepio.translate(cmd, lookup_command=True)
+    for translation in translations:
+      assert translation.function_name == answer.function_name
+      assert translation.args == answer.args
+      assert translation.kwargs == answer.kwargs
+      assert translation.attrs == answer.attrs

@@ -156,6 +156,27 @@ COMMAND_TRANSLATIONS = {
             "name": "sub",
             "tfjs": "sub"
         }],
+        "rsub": [{
+            "args": [
+                {
+                    "name": "other",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "b"
+                },
+                {
+                    "name": "value",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "a"
+                },
+            ],
+            "attrs": [
+                "__rsub__"
+            ],
+            "name": "rsub",
+            "tfjs": "sub"
+        }],
         "copy": [{
             "args": [
                 {
@@ -192,6 +213,33 @@ COMMAND_TRANSLATIONS = {
             ],
             "name": "float",
             "tfjs": "cast"
+        }],
+        "select": [{
+            "args": [
+                {
+                    "name": "value",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "x",
+                },
+                {
+                    "name": "dim",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "axis",
+                },
+                {
+                    "name": "index",
+                    "kwarg": False,
+                    "opt": False,
+                    "tfjs": "indices",
+                },
+            ],
+            "attrs": [
+                "select"
+            ],
+            "name": "select",
+            "tfjs": "gather",
         }],
     }
 }
