@@ -23,6 +23,8 @@ To generate the most recent automatic translations, we must complete two steps:
 
 #### Run Instructions on osX / Linux
 
+#### Run Instructions on osX / Linux
+
 ```bash
 cd docs && sh run_crawlers.sh
 ```
@@ -31,7 +33,7 @@ cd docs && sh run_crawlers.sh
 ```bash
 cd docs && run_crawlers.bat
 ```
-```
+
 
 The static json files are generated and stored in the `output` directory.
 
