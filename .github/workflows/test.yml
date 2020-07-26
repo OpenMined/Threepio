@@ -26,7 +26,6 @@ jobs:
         python_version: 3.8.0
         poetry_version: 1.0
         args: install
-    - name: Install dependencies
       run: |
         cd docs-crawlers
         poetry install 
