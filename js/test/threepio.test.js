@@ -14,7 +14,9 @@ import {
   t,
   softmax,
   relu,
+  select,
   sub,
+  rsub,
   truediv
 } from './fixtures/pytorch';
 const { test, describe, expect } = global; // import jest from global
@@ -84,8 +86,16 @@ describe('Threepio', () => {
     processTests(t);
   });
 
+  test('translates select', () => {
+    processTests(select);
+  });
+
   test('translates subtract', () => {
     processTests(sub);
+  });
+
+  test('translates rsub', () => {
+    processTests(rsub);
   });
 
   test('translates truediv', () => {
