@@ -25,6 +25,7 @@ jobs:
       with:
         python_version: 3.8.0
         poetry_version: 1.0
+        working_directory: ./docs-crawlers # Optional, defaults to '.'
         args: install
       run: |
         cd docs-crawlers
