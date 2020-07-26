@@ -28,7 +28,7 @@ jobs:
     - name: Run all crawlers
       run: |
         chmod +x docs-crawler/docs/run_crawlers.sh
-        ./docs-crawler/docs && sh run_crawlers.sh
+        ./docs-crawler/docs/run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
         
