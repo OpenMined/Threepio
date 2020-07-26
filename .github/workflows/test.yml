@@ -27,8 +27,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run all crawlers
       run: |
-        chmod +x docs-crawler/docs/run_crawlers.sh
-        ./docs-crawler/docs/run_crawlers.sh
+        cd docs-crawler/docs
+        chmod +x run_crawlers.sh
+        sh run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
         
