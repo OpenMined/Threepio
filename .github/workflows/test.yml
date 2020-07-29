@@ -22,9 +22,10 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run:
+        sudo apt-get update
         python -m pip install --upgrade pip
-        cd docs-crawler/       
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        hash -r
+        pip3 install -r docs-crawler/requirements.txt
     - name: Run all crawlers
       run: |
         chmod +x docs-crawler/docs/run_crawlers.sh
