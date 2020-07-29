@@ -10,11 +10,12 @@ on:
     branches: [ master, dev ]
 
 jobs:
-  build:
+  python-tests:
 
     runs-on: ubuntu-latest
-    matrix:
-      python-version: [3.8]
+    strategy:
+      matrix:
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
