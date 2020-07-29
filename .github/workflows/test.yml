@@ -13,17 +13,25 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    matrix:
+      python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8
+        python-version: ${{ matrix.python-version }}
+    - uses: actions/cache@v1.1.2
+      id: cache-reqs
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-python-${{ matrix.python-version }}-pip-${{ hashFiles('docs-crawler/requirements*.txt') }}
     - name: Install dependencies
       run:
         sudo apt-get update
         python -m pip install --upgrade pip
+        hash -r
         pip install -r docs-crawler/requirements.txt
     - name: Run all crawlers
       run: |
