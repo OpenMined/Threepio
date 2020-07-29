@@ -30,7 +30,7 @@ jobs:
     - name: Run all crawlers
       run: |
         cd docs-crawler/docs/
-        bash docs-crawler/docs/run_crawlers.sh
+        bash run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
         
