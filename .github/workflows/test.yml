@@ -20,20 +20,16 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.8
-    - name: Install poetry
-      uses: abatilo/actions-poetry@v1.5.0
-      with:
-        python_version: 3.8.0
-        poetry_version: 1.0
-        working_directory: ./docs-crawlers # Optional, defaults to '.'
-        args: install
-      run: |
-        cd docs-crawlers
-        poetry install 
+    - name: Install dependencies
+      run:
+        python -m pip install --upgrade pip
+        pip install flake8 pytest
+        cd docs-crawler
+        pip install -r requirements.txt
     - name: Run all crawlers
       run: |
         chmod +x docs-crawler/docs/run_crawlers.sh
-        sh docs-crawler/docs/run_crawlers.sh
+        bash docs-crawler/docs/run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
         
