@@ -38,13 +38,10 @@ jobs:
         bash run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
-    - name: push
-      uses: github-actions-x/commit@v2.6
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        push-branch: 'master'
-        commit-message: 'publish'
-        force-add: 'true'
-        files: pythreepio/static/mapped_commands_full.json
+    - name: commit
+      run:
+        git commit
+        git push
+      
          
         
