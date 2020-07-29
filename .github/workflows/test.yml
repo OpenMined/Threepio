@@ -24,7 +24,7 @@ jobs:
       run:
         sudo apt-get update
         python -m pip install --upgrade pip
-        pip3 install -r docs-crawler/requirements.txt
+        pip install -r docs-crawler/requirements.txt
     - name: Run all crawlers
       run: |
         chmod +x docs-crawler/docs/run_crawlers.sh
