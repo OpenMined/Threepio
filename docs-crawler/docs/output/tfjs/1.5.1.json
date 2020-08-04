@@ -105,6 +105,7 @@
 {"code": "trainOnBatch(x,y)", "function_name": "trainOnBatch", "args": ["x", "y"], "kwargs": []},
 {"code": "save(handlerOrURL,config?)", "function_name": "save", "args": ["handlerOrURL", "config?"], "kwargs": []},
 {"code": "getLayer(name?,index?)", "function_name": "getLayer", "args": ["name?", "index?"], "kwargs": []},
+{"code": "add(layer)", "function_name": "add", "args": ["layer"], "kwargs": []},
 {"code": "summary(lineLength?,positions?,printFn?)", "function_name": "summary", "args": ["lineLength?", "positions?", "printFn?"], "kwargs": []},
 {"code": "evaluate(x,y,args?)", "function_name": "evaluate", "args": ["x", "y", "args?"], "kwargs": []},
 {"code": "evaluateDataset(dataset,args)", "function_name": "evaluateDataset", "args": ["dataset", "args"], "kwargs": []},
