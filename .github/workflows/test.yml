@@ -38,14 +38,9 @@ jobs:
         bash run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
-    - name: Commit to repository
-      run: |
-        git config user.name "GitHub Action"
-        git config user.email "actions@users.noreply.github.com"
-        cd pythreepio/static
-        git add  mapped_commands_full.json
-        git commit -m "added final ouput"
-        git push origin master
+    - name: file cross check
+      run: [ $(git status --short | wc -l) = 0 ]
+        
         
       
          
