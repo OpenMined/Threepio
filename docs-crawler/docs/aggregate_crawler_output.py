@@ -1,24 +1,27 @@
-# _*_ coding: utf-8 -*-
-# Aggregate the outputs gotten from crawling the documentation of
-# different ML libraries
+"""
+.. module:: docs
+   :synopsis: Contains the class for aggregating output from each library
+"""
 
 import json
 import re
 import warnings
 from translations import WORD_TRANSLATIONS, COMMAND_TRANSLATIONS
 
-# The Compiler class is responsible for handling every stage of the
-# aggregation. The Class starts by reading the Individual outputs of
-# each library, then If an Exisiting Aggregate exists, It loads the
-# Aggregate from translations.py. The final step is to then merge
-# the exisiting libraries, or update an exisitng Aggregate with new
-# functions or Libraries.
-
 
 class Compiler(object):
-    tf = []  # Stores tensorflow translations
-    tfjs = []  # Stores tensorflowjs translations
-    torch = []  # Store Pytorch translation
+    """The Compiler class is responsible for handling stages of the aggregation.
+
+    The Class starts by reading the Individual outputs of
+    each library, then If an Exisiting Aggregate exists, It loads the
+    Aggregate from translations.py. The final step is to then merge
+    the exisiting libraries, or update an exisitng Aggregate with new
+    functions or Libraries.
+    """
+
+    tf = []  # Stores tf commands crawled from docs
+    tfjs = []  # Stores tfjs commands crawled from docs
+    torch = []  # Stores Pytorch commands crawled from docs
 
     # Combines translations of the 3 libraries
     main_map = {'tf': {}, 'tfjs': {}, 'torch': {}}
@@ -26,6 +29,7 @@ class Compiler(object):
     base_defs = set()  # Caches the standardized name of exisiting functions
 
     def __init__(self):
+
         # Opens the output of tensorflow, torch and tfjs
         # and then caches to their respective files
         with open('./output/tf/2.1.json') as tf_file, \
@@ -35,9 +39,17 @@ class Compiler(object):
             self.tfjs = json.load(tfjs_file)  # Caches tfjs docs
             self.torch = json.load(torch_file)  # Caches Pytorch's docs
 
-    # normalize_func_name(name), uses regex to standardize input string.
-    # the regex instruction(alpha), converts all uppercase to lowercase.
     def normalize_func_name(self, name):
+        """Uses Regex to standardize the input string.
+
+        The regex instruction(alpha), converts all uppercase to lowercase.
+
+        Args:
+            name: Input String to standardize.
+
+        Returns:
+            Converted string in Lowercase.
+        """
 
         # Regex Instruction to convert uppercase characters to lowercase.
         # Foo_Bar -> foo_bar.
@@ -45,9 +57,16 @@ class Compiler(object):
 
         return alpha.sub('', name).lower()  # Returns the standardized name.
 
-    # generate_attrs() used Regex to seperated package chains into
-    # Lists containing individual packages as Items.
     def generate_attrs(self, code):
+        """Uses Regex to seperate package chains into lists containing
+        Individual packages as Items.
+
+        Args:
+            code: Input String containing function call format.
+
+        Returns:
+            List of Strings where every item is package name.
+        """
 
         # The regex Instruction split_def identifies the period sign.
         # packages are then broken up while the function parameters
@@ -57,14 +76,21 @@ class Compiler(object):
         # Returns the output after compiling with regex.
         return split_def.match(code)[1].split('.')
 
-    # populate_command() is responsible for going through each
-    # function from existing libraries.
-    # function names are normalized and cached in base_defs.
-    # Args and Kwargs are also preprocessed and combined
-    # to be cached in f['args']
-    # package name chains are broken down and stored
-    # in f['attrs'] .e.g. foo.bar() -> [foo, bar].
     def populate_command(self, lib):
+        """Responsible for modifying and caching the function object for
+        each library  and cache the function object in self.main_map.
+
+        Goes through each function for existing libraries.
+        function names are then normalized and cached in self.base_defs.
+        Args and Kwargs are also preprocessed and combined
+        to be cached in f['args'] and thenpackage name chains
+        are broken down and stored in f['attrs']
+        .e.g. foo.bar() -> [foo, bar].
+
+        Args:
+            lib: Input String containing Library Name.
+        """
+
         # getattr receives a string and an object.
         # If the object has a varible with same name as the string value,
         # The content of the variable is looped through.
@@ -131,11 +157,10 @@ class Compiler(object):
             # every library.
             self.base_defs.add(nfunc)
 
-    # load_base_defs() goes through the supported functions for each library,
-    # It then Identifies each function and if exisiting, maps to the
-    # respective libraries, which exists as keys in main_map.
-    # base_defs caches all the standard function names accross each libraries.
     def load_base_defs(self):
+        """Calls populate_command() for each library.
+
+        """
 
         # Traverses through tf output to update main_map and base_defs
         self.populate_command('tf')
@@ -146,13 +171,24 @@ class Compiler(object):
         # Traverses through torch output to update main_map and base_defs
         self.populate_command('torch')
 
-    # hydrate_args() splits args and kwargs
-    # eg args -> [foo, bar] and kwargs -> [[oz, True]]
-    # output would be -> args ->
-    # [{'name': 'foo', 'kwarg': False, 'opt': False},
-    # {'name': 'bar', 'kwarg': False, 'opt': False},
-    # {'name': 'oz', 'kwarg': True, 'opt': True} ]
     def hydrate_args(self, base_args, base_kwargs):
+        """Splits args and kwargs into a standardize form.
+
+        The funciton is responsible for spliting and standardizing
+        args and kwargs.
+        E.g. args -> [foo, bar] and kwargs -> [[oz, True]]
+        output would be -> args ->
+        [{'name': 'foo', 'kwarg': False, 'opt': False},
+        {'name': 'bar', 'kwarg': False, 'opt': False},
+        {'name': 'oz', 'kwarg': True, 'opt': True} ]
+
+        Args:
+            base_args: List of strings containing the names of arguments.
+            base_kwargs: List of lists, contains kwarg name and default value.
+
+        Returns:
+            List of objects representing args and kwargs.
+        """
 
         # filters out empty arguments or those with "?".
         base_args = list(filter(lambda a: a not in ['', '?'], base_args))
@@ -185,11 +221,25 @@ class Compiler(object):
         ]
         return ba + bk  # combines kwargs and args lists
 
-    # match_arg_names() compares arguments in two libraries.
-    # if an argument for a particular method exists in the target library.
-    # The argument definition is updated in the source library, using the
-    # target library name has key, and the function name had value
     def match_arg_names(self, from_args, to_args, to_lang):
+        """Compares arguments between 2 libraries for a method
+        and updates source library.
+
+        Responsible for comparing the argument definition in two libraries
+        for a particular method.
+        if an argument for a particular method exists in the target library.
+        The argument definition is updated in the source library, using the
+        target library name has key, and the function name had value
+
+        Args:
+            from_args: Source argument list for a function.
+            to_args: Target argument list for a function.
+            to_lang: String containing target library.
+
+        Returns:
+            Updated source argument list.
+        """
+
         # loops through arg in arg list
         for from_arg in from_args:
             try:
@@ -222,12 +272,17 @@ class Compiler(object):
         # Returns updated from_args
         return from_args
 
-    # load_translations() loops through every method in base_defs.
-    # Each method is then compared between its representation in a
-    # source library(from_lang) and across multiple target libraries in
-    # order to identify different arguments that exists accross different
-    # libraries.
     def load_translations(self, from_lang):
+        """Updates Methods between a source Library and other Libraries.
+
+        Loops through methods in self.base_defs to compare and update
+        the representation in a source language and other target languages.
+        Identifies arguments that might exist with different libraries.
+
+        Args:
+            from_lang: String containin Library name to compare against.
+
+        """
 
         # List of supported languages.
         langs = ['torch', 'tfjs', 'tf']
@@ -270,9 +325,16 @@ class Compiler(object):
                     to_lang
                 )
 
-    # slim_output() merges from_lang and to_lang into a single output
     def slim_output(self, from_lang, to_lang):
+        """Merges 2 libraries to a single output
 
+        Args:
+            from_lang: String containing source language.
+            to_lang: String containing target language.
+
+        Returns:
+            Merged object of each library
+        """
         # Extracts objects from_lang and to_lang in self.main_map.
         input_dict = {
             from_lang: self.main_map[from_lang],
@@ -282,9 +344,19 @@ class Compiler(object):
         # initializes output object
         output = {from_lang: {}, to_lang: {}}
 
-        # hydrate_keys(), adds methods for each libarary in output only if the
-        # method name exists as a property for the target library.
         def hydrate_keys(input_dict, output, from_lang, to_lang):
+            """Adds method for a source library in output only if the method exists
+            in input_dict for both libraries.
+
+            Args:
+                input_dict: Input object for source and target library.
+                output: Output object
+                from_lang: String containing source language.
+                to_lang: String containing target language.
+
+            Returns:
+                Merged object of each library
+            """
 
             # loops through key/value pair for source language in input_dict,
             # keys are method names, and the value is a list of size 1
@@ -309,10 +381,14 @@ class Compiler(object):
 
         return output
 
-    # load_manual_translations() manually updates existing languages
-    # in main_map with the methods methods and arguments from
-    # COMMAND_TRANSLATIONS in translations.py.
     def load_manual_translations(self):
+        """Manually updates self.main_map for existing libraries.
+
+        Uses COMMAND_TRANSLATIONS in translations.py to manually update
+        the functions for existing libraries in main_map.
+
+        """
+
         # for each existing language, loops through commands
         # in COMMAND_TRANSLATIONS
         for lang, commands in COMMAND_TRANSLATIONS.items():
@@ -320,8 +396,10 @@ class Compiler(object):
             # Updates each language in main_map with new methods and arguments.
             self.main_map[lang].update(commands)
 
-    # output_data() updates and save translations
     def output_data(self):
+        """Updates and saves translations.
+
+        """
         with open('../../pythreepio/static/mapped_commands_full.json', 'w',
                   encoding='utf8') as f:
 
