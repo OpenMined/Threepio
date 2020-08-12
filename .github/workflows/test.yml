@@ -41,7 +41,7 @@ jobs:
     - name: git status
       run: git status
     - name: git diff
-      run: git diff
+      run: git diff --name-only
     - name: file cross check
       run: "[ $(git status --short | wc -l) = 0 ]"
         
