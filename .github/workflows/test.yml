@@ -39,7 +39,7 @@ jobs:
     - name: Run all crawlers
       run: |
         cd docs-crawler/docs/
-        bash run_crawlers.sh
+        scrapy crawl tf
     # - name: run aggregate_crawler
     #   run: python docs-crawler/docs/aggregate_crawler_output.py
     - name: diff
