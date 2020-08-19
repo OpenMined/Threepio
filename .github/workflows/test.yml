@@ -42,8 +42,9 @@ jobs:
         bash run_crawlers.sh
     - name: run aggregate_crawler
       run: python docs-crawler/docs/aggregate_crawler_output.py
-    - name: file cross check
-      run: "[(git status --short | wc -l) = 0 ]"
+    - name: diff
+      run: git diff
+      
  
     
     
