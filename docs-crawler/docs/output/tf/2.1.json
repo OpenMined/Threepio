@@ -1,5 +1,0 @@
-[
-{"code": "tf.get_logger()", "function_name": "get_logger", "args": [""], "kwargs": []},
-{"code": "tf.RaggedTensorSpec(shape=None,dtype=tf.dtypes.float32,ragged_rank=None,row_splits_dtype=tf.dtypes.int64)", "function_name": "RaggedTensorSpec", "args": [], "kwargs": [["shape", "None"], ["dtype", "tf.dtypes.float32"], ["ragged_rank", "None"], ["row_splits_dtype", "tf.dtypes.int64"]]},
-{"code": "tf.RaggedTensor(values,row_splits,cached_row_lengths=None,cached_value_rowids=None,cached_nrows=None,internal=False,uniform_row_length=None)", "function_name": "RaggedTensor", "args": ["values", "row_splits"], "kwargs": [["cached_row_lengths", "None"], ["cached_value_rowids", "None"], ["cached_nrows", "None"], ["internal", "False"], ["uniform_row_length", "None"]]}
-]
