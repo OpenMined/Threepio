@@ -35,7 +35,10 @@ class TfSpider(CrawlSpider):
     rules = (
         Rule(LinkExtractor(
             # Allows the links under api_docs.
-            allow=(re.compile(r'.+api_docs\/python\/tf')),
+            allow=(
+              re.compile(r'.+api_docs\/python\/tf\/RaggedTensor'),
+              re.compile(r'.+api_docs\/python\/tf\/get_logger')
+            ),
             # Starts crawling from .devsite-nav-title.
             restrict_css='.devsite-nav-title'),
             callback='parse_api',),  # Calls parse_api() with response.
