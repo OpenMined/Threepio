@@ -39,6 +39,7 @@ class TfSpider(CrawlSpider):
               # re.compile(r'.+api_docs\/python\/tf')
               re.compile(r'.+api_docs\/python\/tf\/get_logger'),
               re.compile(r'.+api_docs\/python\/tf\/RaggedTensor'),
+              re.compile(r'.+api_docs\/python\/tf\/audio'),
             ),
             # Starts crawling from .devsite-nav-title.
             restrict_css='.devsite-nav-title'),
