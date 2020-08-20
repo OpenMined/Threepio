@@ -48,14 +48,10 @@ jobs:
       run: git diff --name-only
     - name: git diff tf 2.1
       run: git diff docs-crawler/docs/output/tf/2.1.json
-    - name: git diff torch 1.4
-      run: git diff docs-crawler/docs/output/torch/1.4.0.json
-    - name: git diff mapped commands
-      run: git diff pythreepio/static/mapped_commands_full.json
     - name: file cross check
       run: "[ $(git status --short | wc -l) = 0 ]"
-        
-        
-      
-         
-        
+
+
+
+
+
