@@ -37,8 +37,8 @@ class TfSpider(CrawlSpider):
             # Allows the links under api_docs.
             allow=(
               # re.compile(r'.+api_docs\/python\/tf')
+              re.compile(r'.+api_docs\/python\/tf\/get_logger'),
               re.compile(r'.+api_docs\/python\/tf\/RaggedTensor'),
-              re.compile(r'.+api_docs\/python\/tf\/get_logger')
             ),
             # Starts crawling from .devsite-nav-title.
             restrict_css='.devsite-nav-title'),
