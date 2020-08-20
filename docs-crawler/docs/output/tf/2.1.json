@@ -1,5 +1,7 @@
 [
-{"code": "tf.get_logger()", "function_name": "get_logger", "args": [""], "kwargs": []},
 {"code": "tf.RaggedTensorSpec(shape=None,dtype=tf.dtypes.float32,ragged_rank=None,row_splits_dtype=tf.dtypes.int64)", "function_name": "RaggedTensorSpec", "args": [], "kwargs": [["shape", "None"], ["dtype", "tf.dtypes.float32"], ["ragged_rank", "None"], ["row_splits_dtype", "tf.dtypes.int64"]]},
+{"code": "tf.get_logger()", "function_name": "get_logger", "args": [""], "kwargs": []},
+{"code": "tf.audio.decode_wav(contents,desired_channels=-1,desired_samples=-1,name=None)", "function_name": "decode_wav", "args": ["contents"], "kwargs": [["desired_channels", "-1"], ["desired_samples", "-1"], ["name", "None"]]},
+{"code": "tf.audio.encode_wav(audio,sample_rate,name=None)", "function_name": "encode_wav", "args": ["audio", "sample_rate"], "kwargs": [["name", "None"]]},
 {"code": "tf.RaggedTensor(values,row_splits,cached_row_lengths=None,cached_value_rowids=None,cached_nrows=None,internal=False,uniform_row_length=None)", "function_name": "RaggedTensor", "args": ["values", "row_splits"], "kwargs": [["cached_row_lengths", "None"], ["cached_value_rowids", "None"], ["cached_nrows", "None"], ["internal", "False"], ["uniform_row_length", "None"]]}
 ]

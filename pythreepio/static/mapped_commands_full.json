@@ -1,15 +1,5 @@
 {
     "tf": {
-        "get_logger": [
-            {
-                "args": [],
-                "attrs": [
-                    "tf",
-                    "get_logger"
-                ],
-                "name": "get_logger"
-            }
-        ],
         "raggedtensorspec": [
             {
                 "args": [
@@ -39,6 +29,75 @@
                     "RaggedTensorSpec"
                 ],
                 "name": "RaggedTensorSpec"
+            }
+        ],
+        "get_logger": [
+            {
+                "args": [],
+                "attrs": [
+                    "tf",
+                    "get_logger"
+                ],
+                "name": "get_logger"
+            }
+        ],
+        "decode_wav": [
+            {
+                "args": [
+                    {
+                        "name": "contents",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "desired_channels",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "desired_samples",
+                        "kwarg": true,
+                        "opt": true
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
+                    }
+                ],
+                "attrs": [
+                    "tf",
+                    "audio",
+                    "decode_wav"
+                ],
+                "name": "decode_wav"
+            }
+        ],
+        "encode_wav": [
+            {
+                "args": [
+                    {
+                        "name": "audio",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "sample_rate",
+                        "kwarg": false,
+                        "opt": false
+                    },
+                    {
+                        "name": "name",
+                        "kwarg": true,
+                        "opt": true
+                    }
+                ],
+                "attrs": [
+                    "tf",
+                    "audio",
+                    "encode_wav"
+                ],
+                "name": "encode_wav"
             }
         ],
         "raggedtensor": [
