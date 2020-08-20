@@ -34,8 +34,8 @@ jobs:
     - name: Delete old JSON files
       run: |
         rm -r docs-crawler/docs/output/tf/2.1.json
-        rm -r docs-crawler/docs/output/tfjs/1.5.1.json
-        rm -r docs-crawler/docs/output/torch/1.4.0.json
+#        rm -r docs-crawler/docs/output/tfjs/1.5.1.json
+#        rm -r docs-crawler/docs/output/torch/1.4.0.json
     - name: Run all crawlers
       run: |
         cd docs-crawler/docs/
