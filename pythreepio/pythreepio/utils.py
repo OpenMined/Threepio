@@ -17,26 +17,10 @@ import static
 def get_mapped_commands() -> dict:
     """
         Fetches data from a "mapped_commands_full.json" file 
+        you can have a look at "mapped_commands_full.json" file by going through following link
+        https://raw.githubusercontent.com/OpenMined/Threepio/dev/pythreepio/static/mapped_commands_full.json
         Returns:
             A dict mapping keys to the corresponding data fetched from json file.  
-        For example:
-          "args": [
-                        {
-                            "name": "fn",
-                            "kwarg": false,
-                            "opt": false
-                        },
-                        {
-                            "name": "elems",
-                            "kwarg": false,
-                            "opt": false
-                        },
-                        {
-                            "name": "dtype",
-                            "kwarg": true,
-                            "opt": true
-                        } 
-                    ]
           If a key from the keys argument is missing from the dictionary,
           then that key represing dat didn't existed.
     """
