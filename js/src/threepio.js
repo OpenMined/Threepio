@@ -45,7 +45,7 @@ export default class Threepio {
       );
 
       if (tArgIndex === -1) {
-        // throw warning for kwarg translation missing
+        // Throw warning for kwarg translation missing
         console.warn(
           `Unable to translare kwarg ${k} for command ${cmd.functionName}`
         );

@@ -17,7 +17,7 @@ import {
   sub,
   truediv
 } from './fixtures/pytorch';
-const { test, describe, expect } = global; // import jest from global
+const { test, describe, expect } = global; // Import jest from global
 
 describe('Threepio', () => {
   const threepio = new Threepio('torch', 'tfjs', tf);
