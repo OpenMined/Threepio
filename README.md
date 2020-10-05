@@ -24,7 +24,8 @@ Threepio is made up of two main components:
 - :spider: [Documentation Crawler](/docs-crawler) - This generates the majority of our automatic translations for Threepio
 - :snake: [Python translation library](/pythreepio) - This is the python library for using threepio
 
-And has clients in both Python and Javascript (now deprecated)!
+~And has clients in both Python and Javascript!~
+And has a client available in Python!
 
 ## Installation
 
