@@ -20,12 +20,11 @@ Some of the life changing features this library provides are:
  - :card_index_dividers: Support for framework versioning in automatic translation _(in progress)_
  - :mage_man: Support for automatic argument type casting (tensorflow tensor -> pytorch tensor) _(in progress)_
 
-Threepio is made up of three main components:
+Threepio is made up of two main components:
 - :spider: [Documentation Crawler](/docs-crawler) - This generates the majority of our automatic translations for Threepio
 - :snake: [Python translation library](/pythreepio) - This is the python library for using threepio
-- :coffee: [JS translation library](/js) - This is the javascript library for using threepio
 
-And has clients in both Python and Javascript!
+And has clients in both Python and Javascript (now deprecated)!
 
 ## Installation
 
@@ -43,11 +42,7 @@ pip install 3p0
 Please check out our [usage document](/pythreepio/README.md) for further guidelines.
 
 ### Javascript
-Use the package manager [npm](https://www.npmjs.com/) to install threepio.
-
-```bash
-npm install @openmined/threepio
-```
+** Threepio.js has been deprecated. For existing javascript code, please refer to commit [0a538a3f](https://github.com/OpenMined/Threepio/commit/0a538a3f1ed70b39be541766211f6b84e2136fc3) **
 
 #### Usage
 
