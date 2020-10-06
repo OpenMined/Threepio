@@ -3,18 +3,18 @@
 ### TensorflowJS
 
 |                       | PyTorch  | TensorFlow  | TensorFlow.js  |
-|-----------------------|---------- |-------------|---------------|
-| tf.tensor             | ✔       | ✔          | ✔             |
+|-----------------------|---------- |------------|----------------|
+| tf.tensor             | ✔        | ✔          | ✔             |
 | tf.scalar             | ✘        | ✔          | ✔             |
-| tf.tesnor1d           | ✘        | ✔          | ✘             |
-| tf.tesnor2d           | ✘        | ✔          | ✘             |
-| tf.tesnor3d           | ✘        | ✔          | ✘             |
-| tf.tesnor4d           | ✘        | ✔          | ✘             |
-| tf.tesnor5d                                  | ✘        | ✔          | ✘             |
-| tf.tesnor6d                                  | ✘        | ✔          | ✘             |
-| buffer                                       | ✘        | ✔          | ✘             |
-| clone                                        | ✘        | ✔          | ✘             |
-| tf.complex                                   | ✘        | ✔          | ✔             |
+| tf.tesnor1d           | ✘        | ✘          | ✔             |
+| tf.tesnor2d           | ✘        | ✘          | ✔             |
+| tf.tesnor3d           | ✘        | ✘          | ✔             |
+| tf.tesnor4d           | ✘        | ✘          | ✔             |
+| tf.tesnor5d           | ✘        | ✘          | ✔             |
+| tf.tesnor6d           | ✘        | ✘          | ✔             |
+| buffer                | ✘        | ✘          | ✔             |
+| clone                 | ✘        | ✘          | ✔             |
+| tf.complex            | ✘        | ✔          | ✔             |
 | tf.eye                                       | ✔        | ✔          | ✔             |
 | tf.fill                                      | ✘        | ✔          | ✔             |
 | tf.imag                                      | ✔        | ✔          | ✔             |
