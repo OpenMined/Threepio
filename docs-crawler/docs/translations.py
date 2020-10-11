@@ -1,4 +1,4 @@
-  """
+"""
 .. module:: docs
    :synopsis: Contains dictionary containing keys and values for translating words & commands between frameworks
 """
