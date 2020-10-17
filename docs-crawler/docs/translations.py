@@ -1,6 +1,6 @@
 """
 .. module:: docs
-   :synopsis: Contains dictionary containing keys and values for translating words & commands between frameworks
+   :synopsis: Contains variables to translate words/commands between frameworks
 """
 
 # dictionary containing values for translating words
