@@ -1,3 +1,9 @@
+"""
+.. module:: docs
+   :synopsis: Contains variables to translate words/commands between frameworks
+"""
+
+# dictionary containing values for translating words
 WORD_TRANSLATIONS = {
     'tfjs': {
         'dim': 'axis',
@@ -11,6 +17,7 @@ WORD_TRANSLATIONS = {
     'tf': {}
 }
 
+# dictionary containing values for translating commands
 COMMAND_TRANSLATIONS = {
     'tf': {},
     'tfjs': {},
