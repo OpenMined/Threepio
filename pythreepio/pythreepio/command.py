@@ -1,6 +1,5 @@
 import sys
 from typing import Callable
-from pythreepio.errors import TranslationMissing
 
 
 class Placeholder(object):

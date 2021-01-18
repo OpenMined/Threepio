@@ -8,7 +8,7 @@ import static
 
 def get_mapped_commands() -> dict:
     """Returns dictionary of mapped commands from mapped_commands_full.json
-        
+
     :return: Dictionary of mapped commands
     :rtype: dict
     """
