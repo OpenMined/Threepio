@@ -14,7 +14,7 @@ class Threepio(object):
     :type from_lang: str
     :param to_lang: Framework to convert to
     :type to_lang: str
-    :param framework: Framework to convert to
+    :param framework: Reference to package that represents to_lang
     :type framework: object
     """
 
