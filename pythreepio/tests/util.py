@@ -4,7 +4,7 @@ import tensorflow as tf
 
 def process_tests(command, threepio, check_answer):
     for i, input in enumerate(command["inputs"]):
-        translations = threepio.translate(input, lookup_command=True)
+        translations = threepio.translate(input)
         for j, translation in enumerate(translations):
             result = translation.execute_routine()
             answer = command["answers"][i][j]

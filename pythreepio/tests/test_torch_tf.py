@@ -67,7 +67,7 @@ def test_translates_sum(torch_threepio):
 
 def test_translates_linear(torch_threepio):
     for i, input_cmd in enumerate(linear["inputs"]):
-        translations = torch_threepio.translate(input_cmd, lookup_command=True)
+        translations = torch_threepio.translate(input_cmd)
         translations.pop(0)
         # Create a store for command outputs
         store = {}

@@ -11,15 +11,15 @@ abs_torch = {
     "answers": [[torch.Tensor([1, 2, 3, 4])]],
 }
 
-t1 = torch.Tensor([[[1,2], [3,4]], [[5,6], [7,8]]])
+t1 = torch.Tensor([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
 select = {
-  "inputs": [Command("select", [
-    t1,
-    0,
-    1
-  ],
-                     {})],
-  "answers": [Command("gather", [t1, 1, 0], {}, ["tf", "gather"])],
+    "inputs": [Command("select", [
+        t1,
+        0,
+        1
+    ],
+        {})],
+    "answers": [Command("gather", [t1, 1, 0], {}, ["tf", "gather"])],
 }
 
 t1 = torch.Tensor([1, -2, 3, -4])
