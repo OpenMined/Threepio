@@ -40,7 +40,7 @@ translated_cmd = threepio.translate(cmd, lookup_command=True)
 ...
 
 # When you're ready, execute the translation
-translated_cmd.execute_routine() # -> [[1, 1], [1, 1]]
+translated_cmd[0].execute_routine() # -> [[1, 1], [1, 1]]
 ```
 
 ## Command Support
