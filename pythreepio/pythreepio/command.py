@@ -44,7 +44,7 @@ class Command(object):
         placeholder_output: str = None,
         exec_fn: Callable = None,
     ):
-        """Initialize a Command object to store command and its details of a certain framework."""
+        # Initialize a Command object to store command and its details of a certain framework.
         self.function_name = function_name
         self.args = args
         self.kwargs = kwargs
@@ -54,7 +54,8 @@ class Command(object):
         self.frameworks = {"tf": "tensorflow", "torch": "torch"}
 
     def execute_routine(self, store={}):
-        """Executes a translated command
+        """
+        Executes a translated command
 
         :param store: Stores key value arguments of a command.
         :type store: dict
@@ -80,7 +81,8 @@ class Command(object):
 
 
 def cmd_from_info(info, store: dict) -> Command:
-    """Creates a command given info and arguments with values.
+    """
+    Creates a command given info and arguments with values.
 
     :param info: Details of attributes of a command
     :type info: dict

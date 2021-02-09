@@ -1,5 +1,5 @@
 class TranslationMissing(Exception):
-    """Exception for commands which currently do not support translation."""
+    # Exception for commands which currently do not support translation.
 
     def __init__(self, name):
         super().__init__(
