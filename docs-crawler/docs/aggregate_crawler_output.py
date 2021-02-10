@@ -30,14 +30,15 @@ class Compiler(object):
 
     def __init__(self):
 
-        # Opens the output of tensorflow, torch and tfjs
-        # and then caches to their respective files
-        with open('./output/tf/2.1.json') as tf_file, \
-                open('./output/torch/1.4.0.json') as torch_file, \
-                open('./output/tfjs/1.5.1.json') as tfjs_file:
-            self.tf = json.load(tf_file)  # Caches tensorflow's docs
-            self.tfjs = json.load(tfjs_file)  # Caches tfjs docs
-            self.torch = json.load(torch_file)  # Caches Pytorch's docs
+        # with open('docs-crawler/docs/output/tf/2.1.json') as tf_file, \
+        #         open(
+        #         'docs-crawler/docs/output/torch/1.4.0.json') as torch_file, \
+        #         open('docs-crawler/docs/output/tfjs/1.5.1.json') as tfjs_file:
+        #     self.tf = json.load(tf_file)
+        #     self.tfjs = json.load(tfjs_file)
+        #     self.torch = json.load(torch_file)
+        with open('docs-crawler/docs/output/tf/2.1.json') as tf_file:
+            self.tf = json.load(tf_file)
 
     def normalize_func_name(self, name):
         """Uses Regex to standardize the input string.
@@ -400,7 +401,7 @@ class Compiler(object):
         """Updates and saves translations.
 
         """
-        with open('../../pythreepio/static/mapped_commands_full.json', 'w',
+        with open('pythreepio/static/mapped_commands_full.json', 'w',
                   encoding='utf8') as f:
 
             # merges self.main_map and f in mapped_commands_full.json
@@ -409,7 +410,7 @@ class Compiler(object):
         # compressed output containing only torch & tfjs
         torch_tfjs_map = self.slim_output('torch', 'tfjs')
 
-        with open('../../static/mapped_commands_torch_tfjs.json', 'w',
+        with open('static/mapped_commands_torch_tfjs.json', 'w',
                   encoding='ascii') as f:
 
             # merges only torch and tfjs in commands_torch.tfjs.json
