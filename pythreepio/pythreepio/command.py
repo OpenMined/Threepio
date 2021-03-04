@@ -31,8 +31,8 @@ class Command(object):
     :type attrs: dict
     :param placeholder_output: helper variable for 1->many translation
     :type placeholder_output: str
-    :param exec_fn
-    :type Callable: store the command callable
+    :param exec_fn: store the command callable
+    :type exec_fn: callable 
     """
 
     def __init__(
