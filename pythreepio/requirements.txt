@@ -1,6 +1,6 @@
 
 numpy==1.18.1
 torch==1.4.0
-tensorflow==2.2.1
+tensorflow==2.5.1
 pytest==3.0
 importlib-resources~=1.5.0
