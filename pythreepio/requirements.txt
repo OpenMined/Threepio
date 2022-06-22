@@ -1,5 +1,5 @@
 
-numpy==1.18.1
+numpy==1.22.0
 torch==1.4.0
 tensorflow==2.2.1
 pytest==3.0
